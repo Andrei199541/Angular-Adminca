@@ -1,0 +1,361 @@
+<div class="page-content fade-in-up">
+    <div class="ibox">
+        <div class="ibox-body">
+            <h5 class="font-strong mb-4">PRODUCTS LIST</h5>
+            <div class="flexbox mb-4">
+                <div class="flexbox">
+                    <label class="mb-0 mr-2">Type:</label>
+                    <select class="selectpicker show-tick form-control" id="type-filter" title="Please select" data-style="btn-solid" data-width="150px">
+                        <option value="">All</option>
+                        <optgroup label="Electronics">
+                            <option>TV & Video</option>
+                            <option>Cameras & Photo</option>
+                            <option>Computers & Tablets</option>
+                        </optgroup>
+                        <optgroup label="Fashion">
+                            <option>Health & Beauty</option>
+                            <option>Shoes</option>
+                            <option>Handbags & Purses</option>
+                            <option>Jewelry and Watches</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="flexbox">
+                    <div class="input-group-icon input-group-icon-left mr-3">
+                        <span class="input-icon input-icon-right font-16"><i class="ti-search"></i></span>
+                        <input class="form-control form-control-rounded form-control-solid" id="key-search" type="text" placeholder="Search ...">
+                    </div>
+                    <a class="btn btn-rounded btn-primary btn-air" href="ecommerce_add_product.html">Add Product</a>
+                </div>
+            </div>
+            <div class="table-responsive row">
+                <table class="table table-bordered table-hover" id="products-table">
+                    <thead class="thead-default thead-lg">
+                        <tr>
+                            <th>ID</th>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>SKU</th>
+                            <th>Quantity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/07.jpg" alt="image" width="60" />Samsung UE32M5503AUX</td>
+                            <td>TV & Video</td>
+                            <td>$425</td>
+                            <td>F0522</td>
+                            <td>
+                                <span class="badge badge-danger badge-pill">Out of stock</span>
+                            </td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/10.jpg" alt="image" width="60" />Dell XPS 13 2-in-1 9365-4429</td>
+                            <td>Computers & Tablets</td>
+                            <td>$1636</td>
+                            <td>A1274</td>
+                            <td>120</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/16.jpg" alt="image" width="60" />Evaflor "Whisky"</td>
+                            <td>Health & Beauty</td>
+                            <td>$12</td>
+                            <td>A5474</td>
+                            <td>148</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/15.jpg" alt="image" width="60" />Evaflor "Whisky Silver"</td>
+                            <td>Health & Beauty</td>
+                            <td>$12</td>
+                            <td>60781</td>
+                            <td>205</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/11.jpg" alt="image" width="60" />HP Elitebook Revolve 810 G3</td>
+                            <td>Computers & Tablets</td>
+                            <td>$3287</td>
+                            <td>U7822</td>
+                            <td>
+                                <span class="badge badge-warning badge-pill">Low of stock</span>
+                            </td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/23.jpg" alt="image" width="60" />Women's wrist watch "Moschino"</td>
+                            <td>Jewelry and Watches</td>
+                            <td>$335</td>
+                            <td>Q5497</td>
+                            <td>47</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/18.jpg" alt="image" width="60" />Ralf Ringer Modern Shoes</td>
+                            <td>Shoes</td>
+                            <td>$53.80</td>
+                            <td>K2397</td>
+                            <td>178</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/08.jpg" alt="image" width="60" />Canon EOS 200D Kit</td>
+                            <td>Cameras & Photo</td>
+                            <td>$1328</td>
+                            <td>R4592</td>
+                            <td>
+                                <span class="badge badge-warning badge-pill">Low of stock</span>
+                            </td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/12.jpg" alt="image" width="60" />Archos 133 Oxygen</td>
+                            <td>Computers & Tablets</td>
+                            <td>$244</td>
+                            <td>T7812</td>
+                            <td>112</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/20.jpg" alt="image" width="60" />Women's bag Cromia "Luxor"</td>
+                            <td>Handbags & Purses</td>
+                            <td>$430</td>
+                            <td>M7894</td>
+                            <td>547</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/05.jpg" alt="image" width="60" />Sony KD-43XE8096BR2</td>
+                            <td>TV & Video</td>
+                            <td>$1080</td>
+                            <td>C3258</td>
+                            <td>78</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/17.jpg" alt="image" width="60" />Brogi Ralf Ringer Modern</td>
+                            <td>Shoes</td>
+                            <td>$24</td>
+                            <td>T9485</td>
+                            <td>
+                                <span class="badge badge-danger badge-pill">Out of stock</span>
+                            </td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/21.jpg" alt="image" width="60" />Women's bag Cromia "Starlight"</td>
+                            <td>Handbags & Purses</td>
+                            <td>$416</td>
+                            <td>Z6219</td>
+                            <td>244</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/25.jpg" alt="image" width="60" />Watch Mitya Veselkov "The Spiral of Time"</td>
+                            <td>Jewelry and Watches</td>
+                            <td>$35</td>
+                            <td>I8976</td>
+                            <td>97</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/13.jpg" alt="image" width="60" />Lenovo Yoga Tab 3 Pro YT3–X90L</td>
+                            <td>Computers & Tablets</td>
+                            <td>$665</td>
+                            <td>L1249</td>
+                            <td>58</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/06.jpg" alt="image" width="60" />Sony KD-55XE8577SR2</td>
+                            <td>TV & Video</td>
+                            <td>$1706</td>
+                            <td>A3656</td>
+                            <td>
+                                <span class="badge badge-warning badge-pill">Low of stock</span>
+                            </td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/09.jpg" alt="image" width="60" />Canon EOS 200D Kit</td>
+                            <td>Cameras & Photo</td>
+                            <td>$650</td>
+                            <td>P9658</td>
+                            <td>102</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/19.jpg" alt="image" width="60" />Sneakers Nike Air Max</td>
+                            <td>Shoes</td>
+                            <td>$102</td>
+                            <td>N3264</td>
+                            <td>55</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/22.jpg" alt="image" width="60" />Men's bag Fabretti</td>
+                            <td>Handbags & Purses</td>
+                            <td>$259</td>
+                            <td>B4754</td>
+                            <td>355</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/26.jpg" alt="image" width="60" />Romanson CL 5A09H MB(BK)</td>
+                            <td>Jewelry and Watches</td>
+                            <td>$518</td>
+                            <td>V6585</td>
+                            <td>420</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/24.jpg" alt="image" width="60" />Wrist watches Rodania</td>
+                            <td>Jewelry and Watches</td>
+                            <td>$693</td>
+                            <td>D5412</td>
+                            <td>
+                                <span class="badge badge-warning badge-pill">Low of stock</span>
+                            </td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/04.jpg" alt="image" width="60" />Sony KD-43XE7096</td>
+                            <td>TV & Video</td>
+                            <td>$870</td>
+                            <td>T4578</td>
+                            <td>75</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>
+                                <img class="mr-3" src="./assets/img/products/14.jpg" alt="image" width="60" />Evaflor "Double Whisky"</td>
+                            <td>Health & Beauty</td>
+                            <td>$12</td>
+                            <td>H0214</td>
+                            <td>132</td>
+                            <td>
+                                <a class="text-light mr-3 font-16" href="javascript:;"><i class="ti-pencil"></i></a>
+                                <a class="text-light font-16" href="javascript:;"><i class="ti-trash"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,249 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Form Layouts'
+  - var pageUrl = 'form_layouts.html'
+  - var page_heading = 'Form Layouts'
+  - var path = ['Forms', 'Form Layouts']
+
+block content
+  .row
+    .col-md-6
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title Basic form
+        form.form-info(action='javascript:;')
+          .ibox-body
+            .row
+              .col-sm-6.form-group.mb-4
+                label First Name
+                input.form-control(type='text', placeholder='First Name')
+              .col-sm-6.form-group.mb-4
+                label Last Name
+                input.form-control(type='text', placeholder='Last Name')
+            .form-group.mb-4
+              label Email
+              input.form-control(type='text', placeholder='Email address')
+            .form-group.mb-4
+              label Password
+              input.form-control(type='password', placeholder='Password')
+            .form-group.mb-0
+              label Gender
+              div
+                label.radio.radio-inline.radio-info
+                  input(type="radio", name='a', checked)
+                  span.input-span
+                  | Male
+                label.radio.radio-inline.radio-info
+                  input(type="radio", name='a')
+                  span.input-span
+                  | Female
+          .ibox-footer
+            button.btn.btn-info.mr-2(type='button') Submit
+            button.btn.btn-secondary(type='reset') Cancel
+    .col-md-6
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title Horizontal Form
+        form.form-horizontal(action='javascript:;')
+          .ibox-body
+            .form-group.mb-4.row
+                label.col-sm-2.col-form-label Email
+                .col-sm-10
+                    input.form-control(type='text', placeholder='Email address')
+            .form-group.mb-4.row
+                label.col-sm-2.col-form-label Username
+                .col-sm-10
+                    input.form-control(type='text', placeholder='Username')
+            .form-group.mb-4.row
+                label.col-sm-2.col-form-label Password
+                .col-sm-10
+                    input.form-control(type='password', placeholder='Password')
+            .form-group.mb-4.row
+                label.col-sm-2.col-form-label Gender
+                .col-sm-10.d-flex.align-items-center
+                    label.radio.radio-grey.radio-primary.radio-inline
+                      input(type='radio', name='b', checked)
+                      span.input-span
+                      | Male
+                    label.radio.radio-grey.radio-primary.radio-inline
+                      input(type='radio', name='b')
+                      span.input-span
+                      | Female
+            .form-group.mb-0.row
+                label.col-sm-2.col-form-label Verify
+                .col-sm-10
+                  .check-list
+                    label.checkbox.checkbox-grey.checkbox-primary
+                      input(type='checkbox')
+                      span.input-span
+                      | Email
+                    label.checkbox.checkbox-grey.checkbox-primary
+                      input(type='checkbox')
+                      span.input-span
+                      | SMS
+                    label.checkbox.checkbox-grey.checkbox-primary
+                      input(type='checkbox')
+                      span.input-span
+                      | Phone
+          
+          .ibox-footer.row
+            .col-sm-10.ml-sm-auto
+              button.btn.btn-primary.mr-2(type='button') Submit
+              button.btn.btn-secondary(type='reset') Cancel
+
+  .row
+    .col-md-6
+      .ibox
+        form.form-purple(action='javascript:;')
+          .ibox-head
+            .ibox-title Iconic form
+          .ibox-body
+            .form-group.mb-4
+              .input-group-icon.input-group-icon-left
+                span.input-icon.input-icon-left: i.ti-user
+                input.form-control(type='text', placeholder='Username')
+            .form-group.mb-4
+              .input-group-icon.input-group-icon-left
+                span.input-icon.input-icon-left: i.ti-email
+                input.form-control(type='text', placeholder='Email')
+            .form-group.mb-4
+              .input-group-icon.input-group-icon-left
+                span.input-icon.input-icon-left: i.ti-lock
+                input.form-control(type='text', placeholder='Password')
+            .form-group.mb-0
+              label.checkbox.checkbox-outline-primary
+                input(type='checkbox')
+                span.input-span
+                | Remamber me
+          .ibox-footer
+              button.btn.btn-primary.mr-2(type='button') Submit
+              button.btn.btn-outline-secondary(type='reset') Cancel
+    .col-md-6
+      .ibox
+        form.form-pink(action='javascript:;')
+          .ibox-head
+            .ibox-title Iconic Air form
+          .ibox-body
+            .form-group.mb-4
+              .input-group-icon.input-group-icon-left
+                span.input-icon.input-icon-left: i.ti-user
+                input.form-control.form-control-air(type='text', placeholder='Username')
+            .form-group.mb-4
+              .input-group-icon.input-group-icon-left
+                span.input-icon.input-icon-left: i.ti-email
+                input.form-control.form-control-air(type='text', placeholder='Email')
+            .form-group.mb-4
+              .input-group-icon.input-group-icon-left
+                span.input-icon.input-icon-left: i.ti-lock
+                input.form-control.form-control-air(type='text', placeholder='Password')
+            .form-group.mb-0
+              label.checkbox.checkbox-pink
+                input(type='checkbox')
+                span.input-span
+                | Remamber me
+          .ibox-footer
+              button.btn.btn-pink.btn-air.mr-2(type='button') Submit
+              button.btn.btn-secondary(type='reset') Cancel
+
+  .row
+    .col-md-6   
+      +panel(title='Big Form')
+        form(action='javascript:;')
+          .form-group.mb-4.mt-4
+            .input-group-icon.input-group-icon-left.input-group-lg
+              .input-icon.input-icon-left: i.ti-user
+              input.form-control.form-control-air(type='text', placeholder='Username')
+          .form-group.mb-4
+            .input-group-icon.input-group-icon-left.input-group-lg
+              .input-icon.input-icon-left: i.ti-lock
+              input.form-control.form-control-air(type='password', placeholder='Password')
+          .text-center.mb-4
+            button.btn.btn-lg.btn-primary.btn-rounded.btn-air(style='width:200px') Sign up
+    .col-md-6
+      +panel(title='Big Rounded Form')
+        form.form-pink(action='javascript:;')
+          .form-group.mb-4.mt-4
+            input.form-control.form-control-lg.form-control-rounded.form-control-air(type='text', placeholder='Username')
+          .form-group.mb-4
+            input.form-control.form-control-lg.form-control-rounded.form-control-air(type='text', placeholder='Password')
+          .text-center.mb-4
+            button.btn.btn-lg.btn-pink.btn-rounded.btn-air(style='width:200px') Sign up
+
+  .ibox
+    form(action='javascript:;')
+      .ibox-head
+        .ibox-title Multi Column form
+      .ibox-body
+        .row
+          .col-md-6
+            .form-group.mb-4
+              label Full Name
+              input.form-control(type='text', placeholder='Enter Full Name')
+            .form-group.mb-4
+              label Email
+              input.form-control(type='text', placeholder='Enter Email')
+            .form-group.mb-4
+              label Date of Birth
+              input.form-control(type='text', placeholder='Enter Date of Birth')
+              span.help-block Please Enter your date of birth.
+          .col-md-6
+            .form-group.mb-4
+              label Location
+              .input-group-icon.input-group-icon-left
+                span.input-icon.input-icon-left: i.ti-location-pin.font-16
+                input.form-control(type='text', placeholder='Enter Location')
+            .form-group.mb-4
+              label Password
+              .input-group-icon.input-group-icon-left
+                span.input-icon.input-icon-left: i.ti-lock
+                input.form-control(type='password', placeholder='Enter Password')
+            .form-group.mb-4
+              label Phone number
+              .input-group
+                .input-group-btn
+                  button.btn.btn-outline-secondary.dropdown-toggle(data-toggle="dropdown")
+                    | +61
+                    i.fa.fa-angle-down.ml-1
+                  .dropdown-menu
+                    a.dropdown-item(href='javascript:;') +61
+                    a.dropdown-item(href='javascript:;') +1
+                    a.dropdown-item(href='javascript:;') +7
+                input.form-control(type='text', placeholder='Enter Phone')
+              span.help-block It will be required to verify your account.
+        .form-group.mb-0
+            label Account Type
+            .mt-1
+                label.radio.radio-inline.radio-grey.radio-primary
+                  input(type="radio", name='d', checked)
+                  span.input-span
+                  | Personal
+                label.radio.radio-inline.radio-grey.radio-primary
+                  input(type="radio", name='d')
+                  span.input-span
+                  | Corporate
+            span.help-block Select one of 2 types of accounts.
+
+      .ibox-footer
+        button.btn.btn-primary.mr-2(type='button') Submit
+        button.btn.btn-outline-secondary(type='reset') Cancel
+
+  +panel(title='Inline Form')
+    form.form-inline.form-success.mb-4(action='javascript:;')
+        label.sr-only(for='ex-email') Email
+        input#ex-email.form-control.mb-2.mr-sm-2.mb-sm-0(type='text', placeholder='Email address')
+        label.sr-only(for='ex-pass') Email
+        input#ex-pass.form-control.mb-2.mr-sm-2.mb-sm-0(type='password', placeholder='Password')
+        .form-check.mb-2.mr-sm-2.mb-sm-0
+          label.checkbox.checkbox-inline.checkbox-success
+            input(type='checkbox')
+            span.input-span
+            | Remamber me
+        button.btn.btn-success(type='submit') Login
+    form.form-inline.form-purple(action='javascript:;')
+        label.sr-only(for='ex-email-2') Email
+        input#ex-email-2.form-control.mb-2.mr-sm-2.mb-sm-0(type='text', placeholder='Email address')
+        label.sr-only(for='ex-pass-2') Email
+        input#ex-pass-2.form-control.mb-2.mr-sm-2.mb-sm-0(type='password', placeholder='Password')
+        button.btn.btn-primary(type='submit') Login
+

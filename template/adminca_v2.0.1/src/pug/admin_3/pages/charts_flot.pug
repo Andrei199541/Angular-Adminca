@@ -1,0 +1,55 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Flot Charts'
+  - var pageUrl = 'charts_flot.html'
+  - var page_heading = 'Flot Charts'
+  - var path = ['Charts', 'Flot Charts']
+
+block plugins
+  +script('Flot/jquery.flot.js', 'plugin')
+  +script('Flot/jquery.flot.resize.js', 'plugin')
+  +script('Flot/jquery.flot.pie.js', 'plugin')
+  +script('Flot/jquery.flot.time.js', 'plugin')
+  +script('flot.tooltip/js/jquery.flot.tooltip.min.js', 'plugin')
+  +script('Flot/jquery.flot.categories.js', 'plugin')
+  +script('Flot/jquery.flot.stack.js', 'plugin')
+  +script('Flot/jquery.flot.selection.js', 'plugin')
+  +script('flot-orderBars/js/jquery.flot.orderBars.js', 'plugin')
+
+block scripts
+  +script('charts_flot_demo.js', 'page')
+
+block content
+    .alert.alert-success.alert-bordered
+      p
+        | Flot is a pure JavaScript plotting library for jQuery, with a focus on simple usage, attractive looks and interactive features.
+      p
+        a.btn.btn-success(href='http://www.flotcharts.org/', target='_blank') Official Website
+    .row
+      .col-md-6
+        +panel('Simple Bar Chart')
+          #flot_bar_chart(style='height:280px;')
+      .col-md-6
+        +panel('Simple Line Chart')
+          #flot_line_chart(style='height:280px;')
+    .row
+      .col-md-6
+        +panel('Real Time Update')
+          #flot_live_chart(style='height:280px;')
+      .col-md-6
+        +panel('Stacked Chart')
+          #flot_stack_chart(style='height:280px;')
+    .row
+      .col-md-6
+        +panel('Pie Chart')
+          #flot_pie_chart(style='height:280px;')
+    +panel('Visitors Example')
+        p
+            | This plot shows visitors per day to the Flot homepage, with weekends colored. 
+            br
+            | The smaller plot is linked to the main plot, so it acts as an overview. Try dragging a selection on either plot, and watch the behavior of the other.
+        #flot_visitors.chart(style='height:280px;')
+        #flot_visitors_overview.chart(style='height:100px;')
+    +panel('Multiple lines')
+      #flot_multi_line(style='height:280px;')

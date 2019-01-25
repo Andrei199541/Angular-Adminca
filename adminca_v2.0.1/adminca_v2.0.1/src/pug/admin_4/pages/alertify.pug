@@ -1,0 +1,80 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Alertify'
+  - var pageUrl = 'alertify.html'
+  - var page_heading = 'Alertify'
+  - var path = ['Components', 'Alertify']
+
+block plugins-styles
+  +link('alertifyjs/dist/css/alertify.css','plugin')
+
+block plugins
+  +script('alertifyjs/dist/js/alertify.js', 'plugin')
+
+block scripts
+  +script('alertify-demo.js', 'page')
+
+block content
+    a.btn.btn-info.mb-4(href='https://alertifyjs.org/', target='_blank') Official Website
+    +panel('Alertify examples')
+      .row
+        .col-xl-6
+            #alertify-theme.form-group
+                div
+                    label THEME STYLE
+                label.radio.radio-inline
+                    input(type='radio', value='default', name='theme')
+                    span.input-span
+                    | Default
+                label.radio.radio-inline
+                    input(type='radio', value='bootstrap', name='theme', checked='')
+                    span.input-span
+                    | Bootstrap
+            button.btn.btn-primary.alertify-1 Basic Alert
+            pre: code.
+              alertify.alert("Message");
+            br
+            button.btn.btn-primary.alertify-2 Confirm Dialog
+            pre: code.
+              alertify.confirm("Message", function () {
+                  // user clicked "ok"
+                  alertify.success("You've clicked OK");
+              }, function() {
+                  // user clicked "cancel"
+                  alertify.error("You've clicked Cancel");
+              });       
+            button.btn.btn-primary.alertify-3 Prompt Dialog
+            pre: code.
+              alertify
+                .defaultValue("Default Value")
+                .prompt("This is a prompt dialog",
+                  function (val, ev) {
+                    ev.preventDefault();
+                    alertify.success("You've clicked OK and typed: " + val);
+                  }, function(ev) {
+                    ev.preventDefault();
+                    alertify.error("You've clicked Cancel");
+                  }
+                );
+            button.btn.btn-primary.alertify-4 Buttons Labels
+            pre: code.
+              alertify
+                .okBtn("Accept")
+                .cancelBtn("Deny")
+                .confirm("Confirm dialog with custom button labels", function (ev) {
+                    ev.preventDefault();
+                    alertify.success("You've clicked OK");
+                }, function(ev) {
+                    ev.preventDefault();
+                    alertify.error("You've clicked Cancel");
+                });
+            button.btn.btn-primary.alertify-5 Multiple Dialog
+            pre: code.
+              alertify.confirm("Confirm?", function (ev) {
+                  ev.preventDefault();
+                  alertify.alert("Successful AJAX after OK");
+              }, function(ev) {
+                  ev.preventDefault();
+                  alertify.alert("Successful AJAX after Cancel");
+              });

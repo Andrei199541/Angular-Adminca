@@ -1,0 +1,77 @@
+// Full Calendar
+.fc-unthemed .fc-content, .fc-unthemed .fc-divider, .fc-unthemed .fc-list-heading td, .fc-unthemed .fc-list-view, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td, .fc-unthemed th, .fc-unthemed thead {
+    border-color: #e9ecef;
+}
+.fc-unthemed .fc-event, .fc-unthemed .fc-event-dot {
+	background-color: #fff;
+	border: 0;
+    box-shadow: 0 5px 20px #d6dee4;
+}
+.fc-unthemed .fc-event .fc-content, .fc-unthemed .fc-event-dot .fc-content {
+    padding: 7px 7px 7px 28px;
+}
+.fc-unthemed .fc-event .fc-content:before, .fc-unthemed .fc-event-dot .fc-content:before {
+    display: block;
+    content: " ";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    top: .65rem;
+    left: 0.75rem;
+}
+.fc-unthemed .fc-event.fc-start.fc-event-primary .fc-content:before, .fc-unthemed .fc-event-dot.fc-start.fc-event-primary .fc-content:before {
+    background-color: #5c6bc0;
+}
+.fc-unthemed .fc-event.fc-start.fc-event-warning .fc-content:before, .fc-unthemed .fc-event-dot.fc-start.fc-event-warning .fc-content:before {
+    background-color: #f39c12;
+}
+.fc-unthemed .fc-event.fc-start.fc-event-info .fc-content:before, .fc-unthemed .fc-event-dot.fc-start.fc-event-info .fc-content:before {
+    background-color: #2cc4cb;
+}
+.fc-unthemed .fc-event.fc-start.fc-event-danger .fc-content:before, .fc-unthemed .fc-event-dot.fc-start.fc-event-danger .fc-content:before {
+    background-color: #f75a5f;
+}
+.fc-unthemed .fc-event.fc-start.fc-event-success .fc-content:before, .fc-unthemed .fc-event-dot.fc-start.fc-event-success .fc-content:before {
+    background-color: #18c5a9;
+}
+.fc-unthemed .fc-list-item .fc-event-dot {background-color: #5c6bc0}
+.fc-unthemed .fc-list-item.fc-event-warning .fc-event-dot {background-color: #f39c12}
+.fc-unthemed .fc-list-item.fc-event-info .fc-event-dot {background-color: #2cc4cb}
+.fc-unthemed .fc-list-item.fc-event-danger .fc-event-dot {background-color: #f75a5f}
+.fc-unthemed .fc-list-item.fc-event-success .fc-event-dot {background-color: #18c5a9}
+
+
+
+.fc-toolbar.fc-header-toolbar {margin-bottom: 1.5rem}
+.fc-toolbar .fc-right .fc-button {
+    border: 1px solid #e9ecef;
+}
+
+.fc-unthemed td.fc-today {
+    background-color: #fdf0db;
+}
+#external-events .ex-event {
+    padding: 10px 15px; 
+    cursor: move;
+}
+.fc-button {
+    box-shadow: none;
+    text-shadow: none;
+    background-color: #fff;
+    border: 0;
+    background-image: none;
+    color: inherit;
+}
+.fc-state-active, .fc-state-down {
+    box-shadow: 0 5px 20px #d6dee4;
+}
+.fc th.fc-widget-header {
+    font-weight: 500;
+    font-size: 13px;
+    padding: 7px 0px;
+    text-transform: uppercase;
+}
+.fc-list-heading td {
+    font-weight: 500;
+}

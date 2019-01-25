@@ -1,0 +1,158 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Pricing Table v6'
+  - var pageUrl = 'pricing-table-6.html'
+
+block content
+  .flexbox-b.mb-5
+    span.mr-4.static-badge.badge-success
+      i.la.la-trophy
+    div
+      h5.font-strong PRICING TABLES
+      .text-light Perfect and easy pricing tables for your business
+  .row
+    .col-md-4
+      .ibox.shadow-wide.text-center
+        h4.pricing-title.text-success BUSINESS
+        .price
+          sup $
+          span.price-number.mr-1 3.99
+          span.font-16 /mo
+        .price-arrow
+          div
+        .ibox-body
+          .pt-4.pb-5
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | 125 GB space
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | 5 websites
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | 3 email address
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | SSH access
+            .flexbox-b.mb-3.text-muted
+              i.la.la-times-circle.mr-3.font-18
+              | Unlimited Users
+            .flexbox-b.mb-3.text-muted
+              i.la.la-times-circle.mr-3.font-18
+              | 24/7 Support
+            .flexbox-b.mb-3.text-muted
+              i.la.la-times-circle.mr-3.font-18
+              | Advanced settings
+          button.btn.btn-secondary(style='width:170px') PURCHASE
+    .col-md-4.pricing-item-active
+      .ibox.shadow-wide.text-center
+        h4.pricing-title BUSINESS
+        .price
+          sup $
+          span.price-number.mr-1 5.99
+          span.font-16 /mo
+        .price-arrow
+          div
+        .ibox-body
+          .pt-4.pb-5
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | 125 GB space
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | 5 websites
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | 3 email address
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | SSH access
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | Unlimited Users
+            .flexbox-b.mb-3.text-muted
+              i.la.la-times-circle.mr-3.font-18
+              | 24/7 Support
+            .flexbox-b.mb-3.text-muted
+              i.la.la-times-circle.mr-3.font-18
+              | Advanced settings
+          button.btn.btn-success.btn-air(style='width:170px') PURCHASE
+    .col-md-4
+      .ibox.shadow-wide.text-center
+        h4.pricing-title.text-success EXTENDED
+        .price
+          sup $
+          span.price-number.mr-1 9.99
+          span.font-16 /mo
+        .price-arrow
+          div
+        .ibox-body
+          .pt-4.pb-5
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | 125 GB space
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | 5 websites
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | 3 email address
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | SSH access
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | Unlimited Users
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | 24/7 Support
+            .flexbox-b.mb-3
+              i.la.la-check.mr-3.font-18
+              | Advanced settings
+          button.btn.btn-secondary(style='width:170px') PURCHASE
+  
+block page_styles
+  style.
+    .pricing-title {
+      margin: 0;
+      padding: 15px;
+    }
+    .price {
+      padding: 15px;
+      background-color: #e3e6e7;
+    }
+    .price sup {
+      margin-right: 3px;
+      font-size: 35px;
+      top: -.5em;
+    }
+    .price-number {font-size: 60px}
+    .price-arrow {
+      box-sizing: content-box;
+      width: 50%;
+      height: 0;
+      padding-left: 50%;
+      padding-top: 5%;
+      overflow: hidden;
+    }
+    .price-arrow div {
+      width: 0;
+      height: 0;
+      margin-left: -1000px;
+      margin-top: -100px;
+      border-left: 1000px solid transparent;
+      border-right: 1000px solid transparent;
+      border-top: 100px solid #e3e6e7;
+    }
+    .pricing-item-active .pricing-title {
+      background-color: #18c5a9;
+      color: #fff;
+    }
+    .pricing-item-active .price {
+      background-color: #16B198;
+      color: #fff;
+    }
+    .pricing-item-active .price-arrow div {
+      border-top-color: #16B198;
+    }

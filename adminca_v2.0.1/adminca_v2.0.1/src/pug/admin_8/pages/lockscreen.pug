@@ -1,0 +1,78 @@
+extends ../layout-simple.pug
+
+block variables
+  - var pageTitle = 'Lockscreen'
+  - var pageUrl = 'lockscreen.html'
+
+block content
+  .cover
+  .ibox.login-content
+    .text-center
+      span.auth-head-icon
+        i.ti-lock
+    form#lock-form.ibox-body.pt-0(action='javascript:;', method='POST')
+      h4.font-strong.text-center.mb-4 STELLA OBRIEN
+      .row.pt-3
+        .col-4
+          +img('users/u10.jpg')(class='img-circle', width='110')
+        .col-8
+          p.font-13 Your are in lock screen. Enter your password to retrieve your session
+          .form-group
+            input.form-control(type='password', name='password', placeholder='******')
+          .form-group
+            button.btn.btn-primary.btn-block(type='submit')
+              span.btn-icon
+                i.ti-lock
+                | UNLOCK
+  
+block page_styles
+  style.
+    body {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('./assets/img/blog/17.jpeg');
+    }
+    .cover {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(117,54,230,.1);
+    }
+    .login-content {
+      max-width: 450px;
+      margin: 100px auto 50px;
+    }
+    .auth-head-icon {
+      position: relative;
+      height: 60px;
+      width: 60px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      background-color: #fff;
+      color: #5c6bc0;
+      box-shadow: 0 5px 20px #d6dee4;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+block scripts
+  script.
+    $(function(){
+      $('#lock-form').validate({
+          errorClass:"help-block",
+          rules: {
+              password: {required:true}
+          },
+          highlight:function(e){$(e).closest(".form-group").addClass("has-error")},
+          unhighlight:function(e){$(e).closest(".form-group").removeClass("has-error")},
+          errorPlacement:function(e,r){
+              var i=$(r).parents(".input-group, .check-list");
+              i.length ? i.after(e) : r.after(e)
+          },
+      });
+    });

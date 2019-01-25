@@ -1,0 +1,96 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Search results'
+  - var pageUrl = 'search.html'
+
+block content
+  .flexbox-b.mb-5
+    span.mr-4.static-badge.badge-pink
+      i.ti-search
+    div
+      h5.font-strong Search Results
+      .text-light Found 420 results in 3 categories
+  .input-group-icon.input-group-icon-left.input-group-lg.mb-4
+    span.input-icon.input-icon-right
+      i.ti-search
+    input.form-control.form-control-air.font-light.font-poppins.border-0(type='text', placeholder='Search ...' style='box-shadow:0 3px 6px rgba(10,16,20,.15)')
+  .ibox
+    .ibox-body
+      .mb-4
+        h3.mt-1
+          | 420 results found for: 
+          span.text-primary “AdminCa Theme”
+        small.text-muted About 1,370 result ( 0.13 seconds)
+      ul.list-group.list-group-full.list-group-divider
+        li.list-group-item.py-3
+          h5.font-strong
+            a.link-blue AdminCa: Perfect Design + Perfect Code
+          p.text-light
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+          .text-muted.font-13
+            span.badge.badge-primary DESIGN
+            span.mx-2 •
+            span Feb 25, 2018
+        li.list-group-item.py-3
+          h5.font-strong
+            a.link-blue AdminCa: Web Design Trends
+          p.text-light
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an typesetting industry. Lorem Ipsum has been the industry's standard dummy.
+          .text-muted.font-13
+            span.badge.badge-danger TRENDS
+            span.mx-2 •
+            span May 20, 2018
+        li.list-group-item.py-3
+          h5.font-strong
+            a.link-blue Easy Programing with Adminca
+          p.text-light
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an...
+          .text-muted.font-13
+            span.badge.badge-success Programing
+            span.mx-2 •
+            span Apr 14, 2018
+        li.list-group-item.py-3
+          h5.font-strong
+            a.link-blue Adminca and Angular
+          p.text-light
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
+          .text-muted.font-13
+            span.badge.badge-pink ANGULAR
+            span.mx-2 •
+            span Sep 22, 2018
+        li.list-group-item.py-3
+          h5.font-strong
+            a.link-blue AdminCa: Bootstrap Premium Admin Theme
+          p.text-light
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an.
+          .text-muted.font-13
+            span.badge.badge-primary BOOTSTRAP
+            span.mx-2 •
+            span Oct 18, 2018
+      ul.pagination.justify-content-center.mt-4
+        li.page-item
+          a.page-link.page-link-solid(href='javascript:;', aria-label='First')
+            span(aria-hidden='true')
+              i.la.la-angle-double-left
+        li.page-item
+          a.page-link.page-link-solid(href='javascript:;', aria-label='Previous')
+            span(aria-hidden='true')
+              i.la.la-angle-left
+        li.page-item.active
+          a.page-link(href='javascript:;') 1
+        li.page-item
+          a.page-link(href='javascript:;') 2
+        li.page-item
+          a.page-link(href='javascript:;') 3
+        li.page-item
+          a.page-link(href='javascript:;') 4
+        li.page-item
+          a.page-link(href='javascript:;')
+            i.la.la-ellipsis-h
+        li.page-item
+          a.page-link.page-link-solid(href='javascript:;', aria-label='Next')
+            i.la.la-angle-right
+        li.page-item
+          a.page-link.page-link-solid(href='javascript:;', aria-label='Last')
+            i.la.la-angle-double-right

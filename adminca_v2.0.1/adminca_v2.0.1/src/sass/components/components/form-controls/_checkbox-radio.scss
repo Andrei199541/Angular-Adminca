@@ -1,0 +1,98 @@
+// Checkboxes & Radios
+
+.checkbox, .radio {
+    position: relative;
+    margin-bottom: 0;
+    cursor: pointer;
+    padding-left: 25px;
+    font-weight: 400;
+    min-height: 18px;
+    .input-span {
+        position: absolute;
+        display: inline-block;
+        height: 18px;
+        width: 18px;
+        left: 0;
+        top: 0;
+        border: 1px solid #bdc3c7;
+        &::after {
+            content: '';
+            position: absolute;
+            display: none;
+            width: 5px;
+            height: 10px;
+            left: 6px;
+            top: 2px;
+            border: solid #526477;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        &:checked {
+            & ~ .input-span:after {
+                display: block;
+            }
+        }
+    }
+    &:hover {
+        .input-span {
+            border-color: #b8b8b8;
+        }
+    }
+    &.checkbox-grey, &.radio-grey {
+        .input-span {
+            background-color: #E6E6E6;
+            border-color: #E6E6E6;
+        }
+    }
+    &.disabled {
+        opacity: .7;
+        cursor: not-allowed;
+    }
+    &.check-single {padding-left:18px}
+}
+
+.radio {
+    .input-span {
+        border-radius: 50%;
+        &::after {
+            border: 0;
+            height: 6px;
+            left: 5px;
+            top: 5px;
+            width: 6px;
+            background: #526477;
+            border-radius: 100%;
+        }
+    }
+}
+.check-list {
+    .checkbox, .radio {display: block;}
+    .checkbox + .checkbox, .radio + .radio {margin-top:8px}
+}
+
+.checkbox-inline, .radio-inline {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+@include checkbox-variant('primary', $checkbox-primary-color, #fff);
+@include checkbox-variant('success', $checkbox-success-color, #fff);
+@include checkbox-variant('info', $checkbox-info-color, #fff);
+@include checkbox-variant('warning', $checkbox-warning-color, #fff);
+@include checkbox-variant('danger', $checkbox-danger-color, #fff);
+@include checkbox-variant('blue', $checkbox-blue-color, #fff);
+@include checkbox-variant('pink', $checkbox-pink-color, #fff);
+@include checkbox-variant('ebony', $checkbox-ebony-color, #fff);
+
+@include checkbox-outline-variant('primary', $checkbox-primary-color);
+@include checkbox-outline-variant('success', $checkbox-success-color);
+@include checkbox-outline-variant('info', $checkbox-info-color);
+@include checkbox-outline-variant('warning', $checkbox-warning-color);
+@include checkbox-outline-variant('danger', $checkbox-danger-color);
+@include checkbox-outline-variant('blue', $checkbox-blue-color);
+@include checkbox-outline-variant('pink', $checkbox-pink-color);
+@include checkbox-outline-variant('ebony', $checkbox-ebony-color);

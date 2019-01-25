@@ -1,0 +1,660 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Icon Buttons'
+  - var pageUrl = 'button-icon.html'
+  - var page_heading = 'Icon Buttons'
+  - var path = ['Buttons', 'Icon Buttons']
+
+block content
+  .row.btn-list-demo
+    .col-md-6
+      +panel(title='Only Icon Buttons (Line awesome)', boxClass='ibox-fullheight')
+        .mt-4.mb-4 Circle
+        div
+          button.btn.btn-info.btn-icon-only.btn-circle.btn-lg.btn-air: i.la.la-pencil
+          button.btn.btn-primary.btn-icon-only.btn-circle.btn-lg.btn-air: i.la.la-music
+          button.btn.btn-pink.btn-icon-only.btn-circle.btn-lg.btn-air: i.la.la-comments
+          button.btn.btn-success.btn-icon-only.btn-circle.btn-lg.btn-air: i.la.la-plus
+          button.btn.btn-danger.btn-icon-only.btn-circle.btn-lg.btn-air: i.la.la-warning
+          button.btn.btn-white.btn-icon-only.btn-circle.btn-lg.btn-air: i.la.la-cloud-download
+        div
+          button.btn.btn-info.btn-icon-only.btn-circle.btn-air: i.la.la-pencil
+          button.btn.btn-primary.btn-icon-only.btn-circle.btn-air: i.la.la-music
+          button.btn.btn-pink.btn-icon-only.btn-circle.btn-air: i.la.la-comments
+          button.btn.btn-success.btn-icon-only.btn-circle.btn-air: i.la.la-plus
+          button.btn.btn-danger.btn-icon-only.btn-circle.btn-air: i.la.la-warning
+          button.btn.btn-white.btn-icon-only.btn-circle.btn-air: i.la.la-cloud-download
+        div
+          button.btn.btn-info.btn-icon-only.btn-circle.btn-sm.btn-air: i.la.la-pencil
+          button.btn.btn-primary.btn-icon-only.btn-circle.btn-sm.btn-air: i.la.la-music
+          button.btn.btn-pink.btn-icon-only.btn-circle.btn-sm.btn-air: i.la.la-comments
+          button.btn.btn-success.btn-icon-only.btn-circle.btn-sm.btn-air: i.la.la-plus
+          button.btn.btn-danger.btn-icon-only.btn-circle.btn-sm.btn-air: i.la.la-warning
+          button.btn.btn-white.btn-icon-only.btn-circle.btn-sm.btn-air: i.la.la-cloud-download
+        .mt-4.mb-4 Gradient
+        div
+          button.btn.btn-gradient-purple.btn-icon-only.btn-circle.btn-lg.btn-air: i.la.la-music
+          button.btn.btn-gradient-peach.btn-icon-only.btn-circle.btn-lg.btn-air: i.la.la-heart-o
+          button.btn.btn-gradient-aqua.btn-icon-only.btn-circle.btn-lg.btn-air: i.la.la-comments
+          button.btn.btn-gradient-blue.btn-icon-only.btn-circle.btn-lg.btn-air: i.la.la-plus
+          button.btn.btn-gradient-silver.btn-icon-only.btn-circle.btn-lg.btn-air: i.la.la-search
+          button.btn.btn-gradient-lime.btn-icon-only.btn-circle.btn-lg.btn-air: i.la.la-leaf
+          button.btn.btn-gradient-blue-pink.btn-icon-only.btn-circle.btn-lg.btn-air: i.la.la-camera
+        .mt-4.mb-4 Outline
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-circle.btn-lg: i.la.la-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-circle.btn-lg: i.la.la-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-circle.btn-lg: i.la.la-comments
+          button.btn.btn-outline-success.btn-icon-only.btn-circle.btn-lg: i.la.la-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-circle.btn-lg: i.la.la-warning
+          button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-lg: i.la.la-cloud-download
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-circle: i.la.la-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-circle: i.la.la-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-circle: i.la.la-comments
+          button.btn.btn-outline-success.btn-icon-only.btn-circle: i.la.la-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-circle: i.la.la-warning
+          button.btn.btn-outline-secondary.btn-icon-only.btn-circle: i.la.la-cloud-download
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-circle.btn-sm: i.la.la-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-circle.btn-sm: i.la.la-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-circle.btn-sm: i.la.la-comments
+          button.btn.btn-outline-success.btn-icon-only.btn-circle.btn-sm: i.la.la-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-circle.btn-sm: i.la.la-warning
+          button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-sm: i.la.la-cloud-download
+        .mt-4.mb-4 Thick style
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-circle.btn-lg.btn-thick: i.la.la-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-circle.btn-lg.btn-thick: i.la.la-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-circle.btn-lg.btn-thick: i.la.la-comments
+          button.btn.btn-outline-success.btn-icon-only.btn-circle.btn-lg.btn-thick: i.la.la-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-circle.btn-lg.btn-thick: i.la.la-warning
+          button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-lg.btn-thick: i.la.la-cloud-download
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-circle.btn-thick: i.la.la-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-circle.btn-thick: i.la.la-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-circle.btn-thick: i.la.la-comments
+          button.btn.btn-outline-success.btn-icon-only.btn-circle.btn-thick: i.la.la-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-circle.btn-thick: i.la.la-warning
+          button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-thick: i.la.la-cloud-download
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-circle.btn-sm.btn-thick: i.la.la-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-circle.btn-sm.btn-thick: i.la.la-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-circle.btn-sm.btn-thick: i.la.la-comments
+          button.btn.btn-outline-success.btn-icon-only.btn-circle.btn-sm.btn-thick: i.la.la-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-circle.btn-sm.btn-thick: i.la.la-warning
+          button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-sm.btn-thick: i.la.la-cloud-download
+        .mt-5.mb-4 Square
+        div
+          button.btn.btn-info.btn-icon-only.btn-lg.btn-air: i.la.la-pencil
+          button.btn.btn-primary.btn-icon-only.btn-lg.btn-air: i.la.la-music
+          button.btn.btn-pink.btn-icon-only.btn-lg.btn-air: i.la.la-comments
+          button.btn.btn-success.btn-icon-only.btn-lg.btn-air: i.la.la-plus
+          button.btn.btn-danger.btn-icon-only.btn-lg.btn-air: i.la.la-warning
+          button.btn.btn-white.btn-icon-only.btn-lg.btn-air: i.la.la-cloud-download
+        div
+          button.btn.btn-info.btn-icon-only.btn-air: i.la.la-pencil
+          button.btn.btn-primary.btn-icon-only.btn-air: i.la.la-music
+          button.btn.btn-pink.btn-icon-only.btn-air: i.la.la-comments
+          button.btn.btn-success.btn-icon-only.btn-air: i.la.la-plus
+          button.btn.btn-danger.btn-icon-only.btn-air: i.la.la-warning
+          button.btn.btn-white.btn-icon-only.btn-air: i.la.la-cloud-download
+        div
+          button.btn.btn-info.btn-icon-only.btn-sm.btn-air: i.la.la-pencil
+          button.btn.btn-primary.btn-icon-only.btn-sm.btn-air: i.la.la-music
+          button.btn.btn-pink.btn-icon-only.btn-sm.btn-air: i.la.la-comments
+          button.btn.btn-success.btn-icon-only.btn-sm.btn-air: i.la.la-plus
+          button.btn.btn-danger.btn-icon-only.btn-sm.btn-air: i.la.la-warning
+          button.btn.btn-white.btn-icon-only.btn-sm.btn-air: i.la.la-cloud-download
+        .mt-4.mb-4 Square Outline
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-lg: i.la.la-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-lg: i.la.la-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-lg: i.la.la-comments
+          button.btn.btn-outline-success.btn-icon-only.btn-lg: i.la.la-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-lg: i.la.la-warning
+          button.btn.btn-outline-secondary.btn-icon-only.btn-lg: i.la.la-cloud-download
+        div
+          button.btn.btn-outline-info.btn-icon-only: i.la.la-pencil
+          button.btn.btn-outline-primary.btn-icon-only: i.la.la-music
+          button.btn.btn-outline-pink.btn-icon-only: i.la.la-comments
+          button.btn.btn-outline-success.btn-icon-only: i.la.la-plus
+          button.btn.btn-outline-danger.btn-icon-only: i.la.la-warning
+          button.btn.btn-outline-secondary.btn-icon-only: i.la.la-cloud-download
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-sm: i.la.la-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-sm: i.la.la-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-sm: i.la.la-comments
+          button.btn.btn-outline-success.btn-icon-only.btn-sm: i.la.la-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-sm: i.la.la-warning
+          button.btn.btn-outline-secondary.btn-icon-only.btn-sm: i.la.la-cloud-download
+        .mt-4.mb-4 Thick style
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-lg.btn-thick: i.la.la-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-lg.btn-thick: i.la.la-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-lg.btn-thick: i.la.la-comments
+          button.btn.btn-outline-success.btn-icon-only.btn-lg.btn-thick: i.la.la-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-lg.btn-thick: i.la.la-warning
+          button.btn.btn-outline-secondary.btn-icon-only.btn-lg.btn-thick: i.la.la-cloud-download
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-thick: i.la.la-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-thick: i.la.la-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-thick: i.la.la-comments
+          button.btn.btn-outline-success.btn-icon-only.btn-thick: i.la.la-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-thick: i.la.la-warning
+          button.btn.btn-outline-secondary.btn-icon-only.btn-thick: i.la.la-cloud-download
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-sm.btn-thick: i.la.la-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-sm.btn-thick: i.la.la-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-sm.btn-thick: i.la.la-comments
+          button.btn.btn-outline-success.btn-icon-only.btn-sm.btn-thick: i.la.la-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-sm.btn-thick: i.la.la-warning
+          button.btn.btn-outline-secondary.btn-icon-only.btn-sm.btn-thick: i.la.la-cloud-download
+
+    .col-md-6
+      +panel(title='Icon Buttons (Line Awesome)', boxClass='ibox-fullheight')
+        button.btn.btn-info.btn-fix: span.btn-icon
+          i.la.la-pencil
+          | Edit
+        button.btn.btn-primary.btn-fix: span.btn-icon
+          i.la.la-cloud-upload
+          | Upload
+        button.btn.btn-pink.btn-fix: span.btn-icon
+          i.la.la-heart-o
+          | Follow
+        button.btn.btn-secondary.btn-fix: span.btn-icon
+          i.la.la-print
+          | Print
+        button.btn.btn-danger.btn-fix: span.btn-icon
+          i.la.la-trash
+          | Remove
+        button.btn.btn-warning.btn-fix: span.btn-icon
+          i.la.la-user-plus
+          | Upload
+        .mt-4.mb-4 Gradient
+        button.btn.btn-gradient-purple.btn-fix: span.btn-icon
+          i.la.la-camera
+          | Upload
+        button.btn.btn-gradient-peach.btn-fix: span.btn-icon
+          i.la.la-heart-o
+          | Follow
+        button.btn.btn-gradient-aqua.btn-fix: span.btn-icon
+          i.la.la-comments
+          | Comment
+        button.btn.btn-gradient-blue.btn-fix: span.btn-icon
+          i.la.la-user-plus
+          | Upload
+        button.btn.btn-gradient-silver.btn-fix: span.btn-icon
+          i.la.la-search
+          | Search
+        button.btn.btn-gradient-lime.btn-fix: span.btn-icon
+          i.la.la-cloud-download
+          | Download
+        button.btn.btn-gradient-blue-pink.btn-fix: span.btn-icon
+          i.la.la-music
+          | Music
+        .mt-4.mb-4 Air style
+        button.btn.btn-info.btn-fix.btn-air: span.btn-icon
+          i.la.la-pencil
+          | Edit
+        button.btn.btn-primary.btn-fix.btn-air: span.btn-icon
+          i.la.la-cloud-upload
+          | Upload
+        button.btn.btn-pink.btn-fix.btn-air: span.btn-icon
+          i.la.la-heart-o
+          | Follow
+        button.btn.btn-secondary.btn-fix.btn-air: span.btn-icon
+          i.la.la-print
+          | Print
+        button.btn.btn-danger.btn-fix.btn-air: span.btn-icon
+          i.la.la-trash
+          | Remove
+        button.btn.btn-warning.btn-fix.btn-air: span.btn-icon
+          i.la.la-user-plus
+          | Upload
+        .mt-4.mb-4 Outline
+        button.btn.btn-outline-info.btn-fix: span.btn-icon
+          i.la.la-pencil
+          | Edit
+        button.btn.btn-outline-primary.btn-fix: span.btn-icon
+          i.la.la-cloud-upload
+          | Upload
+        button.btn.btn-outline-pink.btn-fix: span.btn-icon
+          i.la.la-heart-o
+          | Follow
+        button.btn.btn-outline-secondary.btn-fix: span.btn-icon
+          i.la.la-print
+          | Print
+        button.btn.btn-outline-danger.btn-fix: span.btn-icon
+          i.la.la-trash
+          | Remove
+        button.btn.btn-outline-warning.btn-fix: span.btn-icon
+          i.la.la-user-plus
+          | Upload
+        .mt-4.mb-4 Outline Air style
+        button.btn.btn-outline-info.btn-fix.btn-air: span.btn-icon
+          i.la.la-pencil
+          | Edit
+        button.btn.btn-outline-primary.btn-fix.btn-air: span.btn-icon
+          i.la.la-cloud-upload
+          | Upload
+        button.btn.btn-outline-pink.btn-fix.btn-air: span.btn-icon
+          i.la.la-heart-o
+          | Follow
+        button.btn.btn-outline-secondary.btn-fix.btn-air: span.btn-icon
+          i.la.la-print
+          | Print
+        button.btn.btn-outline-danger.btn-fix.btn-air: span.btn-icon
+          i.la.la-trash
+          | Remove
+        button.btn.btn-outline-warning.btn-fix.btn-air: span.btn-icon
+          i.la.la-user-plus
+          | Upload
+        .mt-4.mb-4 Thick style
+        button.btn.btn-outline-info.btn-fix.btn-thick: span.btn-icon
+          i.la.la-pencil
+          | Edit
+        button.btn.btn-outline-primary.btn-fix.btn-thick: span.btn-icon
+          i.la.la-cloud-upload
+          | Upload
+        button.btn.btn-outline-pink.btn-fix.btn-thick: span.btn-icon
+          i.la.la-heart-o
+          | Follow
+        button.btn.btn-outline-secondary.btn-fix.btn-thick: span.btn-icon
+          i.la.la-print
+          | Print
+        button.btn.btn-outline-danger.btn-fix.btn-thick: span.btn-icon
+          i.la.la-trash
+          | Remove
+        button.btn.btn-outline-warning.btn-fix.btn-thick: span.btn-icon
+          i.la.la-user-plus
+          | Upload
+        .mt-4.mb-4 Rounded
+        button.btn.btn-outline-info.btn-fix.btn-rounded: span.btn-icon
+          i.la.la-pencil
+          | Edit
+        button.btn.btn-outline-primary.btn-fix.btn-rounded: span.btn-icon
+          i.la.la-cloud-upload
+          | Upload
+        button.btn.btn-outline-pink.btn-fix.btn-rounded: span.btn-icon
+          i.la.la-heart-o
+          | Follow
+        button.btn.btn-outline-secondary.btn-fix.btn-rounded: span.btn-icon
+          i.la.la-print
+          | Print
+        button.btn.btn-outline-danger.btn-fix.btn-rounded: span.btn-icon
+          i.la.la-trash
+          | Remove
+        button.btn.btn-outline-warning.btn-fix.btn-rounded: span.btn-icon
+          i.la.la-user-plus
+          | Upload
+        .mt-4.mb-4 Thick style
+        button.btn.btn-outline-info.btn-fix.btn-rounded.btn-thick: span.btn-icon
+          i.la.la-pencil
+          | Edit
+        button.btn.btn-outline-primary.btn-fix.btn-rounded.btn-thick: span.btn-icon
+          i.la.la-cloud-upload
+          | Upload
+        button.btn.btn-outline-pink.btn-fix.btn-rounded.btn-thick: span.btn-icon
+          i.la.la-heart-o
+          | Follow
+        button.btn.btn-outline-secondary.btn-fix.btn-rounded.btn-thick: span.btn-icon
+          i.la.la-print
+          | Print
+        button.btn.btn-outline-danger.btn-fix.btn-rounded.btn-thick: span.btn-icon
+          i.la.la-trash
+          | Remove
+        button.btn.btn-outline-warning.btn-fix.btn-rounded.btn-thick: span.btn-icon
+          i.la.la-user-plus
+          | Upload
+        .mt-4.mb-4 Sizes
+        div
+          button.btn.btn-primary.btn-fix.btn-lg: span.btn-icon
+            i.la.la-pencil
+            | Edit
+          button.btn.btn-pink.btn-fix.btn-lg: span.btn-icon
+            i.la.la-heart-o
+            | Follow
+        div
+          button.btn.btn-primary.btn-fix: span.btn-icon
+            i.la.la-pencil
+            | Edit
+          button.btn.btn-pink.btn-fix: span.btn-icon
+            i.la.la-heart-o
+            | Follow
+        div
+          button.btn.btn-primary.btn-fix.btn-sm: span.btn-icon
+            i.la.la-pencil
+            | Edit
+          button.btn.btn-pink.btn-fix.btn-sm: span.btn-icon
+            i.la.la-heart-o
+            | Follow
+      
+  .row.btn-list-demo
+    .col-md-6
+      +panel(title='Only Icon Buttons (Themify)', boxClass='ibox-fullheight')
+        .mt-4.mb-4 Circle
+        div
+          button.btn.btn-info.btn-icon-only.btn-circle.btn-lg.btn-air: i.ti-pencil
+          button.btn.btn-primary.btn-icon-only.btn-circle.btn-lg.btn-air: i.ti-music
+          button.btn.btn-pink.btn-icon-only.btn-circle.btn-lg.btn-air: i.ti-comment
+          button.btn.btn-success.btn-icon-only.btn-circle.btn-lg.btn-air: i.ti-plus
+          button.btn.btn-danger.btn-icon-only.btn-circle.btn-lg.btn-air: i.ti-help
+          button.btn.btn-white.btn-icon-only.btn-circle.btn-lg.btn-air: i.ti-cloud-down
+        div
+          button.btn.btn-info.btn-icon-only.btn-circle.btn-air: i.ti-pencil
+          button.btn.btn-primary.btn-icon-only.btn-circle.btn-air: i.ti-music
+          button.btn.btn-pink.btn-icon-only.btn-circle.btn-air: i.ti-comment
+          button.btn.btn-success.btn-icon-only.btn-circle.btn-air: i.ti-plus
+          button.btn.btn-danger.btn-icon-only.btn-circle.btn-air: i.ti-help
+          button.btn.btn-white.btn-icon-only.btn-circle.btn-air: i.ti-cloud-down
+        div
+          button.btn.btn-info.btn-icon-only.btn-circle.btn-sm.btn-air: i.ti-pencil
+          button.btn.btn-primary.btn-icon-only.btn-circle.btn-sm.btn-air: i.ti-music
+          button.btn.btn-pink.btn-icon-only.btn-circle.btn-sm.btn-air: i.ti-comment
+          button.btn.btn-success.btn-icon-only.btn-circle.btn-sm.btn-air: i.ti-plus
+          button.btn.btn-danger.btn-icon-only.btn-circle.btn-sm.btn-air: i.ti-help
+          button.btn.btn-white.btn-icon-only.btn-circle.btn-sm.btn-air: i.ti-cloud-down
+        .mt-4.mb-4 Gradient
+        div
+          button.btn.btn-gradient-purple.btn-icon-only.btn-circle.btn-lg.btn-air: i.ti-music
+          button.btn.btn-gradient-peach.btn-icon-only.btn-circle.btn-lg.btn-air: i.la.la-heart-o
+          button.btn.btn-gradient-aqua.btn-icon-only.btn-circle.btn-lg.btn-air: i.ti-comments
+          button.btn.btn-gradient-blue.btn-icon-only.btn-circle.btn-lg.btn-air: i.ti-plus
+          button.btn.btn-gradient-silver.btn-icon-only.btn-circle.btn-lg.btn-air: i.ti-search
+          button.btn.btn-gradient-lime.btn-icon-only.btn-circle.btn-lg.btn-air: i.ti-support
+          button.btn.btn-gradient-blue-pink.btn-icon-only.btn-circle.btn-lg.btn-air: i.ti-gift
+        .mt-4.mb-4 Outline
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-circle.btn-lg: i.ti-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-circle.btn-lg: i.ti-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-circle.btn-lg: i.ti-comment
+          button.btn.btn-outline-success.btn-icon-only.btn-circle.btn-lg: i.ti-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-circle.btn-lg: i.ti-help
+          button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-lg: i.ti-cloud-down
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-circle: i.ti-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-circle: i.ti-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-circle: i.ti-comment
+          button.btn.btn-outline-success.btn-icon-only.btn-circle: i.ti-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-circle: i.ti-help
+          button.btn.btn-outline-secondary.btn-icon-only.btn-circle: i.ti-cloud-down
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-circle.btn-sm: i.ti-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-circle.btn-sm: i.ti-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-circle.btn-sm: i.ti-comment
+          button.btn.btn-outline-success.btn-icon-only.btn-circle.btn-sm: i.ti-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-circle.btn-sm: i.ti-help
+          button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-sm: i.ti-cloud-down
+        .mt-4.mb-4 Thick style
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-circle.btn-lg.btn-thick: i.ti-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-circle.btn-lg.btn-thick: i.ti-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-circle.btn-lg.btn-thick: i.ti-comment
+          button.btn.btn-outline-success.btn-icon-only.btn-circle.btn-lg.btn-thick: i.ti-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-circle.btn-lg.btn-thick: i.ti-help
+          button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-lg.btn-thick: i.ti-cloud-down
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-circle.btn-thick: i.ti-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-circle.btn-thick: i.ti-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-circle.btn-thick: i.ti-comment
+          button.btn.btn-outline-success.btn-icon-only.btn-circle.btn-thick: i.ti-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-circle.btn-thick: i.ti-help
+          button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-thick: i.ti-cloud-down
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-circle.btn-sm.btn-thick: i.ti-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-circle.btn-sm.btn-thick: i.ti-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-circle.btn-sm.btn-thick: i.ti-comment
+          button.btn.btn-outline-success.btn-icon-only.btn-circle.btn-sm.btn-thick: i.ti-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-circle.btn-sm.btn-thick: i.ti-help
+          button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-sm.btn-thick: i.ti-cloud-down
+        .mt-5.mb-4 Square
+        div
+          button.btn.btn-info.btn-icon-only.btn-lg.btn-air: i.ti-pencil
+          button.btn.btn-primary.btn-icon-only.btn-lg.btn-air: i.ti-music
+          button.btn.btn-pink.btn-icon-only.btn-lg.btn-air: i.ti-comment
+          button.btn.btn-success.btn-icon-only.btn-lg.btn-air: i.ti-plus
+          button.btn.btn-danger.btn-icon-only.btn-lg.btn-air: i.ti-help
+          button.btn.btn-white.btn-icon-only.btn-lg.btn-air: i.ti-cloud-down
+        div
+          button.btn.btn-info.btn-icon-only.btn-air: i.ti-pencil
+          button.btn.btn-primary.btn-icon-only.btn-air: i.ti-music
+          button.btn.btn-pink.btn-icon-only.btn-air: i.ti-comment
+          button.btn.btn-success.btn-icon-only.btn-air: i.ti-plus
+          button.btn.btn-danger.btn-icon-only.btn-air: i.ti-help
+          button.btn.btn-white.btn-icon-only.btn-air: i.ti-cloud-down
+        div
+          button.btn.btn-info.btn-icon-only.btn-sm.btn-air: i.ti-pencil
+          button.btn.btn-primary.btn-icon-only.btn-sm.btn-air: i.ti-music
+          button.btn.btn-pink.btn-icon-only.btn-sm.btn-air: i.ti-comment
+          button.btn.btn-success.btn-icon-only.btn-sm.btn-air: i.ti-plus
+          button.btn.btn-danger.btn-icon-only.btn-sm.btn-air: i.ti-help
+          button.btn.btn-white.btn-icon-only.btn-sm.btn-air: i.ti-cloud-down
+        .mt-4.mb-4 Square Outline
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-lg: i.ti-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-lg: i.ti-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-lg: i.ti-comment
+          button.btn.btn-outline-success.btn-icon-only.btn-lg: i.ti-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-lg: i.ti-help
+          button.btn.btn-outline-secondary.btn-icon-only.btn-lg: i.ti-cloud-down
+        div
+          button.btn.btn-outline-info.btn-icon-only: i.ti-pencil
+          button.btn.btn-outline-primary.btn-icon-only: i.ti-music
+          button.btn.btn-outline-pink.btn-icon-only: i.ti-comment
+          button.btn.btn-outline-success.btn-icon-only: i.ti-plus
+          button.btn.btn-outline-danger.btn-icon-only: i.ti-help
+          button.btn.btn-outline-secondary.btn-icon-only: i.ti-cloud-down
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-sm: i.ti-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-sm: i.ti-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-sm: i.ti-comment
+          button.btn.btn-outline-success.btn-icon-only.btn-sm: i.ti-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-sm: i.ti-help
+          button.btn.btn-outline-secondary.btn-icon-only.btn-sm: i.ti-cloud-down
+        .mt-4.mb-4 Thick style
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-lg.btn-thick: i.ti-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-lg.btn-thick: i.ti-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-lg.btn-thick: i.ti-comment
+          button.btn.btn-outline-success.btn-icon-only.btn-lg.btn-thick: i.ti-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-lg.btn-thick: i.ti-help
+          button.btn.btn-outline-secondary.btn-icon-only.btn-lg.btn-thick: i.ti-cloud-down
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-thick: i.ti-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-thick: i.ti-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-thick: i.ti-comment
+          button.btn.btn-outline-success.btn-icon-only.btn-thick: i.ti-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-thick: i.ti-help
+          button.btn.btn-outline-secondary.btn-icon-only.btn-thick: i.ti-cloud-down
+        div
+          button.btn.btn-outline-info.btn-icon-only.btn-sm.btn-thick: i.ti-pencil
+          button.btn.btn-outline-primary.btn-icon-only.btn-sm.btn-thick: i.ti-music
+          button.btn.btn-outline-pink.btn-icon-only.btn-sm.btn-thick: i.ti-comment
+          button.btn.btn-outline-success.btn-icon-only.btn-sm.btn-thick: i.ti-plus
+          button.btn.btn-outline-danger.btn-icon-only.btn-sm.btn-thick: i.ti-help
+          button.btn.btn-outline-secondary.btn-icon-only.btn-sm.btn-thick: i.ti-cloud-down
+  
+    .col-md-6
+      +panel(title='Icon Buttons (Themify)', boxClass='ibox-fullheight')
+        button.btn.btn-info.btn-fix: span.btn-icon
+          i.ti-pencil
+          | Edit
+        button.btn.btn-primary.btn-fix: span.btn-icon
+          i.ti-cloud-up
+          | Upload
+        button.btn.btn-pink.btn-fix: span.btn-icon
+          i.ti-heart
+          | Follow
+        button.btn.btn-secondary.btn-fix: span.btn-icon
+          i.ti-printer
+          | Print
+        button.btn.btn-danger.btn-fix: span.btn-icon
+          i.ti-trash
+          | Remove
+        button.btn.btn-warning.btn-fix: span.btn-icon
+          i.ti-support
+          | Support
+        .mt-4.mb-4 Gradient
+        button.btn.btn-gradient-purple.btn-fix: span.btn-icon
+          i.ti-music
+          | Music
+        button.btn.btn-gradient-peach.btn-fix: span.btn-icon
+          i.ti-camera
+          | Photos
+        button.btn.btn-gradient-aqua.btn-fix: span.btn-icon
+          i.ti-comments
+          | Comment
+        button.btn.btn-gradient-blue.btn-fix: span.btn-icon
+          i.ti-cloud-up
+          | Upload
+        button.btn.btn-gradient-silver.btn-fix: span.btn-icon
+          i.ti-shopping-cart
+          | Purchase
+        button.btn.btn-gradient-lime.btn-fix: span.btn-icon
+          i.ti-support
+          | Support
+        button.btn.btn-gradient-blue-pink.btn-fix: span.btn-icon
+          i.ti-gift
+          | Bounty
+        .mt-4.mb-4 Air style
+        button.btn.btn-info.btn-fix.btn-air: span.btn-icon
+          i.ti-pencil
+          | Edit
+        button.btn.btn-primary.btn-fix.btn-air: span.btn-icon
+          i.ti-cloud-up
+          | Upload
+        button.btn.btn-pink.btn-fix.btn-air: span.btn-icon
+          i.ti-heart
+          | Follow
+        button.btn.btn-secondary.btn-fix.btn-air: span.btn-icon
+          i.ti-printer
+          | Print
+        button.btn.btn-danger.btn-fix.btn-air: span.btn-icon
+          i.ti-trash
+          | Remove
+        button.btn.btn-warning.btn-fix.btn-air: span.btn-icon
+          i.ti-support
+          | Support
+        .mt-4.mb-4 Outline
+        button.btn.btn-outline-info.btn-fix: span.btn-icon
+          i.ti-pencil
+          | Edit
+        button.btn.btn-outline-primary.btn-fix: span.btn-icon
+          i.ti-cloud-up
+          | Upload
+        button.btn.btn-outline-pink.btn-fix: span.btn-icon
+          i.ti-heart
+          | Follow
+        button.btn.btn-outline-secondary.btn-fix: span.btn-icon
+          i.ti-printer
+          | Print
+        button.btn.btn-outline-danger.btn-fix: span.btn-icon
+          i.ti-trash
+          | Remove
+        button.btn.btn-outline-warning.btn-fix: span.btn-icon
+          i.ti-support
+          | Support
+        .mt-4.mb-4 Outline Air style
+        button.btn.btn-outline-info.btn-fix.btn-air: span.btn-icon
+          i.ti-pencil
+          | Edit
+        button.btn.btn-outline-primary.btn-fix.btn-air: span.btn-icon
+          i.ti-cloud-up
+          | Upload
+        button.btn.btn-outline-pink.btn-fix.btn-air: span.btn-icon
+          i.ti-heart
+          | Follow
+        button.btn.btn-outline-secondary.btn-fix.btn-air: span.btn-icon
+          i.ti-printer
+          | Print
+        button.btn.btn-outline-danger.btn-fix.btn-air: span.btn-icon
+          i.ti-trash
+          | Remove
+        button.btn.btn-outline-warning.btn-fix.btn-air: span.btn-icon
+          i.ti-support
+          | Support
+        .mt-4.mb-4 Thick
+        button.btn.btn-outline-info.btn-fix.btn-thick: span.btn-icon
+          i.ti-pencil
+          | Edit
+        button.btn.btn-outline-primary.btn-fix.btn-thick: span.btn-icon
+          i.ti-cloud-up
+          | Upload
+        button.btn.btn-outline-pink.btn-fix.btn-thick: span.btn-icon
+          i.ti-heart
+          | Follow
+        button.btn.btn-outline-secondary.btn-fix.btn-thick: span.btn-icon
+          i.ti-printer
+          | Print
+        button.btn.btn-outline-danger.btn-fix.btn-thick: span.btn-icon
+          i.ti-trash
+          | Remove
+        button.btn.btn-outline-warning.btn-fix.btn-thick: span.btn-icon
+          i.ti-support
+          | Support
+        .mt-4.mb-4 Rounded
+        button.btn.btn-outline-info.btn-fix.btn-rounded: span.btn-icon
+          i.ti-pencil
+          | Edit
+        button.btn.btn-outline-primary.btn-fix.btn-rounded: span.btn-icon
+          i.ti-cloud-up
+          | Upload
+        button.btn.btn-outline-pink.btn-fix.btn-rounded: span.btn-icon
+          i.ti-heart
+          | Follow
+        button.btn.btn-outline-secondary.btn-fix.btn-rounded: span.btn-icon
+          i.ti-printer
+          | Print
+        button.btn.btn-outline-danger.btn-fix.btn-rounded: span.btn-icon
+          i.ti-trash
+          | Remove
+        button.btn.btn-outline-warning.btn-fix.btn-rounded: span.btn-icon
+          i.ti-support
+          | Support
+        .mt-4.mb-4 Thick style
+        button.btn.btn-outline-info.btn-fix.btn-rounded.btn-thick: span.btn-icon
+          i.ti-pencil
+          | Edit
+        button.btn.btn-outline-primary.btn-fix.btn-rounded.btn-thick: span.btn-icon
+          i.ti-cloud-up
+          | Upload
+        button.btn.btn-outline-pink.btn-fix.btn-rounded.btn-thick: span.btn-icon
+          i.ti-heart
+          | Follow
+        button.btn.btn-outline-secondary.btn-fix.btn-rounded.btn-thick: span.btn-icon
+          i.ti-printer
+          | Print
+        button.btn.btn-outline-danger.btn-fix.btn-rounded.btn-thick: span.btn-icon
+          i.ti-trash
+          | Remove
+        button.btn.btn-outline-warning.btn-fix.btn-rounded.btn-thick: span.btn-icon
+          i.ti-support
+          | Support
+        .mt-4.mb-4 Sizes
+        div
+          button.btn.btn-primary.btn-fix.btn-lg: span.btn-icon
+            i.ti-pencil
+            | Edit
+          button.btn.btn-pink.btn-fix.btn-lg: span.btn-icon
+            i.ti-heart
+            | Follow
+        div
+          button.btn.btn-primary.btn-fix: span.btn-icon
+            i.ti-pencil
+            | Edit
+          button.btn.btn-pink.btn-fix: span.btn-icon
+            i.ti-heart
+            | Follow
+        div
+          button.btn.btn-primary.btn-fix.btn-sm: span.btn-icon
+            i.ti-pencil
+            | Edit
+          button.btn.btn-pink.btn-fix.btn-sm: span.btn-icon
+            i.ti-heart
+            | Follow
+
+block page_styles
+  style.
+    .btn-list-demo *:not(.btn-group):not(.btn-group-justified):not(.btn-group-vertical) > .btn {margin-bottom:15px;margin-right:5px;}

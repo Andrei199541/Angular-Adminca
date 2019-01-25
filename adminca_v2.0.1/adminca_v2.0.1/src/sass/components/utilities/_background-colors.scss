@@ -1,0 +1,33 @@
+
+@each $name, $color in $scotch-colors {
+	@include bg-variant($name, $color);
+}
+
+.bg-white { background-color: #fff !important; }
+.bg-transparent { background-color: transparent !important; }
+
+
+.bg-gradient-purple {
+    background-image: linear-gradient(45deg, #ff4081 0%, #7536E6 100%) !important;
+}
+.bg-gradient-peach {
+    background-image: linear-gradient(45deg, #F39C12 0%, #E91E63 100%) !important;
+}
+.bg-gradient-aqua {
+    background-image: linear-gradient(45deg,#35c9ff 0,#69F0AE 100%) !important;
+}
+.bg-gradient-blue {
+    background-image: linear-gradient(45deg, #00dcaf 0, #7536e6 100%) !important;
+}
+.bg-gradient-blue2 {
+    background-image: linear-gradient(45deg, #7536e6 0, #09ddae 100%) !important;
+}
+.bg-gradient-silver {
+    background-image: linear-gradient(45deg, #c7cccf 30%, #35c9ff 100%) !important;
+}
+.bg-gradient-lime {
+    background-image: linear-gradient(45deg, #EEFF41 0%, #35C9FF 100%) !important;
+}
+.bg-gradient-blue-pink {
+    background-image: linear-gradient(45deg, #35c9ff 0, #E91E63 100%) !important;
+}

@@ -1,0 +1,278 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Blog'
+  - var pageUrl = 'blog_list.html'
+
+block content
+  .flexbox-b.mb-5
+    span.mr-4.static-badge.badge-pink
+      i.la.la-pencil
+    div
+      h5.font-strong Blog
+      .text-light Found 420 posts
+  .input-group-icon.input-group-icon-left.input-group-lg.mb-5
+    span.input-icon.input-icon-right
+      i.ti-search
+    input.form-control.form-control-air.border-0.font-light.font-poppins(type='text', placeholder='Search ...', style='box-shadow:0 3px 6px rgba(10,16,20,.15);')
+  .row.mb-5
+    .col-md-4
+      .card.mb-4
+        .rel
+          +img('blog/01.jpeg')(class='card-img-top')
+          .fab.fab-bottom.card-overlay-fab
+            button.btn.btn-primary.btn-icon-only.btn-circle.btn-air(data-toggle='button')
+              i.la.la-share-alt.fab-icon
+              i.la.la-close.fab-icon-active
+            ul.fab-menu
+              li
+                a.btn.btn-soc-facebook.btn-icon-only.btn-circle.btn-air(href='javascript:;')
+                  i.fa.fa-facebook
+              li
+                a.btn.btn-soc-twitter.btn-icon-only.btn-circle.btn-air(href='javascript:;')
+                  i.fa.fa-twitter
+              li
+                a.btn.btn-soc-dribbble.btn-icon-only.btn-circle.btn-air(href='javascript:;')
+                  i.fa.fa-dribbble
+          .card-img-overlay
+            span.badge.badge-purple FASHION
+        .card-body
+          h4.card-title.mb-2
+            a.text-primary Fashion today
+          .text-muted.mb-3 16 January 2017
+          p.text-light
+            | Minim dolor in amet nulla laboris enim dolore consequat proident fugiat culpa eiusmod proident sed excepteur excepteur magna irure ex officia ea sunt in incididunt minim nulla dolor dolor labore exercitation ex nostrud.
+          .d-flex.align-items-center.justify-content-between
+            .text-primary
+              +img('users/u10.jpg')(class='img-circle mr-2', width='30')
+              | Stella Obrien
+            div
+              span.text-muted.mr-4
+                i.fa.fa-heart-o.mr-2
+                | 124
+              span.text-muted
+                i.fa.fa-comment-o.mr-2
+                | 56
+    .col-md-4
+      .card.mb-4
+        .rel
+          +img('blog/culinary-1.jpeg')(class='card-img-top')
+          .card-img-overlay
+            span.badge.badge-pink CULINARY
+        .card-body
+          h4.card-title.mb-2
+            a.text-pink Dish of the day
+          .text-muted.mb-3 16 January 2017
+          p.text-light
+            | Minim dolor in amet nulla laboris enim dolore consequat proident fugiat culpa eiusmod proident sed excepteur excepteur magna irure ex officia ea sunt in incididunt minim nulla dolor dolor labore exercitation ex nostrud.
+          .d-flex.align-items-center.justify-content-between
+            .text-pink
+              +img('users/u8.jpg')(class='img-circle mr-2', width='30')
+              | Lynn Weaver
+            div
+              span.text-muted.mr-4
+                i.fa.fa-heart-o.mr-2
+                | 124
+              span.text-muted
+                i.fa.fa-comment-o.mr-2
+                | 56
+    .col-md-4
+      .card.mb-4
+        .rel
+          +img('blog/05.jpeg')(class='card-img-top')
+          .card-img-overlay
+            span.badge.badge-warning NEWS
+        .card-body
+          h4.card-title.mb-2
+            a.color-inherit(href='javascript:;') Title of the news
+          .text-muted.mb-3 16 January 2017
+          p.text-light
+            | Minim dolor in amet nulla laboris enim dolore consequat proident fugiat culpa eiusmod proident sed excepteur excepteur magna irure ex officia ea sunt in incididunt minim nulla dolor dolor labore exercitation ex nostrud.
+          .d-flex.align-items-center.justify-content-between
+            div
+              +img('users/u6.jpg')(class='img-circle mr-2', width='30')
+              | Connor Perez
+            div
+              span.text-muted.mr-4
+                i.fa.fa-heart-o.mr-2
+                | 124
+              span.text-muted
+                i.fa.fa-comment-o.mr-2
+                | 56
+  .row.mb-5
+    .col-md-4
+      .card.mb-4
+        .rel
+          +img('blog/04.jpeg')(class='card-img-top')
+          .card-img-overlay.text-white
+            span.badge.badge-purple.mb-5 FASHION
+            .card-title-bottom.color-white.mb-2
+              h4.card-title.mb-2
+                a Fashion Trends
+              div 16 January 2017
+        .card-body
+          .d-flex.align-items-center.justify-content-between.mb-4
+            .d-inline-flex.align-items-center
+              +img('users/u8.jpg')(class='img-circle mr-3', width='40')
+              div
+                h6.text-primary.m-0 Lynn Weaver
+                small.text-muted Web Designer
+            .d-inline-flex
+              span.text-muted.pl-3.pr-3.text-center(style='border-right:1px solid rgba(0,0,0,.1)')
+                i.fa.fa-heart-o.d-block.font-16.mb-2
+                | 124
+              span.text-muted.pl-3.pr-3.text-center
+                i.fa.fa-comment-o.d-block.font-16.mb-2
+                | 56
+          p.text-light
+            | Minim dolor in amet nulla laboris enim dolore consequat proident fugiat culpa eiusmod proident sed excepteur excepteur magna irure ex officia ea sunt in incididunt minim nulla dolor dolor labore exercitation ex nostrud.
+          .text-right
+            a.d-inline-flex.align-items-center.text-primary(href='javascript:;')
+              | Read More
+              i.ti-arrow-circle-right.font-20.ml-2
+    .col-md-4
+      .card.mb-4
+        .rel
+          +img('blog/02.jpg')(class='card-img-top')
+          .card-img-overlay.text-white.card-overlay-dark.card-overlay-hover
+            span.badge.badge-warning.mb-5 FASHION
+            .card-title-bottom.color-white.mb-2
+              h4.card-title.mb-2
+                a Style of the week
+              div 16 January 2017
+        .card-body
+          .d-flex.align-items-center.justify-content-between.mb-4
+            .d-inline-flex.align-items-center
+              +img('users/u2.jpg')(class='img-circle mr-3', width='40')
+              div
+                h6.text-warning.m-0 Becky Brooks
+                small.text-muted Web Designer
+            .d-inline-flex
+              span.text-muted.pl-3.pr-3.text-center(style='border-right:1px solid rgba(0,0,0,.1)')
+                i.fa.fa-heart-o.d-block.font-16.mb-2
+                | 124
+              span.text-muted.pl-3.pr-3.text-center
+                i.fa.fa-comment-o.d-block.font-16.mb-2
+                | 56
+          p.text-light
+            | Minim dolor in amet nulla laboris enim dolore consequat proident fugiat culpa eiusmod proident sed excepteur excepteur magna irure ex officia ea sunt in incididunt minim nulla dolor dolor labore exercitation ex nostrud.
+          .text-right
+            a.d-inline-flex.align-items-center.text-warning(href='javascript:;')
+              | Read More
+              i.ti-arrow-circle-right.font-20.ml-2
+    .col-md-4
+      .card.mb-4
+        .rel
+          +img('blog/06.jpeg')(class='card-img-top')
+          .card-img-overlay.text-white
+            span.badge.badge-success.mb-5 WORLD
+            .card-title-bottom.color-white.mb-2
+              h4.card-title.mb-2
+                a Title of the news
+              div 16 January 2017
+        .card-body
+          .d-flex.align-items-center.justify-content-between.mb-4
+            .d-inline-flex.align-items-center
+              +img('users/u11.jpg')(class='img-circle mr-3', width='40')
+              div
+                h6.text-success.m-0 Tyrone Carroll
+                small.text-muted Web Designer
+            .d-inline-flex
+              span.text-muted.pl-3.pr-3.text-center(style='border-right:1px solid rgba(0,0,0,.1)')
+                i.fa.fa-heart-o.d-block.font-16.mb-2
+                | 124
+              span.text-muted.pl-3.pr-3.text-center
+                i.fa.fa-comment-o.d-block.font-16.mb-2
+                | 56
+          p.text-light
+            | Minim dolor in amet nulla laboris enim dolore consequat proident fugiat culpa eiusmod proident sed excepteur excepteur magna irure ex officia ea sunt in incididunt minim nulla dolor dolor labore exercitation ex nostrud.
+          .text-right
+            a.d-inline-flex.align-items-center.text-success(href='javascript:;')
+              | Read More
+              i.ti-arrow-circle-right.font-20.ml-2
+  .row.mb-5
+    .col-md-6
+      .card.mb-4.card-hover-zoom
+        +img('blog/03.jpg')(class='card-img img-zoom')
+        .card-img-overlay.text-white.card-overlay-dark.card-overlay-hover.d-flex.flex-column.justify-content-between.align-items-start
+          .w-100.d-flex.justify-content-between.mb-3
+            div
+              span.badge.badge-purple.mr-2 TRENDS
+              span.badge.badge-pink DESIGN
+            div
+              span.mr-4
+                i.fa.fa-heart-o.mr-2
+                | 124
+              span
+                i.fa.fa-comment-o.mr-2
+                | 56
+          h2.card-title.mb-2
+            a
+              | Web Design Trends
+              br
+              | Strict Selection
+          .text-muted 16 January 2017
+    .col-md-6
+      .card.mb-4.card-hover-zoom
+        +img('blog/07.jpeg')(class='card-img img-zoom')
+        .card-img-overlay.text-white.card-overlay-dark.card-overlay-hover.d-flex.flex-column.justify-content-between.align-items-start
+          .w-100.d-flex.justify-content-between.mb-3
+            div
+              span.badge.badge-purple.mr-2 TRENDS
+              span.badge.badge-pink DESIGN
+            div
+              span.mr-4
+                i.fa.fa-heart-o.mr-2
+                | 124
+              span
+                i.fa.fa-comment-o.mr-2
+                | 56
+          h2.card-title.mb-2
+            a
+              | Web Design Trends
+              br
+              | Strict Selection
+          .text-muted 16 January 2017
+  .row
+    .col-md-6
+      .card.mb-4
+        .embed-responsive.embed-responsive-16by9
+          iframe.embed-responsive-item(src="https://www.youtube.com/embed/7TnL6r8U818?rel=0" allowfullscreen)
+        .card-body
+          h4.card-title.mb-2
+            a.text-primary 'Beautiful Creatures' Trailer 2
+          .text-muted.mb-3 16 January 2017
+          p.text-light
+            | Minim dolor in amet nulla laboris enim dolore consequat proident fugiat culpa eiusmod proident sed excepteur excepteur magna irure ex officia ea sunt in incididunt minim nulla dolor dolor labore exercitation ex nostrud.
+          .d-flex.align-items-center.justify-content-between
+            .text-primary
+              +img('users/u10.jpg')(class='img-circle mr-2', width='30')
+              | Stella Obrien
+            div
+              span.text-muted.mr-4
+                i.fa.fa-heart-o.mr-2
+                | 124
+              span.text-muted
+                i.fa.fa-comment-o.mr-2
+                | 56
+    .col-md-6
+      .card.mb-4
+        .embed-responsive.embed-responsive-16by9
+          iframe.embed-responsive-item(src="https://www.youtube.com/embed/iycoH4Ie0jI?rel=0" allowfullscreen)
+        .card-body
+          h4.card-title.mb-2
+            a.text-info Angry Birds Blues
+          .text-muted.mb-3 16 January 2017
+          p.text-light
+            | Minim dolor in amet nulla laboris enim dolore consequat proident fugiat culpa eiusmod proident sed excepteur excepteur magna irure ex officia ea sunt in incididunt minim nulla dolor dolor labore exercitation ex nostrud.
+          .d-flex.align-items-center.justify-content-between
+            .text-info
+              +img('users/u11.jpg')(class='img-circle mr-2', width='30')
+              | Tyrone Carroll
+            div
+              span.text-muted.mr-4
+                i.fa.fa-heart-o.mr-2
+                | 124
+              span.text-muted
+                i.fa.fa-comment-o.mr-2
+                | 56

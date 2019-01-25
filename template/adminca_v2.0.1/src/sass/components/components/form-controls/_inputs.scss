@@ -1,0 +1,209 @@
+// Inputs & Ipnut Groups
+
+.form-control {
+    border-radius: 2px;
+    border-color: rgba(0,0,0,.1);
+    padding: 0.65rem 1.25rem;
+    font-family: sans-serif, Arial;
+    &:focus {
+        border-color: $input-focus-border-color;
+    }
+    &::placeholder {
+        color: #919ca8;
+    }
+}
+input:focus {
+    border-color: $input-focus-border-color;
+}
+
+// Form Color state
+
+@include form-state('primary', $form-primary-color);
+@include form-state('success', $form-success-color);
+@include form-state('warning', $form-warning-color);
+@include form-state('info', $form-info-color);
+@include form-state('danger', $form-danger-color);
+@include form-state('pink', $form-pink-color);
+@include form-state('ebony', $form-ebony-color);
+
+
+// Line form controls
+
+.form-control-line {
+    border-width: 0 0 1px 0;
+    padding-left: 0;
+}
+
+// Rounded inputs
+
+.form-control-rounded {border-radius: 200px !important}
+
+// Solid style controls
+
+.form-control-solid {
+    background-color: #f4f5f9;
+    border-color: #f4f5f9;
+    &:focus {
+        background-color: darken(#f4f5f9, 5%);
+    }
+}
+
+// Air style controls
+
+.form-control-air {
+    box-shadow: 0px 3px 25px 0px rgba(53, 73, 95, 0.1)
+}
+
+// Select Sizes
+
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.55rem + 2px);
+}
+select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), .input-group-lg > select.input-group-addon:not([size]):not([multiple]), .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]) {
+    height: calc(3.35rem + 2px);
+}
+select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .input-group-sm > select.input-group-addon:not([size]):not([multiple]), .input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]) {
+    height: calc(2.05rem + 2px);
+}
+
+// File input
+
+.file-input {
+    position: relative;
+    input {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+    }
+}
+.file-input-plus {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background-color: #e7e9f6;
+    color: #5c6bc0;
+    border: 1px dashed;
+    font-size: 28px;
+}
+
+
+/*
+** Input groups
+*/
+
+.input-group {
+    .form-control-solid {
+        border-color: #e9ecef;
+    }
+}
+.input-group-addon {
+    padding: 0 1rem;
+    color: #5d6064;
+    color: #71808f;
+    border-radius: 2px !important;
+    border-color: #e9ecef;
+    .input-group-lg & {padding: 0 1.5rem}
+}
+
+
+.form-control-lg, .input-group-lg>.form-control, .input-group-lg>.input-group-btn>.btn {
+    padding: 1rem 1.75rem;
+}
+.form-control-sm, .input-group-sm>.form-control, .input-group-sm>.input-group-addon, .input-group-sm>.input-group-btn>.btn {
+    padding: 0.35rem 0.75rem;
+}
+
+
+// Input group icons
+
+.input-group-icon {
+    position: relative;
+    color: #71808f;
+    .input-icon {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &.input-group-lg {
+        .input-icon {
+            width: 50px;
+        }
+    }
+}
+.input-group-icon-left {
+    .form-control {
+        padding-left: 40px;
+    }
+    .input-icon-left {
+        left: 0;
+    }
+    &.input-group-lg {
+        .form-control {
+            padding-left: 50px;
+        }
+    }
+}
+.input-group-icon-right {
+    .form-control {
+        padding-right: 40px;
+    }
+    .input-icon-right {
+        right: 0;
+        left: auto;
+    }
+    &.input-group-lg {
+        .form-control {
+            padding-right: 50px;
+        }
+    }
+}
+
+
+// Icons Sizes
+
+.form-control-lg, .input-group-lg {
+    [class^='ti-'] {font-size: 1.35rem}
+    [class*=" la-"] {font-size: 1.5rem}
+}
+.form-control-sm, .input-group-sm {
+    [class^='ti-'] {font-size: 1rem}
+    [class*=" la-"] {font-size: 1.1rem}
+}
+
+// States
+
+.has-success {
+    .form-control, .form-control:focus {border-color: $brand-success}
+    .control-label, .col-form-label, .input-icon > i {color: $brand-success}
+    .form-control::placeholder {color: mix(white, $brand-success, 50%)}
+}
+.has-warning {
+    .form-control, .form-control:focus {border-color: $brand-warning}
+    .control-label, .col-form-label, .input-icon > i {color: $brand-warning}
+    .form-control::placeholder {color: mix(white, $brand-warning, 50%)}
+}
+.has-error {
+    .form-control, .form-control:focus {border-color: $brand-danger}
+    .control-label, .col-form-label, .help-block, .error, .input-icon > i {color: $brand-danger}
+    .form-control::placeholder {color: mix(white, $brand-danger, 50%)}
+}
+
+// Help block
+
+.help-block {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 0;
+    margin-top: 2px;
+    color: #71808f;
+    &.error {color: $brand-danger}
+}

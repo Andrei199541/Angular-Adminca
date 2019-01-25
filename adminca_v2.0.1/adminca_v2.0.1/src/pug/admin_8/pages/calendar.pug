@@ -1,0 +1,162 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Calendar'
+  - var pageUrl = 'calendar.html'
+
+block plugins-styles
+    +link('fullcalendar/dist/fullcalendar.min.css', 'plugin')
+    +link('fullcalendar/dist/fullcalendar.print.min.css', 'plugin')(media='print')
+    +link('smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css', 'plugin')
+
+block plugins
+    +script('moment/min/moment.min.js', 'plugin')
+    +script('fullcalendar/dist/fullcalendar.min.js', 'plugin')
+    +script('smalot-bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js', 'plugin')
+    +script('jquery-ui/jquery-ui.min.js', 'plugin')
+
+block content
+  .flexbox-b.mb-5
+    span.mr-4.static-badge.badge-pink
+      i.la.la-calendar-check-o.font-36
+    div
+      h5.font-strong CALENDAR
+      .text-light Found 18 Events for this week
+  .row
+    .col-md-3
+      .ibox
+        .ibox-head
+          .ibox-title DRAGGABLE EVENTS
+        .ibox-body.p-3
+            #external-events
+                .ex-event(data-class='fc-event-primary')
+                    i.badge-point.badge-primary.mr-3
+                    | Business
+                .ex-event(data-class='fc-event-warning')
+                    i.badge-point.badge-warning.mr-3
+                    | Reporting
+                .ex-event(data-class='fc-event-success')
+                    i.badge-point.badge-success.mr-3
+                    | Meeting
+                .ex-event(data-class='fc-event-danger')
+                    i.badge-point.badge-danger.mr-3
+                    | Important
+                .ex-event(data-class='fc-event-info')
+                    i.badge-point.badge-info.mr-3
+                    | Personal
+                p.ml-2.mt-4
+                    label.checkbox.checkbox-primary
+                        input#drop-remove(type='checkbox')
+                        span.input-span
+                        | remove after drop
+        
+    .col-md-9
+      .ibox
+        .ibox-head
+          .ibox-title CALENDAR
+          button.btn.btn-primary.btn-rounded.btn-air.my-3(data-toggle="modal", data-target="#new-event-modal")
+            span.btn-icon
+              i.la.la-plus
+              | New Event
+        .ibox-body
+          #calendar
+  // New Event Dialog
+  #new-event-modal.modal.fade(tabindex='-1', role='dialog')
+      .modal-dialog(role='document')
+          form.modal-content.form-horizontal#newEventForm(action='javascript:;')
+              .modal-header.p-4
+                  h5.modal-title NEW EVENT
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                      span(aria-hidden='true') ×
+              .modal-body.p-4
+                  .form-group.mb-4
+                    label.text-muted.mb-3 Category
+                    div
+                      label.radio.radio-outline-primary.radio-inline.check-single(data-toggle='tooltip', data-original-title='General')
+                        input(type='radio', name='category', checked, value='fc-event-primary')
+                        span.input-span
+                      label.radio.radio-outline-warning.radio-inline.check-single(data-toggle='tooltip', data-original-title='Payment')
+                        input(type='radio', name='category', value='fc-event-warning')
+                        span.input-span
+                      label.radio.radio-outline-success.radio-inline.check-single(data-toggle='tooltip', data-original-title='Technical')
+                        input(type='radio', name='category', value='fc-event-success')
+                        span.input-span
+                      label.radio.radio-outline-danger.radio-inline.check-single(data-toggle='tooltip', data-original-title='Registration')
+                        input(type='radio', name='category', value='fc-event-danger')
+                        span.input-span
+                      label.radio.radio-outline-info.radio-inline.check-single(data-toggle='tooltip', data-original-title='Security')
+                        input(type='radio', name='category', value='fc-event-info')
+                        span.input-span
+                  .form-group.mb-4
+                    input#new-event-title.form-control.form-control-line(type='text', name='title', placeholder='Title')
+                  .row
+                    .col-6.form-group.mb-4
+                      label.col-form-label.text-muted Start:
+                      .input-group-icon.input-group-icon-right
+                        span.input-icon.input-icon-right: i.fa.fa-calendar-check-o
+                        input#new-event-start.form-control.form-control-line.datepicker.date(type='text', name='start', value='')
+                    .col-6.form-group.mb-4
+                      label.col-form-label.text-muted End:
+                      .input-group-icon.input-group-icon-right
+                        span.input-icon.input-icon-right: i.fa.fa-calendar-check-o
+                        input#new-event-end.form-control.form-control-line.datepicker.date(type='text', name='end', value='')
+                  .form-group.mb-4.pt-3
+                    label.ui-switch.switch-icon.mr-3.mb-0
+                      input#new-event-allDay(type='checkbox', checked)
+                      span
+                    | All Day
+              .modal-footer.justify-content-start.bg-primary-50
+                  button#addEventButton.btn.btn-primary.btn-rounded(type='submit') Add event
+  // End New Event Dialog
+  // Event Detail Dialog
+  #event-modal.modal.fade(tabindex='-1', role='dialog')
+      .modal-dialog(role='document')
+          form.modal-content.form-horizontal#eventForm(action='javascript:;')
+              .modal-header.p-4
+                  h5.modal-title EDIT EVENT
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                      span(aria-hidden='true') ×
+              .modal-body.p-4
+                  .form-group.mb-4
+                    label.text-muted.mb-3 Category
+                    div
+                      label.radio.radio-outline-primary.radio-inline.check-single(data-toggle='tooltip', data-original-title='General')
+                        input(type='radio', name='category', checked, value='fc-event-primary')
+                        span.input-span
+                      label.radio.radio-outline-warning.radio-inline.check-single(data-toggle='tooltip', data-original-title='Payment')
+                        input(type='radio', name='category', value='fc-event-warning')
+                        span.input-span
+                      label.radio.radio-outline-success.radio-inline.check-single(data-toggle='tooltip', data-original-title='Technical')
+                        input(type='radio', name='category', value='fc-event-success')
+                        span.input-span
+                      label.radio.radio-outline-danger.radio-inline.check-single(data-toggle='tooltip', data-original-title='Registration')
+                        input(type='radio', name='category', value='fc-event-danger')
+                        span.input-span
+                      label.radio.radio-outline-info.radio-inline.check-single(data-toggle='tooltip', data-original-title='Security')
+                        input(type='radio', name='category', value='fc-event-info')
+                        span.input-span
+                  .form-group.mb-4
+                      input#event-title.form-control.form-control-line(type='text', name='title', placeholder='Title')
+                  .row
+                    .col-6.form-group.mb-4
+                      label.col-form-label.text-muted Start:
+                      .input-group-icon.input-group-icon-right
+                        span.input-icon.input-icon-right: i.fa.fa-calendar-check-o
+                        input#event-start.form-control.form-control-line.datepicker.date(type='text', name='start', value='')
+                    .col-6.form-group.mb-4
+                      label.col-form-label.text-muted End:
+                      .input-group-icon.input-group-icon-right
+                        span.input-icon.input-icon-right: i.fa.fa-calendar-check-o
+                        input#event-end.form-control.form-control-line.datepicker.date(type='text', name='end', value='')
+                  .form-group.mb-4.pt-3
+                    label.ui-switch.switch-icon.mr-3.mb-0
+                      input#event-allDay(type='checkbox')
+                      span
+                    | All Day
+              .modal-footer.justify-content-between.bg-primary-50
+                  button#editEventButton.btn.btn-primary.btn-rounded(type='submit',) Submit
+                  a.text-danger#deleteEventButton(data-dismiss='modal'): i.la.la-trash.font-20
+  // End Event Detail Dialog
+
+block scripts
+  +script('calendar-demo.js', 'page')

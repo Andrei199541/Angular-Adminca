@@ -1,0 +1,105 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Form Wizard'
+  - var pageUrl = 'form_wizard.html'
+  - var page_heading = 'Form Wizard'
+  - var path = ['Forms', 'Form Wizard']
+
+block plugins
+  +script('jquery.steps/build/jquery.steps.min.js', 'plugin')
+
+block content
+    .alert.alert-primary.alert-bordered
+      h4 jQuery Steps
+      p An all-in-one wizard plugin that is extremely flexible, compact and feature-rich.
+      p: a.btn.btn-primary(href='http://www.jquery-steps.com', target='_blank') Official Site
+    
+    +panel(title='Steps with validation')
+      form#form-wizard(action='javascript:;', novalidate='novalidate')
+        h6 Step 1
+        section
+            h3 Account Details
+            .form-group
+                label Email
+                input#email.form-control.required.email(type='text' name="email")
+            .form-group
+                label Password
+                input#password.form-control.required(type='password' name="password")
+            .form-group
+                label Confirm Password
+                input#confirm.form-control.required(type='password' name="confirm")
+        h6 Step 2
+        section
+            h3 Profile Details
+            .form-group
+                label First Name
+                input#name.form-control.required(type='text' name='name')
+            .form-group
+                label Last Name
+                input#surname.form-control.required(type='text' name='surname')
+            .form-group
+                label Address
+                input#address.form-control.required(type='text' name='address')
+        h6 Step 3
+        section
+          .text-center
+            h3 You did it Man
+            i.fa.fa-smile-o.text-success(style='font-size:120px')
+        h6 Step 4
+        section
+          h3 Terms and Conditions
+          label.ui-checkbox.ui-checkbox-success
+            input#acceptTerms(type='checkbox' name='acceptTerms').required
+            span.input-span
+            | I agree with the Terms and Conditions.
+
+block scripts
+  script.
+    $(function(){
+      $('#form-wizard').steps({
+        headerTag: "h6",
+        bodyTag: "section",
+        titleTemplate: '<span class="step-number">#index#</span> #title#',
+        onStepChanging: function (event, currentIndex, newIndex) {
+            var form = $(this);
+            // Always allow going backward even if the current step contains invalid fields!
+            if (currentIndex > newIndex)
+            {
+                return true;
+            }
+
+            // Clean up if user went backward before
+            if (currentIndex < newIndex)
+            {
+                // To remove error styles
+                $(".body:eq(" + newIndex + ") label.error", form).remove();
+                $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+            }
+
+            // Disable validation on fields that are disabled or hidden.
+            form.validate().settings.ignore = ":disabled,:hidden";
+
+            // Start validation; Prevent going forward if false
+            return form.valid();
+        },
+        onFinishing: function (event, currentIndex) {
+            var form = $(this);
+            form.validate().settings.ignore = ":disabled";
+            return form.valid();
+        },
+        onFinished: function (event, currentIndex) {
+            toastr.success('Submitted!');
+        }
+      }).validate({
+        errorPlacement: function errorPlacement(error, element) { error.insertAfter(element); },
+        rules: {
+          confirm: {
+            equalTo: "#password"
+          }
+        },
+        errorClass:"help-block error",
+        highlight:function(e){$(e).closest(".form-group").addClass("has-error")},
+        unhighlight:function(e){$(e).closest(".form-group").removeClass("has-error")},
+      });
+    })

@@ -1,0 +1,42 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Bootstrap Sweet Alert'
+  - var pageUrl = 'sweetalert.html'
+  - var page_heading = 'Bootstrap Sweet Alert'
+  - var path = ['Components', 'Bootstrap Sweet Alert']
+
+block plugins-styles
+  +link('bootstrap-sweetalert/dist/sweetalert.css','plugin')
+
+block plugins
+  +script('bootstrap-sweetalert/dist/sweetalert.min.js', 'plugin')
+
+block scripts
+  +script('sweetalert-demo.js', 'page')
+
+block content
+    a.btn.btn-primary.mb-4(href='http://lipis.github.io/bootstrap-sweetalert/', target='_blank') Official Website
+    +panel('Sweet Alert examples')
+      .row
+        .col-xl-6
+            button.btn.btn-success.sweet-1 Basic example
+            pre: code.
+              swal("Here's a message!", "Here's a under text");
+            br
+            p.font-strong Contextual
+            button.btn.btn-success.sweet-2 Success
+            button.btn.btn-danger.sweet-3 Error
+            button.btn.btn-info.sweet-4 Info
+            button.btn.btn-warning.sweet-5 Warning
+            pre: code.
+              swal("Are you sure?", "Here's a under text", "success");
+            p
+                | 3rd parameter can be 
+                mark success | error | info | warning
+            br
+            p.text-strong A warning message, with a function attached to the "Confirm" button...
+            button.btn.btn-primary.sweet-6 Try it
+            p.text-strong ...and by passing a parameter, you can execute something else for "Cancel".
+            button.btn.btn-pink.sweet-7 Try it
+      

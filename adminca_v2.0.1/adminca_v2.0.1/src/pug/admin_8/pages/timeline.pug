@@ -1,0 +1,246 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Timeline'
+  - var pageUrl = 'timeline.html'
+  - var page_heading = 'Timeline'
+  - var path = ['Pages', 'Timeline']
+
+block page_styles
+  +link('timeline.css','page')
+
+block content
+  .row.mb-4
+    .col-lg-6
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title Timeline List
+        .ibox-body
+          ul.timeline
+            li.timeline-item
+              span.timeline-point
+              | 2 Issue fixed
+              small.float-right.text-muted.ml-2.nowrap Just now
+            li.timeline-item
+              span.timeline-point.bg-warning
+              span
+                | 7 new feedback
+                span.badge.badge-warning.badge-pill.ml-2 important
+              small.float-right.text-muted 5 mins
+            li.timeline-item
+              span.timeline-point.bg-purple
+              span.flexbox
+                | 25 new orders sent
+                i.la.la-truck.font-16.ml-2.text-purple
+              small.float-right.text-muted.ml-2.nowrap 24 mins
+            li.timeline-item
+              span.timeline-point
+              | 12 New orders
+              small.float-right.text-muted.ml-2.nowrap 45 mins
+            li.timeline-item
+              span.timeline-point.bg-warning
+              | 18 new users registered
+              small.float-right.text-muted.ml-2.nowrap 1 hrs
+            li.timeline-item
+              span.timeline-point
+              span
+                | Server Error
+                span.badge.badge-success.badge-pill.ml-2 resolved
+              small.float-right.text-muted 2 hrs
+            li.timeline-item
+              span.timeline-point.bg-purple
+              span
+                | System Warning
+                a.text-purple.ml-2 Check
+              small.float-right.text-muted.ml-2.nowrap 12:07
+            li.timeline-item
+              span.timeline-point.bg-warning
+              | The invoice is ready
+              small.float-right.text-muted.ml-2.nowrap 12:30
+            li.timeline-item
+              span.timeline-point.bg-purple
+              | 5 New Orders
+              small.float-right.text-muted.ml-2.nowrap 13:45
+            li.timeline-item
+              span.timeline-point
+              span.flexbox
+                | Production server up
+                i.la.la-arrow-circle-up.font-18.ml-2.text-success
+              small.float-right.text-muted.ml-2.nowrap 1 days ago
+            li.timeline-item
+              span.timeline-point
+              | Server overloaded 91%
+              small.float-right.text-muted.ml-2.nowrap 2 days ago
+            li.timeline-item
+              span.timeline-point.bg-warning
+              | Server error
+              small.float-right.text-muted.ml-2.nowrap 2 days ago
+    .col-lg-6
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title Timeline List
+        .ibox-body
+          ul.timeline
+            li.timeline-item
+              i.ti-check.timeline-icon
+              | 2 Issue fixed
+              small.float-right.text-muted.ml-2.nowrap Just now
+            li.timeline-item
+              i.ti-announcement.timeline-icon
+              span
+                | 7 new feedback
+                span.badge.badge-warning.badge-pill.ml-2 important
+              small.float-right.text-muted 5 mins
+            li.timeline-item
+              i.ti-truck.timeline-icon
+              | 25 new orders sent
+              small.float-right.text-muted.ml-2.nowrap 24 mins
+            li.timeline-item
+              i.ti-shopping-cart.timeline-icon
+              | 12 New orders
+              small.float-right.text-muted.ml-2.nowrap 45 mins
+            li.timeline-item
+              i.ti-user.timeline-icon
+              | 18 new users registered
+              small.float-right.text-muted.ml-2.nowrap 1 hrs
+            li.timeline-item
+              i.ti-harddrives.timeline-icon
+              span
+                | Server Error
+                span.badge.badge-success.badge-pill.ml-2 resolved
+              small.float-right.text-muted 2 hrs
+            li.timeline-item
+              i.ti-info-alt.timeline-icon
+              span
+                | System Warning
+                a.text-purple.ml-2 Check
+              small.float-right.text-muted.ml-2.nowrap 12:07
+            li.timeline-item
+              i.fa.fa-file-excel-o.timeline-icon
+              | The invoice is ready
+              small.float-right.text-muted.ml-2.nowrap 12:30
+            li.timeline-item
+              i.ti-shopping-cart.timeline-icon
+              | 5 New Orders
+              small.float-right.text-muted.ml-2.nowrap 13:45
+            li.timeline-item
+              i.ti-arrow-circle-up.timeline-icon
+              | Production server up
+              small.float-right.text-muted.ml-2.nowrap 1 days ago
+            li.timeline-item
+              i.ti-harddrives.timeline-icon
+              | Server overloaded 91%
+              small.float-right.text-muted.ml-2.nowrap 2 days ago
+            li.timeline-item
+              i.ti-info-alt.timeline-icon
+              | Server error
+              small.float-right.text-muted.ml-2.nowrap 2 days ago
+  h3.text-center.mb-3 Big Timeline
+  .text-center
+        div
+            label.radio.radio-inline.radio-success
+                input(type='radio', name='timeline1-option', value='1', checked='')
+                span.input-span
+                | Center
+            label.radio.radio-inline.radio-success
+                input(type='radio', name='timeline1-option', value='0')
+                span.input-span
+                | Left
+  .cd-timeline.center-orientation.timeline-1
+        .cd-timeline-block
+            .cd-timeline-icon.bg-success.text-white
+                i.fa.fa-file-text
+            .cd-timeline-content
+                h4 Send documents
+                p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+                a.btn.btn-success.btn-sm(href='javascript:;') More ...
+                span.cd-date Today 14:25
+        .cd-timeline-block
+            .cd-timeline-icon.bg-primary.text-white
+                i.fa.fa-briefcase
+            .cd-timeline-content
+                h4 Meeting
+                p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+                a.btn.btn-success.btn-sm(href='javascript:;') More ...
+                span.cd-date 2 Days ago
+        .cd-timeline-block
+            .cd-timeline-icon.bg-warning.text-white
+                i.fa.fa-shopping-basket
+            .cd-timeline-content
+                h4 Shopping with Olivia
+                p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+                a.btn.btn-success.btn-sm(href='javascript:;') More ...
+                span.cd-date Dec 15
+        .cd-timeline-block
+            .cd-timeline-icon.bg-blue.text-white
+                i.fa.fa-birthday-cake
+            .cd-timeline-content
+                h4 Emma's birthday
+                p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+                a.btn.btn-success.btn-sm(href='javascript:;') More ...
+                span.cd-date Dec 17
+  +panel()
+      h3.text-center.mb-3 Dark style
+      .text-center
+          div
+              label.radio.radio-inline.radio-success
+                  input(type='radio', name='timeline2-option', value='1', checked='')
+                  span.input-span
+                  | Center
+              label.radio.radio-inline.radio-success
+                  input(type='radio', name='timeline2-option', value='0')
+                  span.input-span
+                  | Left
+      .cd-timeline.cd-timeline-dark.center-orientation.timeline-2
+          .cd-timeline-block
+              .cd-timeline-icon.bg-success.text-white
+                  i.fa.fa-file-text
+              .cd-timeline-content
+                  h4 Send documents
+                  p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+                  a.btn.btn-success.btn-sm(href='javascript:;') More ...
+                  span.cd-date Today 14:25
+          .cd-timeline-block
+              .cd-timeline-icon.bg-primary.text-white
+                  i.fa.fa-briefcase
+              .cd-timeline-content
+                  h4 Meeting
+                  p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+                  a.btn.btn-success.btn-sm(href='javascript:;') More ...
+                  span.cd-date 2 Days ago
+          .cd-timeline-block
+              .cd-timeline-icon.bg-warning.text-white
+                  i.fa.fa-shopping-basket
+              .cd-timeline-content
+                  h4 Shopping with Olivia
+                  p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+                  a.btn.btn-success.btn-sm(href='javascript:;') More ...
+                  span.cd-date Dec 15
+          .cd-timeline-block
+              .cd-timeline-icon.bg-blue.text-white
+                  i.fa.fa-birthday-cake
+              .cd-timeline-content
+                  h4 Emma's birthday
+                  p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+                  a.btn.btn-success.btn-sm(href='javascript:;') More ...
+                  span.cd-date Dec 17
+
+
+block scripts
+  script.
+    $(function(){
+        $("[name='timeline1-option']").change(function(){
+            +this.value ? $('.timeline-1').addClass('center-orientation') : $('.timeline-1').removeClass('center-orientation');
+        });
+        $("[name='timeline2-option']").change(function(){
+            +this.value ? $('.timeline-2').addClass('center-orientation') : $('.timeline-2').removeClass('center-orientation');
+        });
+    })

@@ -1,0 +1,476 @@
+<div class="page-content fade-in-up">
+    <div class="flexbox-b mb-5">
+        <span class="mr-4 static-badge badge-pink"><i class="la la-envelope"></i></span>
+        <div>
+            <h5 class="font-strong">Mailbox</h5>
+            <div class="text-light">James Brian, james@example.com</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-4">
+            <a class="btn btn-primary btn-block" data-toggle="modal" data-target="#new-mail-modal" href="javascript:;">
+                <span class="btn-icon"><i class="la la-pencil"></i>Compose</span>
+            </a>
+            <h6 class="mt-5 mb-2">FOLDERS</h6>
+            <ul class="list-group list-group-divider">
+                <li class="list-group-item flexbox">
+                    <a class="flexbox-b" href="javascript:;"><i class="la la-inbox mr-3 font-18"></i>Inbox</a>
+                    <span class="badge badge-warning badge-circle">17</span>
+                </li>
+                <li class="list-group-item">
+                    <a class="flexbox-b" href="javascript:;"><i class="la la-send-o mr-3 font-18"></i>Sent</a>
+                </li>
+                <li class="list-group-item flexbox">
+                    <a class="flexbox-b" href="javascript:;"><i class="la la-star-o mr-3 font-18"></i>Important</a>
+                    <span class="badge badge-success badge-circle">2</span>
+                </li>
+                <li class="list-group-item">
+                    <a class="flexbox-b" href="javascript:;"><i class="la la-envelope mr-3 font-18"></i>Drafts</a>
+                </li>
+                <li class="list-group-item">
+                    <a class="flexbox-b" href="javascript:;"><i class="la la-trash-o mr-3 font-18"></i>Trash</a>
+                </li>
+            </ul>
+            <h6 class="mt-4 mb-2">LABELS</h6>
+            <ul class="list-group list-group-divider">
+                <li class="list-group-item">
+                    <a href="javascript:;"><i class="badge-point badge-success mr-3"></i>Support</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="javascript:;"><i class="badge-point badge-warning mr-3"></i>Shopping</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="javascript:;"><i class="badge-point badge-primary mr-3"></i>Payment</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="javascript:;"><i class="badge-point badge-danger mr-3"></i>System</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="javascript:;"><i class="badge-point badge-blue mr-3"></i>Social</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-9 col-md-8">
+            <div class="ibox" id="mailbox-container">
+                <div class="flexbox-b p-4">
+                    <h5 class="font-strong m-0 mr-3">INBOX</h5>
+                    <span id="counter-selected" style="display:none;">Selected
+                        <span class="font-strong text-danger ml-2" id="counter-count">0</span>
+                    </span>
+                </div>
+                <div class="flexbox px-4 py-3 bg-primary-50">
+                    <div class="flexbox-b">
+                        <label class="checkbox checkbox-primary check-single pt-1">
+                            <input type="checkbox" data-select="all">
+                            <span class="input-span"></span>
+                        </label>
+                        <div class="btn-group mr-2" style="margin-left: -4px;">
+                            <button class="btn btn-transparent btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-angle-down"></i></button>
+                            <ul class="dropdown-menu">
+                                <li data-select="read">
+                                    <a class="dropdown-item">Select read</a>
+                                </li>
+                                <li data-select="unread">
+                                    <a class="dropdown-item">Select unread</a>
+                                </li>
+                                <li class="dropdown-divider"></li>
+                                <li data-select="clear">
+                                    <a class="dropdown-item">Clear selection</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="inbox-actions">
+                            <button class="btn btn-sm btn-transparent btn-primary btn-icon-only btn-circle disabled" data-action="mark_as_read" data-toggle="tooltip" data-original-title="Mark as read"><i class="la la-eye"></i></button>
+                            <button class="btn btn-sm btn-transparent btn-pink btn-icon-only btn-circle disabled" data-action="mark_as_important" data-toggle="tooltip" data-original-title="Mark as important"><i class="la la-star-o"></i></button>
+                            <button class="btn btn-sm btn-transparent btn-info btn-icon-only btn-circle disabled" data-action="reply" data-toggle="tooltip" data-original-title="Reply"><i class="la la-reply"></i></button>
+                            <button class="btn btn-sm btn-transparent btn-danger btn-icon-only btn-circle disabled" data-action="delete" data-toggle="tooltip" data-original-title="Delete"><i class="la la-trash-o"></i></button>
+                        </div>
+                        <span class="counter-selected ml-1" hidden="">Selected
+                            <span class="font-strong text-warning counter-count">3</span>
+                        </span>
+                    </div>
+                    <div class="input-group-icon input-group-icon-left">
+                        <span class="input-icon input-icon-right font-16"><i class="ti-search"></i></span>
+                        <input class="form-control form-control-rounded" id="key-search" type="text" placeholder="Search ...">
+                    </div>
+                </div>
+                <table class="table table-hover table-inbox" id="table-inbox">
+                    <tbody class="rowlinkx" data-link="row">
+                        <tr data-id="1">
+                            <td class="check-cell rowlink-skip">
+                                <label class="checkbox checkbox-primary check-single">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>Emma Johnson</td>
+                            <td>
+                                <a class="d-block" data-toggle="modal" data-target="#mail-view-modal">Fusce suscipit semper erat, vel solo.</a>
+                            </td>
+                            <td></td>
+                            <td><i class="badge-point badge-success"></i></td>
+                            <td class="text-right">5.22 AM</td>
+                        </tr>
+                        <tr class="unread" data-id="2">
+                            <td class="check-cell">
+                                <label class="checkbox checkbox-primary">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>Olivia Smith</td>
+                            <td>Mauris in sem at quam elementum sagittis vel.</td>
+                            <td><i class="fa fa-paperclip"></i></td>
+                            <td><i class="badge-point badge-warning"></i></td>
+                            <td class="text-right">4.10 AM</td>
+                        </tr>
+                        <tr class="unread" data-id="3">
+                            <td class="check-cell">
+                                <label class="checkbox checkbox-primary">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>Noah Williams</td>
+                            <td>Neque porro quisquam est qui dolorem ipsum quia</td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-right">1.20 AM</td>
+                        </tr>
+                        <tr data-id="4">
+                            <td class="check-cell">
+                                <label class="checkbox checkbox-primary">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>Sophia Jones</td>
+                            <td>Lorem ipsum dolor sit.</td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-right">Jan 10</td>
+                        </tr>
+                        <tr data-id="5">
+                            <td class="check-cell">
+                                <label class="checkbox checkbox-primary">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>Jacob Brown</td>
+                            <td>Nam vitae magna sollicitudin, fringilla neque sit.</td>
+                            <td><i class="fa fa-paperclip"></i></td>
+                            <td></td>
+                            <td class="text-right">Dec 18</td>
+                        </tr>
+                        <tr data-id="6">
+                            <td class="check-cell">
+                                <label class="checkbox checkbox-primary">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>James Davis</td>
+                            <td>Donec eget diam quis lectus auctor.</td>
+                            <td></td>
+                            <td><i class="badge-point badge-primary"></i></td>
+                            <td class="text-right">Dec 12</td>
+                        </tr>
+                        <tr data-id="7">
+                            <td class="check-cell">
+                                <label class="checkbox checkbox-primary">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>Ava Wilson</td>
+                            <td>Duis hendrerit tellus tellus, ut lobortis quam.</td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-right">Sep 7</td>
+                        </tr>
+                        <tr class="unread" data-id="8">
+                            <td class="check-cell">
+                                <label class="checkbox checkbox-primary">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>Ethan Taylor</td>
+                            <td>Neque porro quisquam est qui dolorem ipsum quia dolor</td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-right">Sep 1</td>
+                        </tr>
+                        <tr data-id="9">
+                            <td class="check-cell">
+                                <label class="checkbox checkbox-primary">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>Emily Thomas</td>
+                            <td>Proin dictum sem felis, eu.</td>
+                            <td></td>
+                            <td><i class="badge-point badge-danger"></i></td>
+                            <td class="text-right">July 8</td>
+                        </tr>
+                        <tr data-id="10">
+                            <td class="check-cell">
+                                <label class="checkbox checkbox-primary">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>Noah Moore</td>
+                            <td>Phasellus massa velit, sodales non sollicitudin nec.</td>
+                            <td></td>
+                            <td><i class="badge-point badge-success"></i></td>
+                            <td class="text-right">July 6</td>
+                        </tr>
+                        <tr data-id="11">
+                            <td class="check-cell">
+                                <label class="checkbox checkbox-primary">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>Mia Anderson</td>
+                            <td>Pellentesque rutrum auctor magna vel facilisis. Aliquam.</td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-right">June 15</td>
+                        </tr>
+                        <tr data-id="12">
+                            <td class="check-cell">
+                                <label class="checkbox checkbox-primary">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>Amelia Harris</td>
+                            <td>In ac imperdiet nulla. Proin interdum enim.</td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-right">June 8</td>
+                        </tr>
+                        <tr data-id="13">
+                            <td class="check-cell">
+                                <label class="checkbox checkbox-primary">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>Sofia Jackson</td>
+                            <td>Morbi et lacus malesuada, cursus est non yet.</td>
+                            <td><i class="fa fa-paperclip"></i></td>
+                            <td><i class="badge-point badge-primary"></i></td>
+                            <td class="text-right">April 27</td>
+                        </tr>
+                        <tr class="unread" data-id="14">
+                            <td class="check-cell">
+                                <label class="checkbox checkbox-primary">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>Daniel Garcia</td>
+                            <td>Suspendisse potenti. Donec in vestibulum tortor. Duis.</td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-right">April 25</td>
+                        </tr>
+                        <tr data-id="15">
+                            <td class="check-cell">
+                                <label class="checkbox checkbox-primary">
+                                    <input class="mail-check" type="checkbox">
+                                    <span class="input-span"></span>
+                                </label>
+                            </td>
+                            <td>Lucas Martin</td>
+                            <td>Curabitur id ultrices erat. Praesent rhoncus augue.</td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-right">April 25</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul class="pagination justify-content-end p-4">
+                    <li class="page-item">
+                        <a class="page-link page-link-solid" href="javascript:;" aria-label="First">
+                            <span aria-hidden="true"><i class="la la-angle-double-left"></i></span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link page-link-solid" href="javascript:;" aria-label="Previous">
+                            <span aria-hidden="true"><i class="la la-angle-left"></i></span>
+                        </a>
+                    </li>
+                    <li class="page-item active">
+                        <a class="page-link" href="javascript:;">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="javascript:;">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="javascript:;">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="javascript:;">4</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="javascript:;"><i class="la la-ellipsis-h"></i></a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link page-link-solid" href="javascript:;" aria-label="Next"><i class="la la-angle-right"></i></a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link page-link-solid" href="javascript:;" aria-label="Last"><i class="la la-angle-double-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="new-mail-modal">
+        <div class="modal-dialog" role="document">
+            <form class="modal-content">
+                <div class="modal-header p-4">
+                    <h5 class="modal-title">NEW MESSAGE</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="flexbox mb-4">
+                        <span class="btn-icon-only btn-circle bg-primary-50 text-primary mr-3"><i class="ti-support"></i></span>
+                        <div class="flex-1 d-flex">
+                            <div class="flex-1">
+                                <span class="text-muted mr-2">From:</span>
+                                <div>support@example.com</div>
+                            </div>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle font-16" data-toggle="dropdown"><i class="ti-more-alt"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item"><i class="ti-support"></i>support@example.com</a>
+                                    <a class="dropdown-item"><i class="ti-shopping-cart"></i>shopping@example.com</a>
+                                    <a class="dropdown-item"><i class="ti-help"></i>help@example.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <input class="form-control form-control-line" type="text" name="to" placeholder="Recipient">
+                    </div>
+                    <div class="form-group mb-4">
+                        <input class="form-control form-control-line" type="text" name="subject" placeholder="Enter Subject">
+                    </div>
+                    <div class="form-group mb-4">
+                        <textarea class="form-control form-control-line" rows="4" name="message" placeholder="Enter Message"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between bg-primary-50">
+                    <div>
+                        <button class="btn btn-primary btn-rounded mr-3">Submit</button>
+                        <label class="btn btn-sm btn-transparent btn-secondary btn-icon-only btn-circle file-input mb-0"><i class="la la-paperclip font-20"></i>
+                            <input type="file">
+                        </label>
+                        <label class="btn btn-sm btn-transparent btn-secondary btn-icon-only btn-circle file-input mb-0"><i class="la la-image font-20"></i>
+                            <input type="file">
+                        </label>
+                        <button class="btn btn-sm btn-transparent btn-secondary btn-icon-only btn-circle"><i class="la la-link font-20"></i></button>
+                    </div>
+                    <a class="text-danger"><i class="la la-trash font-20"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal fade" id="mail-view-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header px-4 py-3 bg-primary-400">
+                    <div>
+                        <h5 class="modal-title text-white">Stella Obrien</h5><small><a class="text-white" href="javascript:;">12 Messages</a></small></div>
+                    <button class="close text-white" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="d-flex mb-4">
+                        <div>
+                            <img class="img-circle mr-3" src="./assets/img/users/u10.jpg" alt="image" width="40" />
+                        </div>
+                        <div class="flex-1 d-flex">
+                            <div class="flex-1">
+                                <div class="font-strong font-16">I want a new version of Adminca</div>
+                                <div>Stella Obrien
+                                    <span class="text-muted ml-2">Stella@example.com</span>
+                                </div>
+                                <div class="text-muted font-13">24.03.2018, 16:30</div>
+                            </div>
+                            <div class="d-flex ml-4">
+                                <button class="btn btn-sm btn-transparent btn-secondary btn-icon-only btn-circle" data-toggle="tooltip" data-original-title="Important"><i class="la la-star-o"></i></button>
+                                <button class="btn btn-sm btn-transparent btn-secondary btn-icon-only btn-circle" data-toggle="tooltip" data-original-title="Reply"><i class="la la-reply"></i></button>
+                                <div class="dropdown">
+                                    <button class="btn btn-sm btn-transparent btn-secondary btn-icon-only btn-circle dropdown-toggle" data-toggle="dropdown"><i class="ti-more-alt"></i></button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <a class="dropdown-item">Reply</a>
+                                        <a class="dropdown-item">Forward</a>
+                                        <a class="dropdown-item">Mark as unread</a>
+                                        <a class="dropdown-item">Mark as read</a>
+                                        <a class="dropdown-item">Mark as important</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item">Print</a>
+                                        <a class="dropdown-item text-danger">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <p>Hi Jack</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur velit, corporis iste. Dolorem sapiente at, quibusdam fuga ea voluptatem iste. Cupiditate dignissimos, iure impedit, perferendis in beatae fuga voluptate.</p>
+                        <p>Best regards! Stella Obrien.</p>
+                    </div>
+                    <div class="mt-4 pt-2">
+                        <div class="flexbox mb-2">
+                            <span class="text-primary"><i class="la la-paperclip font-18 mr-3"></i>firstfile.pdf</span>
+                            <a href="./assets/img/blog/07.jpeg" download=""><i class="ti-download"></i></a>
+                        </div>
+                        <div class="flexbox">
+                            <span class="text-primary"><i class="la la-paperclip font-18 mr-3"></i>firstfile.pdf</span>
+                            <a href="./assets/demo/test-file.txt" download=""><i class="ti-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between bg-primary-50">
+                    <div>
+                        <button class="btn btn-primary btn-rounded mr-3">Submit</button>
+                        <label class="btn btn-sm btn-transparent btn-secondary btn-icon-only btn-circle file-input mb-0"><i class="la la-paperclip font-20"></i>
+                            <input type="file">
+                        </label>
+                        <label class="btn btn-sm btn-transparent btn-secondary btn-icon-only btn-circle file-input mb-0"><i class="la la-image font-20"></i>
+                            <input type="file">
+                        </label>
+                        <button class="btn btn-sm btn-transparent btn-secondary btn-icon-only btn-circle"><i class="la la-link font-20"></i></button>
+                    </div>
+                    <a class="text-danger"><i class="la la-trash font-20"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .table-inbox tr.unread {
+        font-weight: 600;
+    }
+
+    .table-inbox tr>td:first-child {
+        padding-left: 1.5rem
+    }
+
+    .table-inbox tr>td:last-child {
+        padding-right: 1rem
+    }
+</style>

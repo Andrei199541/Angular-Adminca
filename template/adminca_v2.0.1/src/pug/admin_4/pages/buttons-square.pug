@@ -1,0 +1,176 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Square Style Buttons'
+  - var pageUrl = 'buttons-square.html'
+  - var page_heading = 'Square Style Buttons'
+  - var path = ['Buttons','Square Style']
+
+block content
+  .row.btn-list-demo
+    .col-md-6
+      +panel('Base Buttons')
+        p Add class <code>.btn-square</code> for square buttons.
+        .mb-4 Base State Buttons
+        button.btn.btn-primary.btn-square Primary
+        button.btn.btn-secondary.btn-square Secondary
+        button.btn.btn-pink.btn-square Pink
+        button.btn.btn-success.btn-square Success
+        button.btn.btn-info.btn-square Info
+        button.btn.btn-warning.btn-square Warning
+        button.btn.btn-danger.btn-square Danger
+        button.btn.btn-blue.btn-square Blue
+        .mt-3.mb-2 Long style
+        p Add class <code>.btn-fix</code> for the minimum fixed width
+        button.btn.btn-primary.btn-fix.btn-square Primary
+        button.btn.btn-secondary.btn-fix.btn-square Secondary
+        button.btn.btn-pink.btn-fix.btn-square Pink
+        button.btn.btn-success.btn-fix.btn-square Success
+        button.btn.btn-info.btn-fix.btn-square Info
+        button.btn.btn-warning.btn-fix.btn-square Warning
+        button.btn.btn-danger.btn-fix.btn-square Danger
+        button.btn.btn-blue.btn-fix.btn-square Blue
+        .mt-4.mb-4 Gradient Buttons
+        button.btn.btn-gradient-purple.btn-square.btn-fix PURPLE
+        button.btn.btn-gradient-peach.btn-square.btn-fix PEACH
+        button.btn.btn-gradient-aqua.btn-square.btn-fix AQUA
+        button.btn.btn-gradient-blue.btn-square.btn-fix BLUE
+        button.btn.btn-gradient-silver.btn-square.btn-fix SILVER
+        button.btn.btn-gradient-lime.btn-square.btn-fix LIME
+        button.btn.btn-gradient-blue-pink.btn-square.btn-fix BLUE-PINK
+        button.btn.btn-gradient-blue2.btn-square.btn-fix BLUE 2
+      +panel('Outline Buttons')
+        button.btn.btn-outline-primary.btn-square Primary
+        button.btn.btn-outline-secondary.btn-square Secondary
+        button.btn.btn-outline-success.btn-square Success
+        button.btn.btn-outline-info.btn-square Info
+        button.btn.btn-outline-warning.btn-square Warning
+        button.btn.btn-outline-danger.btn-square Danger
+        button.btn.btn-outline-blue.btn-square Blue
+        button.btn.btn-outline-pink.btn-square Pink
+        .mb-4.mt-3 Long style
+        button.btn.btn-outline-primary.btn-fix.btn-square Primary
+        button.btn.btn-outline-secondary.btn-fix.btn-square Secondary
+        button.btn.btn-outline-success.btn-fix.btn-square Success
+        button.btn.btn-outline-info.btn-fix.btn-square Info
+        button.btn.btn-outline-warning.btn-fix.btn-square Warning
+        button.btn.btn-outline-danger.btn-fix.btn-square Danger
+        button.btn.btn-outline-blue.btn-fix.btn-square Blue
+        button.btn.btn-outline-pink.btn-fix.btn-square Pink
+        .mt-4.mb-2 Thick style
+        p Add class <code>.btn-thick</code> for the thick border
+        button.btn.btn-outline-primary.btn-fix.btn-thick.btn-square Primary
+        button.btn.btn-outline-secondary.btn-fix.btn-thick.btn-square Secondary
+        button.btn.btn-outline-success.btn-fix.btn-thick.btn-square Success
+        button.btn.btn-outline-info.btn-fix.btn-thick.btn-square Info
+        button.btn.btn-outline-warning.btn-fix.btn-thick.btn-square Warning
+        button.btn.btn-outline-danger.btn-fix.btn-thick.btn-square Danger
+        button.btn.btn-outline-blue.btn-fix.btn-thick.btn-square Blue
+        button.btn.btn-outline-pink.btn-fix.btn-thick.btn-square Pink
+      +panel('Block Buttons')
+        p add class <code>.btn-block</code> for  block level buttons.
+        button.btn.btn-info.btn-block.btn-square Block Button
+        button.btn.btn-primary.btn-block.btn-square Block Button
+        button.btn.btn-outline-default.btn-block.btn-square Block Button
+        button.btn.btn-outline-pink.btn-block.btn-square Block Button
+    .col-md-6
+      +panel('Button Sizes')
+        p Add class <code>.btn-lg</code> or <code>.btn-sm</code> for additional sizes.
+        button.btn.btn-primary.btn-lg.btn-square Large Button
+        button.btn.btn-info.btn-lg.btn-square Large Button
+        button.btn.btn-outline-pink.btn-lg.btn-square Large Button
+        button.btn.btn-secondary.btn-lg.btn-square Large Button
+        .mt-4.mb-4 Default size
+        button.btn.btn-primary.btn-square Default Button
+        button.btn.btn-info.btn-square Default Button
+        button.btn.btn-outline-pink.btn-square Default Button
+        button.btn.btn-secondary.btn-square Default Button
+        .mt-4.mb-4 Small size
+        button.btn.btn-primary.btn-sm.btn-square Small Button
+        button.btn.btn-info.btn-sm.btn-square Small Button
+        button.btn.btn-outline-pink.btn-sm.btn-square Small Button
+        button.btn.btn-secondary.btn-sm.btn-square Small Button
+      +panel('Button States')
+        .mt-4.mb-4 Default state
+        button.btn.btn-secondary.btn-square Default
+        button.btn.btn-success.btn-square Default
+        button.btn.btn-info.btn-square Default
+        button.btn.btn-warning.btn-square Default
+        button.btn.btn-primary.btn-square Default
+        button.btn.btn-pink.btn-square Default
+        .mt-4.mb-4 Active state
+        button.btn.btn-secondary.btn-square.active Active
+        button.btn.btn-success.btn-square.active Active
+        button.btn.btn-info.btn-square.active Active
+        button.btn.btn-warning.btn-square.active Active
+        button.btn.btn-primary.btn-square.active Active
+        button.btn.btn-pink.btn-square.active Active
+        .mt-4.mb-4 Disabled state
+        button.btn.btn-secondary.btn-square(disabled) Disabled
+        button.btn.btn-success.btn-square(disabled) Disabled
+        button.btn.btn-info.btn-square(disabled) Disabled
+        button.btn.btn-warning.btn-square(disabled) Disabled
+        button.btn.btn-primary.btn-square(disabled) Disabled
+        button.btn.btn-pink.btn-square(disabled) Disabled
+      +panel('Checkbox and radio buttons')
+        .mt-4.mb-4 Toggle State
+        button.btn.btn-info.btn-square(data-toggle='button')
+          span.active-hidden
+            span.btn-icon
+              i.la.la-cloud-upload
+              | Upload
+          span.active-visible
+            span.btn-icon
+              i.ti-check
+              | Uploaded
+        button.btn.btn-pink.btn-square(data-toggle='button')
+          span.active-hidden Follow
+          span.active-visible
+            span.btn-icon
+              i.ti-heart-broken
+              | Unfollow
+        button.btn.btn-primary.btn-icon-only.btn-square(data-toggle='button')
+          span.active-hidden
+            i.la.la-music
+          span.active-visible
+            i.la.la-pause
+
+        .mt-4.mb-4 Checkbox buttons
+        .btn-group.btn-square(data-toggle='buttons')
+            label.btn.btn-info
+                | CHECKBOX 1
+                input(type='checkbox')
+            label.btn.btn-info
+                | CHECKBOX 2
+                input(type='checkbox')
+            label.btn.btn-info
+                | CHECKBOX 3
+                input(type='checkbox')
+        .mt-4.mb-4 Radio buttons
+        .btn-group.btn-square.mb-4(data-toggle='buttons')
+            label.btn.btn-primary
+                | RADIO 1
+                input(type='radio')
+            label.btn.btn-primary.active
+                | RADIO 2
+                input(type='radio', checked='')
+            label.btn.btn-primary
+                | RADIO 3
+                input(type='radio')
+        .btn-group.btn-square(data-toggle='buttons')
+            label.btn.btn-outline-pink
+                i.ti-check.active-visible
+                |  Male
+                input(type='radio')
+            label.btn.btn-outline-pink
+                i.ti-check.active-visible
+                |  Female
+                input(type='radio')
+            label.btn.btn-outline-pink
+                i.ti-check.active-visible
+                |  N/A
+                input(type='radio')
+
+block page_styles
+  style.
+    .btn-list-demo *:not(.btn-group):not(.btn-group-justified):not(.btn-group-vertical) > .btn {margin-bottom:15px;margin-right:5px;}

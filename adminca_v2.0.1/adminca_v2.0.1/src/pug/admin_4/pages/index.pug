@@ -1,0 +1,612 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Dashboard'
+  - var pageUrl = 'index.html'
+  
+block plugins-styles
+  +link('morris.js/morris.css','plugin')
+
+block plugins
+  +script('chart.js/dist/Chart.min.js', 'plugin')
+  +script('jquery.easy-pie-chart/dist/jquery.easypiechart.min.js', 'plugin')
+
+block content
+  .row
+    .col-lg-8
+      .ibox
+        .ibox-body
+          .d-flex.justify-content-between.mb-4
+            div
+              h3.m-0 Sales Analytics
+              div Your shop sales analytics
+            .rel
+              button.btn.btn-white.btn-icon-only.btn-circle(data-toggle='dropdown')
+                i.ti-settings
+              .dropdown-menu.dropdown-menu-right
+                a.dropdown-item
+                  i.la.la-upload
+                  | Export
+                a.dropdown-item
+                  i.la.la-file-excel-o
+                  | Download
+                a.dropdown-item(data-action='print', data-target='#diagram_1')
+                  i.la.la-print
+                  | Print
+          div
+            canvas#line_chart(style='height:260px;')
+        .ibox-body
+          .text-muted.mb-4 Statistics
+          .row.align-items-center
+            .col-6(data-print-hidden)
+              canvas#chart_1(style='height:100px;')
+            .col-6
+              h2.text-success +2250$
+              .text-muted
+                span.text-success.mr-2
+                  i.ti-stats-up.mr-1
+                  | 32%
+                | FROM LAST YEAR
+          hr
+          .row
+            .col-4.text-center(style='border-right: 1px solid rgba(0,0,0,.1)')
+              .text-muted MONTH INCOME
+              h2.text-success.mt-1 $305
+            .col-4.text-center(style='border-right: 1px solid rgba(0,0,0,.1)')
+              .text-muted MONTH SALES
+              h2.text-success.mt-1 1680
+            .col-4.text-center
+              .text-muted MONTH ORDERS
+              h2.text-success.mt-1 5800
+      .row
+        .col-lg-6
+          .ibox.ibox-fullheight
+            .ibox-head
+              .ibox-title Statistics
+            .ibox-body
+              .row.align-items-center
+                .col-6
+                  div
+                    canvas#doughnut_chart(style='height:200px')
+                .col-6.text-center
+                  div.mb-4
+                    div: i.la.la-heart-o.text-pink.font-26
+                    .h1.m-0 220
+                    .text-lighter month income
+                  div.mb-4
+                    div: i.ti-shopping-cart.text-pink.font-26
+                    .h1.m-0 220
+                    .text-lighter month income
+                  div
+                    div: i.la.la-server.text-pink.font-26
+                    .h1.m-0
+                      | +28
+                      sup %
+                    .text-lighter Issue Fixed
+        .col-lg-6
+          .ibox.ibox-fullheight
+            .ibox-head
+              div
+                .ibox-title Weekly earnings
+                small.text-lighter 24.02 - 24.09
+              .ibox-tools
+                a.dropdown-toggle(data-toggle='dropdown'): i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.la.la-upload
+                    | Export
+                  a.dropdown-item
+                    i.la.la-file-excel-o
+                    | Download
+                  a.dropdown-item
+                    i.la.la-print
+                    | Print
+            .ibox-body
+              .row.m-b-20
+                .col-6.text-center(style='border-right: 1px solid rgba(0,0,0,.1);')
+                  .text-muted DAILY PROFIT
+                  .h2.text-success.mt-1 $540
+                .col-6.text-center
+                  .text-muted SUBSCRIPTIONS
+                  .h2.text-success.mt-1 36
+              .h1.mt-4
+                | $7,400
+                sup .60
+                i.ti-stats-up.float-right.text-warning(style='font-size:40px;')
+              .text-lighter 26% Higher then last week
+              .mt-5.mb-5
+                canvas#earnings_chart(style='height:100px;')
+              .d-flex
+                button.btn.btn-gradient-purple.mr-2 View More
+                button.btn.btn-outline-secondary Print
+      .row
+        .col-lg-7
+          .ibox
+            .ibox-body.bg-success
+              h5.text-center.text-white.mb-3 Statistics
+              div
+                canvas#chart_c(style='height:180px')
+            .ibox-body
+              .text-lighter.mb-2 Lorem Ipsum is simply dummy text
+              div
+                span.h1.mr-3.text-success.font-40 72.5%
+                span.text-lighter 34.5% Higher then last month
+        .col-lg-5
+          .ibox
+            .ibox-body.bg-pink
+              h5.text-center.text-white.mb-3 Statistics
+              div
+                canvas#chart_d(style='height:180px')
+            .ibox-body
+              .text-lighter.mb-2 Lorem Ipsum is simply dummy text
+              div
+                span.h1.mr-3.text-pink.font-40 72.5%
+                span.text-lighter 34.5% Higher
+      +panel('LATEST ORDERS')(tools={'menu':1})
+        .flexbox.mb-4
+          .flexbox
+            span.flexbox.mr-3
+              span.mr-2.text-muted Paid
+              span.h3.mb-0.text-primary.font-strong 310
+            span.flexbox
+              span.mr-2.text-muted Unpaid
+              span.h3.mb-0.text-pink.font-strong 105
+          a.flexbox(href='ecommerce_orders_list.html', target='_blank')
+            | VIEW ALL
+            i.ti-arrow-circle-right.ml-2.font-18
+        .ibox-fullwidth-block
+          table.table.table-hover
+            thead.thead-default.thead-lg
+              tr
+                th.pl-4 Order ID
+                th Customer
+                th Amount
+                th Status
+                th.pr-4(style='width:91px') Date
+            tbody
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1254
+                td Becky Brooks
+                td $457.00
+                td
+                  span.badge.badge-success.badge-pill Shipped
+                td.pr-4 17.05.2018
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1253
+                td Emma Johnson
+                td $1200.00
+                td
+                  span.badge.badge-success.badge-pill Shipped
+                td.pr-4 17.05.2018
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1252
+                td Noah Williams
+                td $780.00
+                td
+                  span.badge.badge-primary.badge-pill Pending
+                td.pr-4 17.05.2018
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1251
+                td Sophia Jones
+                td $105.60
+                td
+                  span.badge.badge-success.badge-pill Completed
+                td.pr-4 17.05.2018
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1250
+                td Jacob Brown
+                td $40.00
+                td
+                  span.badge.badge-primary.badge-pill Pending
+                td.pr-4 17.05.2018
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1249
+                td James Davis
+                td $78.00
+                td
+                  span.badge.badge-danger.badge-pill Canceled
+                td.pr-4 17.05.2018
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1248
+                td Emma Johnson
+                td $1200.00
+                td
+                  span.badge.badge-success.badge-pill Shipped
+                td.pr-4 17.05.2018
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1247
+                td Noah Williams
+                td $780.00
+                td
+                  span.badge.badge-primary.badge-pill Pending
+                td.pr-4 17.05.2018
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1246
+                td James Davis
+                td $78.00
+                td
+                  span.badge.badge-danger.badge-pill Canceled
+                td.pr-4 17.05.2018
+      .row
+        .col-lg-6
+          .card.mb-4.card-hover-zoom
+            +img('blog/03.jpg')(class='card-img img-zoom')
+            .card-img-overlay.text-white.card-overlay-dark.card-overlay-hover.d-flex.flex-column.justify-content-between.align-items-start
+              .w-100.d-flex.justify-content-between.mb-3
+                div
+                  span.badge.badge-primary.mr-2 TRENDS
+                  span.badge.badge-pink DESIGN
+                div
+                  span.mr-4
+                    i.fa.fa-heart-o.mr-2
+                    | 124
+                  span
+                    i.fa.fa-comment-o.mr-2
+                    | 56
+              h2.card-title.mb-2
+                a
+                  | Web Design Trends
+                  br
+                  | Strict Selection
+              .text-muted 16 January 2017
+        .col-lg-6
+          .card.mb-4.card-hover-zoom
+            +img('blog/07.jpeg')(class='card-img img-zoom')
+            .card-img-overlay.text-white.card-overlay-dark.card-overlay-hover.d-flex.flex-column.justify-content-between.align-items-start
+              .w-100.d-flex.justify-content-between.mb-3
+                div
+                  span.badge.badge-primary.mr-2 TRENDS
+                  span.badge.badge-pink DESIGN
+                div
+                  span.mr-4
+                    i.fa.fa-heart-o.mr-2
+                    | 124
+                  span
+                    i.fa.fa-comment-o.mr-2
+                    | 56
+              h2.card-title.mb-2
+                a
+                  | Web Design Trends
+                  br
+                  | Strict Selection
+              .text-muted 16 January 2017
+      
+    .col-lg-4
+      .card.card-air.text-center.centered.mb-4(style='max-width:320px')
+        .card-body
+          div.card-avatar.mt-3.mb-4
+            +img('users/u6.jpg')(class='img-circle')
+          h4.card-title.mb-1 Connor Perez
+          .text-pink
+            i.ti-location-pin.mr-2
+            | California, USA
+          p.mt-4.mb-4 Some quick example text to build on the card title and make up the bulk of the card's content.
+          .d-flex.align-items-center.justify-content-between.mb-5
+            div.text-center
+              h2.text-pink.m-0 1200
+              .text-muted FOLLOWERS
+            div.text-center
+              h2.text-pink.m-0 480
+              .text-muted LIKES
+            div.text-center
+              h2.text-pink.m-0 14.2k
+              .text-muted VIEWS
+          .d-flex.justify-content-around.align-items-center
+            button.btn.btn-pink.btn-rounded.mr-2
+              span.btn-icon
+                i.la.la-heart-o
+                | Follow
+            button.btn.btn-secondary.btn-rounded
+              span.btn-icon
+                i.la.la-envelope
+                | Message
+        .fab.fab-bottom.card-fab-top-right
+          button.btn.btn-pink.btn-icon-only.btn-circle.btn-air(data-toggle='button')
+            i.la.la-share-alt.fab-icon
+            i.la.la-close.fab-icon-active
+          ul.fab-menu
+            li
+              a.btn.btn-soc-facebook.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-facebook
+            li
+              a.btn.btn-soc-twitter.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-twitter
+            li
+              a.btn.btn-soc-dribbble.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-dribbble
+      .ibox
+        .ibox-head
+          .ibox-title NEW CUSTOMERS
+          .ibox-tools
+            a.dropdown-toggle(data-toggle='dropdown')
+              i.ti-user
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item
+                i.ti-pencil.mr-2
+                | Create
+              a.dropdown-item
+                i.ti-pencil-alt.mr-2
+                | Edit
+              a.dropdown-item
+                i.ti-close.mr-2
+                | Remove
+        .ibox-body
+          ul.media-list.media-list-divider.mr-2.scroller(data-height='580px')
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u8.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Lynn Weaver
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u6.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Connor Perez
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-primary.btn-rounded Followed
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u11.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Tyrone Carroll
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u10.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Stella Obrien
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u2.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Becky Brooks
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u5.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Bob Gonzalez
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-primary.btn-rounded Followed
+      .ibox
+        .ibox-head
+          .ibox-title Feeds
+          .ibox-tools
+            a.dropdown-toggle(data-toggle='dropdown')
+              i.ti-notepad
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item
+                i.ti-pencil.mr-2
+                | Create
+              a.dropdown-item
+                i.ti-pencil-alt.mr-2
+                | Edit
+              a.dropdown-item
+                i.ti-close.mr-2
+                | Remove
+        .ibox-body
+          ul.media-list.media-list-divider.scroller(data-height='470px')
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-check
+              .media-body
+                .media-heading
+                  | 2 Issue fixed
+                  small.float-right.text-muted.ml-2 5 mins
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-support
+              .media-body
+                .media-heading.text-success
+                  | 4 New Support Tickets
+                  small.float-right.text-muted.ml-2 7 mins
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-shopping-cart-full
+              .media-body
+                .media-heading
+                  | 7 New Orders
+                  small.float-right.text-muted.ml-2 25 mins
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-harddrives
+              .media-body
+                .media-heading.text-danger
+                  | Server overloaded 91%
+                  small.float-right.text-muted.ml-2 48 mins
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-reload
+              .media-body
+                .media-heading.text-warning
+                  | System Reloaded
+                  small.float-right.text-muted.ml-2 2 hrs
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-user
+              .media-body
+                .media-heading
+                  | 4 New customers
+                  small.float-right.text-muted.ml-2 2 hrs
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-arrow-circle-up
+              .media-body
+                .media-heading.text-success
+                  | Production server up
+                  small.float-right.text-muted.ml-2 12.05
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-announcement
+              .media-body
+                .media-heading.text-primary
+                  | 7 new feedback
+                  small.float-right.text-muted.ml-2 13:45
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+      .ibox
+        .ibox-head
+          .ibox-title TASKS
+          .ibox-tools
+            a.font-18
+              i.ti-plus
+        .ibox-body
+          ul.list-group.list-group-divider.list-group-full.tasks-list
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox', checked='')
+                  span.input-span
+                  span.task-title Make Adminca the best and the most easy admin template
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Create Financial Report
+              .task-data
+                small.text-muted No due date
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox', checked='')
+                  span.input-span
+                  span.task-title Meeting with Ann
+                span.badge.badge-warning.ml-1
+                  i.ti-alarm-clock
+                  |  1 hrs
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Edit the blog post
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Send photos to Jack
+                span.badge.badge-success.ml-1 Today
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Send Financial Reports
+                span.badge.badge-danger.ml-1 Important
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Send message to Bob
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+    
+
+block scripts
+    +script('dashboard_4.js', 'page')

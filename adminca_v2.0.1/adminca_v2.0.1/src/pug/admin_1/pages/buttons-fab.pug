@@ -1,0 +1,108 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Floating Action Buttons'
+  - var pageUrl = 'buttons-fab.html'
+  - var page_heading = 'Floating Action Buttons'
+  - var path = ['Buttons', 'Floating Action Buttons']
+
+block plugins-styles
+  +link('prism/themes/prism.css','plugin')
+
+block plugins
+  +script('clipboard/dist/clipboard.min.js', 'plugin')
+  +script('prism/prism.js', 'plugin')
+
+block content
+  +panel(title='Floating Action Buttons')
+    .row
+      .col-md-6
+
+        h6.mb-4 Right Direction
+        .fab.fab-right.mb-4
+          button.btn.btn-primary.btn-icon-only.btn-circle.btn-lg.btn-air(data-toggle='button')
+            i.la.la-bars.fab-icon
+            i.la.la-close.fab-icon-active
+          ul.fab-menu
+            li
+              a.btn.btn-pink.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.la.la-music
+            li
+              a.btn.btn-pink.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.la.la-camera
+            li
+              a.btn.btn-pink.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.la.la-comments
+        br
+        .fab.fab-right
+          button.btn.btn-pink.btn-icon-only.btn-circle.btn-lg.btn-air(data-toggle='button')
+            i.la.la-share-alt.fab-icon
+            i.la.la-close.fab-icon-active
+          ul.fab-menu
+            li
+              a.btn.btn-soc-facebook.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-facebook
+            li
+              a.btn.btn-soc-twitter.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-twitter
+            li
+              a.btn.btn-soc-dribbble.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-dribbble
+            li
+              a.btn.btn-soc-google.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-google-plus
+      
+      .col-md-6
+        pre
+          button.btn.btn-sm.btn-secondary.clipboard-copy Copy
+          code.language-markup.
+            &lt;div class="fab fab-right">
+              &lt;button class="btn btn-lg btn-primary btn-icon-only btn-circle btn-air" data-toggle="button">
+                &lt;i class="fab-icon la la-bars">&lt;/i>
+                &lt;i class="fab-icon-active la la-close">&lt;/i>
+              &lt;/button>
+
+              &lt;ul class="fab-menu">
+                &lt;li>&lt;a class="btn btn-pink" href="#">1&lt;/a>&lt;/li>
+                &lt;li>&lt;a class="btn btn-pink" href="#">2&lt;/a>&lt;/li>
+                &lt;li>&lt;a class="btn btn-pink" href="#">3&lt;/a>&lt;/li>
+              &lt;/ul>
+            &lt;/div>
+    .row.mt-5
+      .col-md-4
+        h6.mb-2 Top Direction
+        p <code>.fab-top</code> add to <i>.fab</i>
+        .fab.fab-top
+          button.btn.btn-primary.btn-icon-only.btn-circle.btn-lg.btn-air(data-toggle='button')
+            i.la.la-bars.fab-icon
+            i.la.la-close.fab-icon-active
+          ul.fab-menu
+            li
+              button.btn.btn-pink.btn-icon-only.btn-circle.btn-air: i.la.la-music
+            li
+              button.btn.btn-pink.btn-icon-only.btn-circle.btn-air: i.la.la-camera
+            li
+              button.btn.btn-pink.btn-icon-only.btn-circle.btn-air: i.la.la-comments
+      .col-md-4
+        h6.mb-2 Bottom Direction
+        p <code>.fab-bottom</code> add to <i>.fab</i>
+        .fab.fab-bottom
+          button.btn.btn-primary.btn-icon-only.btn-circle.btn-lg.btn-air(data-toggle='button')
+            i.la.la-bars.fab-icon
+            i.la.la-close.fab-icon-active
+          ul.fab-menu
+            li
+              button.btn.btn-pink.btn-icon-only.btn-circle.btn-air: i.la.la-music
+            li
+              button.btn.btn-pink.btn-icon-only.btn-circle.btn-air: i.la.la-camera
+            li
+              button.btn.btn-pink.btn-icon-only.btn-circle.btn-air: i.la.la-comments
+      .col-md-4
+        h6.mb-2 Left Direction
+        p <code>.fab-left</code> add to <i>.fab</i>
+        .fab.fab-left
+          button.btn.btn-primary.btn-icon-only.btn-circle.btn-lg.btn-air(data-toggle='button')
+            i.la.la-bars.fab-icon
+            i.la.la-close.fab-icon-active
+          ul.fab-menu
+            li
+              button.btn.btn-pink.btn-icon-only.btn-circle.btn-air: i.la.la-music
+            li
+              button.btn.btn-pink.btn-icon-only.btn-circle.btn-air: i.la.la-camera
+            li
+              button.btn.btn-pink.btn-icon-only.btn-circle.btn-air: i.la.la-comments
+        
+      .col-md-6

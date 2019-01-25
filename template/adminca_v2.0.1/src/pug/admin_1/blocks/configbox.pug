@@ -1,0 +1,36 @@
+// BEGIN THEME CONFIG PANEL
+.theme-config
+    .theme-config-toggle
+        i.ti-settings.theme-config-show
+        i.ti-close.theme-config-close
+    .theme-config-box
+        h5.text-center.mb-4.mt-3 SETTINGS
+        .font-strong.mb-3 LAYOUT OPTIONS
+        .check-list.mb-4
+            label.checkbox.checkbox-grey.checkbox-primary
+                input#_fixedNavbar(type='checkbox' checked)
+                span.input-span
+                | Fixed navbar
+            label.checkbox.checkbox-grey.checkbox-primary.mt-3
+                input#_fixedlayout(type='checkbox')
+                span.input-span
+                | Fixed layout
+            label.checkbox.checkbox-grey.checkbox-primary.mt-3
+                input.js-sidebar-toggler(type='checkbox')
+                span.input-span
+                | Collapse sidebar
+            label.checkbox.checkbox-grey.checkbox-primary.mt-3
+                input#_drawerSidebar(type='checkbox')
+                span.input-span
+                | Drawer sidebar
+        .font-strong.mb-3 LAYOUT STYLE
+        .check-list.mb-4
+            label.radio.radio-grey.radio-primary
+                input(type='radio', name='layout-style', value='', checked='')
+                span.input-span
+                | Fluid
+            label.radio.radio-grey.radio-primary.mt-3
+                input(type='radio', name='layout-style', value='1')
+                span.input-span
+                | Boxed
+// END THEME CONFIG PANEL

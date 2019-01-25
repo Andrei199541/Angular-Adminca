@@ -1,0 +1,45 @@
+// Bootstrap Datepicker
+
+.datepicker table tr td, .datepicker table tr th {
+	width: 35px;
+	height: 35px;
+}
+
+.datepicker table tr td.active,
+.datepicker table tr td span.active
+{
+    background-color: #5c6bc0 !important;
+    border-color: #5c6bc0 !important;
+}
+.datepicker table tr td, .datepicker table tr th {
+    border-radius: 2px
+}
+
+.datepicker table tr td.new, .datepicker table tr td.old {
+	color: #999
+}
+.datepicker-inline {
+	width: 245px;
+}
+.datepicker thead th, 
+.datepicker tfoot th {
+	font-weight: 500
+}
+.datepicker thead th.next, 
+.datepicker thead th.prev {
+	font-size: 0;
+    font-family: themify;
+    speak: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+}
+.datepicker thead th.next::before {
+	content: "\e649";
+	font-size: 12px;
+}
+.datepicker thead th.prev::before {
+    content: "\e64a";
+    font-size: 12px;
+}

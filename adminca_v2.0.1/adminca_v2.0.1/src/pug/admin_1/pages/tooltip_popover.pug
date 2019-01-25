@@ -1,0 +1,35 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Tooltip & Popover'
+  - var pageUrl = 'tooltip_popover.html'
+  - var page_heading = 'Tooltip & Popover'
+  - var path = ['Basic UI', 'Tooltip & Popover']
+
+block content
+  +panel(title='Tooltips & Popovers', tools={'collapse':1, 'menu':1}, boxClass='btn-list-demo')
+    .text-center
+      h5.mb-5 Tooltips
+      button.btn.btn-purple(data-toggle='tooltip', data-placement='left', title='Tooltip on left') Left
+      button.btn.btn-purple(data-toggle='tooltip', data-placement='top', title='Tooltip on top') Top
+      button.btn.btn-purple(data-toggle='tooltip', data-placement='bottom', title='Tooltip on bottom') Bottom
+      button.btn.btn-purple(data-toggle='tooltip', data-placement='right', title='Tooltip on right') Right
+      button.btn.btn-purple(data-toggle='tooltip', data-html='true', title='<em>Tooltip</em> <u>with</u> <b>HTML</b>') With HTML
+      br
+      br
+      button.btn.btn-purple(data-toggle='tooltip', data-placement='top', data-trigger='click', title='Clickable Tooltip') Click to tooltip
+      button.btn.btn-purple(data-toggle='tooltip', data-placement='top', data-html='true', title="<img src='./assets/img/users/u8.jpg' width='35px'>") With Icons
+      h5.mb-5.mt-5 Popovers
+      button.btn.btn-pink(data-container='body', data-toggle='popover', data-trigger='hover', data-placement='top', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Hoverable Popover
+      button.btn.btn-pink(data-container='body', data-toggle='popover', data-trigger='focus', data-placement='top', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Dismissable Popover
+      button.btn.btn-pink(data-container='body', data-toggle='popover', data-placement='top', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Clickable Popover
+      br
+      br
+      button.btn.btn-pink(data-container='body', data-toggle='popover', data-trigger='hover', data-placement='top', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Top
+      button.btn.btn-pink(data-container='body', data-toggle='popover', data-trigger='hover', data-placement='right', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Right
+      button.btn.btn-pink(data-container='body', data-toggle='popover', data-trigger='hover', data-placement='bottom', data-content='Vivamussagittis lacus vel augue laoreet rutrum faucibus.') Bottom
+      button.btn.btn-pink(data-container='body', data-toggle='popover', data-trigger='hover', data-placement='left', data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.') Left
+
+block page_styles
+  style.
+    .btn-list-demo *:not(.btn-group):not(.btn-group-justified):not(.btn-group-vertical) > .btn {margin-bottom:15px;margin-right:5px;}

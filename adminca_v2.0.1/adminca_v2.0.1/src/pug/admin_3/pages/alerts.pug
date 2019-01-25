@@ -1,0 +1,274 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Alerts'
+  - var pageUrl = 'alerts.html'
+  - var page_heading = 'Alerts'
+  - var path = ['Basic UI', 'Alerts']
+
+block content
+  .row
+    .col-md-6
+      +panel(title='Basic Alerts', tools={'collapse':1, 'expend':1}, boxClass='ibox-fullheight')
+        .alert.alert-primary
+            strong Primary!
+            br
+            | This is a primary alert—check it out! 
+        .alert.alert-secondary
+            strong Secondary!
+            br
+            | This is a secondary alert—check it out! 
+        .alert.alert-success
+            strong Success!
+            br
+            | You successfully read this important alert message. 
+        .alert.alert-info
+            strong Info!
+            br
+            | This alert needs your attention, but it's not super important. 
+        .alert.alert-warning
+            strong Warning!
+            br
+            | Better check yourself, you're not looking too good. 
+        .alert.alert-danger
+            strong Danger!
+            br
+            | Change a few things up and try submitting again. 
+        .alert.alert-primary
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+        .alert.alert-pink
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+    
+    .col-md-6
+      +panel(title='Bordered Style', tools={'collapse':1, 'expend':1}, boxClass='ibox-fullheight')
+        .alert.alert-primary.alert-bordered
+            strong Primary!
+            br
+            | This is a primary alert—check it out! 
+        .alert.alert-secondary.alert-bordered
+            strong Secondary!
+            br
+            | This is a secondary alert—check it out! 
+        .alert.alert-success.alert-bordered
+            strong Success!
+            br
+            | You successfully read this important alert message. 
+        .alert.alert-info.alert-bordered
+            strong Info!
+            br
+            | This alert needs your attention, but it's not super important. 
+        .alert.alert-warning.alert-bordered
+            strong Warning!
+            br
+            | Better check yourself, you're not looking too good. 
+        .alert.alert-danger.alert-bordered
+            strong Danger!
+            br
+            | Change a few things up and try submitting again. 
+        .alert.alert-primary.alert-bordered
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+        .alert.alert-pink.alert-bordered
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+
+  .row
+    .col-md-6
+      +panel(title='Dismissing', tools={'collapse':1, 'expend':1}, boxClass='ibox-fullheight')
+        .alert.alert-info.alert-dismissable.fade.show
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Info!
+            br
+            | This alert needs your attention, but it's not super important. 
+        .alert.alert-warning.alert-dismissable.fade.show
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Warning!
+            br
+            | Better check yourself, you're not looking too good. 
+        .alert.alert-primary.alert-dismissable.fade.show
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+        .alert.alert-pink.alert-dismissable.fade.show
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+        .mt-4.mb-4 With Icon
+        .alert.alert-info.alert-dismissable.fade.show.has-icon
+            i.la.la-info.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Info!
+            br
+            | This alert needs your attention, but it's not super important. 
+        .alert.alert-warning.alert-dismissable.fade.show.has-icon
+            i.la.la-warning.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Warning!
+            br
+            | Better check yourself, you're not looking too good. 
+        .alert.alert-primary.alert-dismissable.fade.show.has-icon
+            i.la.la-check.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+        .alert.alert-pink.alert-dismissable.fade.show.has-icon
+            i.la.la-info-circle.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+
+    .col-md-6
+      +panel(title='Dismissing', tools={'collapse':1, 'expend':1}, boxClass='ibox-fullheight')
+        .alert.alert-info.alert-dismissable.fade.show.alert-bordered
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Info!
+            br
+            | This alert needs your attention, but it's not super important. 
+        .alert.alert-warning.alert-dismissable.fade.show.alert-bordered
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Warning!
+            br
+            | Better check yourself, you're not looking too good. 
+        .alert.alert-primary.alert-dismissable.fade.show.alert-bordered
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+        .alert.alert-pink.alert-dismissable.fade.show.alert-bordered
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+        .mt-4.mb-4 With Icon
+        .alert.alert-info.alert-dismissable.fade.show.alert-bordered.has-icon
+            i.la.la-info.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Info!
+            br
+            | This alert needs your attention, but it's not super important. 
+        .alert.alert-warning.alert-dismissable.fade.show.alert-bordered.has-icon
+            i.la.la-warning.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Warning!
+            br
+            | Better check yourself, you're not looking too good. 
+        .alert.alert-primary.alert-dismissable.fade.show.alert-bordered.has-icon
+            i.la.la-check.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+        .alert.alert-pink.alert-dismissable.fade.show.alert-bordered.has-icon
+            i.la.la-info-circle.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+  .row
+    .col-md-6
+      +panel(title='Additional content', tools={'collapse':1, 'expend':1}, boxClass='ibox-fullheight')
+        .alert.alert-primary.alert-dismissable.fade.show
+            button.close(data-dismiss='alert', aria-label='Close')
+            h4 Hello!
+            p
+                | Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+            p
+                button.btn.btn-success.btn-sm.mr-2 i am agree
+                button.btn.btn-pink.btn-sm(data-dismiss='alert') Close
+        .alert.alert-info.alert-dismissable.fade.show
+            button.close(data-dismiss='alert', aria-label='Close')
+            h4 Hello!
+            p
+                | Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+            hr
+            .d-flex.align-items-center.justify-content-between
+                | Are you sure?
+                button.btn.btn-sm.btn-outline-pink.btn-outline(data-dismiss='alert') Close
+        .alert.alert-pink.alert-dismissable.fade.show.alert-outline.has-icon
+            i.la.la-info-circle.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            .d-flex.align-items-center.justify-content-between
+              div
+                strong Well done!
+                br
+                | You successfully read this important alert message.
+              div
+                button.btn.btn-sm.btn-pink.btn-rounded(data-dismiss='alert') Close
+        .alert.alert-info.alert-dismissable.fade.show.alert-outline.has-icon
+            i.la.la-info.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            .d-flex.align-items-center.justify-content-between
+              div
+                strong Well done!
+                br
+                | This alert needs your attention, but it's not super important.
+              div
+                button.btn.btn-sm.btn-info.btn-rounded(data-dismiss='alert') Close
+        .alert.alert-primary.alert-dismissable.fade.show.has-icon
+            i.la.la-info-circle.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            .d-flex.align-items-center.justify-content-between
+              div
+                strong Well done!
+                br
+                | This alert needs your attention, but it's not super important.
+              div
+                button.btn.btn-sm.btn-warning.btn-rounded(data-dismiss='alert') Close
+
+    .col-md-6
+      +panel(title='Outline Style', tools={'collapse':1, 'expend':1}, boxClass='ibox-fullheight')
+        .alert.alert-info.alert-dismissable.fade.show.alert-outline
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Info!
+            br
+            | This alert needs your attention, but it's not super important. 
+        .alert.alert-warning.alert-dismissable.fade.show.alert-outline
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Warning!
+            br
+            | Better check yourself, you're not looking too good. 
+        .alert.alert-primary.alert-dismissable.fade.show.alert-outline
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+        .alert.alert-pink.alert-dismissable.fade.show.alert-outline
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+        .mt-4.mb-4 With Icon
+        .alert.alert-info.alert-dismissable.fade.show.alert-outline.has-icon
+            i.la.la-info.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Info!
+            br
+            | This alert needs your attention, but it's not super important. 
+        .alert.alert-warning.alert-dismissable.fade.show.alert-outline.has-icon
+            i.la.la-warning.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Warning!
+            br
+            | Better check yourself, you're not looking too good. 
+        .alert.alert-primary.alert-dismissable.fade.show.alert-outline.has-icon
+            i.la.la-check.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Well done!
+            br
+            | You successfully read this important alert message.
+        .alert.alert-pink.alert-dismissable.fade.show.alert-outline.has-icon
+            i.la.la-info-circle.alert-icon
+            button.close(data-dismiss='alert', aria-label='Close')
+            strong Well done!
+            br
+            | You successfully read this important alert message.

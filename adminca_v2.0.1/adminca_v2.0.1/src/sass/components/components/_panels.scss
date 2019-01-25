@@ -1,0 +1,82 @@
+
+.ibox {
+    position: relative;
+    margin-bottom: 25px;
+    background-color: #fff;
+    box-shadow: 0 0 1px rgba(0,0,0,.15);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    .ibox-head {
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: $ibox-head-height;
+        .ibox-title {
+            font-size: 16px;
+            font-weight: 500;
+            small {
+                font-weight: 400;
+                font-size: 13px;
+                color: #777;
+                a {color:inherit}
+            }
+        }
+        .ibox-tools {
+            position: relative;
+            & > a {
+                color: #aaa;
+                font-size: 16px;
+                margin-left: 8px;
+                &:hover {color:inherit}
+            }
+        }
+        .nav-tabs, .nav-pills {margin:0}
+        .nav-tabs {
+            border: 0;
+            height: $ibox-head-height;
+            .nav-link {
+                height: 100%;
+                align-items: center;
+                display: inline-flex;
+            }
+        }
+    }
+    .ibox-body {
+        padding: $panel-padding-top $panel-padding-x $panel-padding-bottom;
+        .ibox-fullwidth-block {
+            margin-left: -$panel-padding-x;
+            margin-right: -$panel-padding-x;
+        }
+    }
+    .ibox-footer {
+        padding: 25px;
+        border-top: 1px solid #eee;
+    }
+    &.ibox-fullscreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        z-index: 1005;
+    }
+    &.ibox-fullheight {
+        height: calc(100% - #{$panel-margin-bottom});
+    }
+    .abs-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+    &.shadow-wide {
+        box-shadow: 0 5px 20px #d6dee4;
+    }
+}
+
+body.fullscreen-mode {
+    overflow-y: hidden;
+}

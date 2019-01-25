@@ -1,0 +1,49 @@
+// Button Groups
+
+
+.btn-group.btn-rounded {
+    & > .btn:first-child {
+        border-radius: 50px 0 0 50px!important;
+    }
+    & > .btn:last-child {
+        border-radius: 0 50px 50px 0!important;
+    }
+}
+.btn-group-vertical.btn-rounded {
+    & > .btn:first-child {
+        border-radius: 50px 50px 0 0!important;
+    }
+    & > .btn:last-child {
+        border-radius: 0 0 50px 50px!important;
+    }
+}
+
+
+// JUSTIFIED BUTTONS
+.btn-group-justified {
+    display: flex;
+    .btn {
+        flex: 1;
+        border-radius: 0;
+        &:first-child {
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+        }
+        &:last-child {
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+    }
+}
+
+// Vertical Buttons group
+
+.btn-group-vertical {
+    .btn.labeled {
+        text-align: left;
+        .btn-label {width: 33px}
+    }
+    &.btn-group-lg .btn.labeled .btn-label {width: 45px}
+    &.btn-group-sm .btn.labeled .btn-label {width: 28px}
+    &.btn-group-xs .btn.labeled .btn-label {width: 22px}
+}

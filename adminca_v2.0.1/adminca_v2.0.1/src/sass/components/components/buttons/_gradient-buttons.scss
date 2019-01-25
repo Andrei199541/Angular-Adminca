@@ -1,0 +1,32 @@
+//== GRADIENT BUTTONS
+
+[class*="btn-gradient-"] {
+    border-width: 0;
+    color: #fff;
+}
+.btn-gradient-purple {
+    background-image: linear-gradient(45deg, #ff4081 0%, #7536E6 100%) !important;
+}
+.btn-gradient-peach {
+    background-image: linear-gradient(45deg, #F39C12 0%, #E91E63 100%) !important;
+}
+.btn-gradient-aqua {
+    background-image: linear-gradient(45deg,#35c9ff 0,#69F0AE 100%) !important;
+}
+.btn-gradient-blue {
+    background-image: linear-gradient(45deg, #00dcaf 0, #7536e6 100%) !important;
+}
+.btn-gradient-blue2 {
+    background-image: linear-gradient(45deg, #7536e6 0, #09ddae 100%) !important;
+}
+.btn-gradient-silver {
+    background-image: linear-gradient(45deg,#c7cccf 30%,#35c9ff 100%) !important;
+    color: inherit;
+}
+.btn-gradient-lime {
+    background-image: linear-gradient(45deg, #EEFF41 0%, #35C9FF 100%) !important;
+    color: inherit;
+}
+.btn-gradient-blue-pink {
+    background-image: linear-gradient(45deg, #35c9ff 0, #E91E63 100%) !important;
+}

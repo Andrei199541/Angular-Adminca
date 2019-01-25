@@ -1,0 +1,139 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Toastr notifications'
+  - var pageUrl = 'toastr.html'
+  - var page_heading = 'Toastr notifications'
+  - var path = ['Components', 'Toastr notifications']
+
+block scripts
+  +script('toastr-demo.js', 'page')
+
+block content
+    a.btn.btn-primary.mb-4(href='http://codeseven.github.io/toastr/', target='_blank') Official Website
+    +panel('Toastr Notification')
+        .row
+            .col-md-4
+                .form-group
+                    label Title
+                    input#title.form-control(type='text', placeholder='Enter a title ...')
+                .form-group
+                    label Message
+                    textarea#message.form-control(placeholder='Enter a message ...', rows='3')
+                .form-group.check-list
+                    label.checkbox
+                        input#closeButton(type='checkbox', value='checked', checked='')
+                        span.input-span
+                        | Close Button
+                    label.checkbox
+                        input#addBehaviorOnToastClick(type='checkbox', value='checked')
+                        span.input-span
+                        | Add behavior on toast click
+                    label.checkbox
+                        input#debugInfo(type='checkbox', value='checked')
+                        span.input-span
+                        | Debug
+                    label.checkbox
+                        input#progressBar(type='checkbox', value='checked', checked='')
+                        span.input-span
+                        | Progress Bar
+                    label.checkbox
+                        input#preventDuplicates(type='checkbox', value='checked')
+                        span.input-span
+                        |  Prevent Duplicates
+                    label.checkbox
+                        input#addClear(type='checkbox', value='checked')
+                        span.input-span
+                        |  Add button to force clearing a toast, ignoring focus
+                    label.checkbox
+                        input#newestOnTop(type='checkbox', value='checked')
+                        span.input-span
+                        |  Newest on top
+            .col-md-2
+                #toastTypeGroup.form-group.check-list
+                    label Toast Type
+                    label.radio
+                        input(type='radio', name='toast', value='success', checked='')
+                        span.input-span
+                        | Success
+                    label.radio
+                        input(type='radio', name='toast', value='info')
+                        span.input-span
+                        | Info
+                    label.radio
+                        input(type='radio', name='toast', value='warning')
+                        span.input-span
+                        | Warning
+                    label.radio
+                        input(type='radio', name='toast', value='error')
+                        span.input-span
+                        | Error
+                #positionGroup.form-group.check-list
+                    label Position
+                    label.radio
+                        input(type='radio', name='positions', value='toast-top-right', checked='')
+                        span.input-span
+                        | Top Right
+                    label.radio
+                        input(type='radio', name='positions', value='toast-bottom-right')
+                        span.input-span
+                        | Bottom Right
+                    label.radio
+                        input(type='radio', name='positions', value='toast-bottom-left')
+                        span.input-span
+                        | Bottom Left
+                    label.radio
+                        input(type='radio', name='positions', value='toast-top-left')
+                        span.input-span
+                        | Top Left
+                    label.radio
+                        input(type='radio', name='positions', value='toast-top-full-width')
+                        span.input-span
+                        | Top Full Width
+                    label.radio
+                        input(type='radio', name='positions', value='toast-bottom-full-width')
+                        span.input-span
+                        | Bottom Full Width
+                    label.radio
+                        input(type='radio', name='positions', value='toast-top-center')
+                        span.input-span
+                        | Top Center
+                    label.radio
+                        input(type='radio', name='positions', value='toast-bottom-center')
+                        span.input-span
+                        | Bottom Center
+            .col-md-2
+                .form-group
+                    label Show Easing
+                    input#showEasing.form-control(type='text', value='swing', placeholder='swing, linear')
+                .form-group
+                    label Hide Easing
+                    input#hideEasing.form-control(type='text', value='linear', placeholder='swing, linear')
+                .form-group
+                    label Show Method
+                    input#showMethod.form-control(type='text', value='fadeIn', placeholder='show, fadeIn, slideDown')
+                .form-group
+                    label Hide Method
+                    input#hideMethod.form-control(type='text', value='fadeOut', placeholder='hide, fadeOut, slideUp')
+            .col-md-3
+                .form-group
+                    label Show Duration
+                    input#showDuration.form-control(type='text', value='300', placeholder='ms')
+                .form-group
+                    label Hide Duration
+                    input#hideDuration.form-control(type='text', value='1000', placeholder='ms')
+                .form-group
+                    label Time out
+                    input#timeOut.form-control(type='text', value='5000', placeholder='ms')
+                .form-group
+                    label Extended time out
+                    input#extendedTimeOut.form-control(type='text', value='1000', placeholder='ms')
+        .row
+            .col-md-12
+                button#showtoast.btn.btn-primary Show Toast
+                button#cleartoasts.btn.btn-secondary Clear Toasts
+                button#clearlasttoast.btn.btn-secondary Clear Last Toast
+        .row
+            .col-md-12
+                pre#toastrOptions.
+                    \nSettings...            

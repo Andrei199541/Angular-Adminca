@@ -1,0 +1,58 @@
+header.header
+  // START TOP-LEFT TOOLBAR
+  ul.nav.navbar-toolbar
+    li
+      a.nav-link.sidebar-toggler.js-sidebar-toggler(href='javascript:;')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    li.dropdown.mega-menu
+      a.nav-link.dropdown-toggle(data-toggle='dropdown' href='javascript:;') Mega
+      .dropdown-menu
+        .dropdown-arrow
+        .mega-toolbar-menu
+          .d-flex
+            a.mega-toolbar-item(href='javascript:;')
+              .item-icon: i.ti-file
+              .item-name Reports
+              .item-text Lorem Ipsum is simply dummy.
+              .item-details 74 New
+            a.mega-toolbar-item(href='javascript:;')
+              .item-icon: i.ti-shopping-cart-full
+              .item-name Orders
+              .item-text Lorem Ipsum is simply dummy.
+              .item-details 125 New
+          .d-flex
+            a.mega-toolbar-item(href='javascript:;')
+              .item-icon: i.ti-wallet
+              .item-name Profit
+              .item-text Lorem Ipsum is simply dummy.
+              .item-details
+                | +1200
+                sup $
+            a.mega-toolbar-item(href='javascript:;')
+              .item-icon: i.ti-support
+              .item-name Support
+              .item-text Lorem Ipsum is simply dummy.
+              .item-details 54 New Ticket
+    
+
+    li
+      a.nav-link.search-toggler.js-search-toggler
+        i.ti-search
+        span Search here...
+  // END TOP-LEFT TOOLBAR
+  //LOGO
+  a.page-brand(href='index.html') A
+  // START TOP-RIGHT TOOLBAR
+  ul.nav.navbar-toolbar
+    include header/user.pug
+    li.timeout-toggler
+      a.nav-link(data-toggle='modal' data-target='#session-dialog' href='javascript:;').toolbar-icon
+        i.ti-alarm-clock.timeout-toggler-icon.rel
+          span.notify-signal
+    include header/notification.pug
+    li
+      a.nav-link.quick-sidebar-toggler
+        span.ti-align-right
+  // END TOP-RIGHT TOOLBAR

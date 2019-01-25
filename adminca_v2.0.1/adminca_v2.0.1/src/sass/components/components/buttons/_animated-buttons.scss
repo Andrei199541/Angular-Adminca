@@ -1,0 +1,78 @@
+// ANIMATED BUTTONS
+
+.btn-animated {
+    .visible-content, .hidden-content {transition: all .3s ease 0s;}
+    .hidden-content {line-height: 20px}
+    &.from-left {
+        .visible-content {
+            position: relative;
+            left: 0;
+            right: auto;
+        }
+        .hidden-content {
+            position: absolute;
+            top: 50%;
+            left: -100%;
+            margin-top: -10px;
+            width: 100%;
+        }
+        &:hover {
+            .visible-content {
+                left: 200%;
+                right: auto;
+            }
+            .hidden-content {
+                left: 0;
+                right: auto;
+            }
+        }
+    }
+    &.from-top {
+        .visible-content {
+            position: relative;
+            left: 0;
+            right: auto;
+        }
+        .hidden-content {
+            position: absolute;
+            top: -50%;
+            left: 0;
+            margin-top: -10px;
+            width: 100%;
+        }
+        &:hover {
+            .visible-content {
+                opacity: 0
+            }
+            .hidden-content {
+                top: 50%;
+            }
+        }
+    }
+    &.fade-button {
+        .visible-content {
+            position: relative;
+            left: 0;
+            right: auto;
+        }
+        .hidden-content {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -10px;
+            width: 100%;
+            opacity: 0;
+            transform: scale(1.5);
+        }
+        &:hover {
+            .visible-content {
+                opacity: 0;
+                transform: scale(.75);
+            }
+            .hidden-content {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+}

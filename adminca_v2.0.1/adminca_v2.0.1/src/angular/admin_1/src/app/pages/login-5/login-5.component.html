@@ -1,0 +1,81 @@
+<style>
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(./assets/img/blog/19.jpeg);
+    }
+    .cover {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(117, 54, 230, .1);
+    }
+
+    .auth-head-icon {
+        position: relative;
+        height: 60px;
+        width: 60px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        background: rgba(0, 0, 0, .6);
+        color: #fff;
+        box-shadow: 0 5px 20px #d6dee4;
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    .login-box {
+        background: rgba(0, 0, 0, .6);
+        color: rgba(255, 255, 255, .8);
+    }
+
+    .login-box .form-control {
+        background-color: transparent;
+        border-color: rgba(255, 255, 255, .6);
+        color: #fff;
+    }
+
+    .login-box .form-control:focus {
+        border-color: rgba(255, 255, 255, 1);
+    }
+    body.empty-layout .theme-config, body.empty-layout .to-top{
+        display: none !important;
+    }
+</style>
+
+<div class="overlay"></div>
+<div class="cover"></div>
+<div style="max-width: 400px;margin: 100px auto 50px;">
+    <div class="text-center mb-5">
+        <span class="auth-head-icon"><i class="la la-user"></i></span>
+    </div>
+    <div class="ibox login-box">
+        <form class="ibox-body" id="login-form" action="javascript:;" method="POST">
+            <h4 class="font-strong text-center mb-5">LOG IN</h4>
+            <div class="form-group mb-4">
+                <input class="form-control form-control-line" type="text" name="email" placeholder="Email">
+            </div>
+            <div class="form-group mb-4">
+                <input class="form-control form-control-line" type="password" name="password" placeholder="Password">
+            </div>
+            <div class="flexbox mb-5">
+                <label class="checkbox checkbox-primary">
+                    <input type="checkbox" checked="">
+                    <span class="input-span"></span> Remember</label>
+                <a class="color-inherit" routerLink="/forgot_password">Forgot password?</a>
+            </div>
+            <div class="text-center mb-4">
+                <button class="btn btn-primary btn-rounded btn-block">LOGIN</button>
+            </div>
+        </form>
+    </div>
+</div>

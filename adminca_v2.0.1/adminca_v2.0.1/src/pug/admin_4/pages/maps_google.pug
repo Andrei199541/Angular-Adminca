@@ -1,0 +1,42 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Google maps'
+  - var pageUrl = 'maps_google.html'
+  - var page_heading = 'Google maps'
+  - var path = ['Maps', 'Google maps']
+
+block plugins
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBeEBUVFBBEB74t72GUzfQqgBO9vUTJ4VM')
+
+block scripts
+  +script('google-maps-demo.js', 'page')
+
+block content
+    .alert.alert-primary.alert-bordered
+        p.mb-0
+            | Google Maps: for more options and examples see the official 
+            a(href='https://developers.google.com/maps/documentation/javascript/tutorial', target='_blank') official documentation
+        p
+            | Or you can use plugins for easy operation. For example 
+            a(href='https://hpneo.github.io/gmaps/', target='_blank' class='text-success') gmaps.js
+        p
+            a.btn.btn-primary(href='https://developers.google.com/maps/documentation/javascript/tutorial', target='_blank') Official Website
+    .row
+      .col-md-6
+        +panel('Simple Map')
+          #map_1.google-map
+      .col-md-6
+        +panel('Styled Map - Night Mode')
+          #map_2.google-map
+    .row
+      .col-md-6
+        +panel('Street view')
+          #map_3.google-map
+      .col-md-6
+        +panel('Map Satellite type')
+          #map_4.google-map
+    
+block page_styles
+    style.
+      .google-map {height: 300px;}

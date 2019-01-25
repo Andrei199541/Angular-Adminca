@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Adminca bootstrap 4 & angular 5 admin template, Шаблон админки</title>
+    <link href="assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="assets/vendors/themify-icons/css/themify-icons.css" rel="stylesheet"/>
+    <link href="assets/vendors/fixed-sticky/fixedsticky.css" rel="stylesheet"/>
+    <link href="assets/vendors/highlight/styles/railscasts.css" rel="stylesheet">
+    <link href="assets/vendors/jstree/dist/themes/default/style.min.css" rel="stylesheet"/>
+    <link href="assets/css/app.css" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+  </head>
+  <body class="page-docs" data-spy="scroll" data-target="#sidebarScroll" data-offset="20">
+    <div class="wrapper">
+      <header class="header header-fixed-top header-scroll">
+        <div class="content">
+          <div>
+              <a href="javascript:;" class="d-md-none sidebar-toggler"><i class="ti-menu"></i></a>
+              <a href="http://admincast.com/adminca/" class="brand d-none d-sm-inline" target="_blank">ADMINCA</a>
+          </div>
+          <div class="d-flex align-items-center">
+            <ul class="nav header-menu">
+              <li class="dropdown">
+                <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown">DOCUMENTATION</a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a href="documentation.html" class="dropdown-item d-flex align-items-center" target="_blank"><img src="assets/img/en.png" height="20px" class="mr-2">English</a>
+                  <a href="documentation-ru.html" class="dropdown-item d-flex align-items-center" target="_blank"><img src="assets/img/ru.png" height="20px" class="mr-2" style="margin-top:-3px;">Russian</a>
+                </div>
+              </li>
+            </ul>
+            <a href="http://themeforest.net/item/adminca-responsive-bootstrap-4-3-angular-4-admin-dashboard-template/20912589?ref=Vaap" class="btn btn-pink btn-rounded btn-air purchase_button" target="_blank"><span class="btn-icon"><i class="ti-shopping-cart"></i>PURCHASE</span></a>
+          </div>
+        </div>
+      </header>
+      <section class="section-docs">
+        <div class="content text-right">
+          <a class="btn btn-light mr-2" href="documentation.html"><img src="assets/img/en.png" height="24px"> English</a>
+          <a class="btn btn-light" href="documentation-ru.html"><img src="assets/img/ru.png" height="24px" style="margin-top:-3px;"> Russian</a>
+        </div>
+        <div class="content d-flex align-items-start justify justify-content-between">
+          <aside class="docs-sidebar fixedsticky" id="sidebarScroll"> 
+              <ul class="docs-sidebar-list">
+                <li class="nav-item"><a href="#sec1" class="nav-link active">Введение</a></li>
+                <li class="nav-item"><a href="#sec2" class="nav-link active">Быстрый старт</a></li>
+                <li class="nav-item">
+                    <a href="#sec3" class="nav-link">Структура папок<i class="fa fa-angle-left arrow-icon"></i></a>
+                    <ul class="nav flex-md-column ml-2 hidden-sm-down">
+                        <li class="nav-item"><a href="#sec3a" class="nav-link">Обзор</a></li>
+                        <li class="nav-item"><a href="#sec3b" class="nav-link">Pug</a></li>
+                        <li class="nav-item"><a href="#sec3c" class="nav-link">Javascript</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#sec4" class="nav-link">Gulp сборка<i class="fa fa-angle-left arrow-icon"></i></a>
+                    <ul class="nav flex-md-column ml-2 hidden-sm-down">
+                        <li class="nav-item"><a href="#sec4a" class="nav-link">Установка Gulp</a></li>
+                        <li class="nav-item"><a href="#sec4b" class="nav-link">Настройки</a></li>
+                        <li class="nav-item"><a href="#sec4c" class="nav-link">Таски</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#sec5" class="nav-link">Стили<i class="fa fa-angle-left arrow-icon"></i></a>
+                    <ul class="nav flex-md-column ml-2 hidden-sm-down">
+                        <li class="nav-item"><a href="#sec5a" class="nav-link">Обзор</a></li>
+                        <li class="nav-item"><a href="#sec5b" class="nav-link">Структура папок</a></li>
+                        <li class="nav-item"><a href="#sec5c" class="nav-link">Настройки</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#sec6" class="nav-link">Angular<i class="fa fa-angle-left arrow-icon"></i></a>
+                    <ul class="nav flex-md-column ml-2 hidden-sm-down">
+                        <li class="nav-item"><a href="#sec6a" class="nav-link">Структура папок</a></li>
+                        <li class="nav-item"><a href="#sec6b" class="nav-link">Установка</a></li>
+                    </ul>
+                </li>
+              </ul>
+          </aside>
+
+          <div class="docs-content col docs-content-ru">
+            <div id="sec1" class="section">
+              <h2 class="section-head">Введение</h2>
+              <div class="section-content">
+                <p>
+                  Adminca - это идеальный, мощный, полностью настраиваемый и очень простой к использованию универсальный шаблон администратора который подойдет для любых типов веб-приложений. 
+                  Основывая на популярном фреймворке <code>Bootstrap  4</code> он обеспечивает полностью адаптивный и совершенный интерфейс. 
+                  Удобная структура и высококачественный код сделают его очень простой к использованию шаблоном который может легко настроиват даже начинающий разработчик. 
+                  Adminca поставляется с несколькими версиями шаблонов: <code>HTML</code> и <code>Angular 5+</code>. <br>
+                  Adminca: <b>Сэкономьте свое время, выберите лучшее</b>, ведь мы много работаем чтобы вам было удобно.
+                </p>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div id="sec2" class="section">
+              <h2 class="section-head">Быстрый старт</h2>
+              <div class="section-content">
+                <p>Если вы хотите что то изменить в шаблоне с помощью компиляции, выполните следуюшие 6 команды.</p>
+                <ol>
+                  <li>Загрузите и установите последнюю версию <a href="https://nodejs.org" target="_blank">Node.js</a>.</li>
+                  <li>Установите <code>bower</code> глобально:
+                    <pre><code class="CoffeeScript">npm install bower -g</code></pre>
+                  </li>
+                  <li>Установите <code>gulp</code> глобально:
+                    <pre><code class="CoffeeScript">npm install gulp-cli -g</code></pre>
+                  </li>
+                  <li>Перейдите в <code>[adminca_folder]/tools/gulp</code> папку:
+                    <pre><code class="bash">cd tools/gulp</code></pre>
+                  </li>
+                  <li>Установите инструменты для сборки вашего проекта. Необходимо выполнить в папке <code>[adminca_folder]/tools/gulp</code>:
+                    <pre><code class="CoffeeScript">npm install</code></pre>
+                  </li>
+                  <li>Скомпилируйте все темы. На выходе мы получаем наши скомпилированные темы в папке <code>[adminca_folder]/dist</code>.
+                    <pre><code class="nginx">gulp build</code></pre>
+                    <p class="m-0">Если вы хотите скомпилировать одну тему выполните команду <code>gulp build:[theme]</code>. <code>[theme]</code> == один из тем: 
+                      <ul>
+                        <li><code>admin_1</code> <span class="text-muted">// gulp build:admin_1</span></li>
+                        <li><code>admin_2</code></li>
+                        <li><code>admin_3</code></li>
+                        <li><code>...</code> // остальные шаблоны</li>
+                      </ul>Подробно про компиляцию читайте в секцию <a href="#sec4" data-href>Gulp сборка</a>.
+                    </p>
+                   
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div id="sec3" class="section">
+              <h2 class="section-head">Структура папок</h2>
+              <h3 id="sec3a" class="section-title">Обзор</h3>
+              <div class="section-content">
+                <p>Мы создали для вас гибкую и настраиваемый файловую структуру который вы легко используйте.</p>
+                <table class="table table-bordered font-14">
+                  <thead><tr bgcolor="#eee" class="font-strong text-info"><th>Path</th><th>Description</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td><span><i class="fa fa-folder-open mr-2"></i>src</span></td>
+                      <td>папка исходного кода</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>angular</span></td>
+                      <td>исходные angular файлы</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>img</span></td>
+                      <td>исходные картинки</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>js</span></td>
+                      <td>исходные js файлы</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>pug</span></td>
+                      <td>исходные pug файлы</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>sass</span></td>
+                      <td>исходные sass файлы</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>...</span></td>
+                      <td>другие исходные файлы</td>
+                    </tr>
+                    <tr><td colspan="2" bgcolor="#eee" class="font-strong text-info">папка сборки</td></tr>
+                    <tr>
+                      <td><span><i class="fa fa-folder-open mr-2"></i>tools</span></td>
+                      <td>папка сборки</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>gulp</span></td>
+                      <td>папка Gulp сборки</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class=""><i class="fa fa-folder mr-2"></i>gulp-tasks</span></td>
+                      <td>отдельные Gulp таски</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">gulpfile.js</span></td>
+                      <td>главный скрипт Gulp тасков</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">package.json</span></td>
+                      <td>Файл конфигурации менеджера пакетов NPM</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">bower.json</span></td>
+                      <td>Файл манифеста менеджера пакетов Bower</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">.bowerrc</span></td>
+                      <td>Файл конфигурации менеджера пакетов Bower</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">config.json</span></td>
+                      <td>Файл настройки сборки. Здесь вы можете полностью настроить параметры сборки.</td>
+                    </tr>
+                    <tr><td colspan="2" bgcolor="#eee" class="font-strong text-info">скомпилированный шаблон</td></tr>
+                    <tr>
+                      <td><span><i class="fa fa-folder-open mr-2"></i>dist</span></td>
+                      <td>выходная папка скомпилированного шаблона</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>admin_1</span></td>
+                      <td>layout 1</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class=""><i class="fa fa-folder mr-2"></i>html</span></td>
+                      <td>HTML версия</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class=""><i class="fa fa-folder mr-2"></i>angular</span></td>
+                      <td>Angular версия</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>admin_2</span></td>
+                      <td>layout 2</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>...</span></td>
+                      <td>остальные демо версии</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3 id="sec3b" class="section-title">Pug</h3>
+              <div class="section-content">
+                <p><a href="https://pugjs.org" target="_blank">Pug</a> (Jade 2) – Мощный, элегантный, многофункциональный шаблонный движок.</p>
+                <p>Pug файлы расположены в <code>[root]/src/pug</code> папке</p>
+                <table class="table table-bordered font-14">
+                  <thead><tr><th>Path</th><th>Description</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td><span class=""><i class="fa fa-folder-open mr-2"></i>pug</span></td>
+                      <td>исходные pug файлы</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>admin_1</span></td>
+                      <td>pug файлы для admin_1 шаблона</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>admin_2</span></td>
+                      <td>pug файлы для admin_2 шаблона</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>...</span></td>
+                      <td>остальные шаблоны</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">config.pug</span></td>
+                      <td>глобальный файл настройки: пути для html файлов</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">mixins.pug</span></td>
+                      <td>миксины</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3 id="sec3c" class="section-title">Javascript</h3>
+              <div class="section-content">
+                <p>Javascript файлы расположены в <code>[root]/src/js</code> папке</p>
+                <table class="table table-bordered font-14">
+                  <thead><tr><th>Path</th><th>Description</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td><span class=""><i class="fa fa-folder-open mr-2"></i>js</span></td>
+                      <td>исходные Javascript файлы</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>app</span></td>
+                      <td>Javascript Файлы на уровне приложений (глобальные)</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">app.js</span></td>
+                      <td>основной javascript файл</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>theme</span></td>
+                      <td>javascript файлы на уровне шаблона</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">admin_1</span></td>
+                      <td>javascript файлы для макета admin_1 шаблона</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">admin_2</span></td>
+                      <td>javascript файлы для макета admin_2 шаблона</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">...</span></td>
+                      <td>остальные шаблоны</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div id="sec4" class="section">
+              <h2 class="section-head">Gulp сборка</h2>
+              <h3 id="sec4a" class="section-title">Установка</h3>
+              <div class="section-content">
+                <p>Gulp - это инструментарий для автоматизации трудоемких задач в процессе разработки. <a href="https://gulpjs.com/" target="_blank">gulpjs.com</a><br>
+                Чтобы установить и использовать Gulp, вам понадобится <a href="https://nodejs.org" target="_blank">Node.js</a> установленный на вашем компьютере.</p>
+                <p><b>1)</b> Чтобы установить <code>Gulp</code> глобально выполните следующую команду в командной строке:</p>
+                <pre><code class="CoffeeScript">npm install gulp-cli -g</code></pre>
+                <p><b>2)</b> И установим <code>Bower</code> глобально:</p>
+                <pre><code class="CoffeeScript">npm install bower -g</code></pre>
+                <p><b>3)</b> Потом перейдите в каталог <code>[root]tools/gulp</code> и выполните</p>
+                <pre><code class="CoffeeScript">npm install</code></pre>
+                <p>Эта команда создаст каталог node_modules и установит в нем gulp и все необходимые инструменты для сборки вашего проекта.</p>
+              </div>
+              <h3 id="sec4b" class="section-title">Настройки сборки</h3>
+              <div class="section-content">
+                <p>Все настройки сборки хранится в <code>[root]/tools/gulp/config.json</code> файле. Вы можете полностью настроить параметры сборки.</p>
+                <pre><code>{
+  "path": {
+      "src": "../../src",
+      "output": "../../dist",
+      "bower_components": "../../src/bower_components",
+      "vendors": "../../src/vendors"
+  },
+  "build": {
+      "admin_1": {
+          "js": {
+              "src": [
+                  "@{path.src}/js/app/app.js",
+                  "@{path.src}/js/theme/admin_1/layout.js"
+              ],
+              "output": "@{path.output}/admin_1/html/assets/js"
+          },
+          "sass": {
+              "src": {
+                  "bundle": [
+                      "@{path.src}/sass/components/components.bs4/components.scss",
+                      "@{path.src}/sass/layouts/admin_1/layout.scss",
+                      "@{path.src}/sass/vendors/vendors.scss"
+                  ],
+                  "themes": "@{path.src}/sass/layouts/admin_1/themes/*.scss",
+                  "pages": "@{path.src}/sass/layouts/admin_1/pages/*.css"
+              },
+              "output": {
+                  "bundle": "@{path.output}/admin_1/html/assets/css",
+                  "themes": "@{path.output}/admin_1/html/assets/css/themes",
+                  "pages": "@{path.output}/admin_1/html/assets/css/pages"
+              }
+          },
+          "pug": {
+            "src": "@{path.src}/pug/admin_1/pages/*.pug",
+            "output": "@{path.output}/admin_1/html"
+          }
+      },
+      "admin_2": {
+          "js": {
+              "src": [
+                  "@{path.src}/js/app/app.js",
+                  "@{path.src}/js/theme/admin_2/layout.js"
+              ],
+              "output": "@{path.output}/admin_2/html/assets/js"
+          },
+          "sass": {
+              "src": {
+                  "bundle": [
+                      "@{path.src}/sass/components/components.bs4/components.scss",
+                      "@{path.src}/sass/layouts/admin_2/layout.scss",
+                      "@{path.src}/sass/vendors/vendors.scss"
+                  ],
+                  "themes": "@{path.src}/sass/layouts/admin_2/themes/*.scss",
+                  "pages": "@{path.src}/sass/layouts/admin_2/pages/*.css"
+              },
+              "output": {
+                  "bundle": "@{path.output}/admin_2/html/assets/css",
+                  "themes": "@{path.output}/admin_2/html/assets/css/themes",
+                  "pages": "@{path.output}/admin_1/html/assets/css/pages"
+              }
+          },
+          "pug": {
+            "src": "@{path.src}/pug/admin_2/pages/*.pug",
+            "output": "@{path.output}/admin_2/html"
+          }
+      }
+      ... остальные демо версии
+  }
+}
+                </code></pre>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>path</code></td>
+                      <td><code>Object</code></td>
+                      <td>Пути к папке исходного кода: <code>src</code>, к папке вывода: <code>output</code>, к папкам <code>bower_components</code> и <code>vendors</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>build.[theme].js.src</code></td>
+                      <td><code>Array</code> or <code>string</code></td>
+                      <td>Пути исходных js файлов</td>
+                    </tr>
+                    <tr>
+                      <td><code>build.[theme].js.output</code></td>
+                      <td><code>string</code></td>
+                      <td>папка вывода файла <code>app.js</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>build.[theme].sass.src</code></td>
+                      <td><code>Object</code></td>
+                      <td>Пути исходных sass файлов: <code>bundle</code> для <code>main.css</code> файла, <code>themes</code> для цветных схем, <code>pages</code> для отдельных страниц.</td>
+                    </tr>
+                    <tr>
+                      <td><code>build.[theme].sass.output</code></td>
+                      <td><code>Object</code></td>
+                      <td>Папки вывода css файлов</td>
+                    </tr>
+                    <tr>
+                      <td><code>build.[theme].pug.src</code></td>
+                      <td><code>Array</code> or <code>string</code></td>
+                      <td>Пути исходных pug(Jade 2) файлов</td>
+                    </tr>
+                    <tr>
+                      <td><code>build.[theme].pug.output</code></td>
+                      <td><code>string</code></td>
+                      <td>Папка вывода Html файлов</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3 id="sec4c" class="section-title">Таски</h3>
+              <div class="section-content">
+                <p>Все gulp таски находится в <code>[root]/tools/gulp/gulp-tasks</code> папке.</p>
+                <p>Мы создали для вас очень удобную и гибкую систему сборки, который легко может понять даже начинающий. <br>Вы можете легко создать как одну тему, так и все вместе в одной команде.</p>
+                <p>Давайте начнем. Поскольку у нас есть несколько тем: <code>admin_1</code>, <code>admin_2</code>, <code>Admin_3</code> ..., поэтому мы создали отдельные задачи для каждой темы.</p>
+                <pre><code class="JavaScript">gulp build:admin_1  //== СОБРАТЬ ВСЕ ФАЙЛЫ ДЛЯ ADMIN_1 ТЕМ
+    gulp.start('admin_1:pug');     // СОБРАТЬ HTML ФАЙЛЫ ДЛЯ ADMIN_1 ТЕМ
+    gulp.start('admin_1:sass');    // СОБРАТЬ CSS ФАЙЛЫ ДЛЯ ADMIN_1 ТЕМ
+    gulp.start('admin_1:js');      // СОБРАТЬ JS ФАЙЛЫ ДЛЯ ADMIN_1 ТЕМ
+
+gulp build:admin_2  //== СОБРАТЬ ВСЕ ФАЙЛЫ ДЛЯ ADMIN_2 ТЕМ
+    gulp.start('admin_2:pug');     // СОБРАТЬ HTML ФАЙЛЫ ДЛЯ ADMIN_2 ТЕМ
+    gulp.start('admin_2:sass');    // СОБРАТЬ CSS ФАЙЛЫ ДЛЯ ADMIN_2 ТЕМ
+    gulp.start('admin_2:js');      // СОБРАТЬ JS ФАЙЛЫ ДЛЯ ADMIN_2 ТЕМ
+
+gulp build:admin_3  //== СОБРАТЬ ВСЕ ФАЙЛЫ ДЛЯ ADMIN_3 ТЕМ
+    ...
+</code></pre>
+                <p>Так мы видим, что для сборки <code>Admin_1</code> тем нам нужна одна команда: <code>gulp build:admin_1</code>, который создает все файлы для этой темы.</p>
+                <p>Подробно что он делает:</p>
+                <ul>
+                  <li>запускает <code>gulp.start('admin_1:pug');</code> команду который возьмет все pug файлы из <code>[root]/src/pug/admin_1/pages/*.pug</code> папки указанный в<code>build.admin_1.pug.src</code> параметре конигурации.
+                    <ul>
+                      <li>Компилирует их в html файлы.</li>
+                      <li>И сохранит их в <code>[root]/dist/admin_1/html</code> папке указанный в <code>build.admin_1.pug.output</code> параметре конигурации.</li>
+                    </ul>
+                  </li>
+                  <li>запускает <code>gulp.start('admin_1:js');</code> команду который возьмет
+                    <ul>
+                      <li><code>[root]/src/js/app/app.js</code></li>
+                      <li><code>[root]/src/js/theme/admin_1/layout.js</code></li>
+                    </ul>
+                    файлы указанный в <code>build.admin_1.pug.src</code> параметре конигурации.
+                    <ul>
+                      <li>Минифицировать.</li>
+                      <li>Затем соединит их в <code>app.js</code> файле.</li>
+                      <li>И сохранит его в <code>[root]/dist/admin_1/html/assets/js</code> папке указанный в <code>build.admin_1.js.output</code> параметре конигурации.</li>
+                    </ul>
+                  </li>
+                  <li>запускает <code>gulp.start('admin_1:sass');</code> команду который возьмет
+                    <ul>
+                      <li><code>[root]/src/sass/components/components.scss</code> -- ui компоненты</li>
+                      <li><code>[root]/src/sass/layouts/admin_1/layout.scss</code> -- стили для макет темы admin_1</li>
+                      <li><code>[root]/src/sass/vendors/vendors.scss</code> -- стили для вендорных плагинов</li>
+                    </ul>
+                    файлы указанный в <code>build.admin_1.sass.src</code> параметре конигурации.
+                    <ul>
+                      <li>соединит их в <code>main.css</code> файле.</li>
+                      <li>Минифицировать.</li>
+                      <li>И сохранит его в <code>[root]/dist/admin_1/html/assets/css</code> папке указанный в <code>build.admin_1.sass.output</code> параметре конигурации.</li>
+                    </ul>
+                    <p>И компилирует остальные sass файлы.</p>
+                  </li>
+                  <li>Создает остальные файлы: картинки, вендорные плагины...</li>
+                </ul>
+                <p>На выходе мы получаем такую папку в выходном папке <code>[root]/dist/admin_1/html</code></p>
+                <div class="jstree mb-4">
+                  <ul>
+                    <li class="jstree-open">assets
+                      <ul>
+                        <li class="jstree-open">css
+                          <ul>
+                            <li data-jstree="{&quot;type&quot;:&quot;css&quot;}">main.css</li>
+                            <li>themes</li>
+                            <li>pages</li>
+                          </ul>
+                        </li>
+                        <li class="jstree-open">js
+                          <ul>
+                            <li data-jstree="{&quot;type&quot;:&quot;js&quot;}">app.js</li>
+                            <li>scripts</li>
+                          </ul>
+                        </li>
+                        <li>img</li>
+                        <li>vendors</li>
+                        <li>demo</li>
+                      </ul>
+                    </li>
+                    <li data-jstree="{&quot;type&quot;:&quot;html&quot;}"> index.html</li>
+                    <li data-jstree="{&quot;type&quot;:&quot;html&quot;}"> dashboard_2.html</li>
+                    <li data-jstree="{&quot;type&quot;:&quot;html&quot;}"> dashboard_3.html</li>
+                    <li data-jstree="{&quot;type&quot;:&quot;html&quot;}"> ...</li>
+                  </ul>
+                </div>
+                <h5 class="font-strong">Другие таски</h5>
+                <pre><code class="JavaScript">gulp build:pug   //== СОБРАТЬ ВСЕ HTML ФАЙЛЫ ДЛЯ ВСЕХ ТЕМ
+gulp build:sass   //== СОБРАТЬ ВСЕ CSS ФАЙЛЫ ДЛЯ ВСЕХ ТЕМ
+gulp build:js     //== СОБРАТЬ ВСЕ JS ФАЙЛЫ ДЛЯ ВСЕХ ТЕМ
+</code></pre>
+                <h5 class="font-strong">Изменения файлов</h5>
+                <p>Gulp может запускаться автоматически при изменении файла.</p>
+                <pre><code class="JavaScript">gulp serve</code></pre>
+                <p>Это команда запускает сервер с помощью browserSync и отслеживает в реальном времени все изменения с исходными файлами в папке src и в зависимости от изменений выполнять конкретный таск.</p>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div id="sec5" class="section">
+              <h2 class="section-head">Стили</h2>
+              <h3 id="sec5a" class="section-title">Обзор</h3>
+              <div class="section-content">
+                <p>Каждый шаблон в Adminca включает один главный стиль: <code>main.min.css</code> файл, состоящий из:</p>
+                <ul>
+                  <li>стили для ui компонентов</li>
+                  <li>стили макета</li>
+                  <li>стили для вендорных плагинов</li>
+                </ul>
+                <p>Стили для ui компонентов компилируются из <code>[root]/src/sass/components/components.scss</code> файла.</p>
+                <p>Стили макета компилируются из <code>[root]/src/sass/layouts/[theme]/layout.scss</code> файла.</p>
+                <p>Стили для вендорных плагинов компилируются из <code>[root]/src/sass/vendors/vendors.scss</code> файла.</p>
+                <p>Они соединяются в одном файле <code>main.min.css</code> для каждого версии шаблона.</p>
+                <p>Таким образом мы получаем</p>
+                <table class="table table-bordered table-responsive">
+                  <thead>
+                    <tr><th>[Admin_1] theme</th><th>[Admin_2] theme</th><th>[Admin_2] theme</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>sass/components/components.scss</code></td>
+                      <td><code>sass/components/components.scss</code></td>
+                      <td><code>sass/components/components.scss</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>sass/layouts/admin_1/layout.scss</code></td>
+                      <td><code>sass/layouts/admin_2/layout.scss</code></td>
+                      <td><code>sass/layouts/admin_3/layout.scss</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>sass/vendors/vendors.scss</code></td>
+                      <td><code>sass/vendors/vendors.scss</code></td>
+                      <td><code>sass/vendors/vendors.scss</code></td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr><th colspan="3">в итоге получаем</th></tr>
+                    <tr><th><code>main.css</code></th><th><code>main.css</code></th><th><code>main.css</code></th></tr>
+                  </tfoot>
+                </table>
+              </div>
+              <h3 id="sec5b" class="section-title">Структура папок</h3>
+              <div class="section-content">
+                <p>Sass файлы расположены в <code>[root]/src/sass</code> папке.</p>
+                <table class="table table-bordered font-14">
+                  <thead><tr><th>Path</th><th>Description</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td><span class=""><i class="fa fa-folder-open mr-2"></i>sass</span></td>
+                      <td>исходные sass файлы</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>components</span></td>
+                      <td>sass файлы для ui компонентов</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>layouts</span></td>
+                      <td>sass файлы для макетов шаблонов</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">admin_1</span></td>
+                      <td>sass файлы для макета admin_1 шаблона</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">admin_2</span></td>
+                      <td>sass файлы для макета admin_2 шаблона</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">...</span></td>
+                      <td>остальные шаблоны</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>vendors</span></td>
+                      <td>sass файлы для вендорных плагинов</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>mixins</span></td>
+                      <td>миксины</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3 id="sec5c" class="section-title">Настройки</h3>
+              <div class="section-content">
+                <p>Конфигурации ui компонентов находится в <code>[root]/src/sass/components/vars.scss</code> файле.</p>
+                <p>кусок кода настройки</p>
+                <pre><code class="scss">
+//
+//** Global Config
+// ======================
+
+
+//== COLORS
+
+$blue-dark:       #3498DB;
+$ebony:           #34495f;
+$green:           #18C5A9;
+$blue:            #2CC4CB;
+$red:             #f75a5f;
+$orange:          #F39C12;
+$silver:          #bdc3c7;
+$purple:          #5C6BC0;
+$pink:            #FF4081;
+$grey:            #7f8c8d;
+$peach:           #ED5043;
+$bright-purple:   #7536e6;
+
+//== SEMANTIC COLORS
+
+$brand-primary:             $purple;
+$brand-secondary:           $silver;
+$brand-success:             $green;
+$brand-info:                $blue;
+$brand-warning:             $orange;
+$brand-danger:              $red;
+$brand-default:             $silver;
+
+
+// COLORS PALLETES
+//
+// The colors for which the palette will be created
+
+$scotch-colors: (
+    'primary': (
+      color: $purple,
+      palette: true,
+    ),
+    'success': (
+      color: $green,
+      palette: true,
+    ),
+    'info': (
+      color: $blue,
+    ),
+    'warning': (
+      color: $orange,
+    ),
+    'danger': (
+      color: $red,
+    ),
+);              
+                </code></pre>
+                <h5 class="font-strong">Scotch colors</h5>
+                <p>Обращайте внимание на <code>$scotch-colors</code> массив. Для каждого цвета в этом массиве будет создана палитра фона от 50-800 если задать параметр palette: true. Например:</p>
+                <pre><code class="scss">
+// COLORS PALLETES
+//
+// The colors for which the palette will be created
+
+$scotch-colors: (
+    'blue': (
+        color: $blue,
+        palette: true,
+    ),
+);              
+                </code></pre>
+                <p>Будет создана следующие стили:</p>
+                <pre><code class="css">
+.bg-blue-800: { background-color: #208d92 }
+.bg-blue-700: { background-color: #24a1a6 }
+.bg-blue-600: { background-color: #28b4bb }
+.bg-blue:     { background-color: #2cc4cb }
+.bg-blue-400: { background-color: #4ccdd3 }
+.bg-blue-300: { background-color: #6bd6db }
+.bg-blue-200: { background-color: #96e2e5 }
+.bg-blue-100: { background-color: #c0edef }
+.bg-blue-50:  { background-color: #e6f8f9 }
+                </code></pre>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div id="sec6" class="section">
+              <h2 class="section-head">Angular</h2>
+              <h3 id="sec6a" class="section-title">Структура файлов</h3>
+              <div class="section-content">
+                <p>Исходный код Angular находится в <code>[root]/src/angular/[theme]</code> папках.</p>
+                <ul>
+                  <li><code>[root]/src/angular/admin_1</code></li>
+                  <li><code>[root]/src/angular/admin_2</code></li>
+                  <li><code>[root]/src/angular/admin_3</code></li>
+                  <li>... // остальные шаблоны</li>
+                </ul>
+              </div>
+              <h3 id="sec6b" class="section-title">Установка</h3>
+              <div class="section-content">
+                <p>Angular CLI - это инструмент интерфейса командной строки, который может создавать проект, добавлять файлы и выполнять множество текущих задач разработки, таких как тестирование, комплектация и развертывание.</p>
+                <ol>
+                  <li>Загрузите и установите последнюю версию <a href="https://nodejs.org" target="_blank">Node.js</a>, если он у вас еще  не установлен.</li>
+                  <li><p>Установите Angular CLI глобално: Откройте консоль и запустите следующую команду:</p>
+                    <pre><code class="CoffeeScript">npm install -g @angular/cli</code></pre>
+                  </li>
+                  <li>
+                    <p>Установите приложение Angular: перейдите в папку приложении Angular: <code>[root]/src/angular/[theme]</code> и запустите следующую команду:</p>
+                    <pre><code class="CoffeeScript">npm install</code></pre>
+                  </li>
+                </ol>
+                <p>Эта команда установит все необходимые модули Node.js в каталог node_modules внутри папки вашей Angular приложении.</p>
+                <h5 class="font-strong">Server</h5>
+                <p>Запустите сервер. Команда ng serve запускает сервер, наблюдает за вашими файлами и перестраивает приложение при внесении изменений в эти файлы. Использование опции --open (или просто -o) автоматически откроет ваш браузер на <code>http://localhost:4200</code>.</p>
+                <pre><code class="CoffeeScript">ng serve --open</code></pre>
+                <h5 class="font-strong">Сборка</h5>
+                <p>Команда <code>ng build</code> компилирует приложение в выходной каталог dist.</p>
+                <pre><code class="CoffeeScript">ng build --prod</code></pre>
+                <p>Подробную информацию о сборке можно найти в официальном документацию.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      
+      <section class="section-buy">
+        <div class="content">
+          <div class="text-center">
+            <i class="ti-gift mb-2 d-block" style="font-size:60px;color:#3ae2ce;"></i>
+            <div class="font-36 mb-2">Big Bundle – <span class="font-strong">50% OFF Limited offer!</span></div>
+            <div class="font-20 mb-3">Full package for the perfect price</div>
+            <div><span class="mr-2 font-26" style="text-decoration: line-through;">$60</span><span class="text-pink font-strong" style="font-size: 60px">$30</span></div>
+            <a href="http://themeforest.net/item/adminca-responsive-bootstrap-4-3-angular-4-admin-dashboard-template/20912589?ref=Vaap" class="btn btn-accent mt-3" target="_blank" style="width: 400px"><span class="btn-icon"><i class="ti-shopping-cart"></i>BUY NOW WITH 50% DISCOUNT</span></a>
+          </div>
+      </section>
+
+      <footer>
+        <div class="content">
+          <p>2018 © Adminca - Save your time, choose the best</p>
+        </div>
+      </footer>
+    </div>
+    
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="assets/vendors/fixed-sticky/fixedsticky.js" type="text/javascript"></script>
+    <script src="assets/vendors/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src='assets/vendors/highlight/highlight.pack.js' type="text/javascript"></script>
+    <script src="assets/vendors/jstree/dist/jstree.min.js" type="text/javascript"></script>
+    <script src="assets/js/custom.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $('.docs-sidebar').fixedsticky();
+      $('.docs-sidebar-list').slimScroll({
+        height: '100%',
+        railOpacity: '0.9',
+      });
+      hljs.initHighlightingOnLoad();
+      $('.jstree').jstree({
+      core : {
+            'check_callback' : true
+        },
+        plugins:["dnd","types","contextmenu"],
+        types : {
+            'default' : {
+                'icon' : 'fa fa-folder'
+            },
+            'file' : {
+                icon : 'fa fa-file-o'
+            },
+            'html' : {
+                icon : 'fa fa-file-code-o'
+            },
+            'css' : {
+                icon : 'fa fa-file-code-o'
+            },
+            'js' : {
+                icon : 'fa fa-file-text-o'
+            },
+            'img' : {
+                icon : 'fa fa-file-image-o'
+            },
+            'audio' : {
+                icon : 'fa fa-file-audio-o'
+            },
+            'video' : {
+                icon : 'fa fa-file-video-o'
+            },
+        }
+    });
+    </script>
+  </body>
+</html>

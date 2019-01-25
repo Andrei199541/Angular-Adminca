@@ -1,0 +1,285 @@
+//
+//** Variables
+//
+
+
+//== COLORS
+
+$blue-dark:       #3498DB;
+$ebony:           #34495f;
+$green:           #18C5A9;
+$blue:            #2CC4CB;
+$red:             #f75a5f;
+$orange:          #F39C12;
+$silver:          #bdc3c7;
+$purple:          #5C6BC0;
+$pink:            #FF4081;
+$grey:            #7f8c8d;
+$peach:           #ED5043;
+$bright-purple:   #7536e6;
+
+
+//== SEMANTIC COLORS
+
+$brand-primary:             $purple;
+$brand-secondary:           $silver;
+$brand-success:             $green;
+$brand-info:                $blue;
+$brand-warning:             $orange;
+$brand-danger:              $red;
+$brand-default:             $silver;
+
+
+// COLORS PALLETES
+//
+// The colors for which the palette will be created
+
+$scotch-colors: (
+	'primary': (
+		color: $purple,
+		palette: true,
+	),
+	'secondary': (
+		color: $silver,
+		palette: true,
+	),
+	'success': (
+		color: $green,
+		palette: true,
+	),
+	'info': (
+		color: $blue,
+	),
+	'warning': (
+		color: $orange,
+	),
+	'danger': (
+		color: $red,
+	),
+	'blue': (
+		color: $blue-dark,
+	),
+	'pink': (
+		color: $pink,
+		palette: true,
+	),
+);
+
+
+// Body
+
+$body-bg:     #f2f3fa;
+$body-color:  $ebony;
+
+// Border Raius
+
+$border-radius:          2px;
+$border-radius-lg:       3px;
+$border-radius-sm:       1px;
+
+
+// BUTTONS
+
+$btn-primary-color:           #fff;
+$btn-primary-bg:              $brand-primary;
+$btn-primary-border:          $btn-primary-bg;
+$btn-primary-label-color:     $btn-primary-border;
+
+$btn-secondary-color:         #485b6f;
+$btn-secondary-bg:            #e9ecef;
+$btn-secondary-border:        $btn-secondary-bg;
+$btn-secondary-label-color:   $btn-secondary-border;
+
+$btn-info-color:              #fff;
+$btn-info-bg:                 $brand-info;
+$btn-info-border:             $btn-info-bg;
+$btn-info-label-color:        $btn-info-border;
+
+$btn-success-color:           #fff;
+$btn-success-bg:              $brand-success;
+$btn-success-border:          $btn-success-bg;
+$btn-success-label-color:     $btn-success-border;
+
+$btn-warning-color:           #fff;
+$btn-warning-bg:              $brand-warning;
+$btn-warning-border:          $btn-warning-bg;
+$btn-warning-label-color:     $btn-warning-border;
+
+$btn-danger-color:            #fff;
+$btn-danger-bg:               $brand-danger;
+$btn-danger-border:           $btn-danger-bg;
+$btn-danger-label-color:      $btn-danger-border;
+
+$btn-pink-color:              #fff;
+$btn-pink-bg:                 $pink;
+$btn-pink-border:             $btn-pink-bg;
+$btn-pink-label-color:        $btn-pink-border;
+
+$btn-blue-color:              #fff;
+$btn-blue-bg:                 $blue-dark;
+$btn-blue-border:             $btn-blue-bg;
+$btn-blue-label-color:        $btn-blue-border;
+
+
+$btn-border-raius:            $border-radius;
+$btn-lg-border-raius:         $border-radius;
+$btn-sm-border-raius:         $border-radius;
+
+$btn-label-border-raius:         $border-radius;
+
+// Social Buttons
+
+$btn-facebook-color: #3B5998;
+$btn-twitter-color: #55ACEE;
+$btn-google-color: #dd4b39;
+$btn-linkedin-color: #007bb5;
+$btn-pinterest-color: #cb2027;
+$btn-vk-color: #4b73a4;
+$btn-instagram-color: #007bb5;
+$btn-youtube-color: #bb0000;
+$btn-dribbble-color: #ea4c89;
+$btn-github-color: #333;
+$btn-tumblr-color: #2c4762;
+$btn-flickr-color: #f40083;
+$btn-yahoo-color: #430297;
+$btn-ok-color: #F58220;
+$btn-rss-color: #ff6600;
+
+//== Text
+
+$text-primary:   $brand-primary;
+$text-success:   $brand-success;
+$text-info:      $brand-info;
+$text-warning:   $brand-warning;
+$text-danger:    $brand-danger;
+$text-purple:    $purple;
+$text-pink:      $pink;
+$text-blue:      $blue-dark;
+$text-muted:     #aaa;
+$text-light:     #71808f;
+$text-white:     #fff;
+
+
+//== Alerts
+
+$alert-primary-bg:            mix(white, $brand-primary, 15%);
+$alert-primary-color:          mix(black, $brand-primary, 15%);
+
+$alert-secondary-bg:            mix(white, $brand-secondary, 15%);
+$alert-secondary-color:          mix(black, $brand-secondary, 15%);
+
+$alert-success-bg:            mix(white, $brand-success, 15%);
+$alert-success-color:          mix(black, $brand-success, 15%);
+
+$alert-info-bg:               mix(white, $brand-info, 15%);
+$alert-info-color:             mix(black, $brand-info, 15%);
+
+$alert-warning-bg:            mix(white, $brand-warning, 15%);
+$alert-warning-color:          mix(black, $brand-warning, 15%);
+
+$alert-danger-bg:             mix(white, $brand-danger, 15%);
+$alert-danger-color:           mix(black, $brand-danger, 15%);
+
+$alert-pink-bg:            mix(white, $pink, 15%);
+$alert-pink-color:          mix(black, $pink, 15%);
+
+
+//== Badges
+
+$badge-default-bg:            mix(white, $silver, 58%);
+$badge-default-color:         $body-color;
+
+$badge-primary-bg:            $brand-primary;
+$badge-success-bg:            $brand-success;
+$badge-info-bg:               $brand-info;
+$badge-warning-bg:            $brand-warning;
+$badge-danger-bg:             $brand-danger;
+$badge-blue-bg:               $blue-dark;
+$badge-pink-bg:               $pink;
+
+
+//== Tabs
+
+$pill-success-bg:    $brand-success;
+$pill-info-bg:       $brand-info;
+$pill-warning-bg:    $brand-warning;
+$pill-danger-bg:     $brand-danger;
+$pill-pink-bg:       $pink;
+
+$tab-success-color:  $brand-success;
+$tab-info-color:     $brand-info;
+$tab-warning-color:  $brand-warning;
+$tab-danger-color:   $brand-danger;
+$tab-pink-color:     $pink;
+
+
+
+//== Table
+
+$table-border-color: #e8e8e8;
+
+$success-row-bg:    mix(white, $brand-success, 85%);
+$info-row-bg:       mix(white, $brand-info, 85%);
+$warning-row-bg:    mix(white, $brand-warning, 85%);
+$danger-row-bg:     mix(white, $brand-danger, 85%);
+
+// Table Colored thead and border
+$table-head-purple-bg:    $purple;
+$table-head-success-bg:   $brand-success;
+$table-purple-border:     $purple;
+$table-success-border:    $brand-success;
+
+
+//== Panels
+$ibox-head-height: 60px;
+
+$panel-padding-x: 25px;
+$panel-padding-top: 25px;
+$panel-padding-bottom: 25px;
+$panel-margin-bottom: 25px;
+
+
+/*
+** FORMS
+*/
+
+$input-focus-border-color:  $purple;
+
+// Switches
+
+$switch-default-bg: $brand-primary;
+$switch-primary-bg: $brand-primary;
+$switch-success-bg: $brand-success;
+$switch-info-bg:    $brand-info;
+$switch-warning-bg: $brand-warning;
+$switch-danger-bg:  $brand-danger;
+$switch-ebony-bg:   $ebony;
+$switch-blue-bg:    $blue-dark;
+$switch-pink-bg:    $pink;
+
+// Checkboxes
+
+$checkbox-primary-color: $brand-primary;
+$checkbox-success-color: $brand-success;
+$checkbox-info-color: $brand-info;
+$checkbox-warning-color: $brand-warning;
+$checkbox-danger-color: $brand-danger;
+$checkbox-ebony-color: $ebony;
+$checkbox-blue-color: $blue-dark;
+$checkbox-pink-color: $pink;
+
+// Form Color states
+
+$form-primary-color:   $brand-primary;
+$form-success-color:   $brand-success;
+$form-info-color:      $brand-info;
+$form-warning-color:   $brand-warning;
+$form-danger-color:    $brand-danger;
+$form-pink-color:      $pink;
+$form-ebony-color:     $ebony;
+
+//== Pagination
+
+$pagination-active-item-color:    $brand-primary;
+$pagination-item-hover-color:     $brand-primary;
+

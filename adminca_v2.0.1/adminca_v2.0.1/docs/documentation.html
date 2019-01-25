@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Adminca bootstrap 4 & angular 5 admin template, Шаблон админки</title>
+    <link href="assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="assets/vendors/themify-icons/css/themify-icons.css" rel="stylesheet"/>
+    <link href="assets/vendors/fixed-sticky/fixedsticky.css" rel="stylesheet"/>
+    <link href="assets/vendors/highlight/styles/railscasts.css" rel="stylesheet">
+    <link href="assets/vendors/jstree/dist/themes/default/style.min.css" rel="stylesheet"/>
+    <link href="assets/css/app.css" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+  </head>
+  <body class="page-docs" data-spy="scroll" data-target="#sidebarScroll" data-offset="20">
+    <div class="wrapper">
+      <header class="header header-fixed-top header-scroll">
+        <div class="content">
+          <div>
+              <a href="javascript:;" class="d-md-none sidebar-toggler"><i class="ti-menu"></i></a>
+              <a href="http://admincast.com/adminca/" class="brand d-none d-sm-inline" target="_blank">ADMINCA</a>
+          </div>
+          <div class="d-flex align-items-center">
+            <ul class="nav header-menu">
+              <li class="dropdown">
+                <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle="dropdown">DOCUMENTATION</a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a href="documentation.html" class="dropdown-item d-flex align-items-center" target="_blank"><img src="assets/img/en.png" height="20px" class="mr-2">English</a>
+                  <a href="documentation-ru.html" class="dropdown-item d-flex align-items-center" target="_blank"><img src="assets/img/ru.png" height="20px" class="mr-2" style="margin-top:-3px;">Russian</a>
+                </div>
+              </li>
+            </ul>
+            <a href="http://themeforest.net/item/adminca-responsive-bootstrap-4-3-angular-4-admin-dashboard-template/20912589?ref=Vaap" class="btn btn-pink btn-rounded btn-air purchase_button" target="_blank"><span class="btn-icon"><i class="ti-shopping-cart"></i>PURCHASE</span></a>
+          </div>
+        </div>
+      </header>
+
+      <section class="section-docs">
+        <div class="content text-right">
+          <a class="btn btn-light mr-2" href="documentation.html"><img src="assets/img/en.png" height="24px"> English</a>
+          <a class="btn btn-light" href="documentation-ru.html"><img src="assets/img/ru.png" height="24px" style="margin-top:-3px;"> Russian</a>
+        </div>
+        <div class="content d-flex align-items-start justify justify-content-between">
+          <aside class="docs-sidebar fixedsticky" id="sidebarScroll"> 
+              <ul class="docs-sidebar-list">
+                <li class="nav-item"><a href="#sec1" class="nav-link active">Introduction</a></li>
+                <li class="nav-item"><a href="#sec2" class="nav-link active">Quick Start</a></li>
+                <li class="nav-item">
+                    <a href="#sec3" class="nav-link">Folder structure<i class="fa fa-angle-left arrow-icon"></i></a>
+                    <ul class="nav flex-md-column ml-2 hidden-sm-down">
+                        <li class="nav-item"><a href="#sec3a" class="nav-link">Overview</a></li>
+                        <li class="nav-item"><a href="#sec3b" class="nav-link">Pug</a></li>
+                        <li class="nav-item"><a href="#sec3c" class="nav-link">Javascript</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#sec4" class="nav-link">Gulp build<i class="fa fa-angle-left arrow-icon"></i></a>
+                    <ul class="nav flex-md-column ml-2 hidden-sm-down">
+                        <li class="nav-item"><a href="#sec4a" class="nav-link">Installing Gulp</a></li>
+                        <li class="nav-item"><a href="#sec4b" class="nav-link">Config</a></li>
+                        <li class="nav-item"><a href="#sec4c" class="nav-link">Tasks</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#sec5" class="nav-link">Stylesheets<i class="fa fa-angle-left arrow-icon"></i></a>
+                    <ul class="nav flex-md-column ml-2 hidden-sm-down">
+                        <li class="nav-item"><a href="#sec5a" class="nav-link">Overview</a></li>
+                        <li class="nav-item"><a href="#sec5b" class="nav-link">Folder structure</a></li>
+                        <li class="nav-item"><a href="#sec5c" class="nav-link">Config</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#sec6" class="nav-link">Angular<i class="fa fa-angle-left arrow-icon"></i></a>
+                    <ul class="nav flex-md-column ml-2 hidden-sm-down">
+                        <li class="nav-item"><a href="#sec6a" class="nav-link">Files structure</a></li>
+                        <li class="nav-item"><a href="#sec6b" class="nav-link">Installation</a></li>
+                    </ul>
+                </li>
+              </ul>
+          </aside>
+
+          <div class="docs-content col">
+            <div id="sec1" class="section">
+              <h2 class="section-head">Introduction</h2>
+              <div class="section-content">
+                <p>
+                  Adminca is an perfect, powerful, fully customizable and very easy to use universal admin template that is suitable for any type of web application. 
+                  Based on the popular <code>Bootstrap  4</code>framework, it provides a completely adaptive and perfect interface. 
+                  A comfortable structure and high-quality code will make it very easy to use a template that can easily be customized even a novice developer. 
+                  Adminca comes with several versions of templates: <code>HTML</code> and <code>Angular 5+</code>. <br>
+                  Adminca: <b>Save your time, choose the best</b>, we work a lot to make you comfortable.
+                </p>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div id="sec2" class="section">
+              <h2 class="section-head">Quick Start</h2>
+              <div class="section-content">
+              	<p>If you want to change something in the template using compilation, run the following 6 commands.</p>
+                <ol>
+                  <li>Download and install the latest <a href="https://nodejs.org" target="_blank">Node.js</a>.</li>
+                  <li>Install <code>bower</code> globally:
+                    <pre><code class="CoffeeScript">npm install bower -g</code></pre>
+                  </li>
+                  <li>Install <code>gulp</code> globally:
+                    <pre><code class="CoffeeScript">npm install gulp-cli -g</code></pre>
+                  </li>
+                  <li>Navigate to <code>[adminca_folder]/tools/gulp</code> folder:
+                    <pre><code class="bash">cd tools/gulp</code></pre>
+                  </li>
+                  <li>Install necessary tools to build your project. Must execute in <code>[adminca_folder]/tools/gulp</code> folder:
+                    <pre><code class="CoffeeScript">npm install</code></pre>
+                  </li>
+                  <li>Compile all the themes. At the output we get our compiled themes in the <code>[adminca_folder]/dist</code> folder.
+                    <pre><code class="nginx">gulp build</code></pre>
+                    <p class="m-0">If you want to compile one theme, run the command <code>gulp build:[theme]</code>. <code>[theme]</code> == one of the themes: 
+                      <ul>
+                        <li><code>admin_1</code> <span class="text-muted">// gulp build:admin_1</span></li>
+                        <li><code>admin_2</code></li>
+                        <li><code>admin_3</code></li>
+                        <li><code>...</code> // other templates</li>
+                      </ul>Read more about the compilation in section <a href="#sec4" data-href>Gulp build</a>.
+                    </p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div id="sec3" class="section">
+              <h2 class="section-head">Folder structure</h2>
+              <h3 id="sec3a" class="section-title">Overview</h3>
+              <div class="section-content">
+                <p>We have created for you a flexible and customizable file structure that you easily use.</p>
+                <table class="table table-bordered font-14">
+                  <thead><tr bgcolor="#eee" class="font-strong text-info"><th>Path</th><th>Description</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td><span><i class="fa fa-folder-open mr-2"></i>src</span></td>
+                      <td>source code folder</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>angular</span></td>
+                      <td>Angular source files</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>img</span></td>
+                      <td>Images</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>js</span></td>
+                      <td>Javascript source files</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>pug</span></td>
+                      <td>Pug source files</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>sass</span></td>
+                      <td>Sass source files</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>...</span></td>
+                      <td>Other source files</td>
+                    </tr>
+                    <tr><td colspan="2" bgcolor="#eee" class="font-strong text-info">build folder</td></tr>
+                    <tr>
+                      <td><span><i class="fa fa-folder-open mr-2"></i>tools</span></td>
+                      <td>build folder</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span><i class="fa fa-folder mr-2"></i>gulp</span></td>
+                      <td>Gulp build folder</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span><i class="fa fa-folder mr-2"></i>gulp-tasks</span></td>
+                      <td>Individual Gulp tasks</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">gulpfile.js</span></td>
+                      <td>Gulp tasks main script</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">package.json</span></td>
+                      <td>NPM package manager config file</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">bower.json</span></td>
+                      <td>Bower package manager manifest file</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">.bowerrc</span></td>
+                      <td>Bower package manager config file</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">config.json</span></td>
+                      <td>Build config file. Here you can fully customize the build parameters.</td>
+                    </tr>
+                    <tr><td colspan="2" bgcolor="#eee" class="font-strong text-info">compiled template</td></tr>
+                    <tr>
+                      <td><span><i class="fa fa-folder-open mr-2"></i>dist</span></td>
+                      <td>output folder of the compiled template</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>admin_1</span></td>
+                      <td>layout 1</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class=""><i class="fa fa-folder mr-2"></i>html</span></td>
+                      <td>HTML version</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class=""><i class="fa fa-folder mr-2"></i>angular</span></td>
+                      <td>Angular version</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>admin_2</span></td>
+                      <td>layout 2</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>...</span></td>
+                      <td>other demo versions</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+              <h3 id="sec3b" class="section-title">Pug</h3>
+              <div class="section-content">
+                <p><a href="https://pugjs.org" target="_blank">Pug</a> (Jade 2) – robust, elegant, feature rich template engine.</p>
+                <p>Pug files are located in <code>[root]/src/pug</code> folder</p>
+                <table class="table table-bordered font-14">
+                  <thead><tr><th>Path</th><th>Description</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td><span class=""><i class="fa fa-folder-open mr-2"></i>pug</span></td>
+                      <td>source pug files</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>admin_1</span></td>
+                      <td>pug files for admin_1 template</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>admin_2</span></td>
+                      <td>pug files for admin_2 template</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>...</span></td>
+                      <td>other templates</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">config.pug</span></td>
+                      <td>global configuration file: paths for html files</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">mixins.pug</span></td>
+                      <td>mixins</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3 id="sec3c" class="section-title">Javascript</h3>
+              <div class="section-content">
+                <p>Javascript files are located in <code>[root]/src/js</code> folder</p>
+                <table class="table table-bordered font-14">
+                  <thead><tr><th>Path</th><th>Description</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td><span class=""><i class="fa fa-folder-open mr-2"></i>js</span></td>
+                      <td>source javascript files</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>app</span></td>
+                      <td>Application level(global) javascript files</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">app.js</span></td>
+                      <td>main javascript file</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>theme</span></td>
+                      <td>theme level javascript files</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">admin_1</span></td>
+                      <td>javascript files for admin_1 template layout</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">admin_2</span></td>
+                      <td>javascript files for admin_2 template layout</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">admin_3</span></td>
+                      <td>other templates</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div id="sec4" class="section">
+              <h2 class="section-head">Gulp build</h2>
+              <h3 id="sec4a" class="section-title">Installing</h3>
+              <div class="section-content">
+                <p>Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow. <a href="https://gulpjs.com/" target="_blank">gulpjs.com</a><br>
+                To install and use Gulp, you will need <a href="https://nodejs.org" target="_blank">Node.js</a> installed to your computer.</p>
+                <p><b>1)</b> To install <code>Gulp</code> globally, run the following command on the command line:</p>
+                <pre><code class="CoffeeScript">npm install gulp-cli -g</code></pre>
+                <p><b>2)</b> And install <code>Bower</code> globally:</p>
+                <pre><code class="CoffeeScript">npm install bower -g</code></pre>
+                <p><b>3)</b> Then navigate to <code>[root]tools/gulp</code> directory and run</p>
+                <pre><code class="CoffeeScript">npm install</code></pre>
+                <p>This command will create a node_modules directory and install gulp and all the necessary tools to build your project.</p>
+              </div>
+              <h3 id="sec4b" class="section-title">Build Config</h3>
+              <div class="section-content">
+                <p>All build config are stored in the <code>[root]/tools/gulp/config.json</code> file. Here you can fully customize the build parameters.</p>
+                <pre><code>{
+  "compile": {
+      "jsUglify": true,
+      "cssMinify": true
+  },
+  "path": {
+      "src": "../../src",
+      "output": "../../dist",
+      "bower_components": "../../src/bower_components",
+      "vendors": "../../src/vendors"
+  },
+  "build": {
+      "admin_1": {
+          "js": {
+              "src": [
+                  "@{path.src}/js/app/app.js",
+                  "@{path.src}/js/theme/admin_1/layout.js"
+              ],
+              "output": "@{path.output}/admin_1/html/assets/js"
+          },
+          "sass": {
+              "src": {
+                  "bundle": [
+                      "@{path.src}/sass/components/components.bs4/components.scss",
+                      "@{path.src}/sass/layouts/admin_1/layout.scss",
+                      "@{path.src}/sass/vendors/vendors.scss"
+                  ],
+                  "themes": "@{path.src}/sass/layouts/admin_1/themes/*.scss",
+                  "pages": "@{path.src}/sass/layouts/admin_1/pages/*.css"
+              },
+              "output": {
+                  "bundle": "@{path.output}/admin_1/html/assets/css",
+                  "themes": "@{path.output}/admin_1/html/assets/css/themes",
+                  "pages": "@{path.output}/admin_1/html/assets/css/pages"
+              }
+          },
+          "pug": {
+            "src": "@{path.src}/pug/admin_1/pages/*.pug",
+            "output": "@{path.output}/admin_1/html"
+          }
+      },
+      "admin_2": {
+          "js": {
+              "src": [
+                  "@{path.src}/js/app/app.js",
+                  "@{path.src}/js/theme/admin_2/layout.js"
+              ],
+              "output": "@{path.output}/admin_2/html/assets/js"
+          },
+          "sass": {
+              "src": {
+                  "bundle": [
+                      "@{path.src}/sass/components/components.bs4/components.scss",
+                      "@{path.src}/sass/layouts/admin_2/layout.scss",
+                      "@{path.src}/sass/vendors/vendors.scss"
+                  ],
+                  "themes": "@{path.src}/sass/layouts/admin_2/themes/*.scss",
+                  "pages": "@{path.src}/sass/layouts/admin_2/pages/*.css"
+              },
+              "output": {
+                  "bundle": "@{path.output}/admin_2/html/assets/css",
+                  "themes": "@{path.output}/admin_2/html/assets/css/themes",
+                  "pages": "@{path.output}/admin_1/html/assets/css/pages"
+              }
+          },
+          "pug": {
+            "src": "@{path.src}/pug/admin_2/pages/*.pug",
+            "output": "@{path.output}/admin_2/html"
+          }
+      }
+      ... other demo versions
+  }
+}
+                </code></pre>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>path</code></td>
+                      <td><code>Object</code></td>
+                      <td>The path of the source code folder: <code>src</code>, to the output folder: <code>output</code>, to folders <code>bower_components</code> и <code>vendors</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>build.[theme].js.src</code></td>
+                      <td><code>Array</code> or <code>string</code></td>
+                      <td>The path(s) of source js files</td>
+                    </tr>
+                    <tr>
+                      <td><code>build.[theme].js.output</code></td>
+                      <td><code>string</code></td>
+                      <td><code>app.js</code> file output folder</td>
+                    </tr>
+                    <tr>
+                      <td><code>build.[theme].sass.src</code></td>
+                      <td><code>Object</code></td>
+                      <td>The path(s) of source sass files: <code>bundle</code> for <code>main.css</code> file, <code>themes</code> for color schemes, <code>pages</code> for individual pages.</td>
+                    </tr>
+                    <tr>
+                      <td><code>build.[theme].sass.output</code></td>
+                      <td><code>Object</code></td>
+                      <td>Output folders for css files</td>
+                    </tr>
+                    <tr>
+                      <td><code>build.[theme].pug.src</code></td>
+                      <td><code>Array</code> or <code>string</code></td>
+                      <td>The path(s) of source pug(Jade 2) files</td>
+                    </tr>
+                    <tr>
+                      <td><code>build.[theme].pug.output</code></td>
+                      <td><code>string</code></td>
+                      <td>Html files output folder</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3 id="sec4c" class="section-title">Tasks</h3>
+              <div class="section-content">
+                <p>The entire task gulp is in <code>[root]/tools/gulp/gulp-tasks</code> folder.</p>
+                <p>We have built for you a very convenient and flexible build system that even a beginner can easily understand. <br>You can easily create as one theme, and all together in one command.</p>
+                <p>Let's start. Since we have several themes: <code>admin_1</code>, <code>admin_3</code>, <code>Admin_3</code> ..., we have accordingly created a separate task for each themes</p>
+                <pre><code class="JavaScript">gulp build:admin_1  //== BUILD FILES FOR ADMIN_1 THEME
+    gulp.start('admin_1:pug');     // BUILD HTML FILES FOR ADMIN_1
+    gulp.start('admin_1:sass');    // BUILD CSS FILES FOR ADMIN_1
+    gulp.start('admin_1:js');      // BUILD JS FILES FOR ADMIN_1
+
+gulp build:admin_2  //== BUILD ALL FILES FOR ADMIN_2 THEME
+    gulp.start('admin_2:pug');     // BUILD HTML FILES FOR ADMIN_2
+    gulp.start('admin_2:sass');    // BUILD CSS FILES FOR ADMIN_2
+    gulp.start('admin_2:js');      // BUILD JS FILES FOR ADMIN_2
+
+gulp build:admin_3  //== BUILD ALL FILES FOR ADMIN_3 THEME
+    ...
+</code></pre>
+                <p>so we see that for the assembly of <code>Admin_1</code> theme we need one command: <code>gulp build:admin_1</code>, which creates all files for this theme.</p>
+                <p>What it does in detail:</p>
+                <ul>
+                  <li>run <code>gulp.start('admin_1:pug');</code> command which will take all the pug files from the <code>[root]/src/pug/admin_1/pages/*.pug</code> folder specified in the <code>build.admin_1.pug.src</code> config parameter.
+                    <ul>
+                      <li>Compiles them into html files.</li>
+                      <li>And will save them in the <code>[root]/dist/admin_1/html</code> folder specified in the <code>build.admin_1.pug.output</code> config parameter.</li>
+                    </ul>
+                  </li>
+                  <li>run <code>gulp.start('admin_1:js');</code> command which will take
+                    <ul>
+                      <li><code>[root]/src/js/app/app.js</code></li>
+                      <li><code>[root]/src/js/theme/admin_1/layout.js</code></li>
+                    </ul>
+                    files specified in the <code>build.admin_1.pug.src</code> config parameter.
+                    <ul>
+                      <li>Minify.</li>
+                      <li>Then concat them in a <code>app.js</code> file.</li>
+                      <li>And will save it in the <code>[root]/dist/admin_1/html/assets/js</code> folder specified in the <code>build.admin_1.js.output</code> config parameter.</li>
+                    </ul>
+                  </li>
+                  <li>run <code>gulp.start('admin_1:sass');</code> command which will take
+                    <ul>
+                      <li><code>[root]/src/sass/components/components.scss</code> -- ui components</li>
+                      <li><code>[root]/src/sass/layouts/admin_1/layout.scss</code> -- admin_1 theme layout</li>
+                      <li><code>[root]/src/sass/vendors/vendors.scss</code> -- reset vendor plugins styles</li>
+                    </ul>
+                    files specified in the <code>build.admin_1.sass.src</code> config parameter.
+                    <ul>
+                      <li>Concat them in a <code>main.css</code> file.</li>
+                      <li>Minify.</li>
+                      <li>And will save it in the <code>[root]/dist/admin_1/html/assets/css</code> folder specified in the <code>build.admin_1.sass.output</code> config parameter.</li>
+                    </ul>
+                    <p>And compiles the rest of the sass files.</p>
+                  </li>
+                  <li>Creates the rest of the files: pictures, vendor plugins...</li>
+                </ul>
+                <p>So at the output we get such a folder in the output folder <code>[root]/dist/admin_1/html</code></p>
+                <div class="jstree mb-4">
+                  <ul>
+                    <li class="jstree-open">assets
+                      <ul>
+                        <li class="jstree-open">css
+                          <ul>
+                            <li data-jstree="{&quot;type&quot;:&quot;css&quot;}">main.css</li>
+                            <li>themes</li>
+                            <li>pages</li>
+                          </ul>
+                        </li>
+                        <li class="jstree-open">js
+                          <ul>
+                            <li data-jstree="{&quot;type&quot;:&quot;js&quot;}">app.js</li>
+                            <li>scripts</li>
+                          </ul>
+                        </li>
+                        <li>img</li>
+                        <li>vendors</li>
+                        <li>demo</li>
+                      </ul>
+                    </li>
+                    <li data-jstree="{&quot;type&quot;:&quot;html&quot;}"> index.html</li>
+                    <li data-jstree="{&quot;type&quot;:&quot;html&quot;}"> dashboard_2.html</li>
+                    <li data-jstree="{&quot;type&quot;:&quot;html&quot;}"> dashboard_3.html</li>
+                    <li data-jstree="{&quot;type&quot;:&quot;html&quot;}"> ...</li>
+                  </ul>
+                </div>
+                <h5 class="font-strong">Other Tasks</h5>
+                <pre><code class="JavaScript">gulp build:pug   //== BUILD ALL HTML FILES FOR ALL THEMES
+gulp build:sass   //== BUILD ALL CSS FILES FOR ALL THEMES
+gulp build:js     //== BUILD ALL JS FILES FOR ALL THEMES
+</code></pre>
+                <h5 class="font-strong">Files watchers</h5>
+                <p>Gulp can run automatically when a file changed.</p>
+                <pre><code class="JavaScript">gulp serve</code></pre>
+                <p>this command starts the server with help of brouser and watch in real time all changes with the source files in the src folder and, depending on the changes, performs a specific task.</p>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div id="sec5" class="section">
+              <h2 class="section-head">Stylesheets</h2>
+              <h3 id="sec5a" class="section-title">Overview</h3>
+              <div class="section-content">
+                <p>Each template in Adminca includes one main style: <code>main.min.css</code> file, consisting of:</p>
+                <ul>
+                  <li>styles for ui components</li>
+                  <li>a layout styles</li>
+                  <li>styles for vendor plugins</li>
+                </ul>
+                <p>The styles for ui components are compiled from <code>[root]/src/sass/components/components.scss</code> file.</p>
+                <p>Layout styles are compiled from the <code>[root]/src/sass/layouts/[theme]/layout.scss</code> file.</p>
+                <p>Styles for vendor plugins are compiled from <code>[root]/src/sass/vendors/vendors.scss</code> file.</p>
+                <p>They are combined in one <code>main.min.css</code> file for each version of the template.</p>
+                <p>So we get</p>
+                <table class="table table-bordered table-responsive">
+                  <thead>
+                    <tr><th>[Admin_1] theme</th><th>[Admin_2] theme</th><th>[Admin_3] theme</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>sass/components/components.scss</code></td>
+                      <td><code>sass/components/components.scss</code></td>
+                      <td><code>sass/components/components.scss</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>sass/layouts/admin_1/layout.scss</code></td>
+                      <td><code>sass/layouts/admin_2/layout.scss</code></td>
+                      <td><code>sass/layouts/admin_3/layout.scss</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>sass/vendors/vendors.scss</code></td>
+                      <td><code>sass/vendors/vendors.scss</code></td>
+                      <td><code>sass/vendors/vendors.scss</code></td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr><th colspan="3">so we get</th></tr>
+                    <tr><th><code>main.css</code></th><th><code>main.css</code></th><th><code>main.css</code></th></tr>
+                  </tfoot>
+                </table>
+              </div>
+              <h3 id="sec5b" class="section-title">Folder structure</h3>
+              <div class="section-content">
+                <p>Sass files are located in <code>[root]/src/sass</code> folder.</p>
+                <table class="table table-bordered font-14">
+                  <thead><tr><th>Path</th><th>Description</th></tr></thead>
+                  <tbody>
+                    <tr>
+                      <td><span class=""><i class="fa fa-folder-open mr-2"></i>sass</span></td>
+                      <td>source sass files</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>components</span></td>
+                      <td>sass files for ui components</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>layouts</span></td>
+                      <td>sass files for templates layouts</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">admin_1</span></td>
+                      <td>sass files for admin_1 template layout</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">admin_2</span></td>
+                      <td>sass files for admin_2 template layout</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:50px"><span class="file-node">...</span></td>
+                      <td>other templates</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>vendors</span></td>
+                      <td>sass files for vendor plugins</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-left:30px"><span class=""><i class="fa fa-folder mr-2"></i>mixins</span></td>
+                      <td>mixins</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3 id="sec5c" class="section-title">Config</h3>
+              <div class="section-content">
+                <p>The configuration of the ui components is in the <code>[root]/src/sass/components/vars.scss</code> file.</p>
+                <p>code snippet</p>
+                <pre><code class="scss">
+//
+//** Global Config
+// ======================
+
+
+//== COLORS
+
+$blue-dark:       #3498DB;
+$ebony:           #34495f;
+$green:           #18C5A9;
+$blue:            #2CC4CB;
+$red:             #f75a5f;
+$orange:          #F39C12;
+$silver:          #bdc3c7;
+$purple:          #5C6BC0;
+$pink:            #FF4081;
+$grey:            #7f8c8d;
+$peach:           #ED5043;
+$bright-purple:   #7536e6;
+
+//== SEMANTIC COLORS
+
+$brand-primary:             $purple;
+$brand-secondary:           $silver;
+$brand-success:             $green;
+$brand-info:                $blue;
+$brand-warning:             $orange;
+$brand-danger:              $red;
+$brand-default:             $silver;
+
+
+// COLORS PALLETES
+//
+// The colors for which the palette will be created
+
+$scotch-colors: (
+  'primary': (
+      color: $purple,
+      palette: true,
+    ),
+    'success': (
+      color: $green,
+      palette: true,
+    ),
+    'info': (
+      color: $blue,
+    ),
+    'warning': (
+      color: $orange,
+    ),
+    'danger': (
+      color: $red,
+    ),
+);              
+                </code></pre>
+                <h5 class="font-strong">Scotch colors</h5>
+                <p>Pay attention to the <code>$scotch-colors</code> array. For each color in this array will be created a palette of background from 50-800 if you specify the parameter palette: true. for example:</p>
+                <pre><code class="scss">
+// COLORS PALLETES
+//
+// The colors for which the palette will be created
+
+$scotch-colors: (
+    'blue': (
+        color: $blue,
+        palette: true,
+    ),
+);              
+                </code></pre>
+                <p>The following styles will be created:</p>
+                <pre><code class="css">
+.bg-blue-800: { background-color: #208d92 }
+.bg-blue-700: { background-color: #24a1a6 }
+.bg-blue-600: { background-color: #28b4bb }
+.bg-blue:     { background-color: #2cc4cb }
+.bg-blue-400: { background-color: #4ccdd3 }
+.bg-blue-300: { background-color: #6bd6db }
+.bg-blue-200: { background-color: #96e2e5 }
+.bg-blue-100: { background-color: #c0edef }
+.bg-blue-50:  { background-color: #e6f8f9 }
+                </code></pre>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <div id="sec6" class="section">
+              <h2 class="section-head">Angular</h2>
+              <h3 id="sec6a" class="section-title">Files structure</h3>
+              <div class="section-content">
+                <p>Angular source code are located in <code>[root]/src/angular/[theme]</code> folders.</p>
+                <ul>
+                  <li><code>[root]/src/angular/admin_1</code></li>
+                  <li><code>[root]/src/angular/admin_2</code></li>
+                  <li><code>[root]/src/angular/admin_3</code></li>
+                  <li>... // other templates</li>
+                </ul>
+              </div>
+              <h3 id="sec6b" class="section-title">Installation</h3>
+              <div class="section-content">
+                <p>The Angular CLI is a command line interface tool that can create a project, add files, and perform a variety of ongoing development tasks such as testing, bundling, and deployment.</p>
+                <ol>
+                  <li>Download and install the latest <a href="https://nodejs.org" target="_blank">Node.js</a>, if you have not already installed it.</li>
+                  <li><p>Install the Angular CLI globally: Open the console and run the following command:</p>
+                    <pre><code class="CoffeeScript">npm install -g @angular/cli</code></pre>
+                  </li>
+                  <li>
+                    <p>Setup Angular app: navigate into angular app folder: <code>[root]/src/angular/[theme]</code> and run the following command:</p>
+                    <pre><code class="CoffeeScript">npm install</code></pre>
+                  </li>
+                </ol>
+                <p>This command will install all the required Node.js modules into the node_modules directory inside your angular app folder.</p>
+                <h5 class="font-strong">Server</h5>
+                <p>Launch the server. The ng serve command launches the server, watches your files, and rebuilds the app as you make changes to those files. Using the --open (or just -o) option will automatically open your browser on <code>http://localhost:4200</code>.</p>
+                <pre><code class="CoffeeScript">ng serve --open</code></pre>
+                <h5 class="font-strong">Build</h5>
+                <p>The <code>ng build</code> command compiles the application into an output directory dist.</p>
+                <pre><code class="CoffeeScript">ng build --prod</code></pre>
+                <p>Detailed information about the build can be found in the official documentation.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      
+      <section class="section-buy">
+        <div class="content">
+          <div class="text-center">
+            <i class="ti-gift mb-2 d-block" style="font-size:60px;color:#3ae2ce;"></i>
+            <div class="font-36 mb-2">Big Bundle – <span class="font-strong">50% OFF Limited offer!</span></div>
+            <div class="font-20 mb-3">Full package for the perfect price</div>
+            <div><span class="mr-2 font-26" style="text-decoration: line-through;">$60</span><span class="text-pink font-strong" style="font-size: 60px">$30</span></div>
+            <a href="http://themeforest.net/item/adminca-responsive-bootstrap-4-3-angular-4-admin-dashboard-template/20912589?ref=Vaap" class="btn btn-accent mt-3" target="_blank" style="width: 400px"><span class="btn-icon"><i class="ti-shopping-cart"></i>BUY NOW WITH 50% DISCOUNT</span></a>
+          </div>
+      </section>
+
+      <footer>
+        <div class="content">
+          <p>2018 © Adminca - Save your time, choose the best</p>
+        </div>
+      </footer>
+    </div>
+    
+    <script src="assets/js/app.js" type="text/javascript"></script>
+    <script src="assets/vendors/fixed-sticky/fixedsticky.js" type="text/javascript"></script>
+    <script src="assets/vendors/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src='assets/vendors/highlight/highlight.pack.js' type="text/javascript"></script>
+    <script src="assets/vendors/jstree/dist/jstree.min.js" type="text/javascript"></script>
+    <script src="assets/js/custom.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $('.docs-sidebar').fixedsticky();
+      $('.docs-sidebar-list').slimScroll({
+        height: '100%',
+        railOpacity: '0.9',
+      });
+      hljs.initHighlightingOnLoad();
+      $('.jstree').jstree({
+      core : {
+            'check_callback' : true
+        },
+        plugins:["dnd","types","contextmenu"],
+        types : {
+            'default' : {
+                'icon' : 'fa fa-folder'
+            },
+            'file' : {
+                icon : 'fa fa-file-o'
+            },
+            'html' : {
+                icon : 'fa fa-file-code-o'
+            },
+            'css' : {
+                icon : 'fa fa-file-code-o'
+            },
+            'js' : {
+                icon : 'fa fa-file-text-o'
+            },
+            'img' : {
+                icon : 'fa fa-file-image-o'
+            },
+            'audio' : {
+                icon : 'fa fa-file-audio-o'
+            },
+            'video' : {
+                icon : 'fa fa-file-video-o'
+            },
+        }
+    });
+    </script>
+  </body>
+</html>

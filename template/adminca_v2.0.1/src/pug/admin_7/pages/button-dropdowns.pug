@@ -1,0 +1,223 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Dropdown Buttons'
+  - var pageUrl = 'button-dropdowns.html'
+  - var page_heading = 'Dropdown Buttons'
+  - var path = ['Dropdown Buttons']
+
+block content
+  .row.btn-list-demo.dropdown-demo
+    .col-md-6
+      +panel('Dropdown Buttons')
+        .mb-4 Single button dropdowns 
+        .dropdown
+          button.btn.btn-primary.dropdown-toggle.dropdown-arrow(data-toggle='dropdown') Dropdown Button
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .dropdown
+          button.btn.btn-secondary.dropdown-toggle.dropdown-arrow(data-toggle='dropdown') Dropdown Button
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .dropdown
+          button.btn.btn-info.dropdown-toggle.dropdown-arrow(data-toggle='dropdown') Dropdown Button
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .dropdown
+          button.btn.btn-pink.dropdown-toggle.dropdown-arrow(data-toggle='dropdown') Dropdown Button
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .mt-4.mb-4 Split button dropdowns
+        .btn-group
+          button.btn.btn-primary Dropdown Button
+          button.btn.btn-primary.dropdown-toggle-split.dropdown-toggle.dropdown-arrow(data-toggle='dropdown')
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .btn-group
+          button.btn.btn-secondary Dropdown Button
+          button.btn.btn-secondary.dropdown-toggle-split.dropdown-toggle.dropdown-arrow(data-toggle='dropdown')
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .btn-group
+          button.btn.btn-info Dropdown Button
+          button.btn.btn-info.dropdown-toggle-split.dropdown-toggle.dropdown-arrow(data-toggle='dropdown')
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .btn-group
+          button.btn.btn-pink Dropdown Button
+          button.btn.btn-pink.dropdown-toggle-split.dropdown-toggle.dropdown-arrow(data-toggle='dropdown')
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        hr
+        .btn-group
+          button.btn.btn-outline-primary Dropdown Button
+          button.btn.btn-outline-primary.dropdown-toggle-split.dropdown-toggle.dropdown-arrow(data-toggle='dropdown')
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .btn-group
+          button.btn.btn-outline-secondary Dropdown Button
+          button.btn.btn-outline-secondary.dropdown-toggle-split.dropdown-toggle.dropdown-arrow(data-toggle='dropdown')
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .btn-group
+          button.btn.btn-outline-info Dropdown Button
+          button.btn.btn-outline-info.dropdown-toggle-split.dropdown-toggle.dropdown-arrow(data-toggle='dropdown')
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .btn-group
+          button.btn.btn-outline-pink Dropdown Button
+          button.btn.btn-outline-pink.dropdown-toggle-split.dropdown-toggle.dropdown-arrow(data-toggle='dropdown')
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .mt-4.mb-4 Menu with icons
+        .dropdown
+          button.btn.btn-info.dropdown-toggle.dropdown-arrow(data-toggle='dropdown') Themify Icons
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;')
+              i.ti-user
+              | Action
+            a.dropdown-item(href='javascript:;')
+              i.ti-comments
+              | Another action
+            a.dropdown-item(href='javascript:;')
+              i.ti-support
+              | Something else here
+        .dropdown
+          button.btn.btn-pink.dropdown-toggle.dropdown-arrow(data-toggle='dropdown') Lineawesome Icons
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;')
+              i.la.la-camera
+              | Action
+            a.dropdown-item(href='javascript:;')
+              i.la.la-comments
+              | Another action
+            a.dropdown-item(href='javascript:;')
+              i.la.la-heart-o
+              | Something else here
+        .mt-3.mb-4 Sizing
+        .dropdown
+          button.btn.btn-lg.btn-secondary.dropdown-toggle.dropdown-arrow(data-toggle='dropdown') Large Button
+          .dropdown-menu.dropdown-menu-right
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .btn-group.btn-group-lg
+          button.btn.btn-primary Large Split Button
+          button.btn.btn-primary.dropdown-toggle-split.dropdown-toggle.dropdown-arrow(data-toggle='dropdown')
+          .dropdown-menu.dropdown-menu-right
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        br
+        .dropdown
+          button.btn.btn-sm.btn-secondary.dropdown-toggle.dropdown-arrow(data-toggle='dropdown') Small Button
+          .dropdown-menu.dropdown-menu-right
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .btn-group.btn-group-sm
+          button.btn.btn-primary Small Split Button
+          button.btn.btn-primary.dropdown-toggle-split.dropdown-toggle.dropdown-arrow(data-toggle='dropdown')
+          .dropdown-menu.dropdown-menu-right
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+
+    .col-md-6
+      +panel('Dropdown Buttons')
+        .mt-4.mb-4 Divider
+        .dropdown
+          button.btn.btn-primary.dropdown-toggle.dropdown-arrow(data-toggle='dropdown') Dropdown Button
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+            .dropdown-divider
+            a.dropdown-item(href='javascript:;') Separated link
+        .dropdown
+          button.btn.btn-secondary.dropdown-toggle.dropdown-arrow(data-toggle='dropdown') Dropdown Button
+          .dropdown-menu
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+            .dropdown-divider
+            a.dropdown-item(href='javascript:;') Separated link
+        .mt-4.mb-4 Menu headers
+        .dropdown
+          button.btn.btn-primary.dropdown-toggle.dropdown-arrow(data-toggle='dropdown') Dropdown Button
+          .dropdown-menu
+            h6.dropdown-header Dropdown header
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+            .dropdown-divider
+            a.dropdown-item(href='javascript:;') Separated link
+        .dropdown
+          button.btn.btn-secondary.dropdown-toggle.dropdown-arrow(data-toggle='dropdown') Dropdown Button
+          .dropdown-menu
+            h6.dropdown-header Dropdown header
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+            .dropdown-divider
+            a.dropdown-item(href='javascript:;') Separated link
+        h6.mt-4.mb-2 Menu alignment
+        p Add <code>.dropdown-menu-right</code> to a <code>.dropdown-menu</code> to right align the dropdown menu.
+        .dropdown
+          button.btn.btn-success.dropdown-toggle.dropdown-arrow(data-toggle='dropdown') Right Aligned
+          .dropdown-menu.dropdown-menu-right
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .btn-group
+          button.btn.btn-warning Right Aligned
+          button.btn.btn-warning.dropdown-toggle-split.dropdown-toggle.dropdown-arrow(data-toggle='dropdown')
+          .dropdown-menu.dropdown-menu-right
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        h6.mt-4.mb-2 Dropup variation
+        p Trigger dropdown menus above elements by adding <code>.dropup</code> to the parent element.
+        .dropdown.dropup
+          button.btn.btn-success.dropdown-toggle.dropdown-arrow(data-toggle='dropdown') Dropup Button
+          .dropdown-menu.dropdown-menu-right
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+        .btn-group.dropup
+          button.btn.btn-warning Dropup Button
+          button.btn.btn-warning.dropdown-toggle-split.dropdown-toggle(data-toggle='dropdown'): i.la.la-angle-down
+          .dropdown-menu.dropdown-menu-right
+            a.dropdown-item(href='javascript:;') Action
+            a.dropdown-item(href='javascript:;') Another action
+            a.dropdown-item(href='javascript:;') Something else here
+
+
+block page_styles
+  style.
+    .btn-list-demo *:not(.btn-group):not(.btn-group-justified):not(.btn-group-vertical) > .btn, .btn-group {margin-bottom:15px;margin-right:5px;}
+    .dropdown-demo .dropdown {display:inline-block}

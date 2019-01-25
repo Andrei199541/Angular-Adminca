@@ -1,0 +1,212 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Pricing Table v2'
+  - var pageUrl = 'pricing-table-2.html'
+
+block content
+  .flexbox-b.mb-5
+    span.mr-4.static-badge.badge-pink
+      i.la.la-trophy
+    div
+      h5.font-strong PRICING TABLES
+      .text-light Perfect and easy pricing tables for your business
+  .ibox
+    .ibox-body
+      .ibox-fullwidth-block
+        table.table.pricing-table
+          thead
+            tr
+              th
+              th
+                .h4.font-strong BASIC
+                .text-muted.font-normal Month for free
+              th
+                .h4.font-strong BUSINESS
+                .text-muted.font-normal For Starter Business
+              th
+                .h4.font-strong EXTENDED
+                .text-muted.font-normal For a Big Project
+          thead.thead-default.thead-lg
+            tr
+              th PRICE
+              th
+                .h1.font-strong.text-primary.mb-0 $26
+              th
+                .h1.font-strong.text-primary.mb-0 $45
+              th
+                .h1.font-strong.text-primary.mb-0 $80
+          tbody
+            tr
+              td Domains
+              td 1
+              td 5
+              td 10
+            tr
+              td Disk Space
+              td 10 Gb
+              td 50 Gb
+              td 265 Gb
+            tr
+              td Internet Speed
+              td 10 Mb/s
+              td 50 Mb/s
+              td 200 Mb/s
+            tr
+              td SSH access
+              td
+                i.la.la-check.font-18
+              td
+                i.la.la-check.font-18
+              td
+                i.la.la-check.font-18
+            tr
+              td Unlimited Users
+              td
+                i.la.la-times-circle.text-muted.font-18
+              td
+                i.la.la-check.font-18
+              td
+                i.la.la-check.font-18
+            tr
+              td 24/7 Support
+              td
+                i.la.la-times-circle.text-muted.font-18
+              td
+                i.la.la-times-circle.text-muted.font-18
+              td
+                i.la.la-check.font-18
+            tr
+              td Advanced settings
+              td
+                i.la.la-times-circle.text-muted.font-18
+              td
+                i.la.la-times-circle.text-muted.font-18
+              td
+                i.la.la-check.font-18
+            tr
+              td SSL certificate
+              td
+                i.la.la-times-circle.text-muted.font-18
+              td
+                i.la.la-times-circle.text-muted.font-18
+              td
+                i.la.la-check.font-18
+            tr
+              td
+              td
+                button.btn.btn-primary.btn-rounded.btn-air PURCHASE
+              td
+                button.btn.btn-primary.btn-rounded.btn-air PURCHASE
+              td
+                button.btn.btn-primary.btn-rounded.btn-air PURCHASE
+  hr.mb-5.mt-5
+  .ibox
+    .ibox-body
+      .ibox-fullwidth-block
+        table.table.pricing-table
+          thead
+            tr
+              th
+              th
+                span.btn-icon-only.btn-circle.bg-primary-50.text-purple.btn-lg.mb-3
+                  i.ti-cup
+                .h4.font-strong BASIC
+                .text-muted.font-normal Month for free
+              th
+                span.btn-icon-only.btn-circle.bg-success-50.text-success.btn-lg.mb-3
+                  i.ti-briefcase
+                .h4.font-strong BUSINESS
+                .text-muted.font-normal For Starter Business
+              th
+                span.btn-icon-only.btn-circle.bg-pink-50.text-pink.btn-lg.mb-3
+                  i.ti-gift
+                .h4.font-strong EXTENDED
+                .text-muted.font-normal For a Big Project
+          thead.thead-default.thead-lg
+            tr
+              th PRICE
+              th
+                .h1.font-strong.text-primary.mb-0 $26
+              th
+                .h1.font-strong.text-success.mb-0 $45
+              th
+                .h1.font-strong.text-pink.mb-0 $80
+          tbody
+            tr
+              td Domains
+              td 1
+              td 5
+              td 10
+            tr
+              td Disk Space
+              td 10 Gb
+              td 50 Gb
+              td 265 Gb
+            tr
+              td Internet Speed
+              td 10 Mb/s
+              td 50 Mb/s
+              td 200 Mb/s
+            tr
+              td SSH access
+              td
+                i.la.la-check.font-18
+              td
+                i.la.la-check.font-18
+              td
+                i.la.la-check.font-18
+            tr
+              td Unlimited Users
+              td
+                i.la.la-times-circle.text-muted.font-18
+              td
+                i.la.la-check.font-18
+              td
+                i.la.la-check.font-18
+            tr
+              td 24/7 Support
+              td
+                i.la.la-times-circle.text-muted.font-18
+              td
+                i.la.la-times-circle.text-muted.font-18
+              td
+                i.la.la-check.font-18
+            tr
+              td Advanced settings
+              td
+                i.la.la-times-circle.text-muted.font-18
+              td
+                i.la.la-times-circle.text-muted.font-18
+              td
+                i.la.la-check.font-18
+            tr
+              td SSL certificate
+              td
+                i.la.la-times-circle.text-muted.font-18
+              td
+                i.la.la-times-circle.text-muted.font-18
+              td
+                i.la.la-check.font-18
+            tr
+              td
+              td
+                button.btn.btn-primary.btn-rounded.btn-air PURCHASE
+              td
+                button.btn.btn-success.btn-rounded.btn-air PURCHASE
+              td
+                button.btn.btn-pink.btn-rounded.btn-air PURCHASE
+  
+block page_styles
+  style.
+    .pricing-table td, .pricing-table th {
+      text-align: center;
+    }
+    .pricing-table tbody td:first-child, .pricing-table thead th:first-child {
+      text-align: left;
+      font-weight: 500;
+      padding-left: 1.5rem;
+    }
+    .pricing-table tbody td:last-child, .pricing-table thead th:last-child {
+      padding-right: 1.5rem;
+    }

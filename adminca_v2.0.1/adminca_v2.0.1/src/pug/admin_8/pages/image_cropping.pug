@@ -1,0 +1,125 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Image Cropping'
+  - var pageUrl = 'image_cropping.html'
+  - var page_heading = 'Image Cropping'
+  - var path = ['Forms', 'Image Cropping']
+
+block plugins-styles
+  +link('cropper/dist/cropper.min.css','plugin')
+  +link('image-cropping.css','page')
+
+block plugins
+  +script('cropper/dist/cropper.min.js', 'plugin')
+
+block scripts
+  +script('image-cropping.js', 'page')
+
+block content
+  .ibox
+    .ibox-head
+      .ibox-title
+        | Image Cropping
+        a.btn.btn-sm.btn-primary.ml-2(href="https://fengyuanchen.github.io/cropper/", target="_blank") Official site
+    .ibox-body
+      .row
+        .col-lg-8
+          .img-container
+            +img('blog/cropper-picture.jpg')(id='image')
+        .col-lg-4
+            .cropper-preview.clearfix
+                .img-preview.preview-lg
+                .img-preview.preview-md
+                .img-preview.preview-sm
+                .img-preview.preview-xs
+            .cropper-data
+                .input-group.input-group-sm.mb-3
+                    label.input-group-addon X
+                    input#dataX.form-control(type='text', placeholder='x')
+                    span.input-group-addon px
+                .input-group.input-group-sm.mb-3
+                    label.input-group-addon Y
+                    input#dataY.form-control(type='text', placeholder='y')
+                    span.input-group-addon px
+                .input-group.input-group-sm.mb-3
+                    label.input-group-addon Width
+                    input#dataWidth.form-control(type='text', placeholder='width')
+                    span.input-group-addon px
+                .input-group.input-group-sm.mb-3
+                    label.input-group-addon Height
+                    input#dataHeight.form-control(type='text', placeholder='height')
+                    span.input-group-addon px
+                .input-group.input-group-sm.mb-3
+                    label.input-group-addon(for='dataRotate') Rotate
+                    input#dataRotate.form-control(type='text', placeholder='rotate')
+                    span.input-group-addon deg
+                .input-group.input-group-sm.mb-3
+                    label.input-group-addon(for='dataScaleX') ScaleX
+                    input#dataScaleX.form-control(type='text', placeholder='scaleX')
+                .input-group.input-group-sm.mb-3
+                    label.input-group-addon(for='dataScaleY') ScaleY
+                    input#dataScaleY.form-control(type='text', placeholder='scaleY')
+      .cropper-toolbar.text-center.docs-buttons
+            .btn-group.mb-3
+                button.btn.btn-primary(type='button', data-method='zoom', data-option='0.1', data-toggle='tooltip', data-original-title='Zoom In')
+                    span.fa.fa-search-plus
+                button.btn.btn-primary(type='button', data-method='zoom', data-option='-0.1', data-toggle='tooltip', data-original-title='Zoom Out')
+                    span.fa.fa-search-minus
+            .btn-group.mb-3
+                button.btn.btn-primary(type='button', data-method='move', data-option='-10', data-toggle='tooltip', data-second-option='0', data-original-title='Move Left')
+                    span.fa.fa-arrow-left
+                button.btn.btn-primary(type='button', data-method='move', data-option='10', data-second-option='0', data-toggle='tooltip', data-original-title='Move Right')
+                    span.fa.fa-arrow-right
+                button.btn.btn-primary(type='button', data-method='move', data-option='0', data-second-option='-10', data-toggle='tooltip', data-original-title='Move Up')
+                    span.fa.fa-arrow-up
+                button.btn.btn-primary(type='button', data-method='move', data-option='0', data-second-option='10', data-toggle='tooltip', data-original-title='Move Down')
+                    span.fa.fa-arrow-down
+            .btn-group.mb-3
+                button.btn.btn-primary(type='button', data-method='rotate', data-option='-45', data-toggle='tooltip', data-original-title='Rotate Left')
+                    span.fa.fa-rotate-left
+                button.btn.btn-primary(type='button', data-method='rotate', data-option='45', data-toggle='tooltip', data-original-title='Rotate Right')
+                    span.fa.fa-rotate-right
+            .btn-group.mb-3
+                button.btn.btn-primary(type='button', data-method='scaleX', data-option='-1', data-toggle='tooltip', data-original-title='Flip Horizontal')
+                    span.fa.fa-arrows-h
+                button.btn.btn-primary(type='button', data-method='scaleY', data-option='-1', data-toggle='tooltip', data-original-title='Flip Vertical')
+                    span.fa.fa-arrows-v
+            .btn-group.mb-3
+                button.btn.btn-primary(type='button', data-method='crop', data-toggle='tooltip', data-original-title='Crop')
+                    span.fa.fa-check
+                button.btn.btn-primary(type='button', data-method='clear', data-toggle='tooltip', data-original-title='Clear')
+                    span.fa.fa-remove
+            .btn-group.mb-3
+                button.btn.btn-primary(type='button', data-method='disable', data-toggle='tooltip', data-original-title='Disable')
+                    span.fa.fa-lock
+                button.btn.btn-primary(type='button', data-method='enable', data-toggle='tooltip', data-original-title='Enable')
+                    span.fa.fa-unlock
+            .btn-group.mb-3
+                button.btn.btn-primary(type='button', data-method='reset', data-toggle='tooltip', data-original-title='Reset')
+                    span.fa.fa-refresh
+                label.btn.btn-primary.btn-upload(for='inputImage', data-toggle='tooltip', data-original-title='Upload image file')
+                    input#inputImage.sr-only(type='file', name='file', accept='.jpg,.jpeg,.png,.gif,.bmp,.tiff')
+                    span.fa.fa-upload
+                button.btn.btn-primary(type='button', data-method='destroy', data-toggle='tooltip', data-original-title='Destroy')
+                    span.fa.fa-power-off
+            div
+                .btn-group.btn-group-crop
+                    button.btn.btn-info.btn-labeled.btn-labeled-left.btn-icon(type='button', data-method='getCroppedCanvas', data-toggle='tooltip', data-original-title='Show cropped canvas')
+                        span.btn-label: i.fa.fa-download
+                        | Download
+                    button.btn.btn-info(type='button', data-method='getCroppedCanvas', data-option='{ "width": 160, "height": 90 }', data-toggle='tooltip', data-original-title='Crop in 160x90') 160×90
+                    button.btn.btn-info(type='button', data-method='getCroppedCanvas', data-option='{ "width": 320, "height": 180 }', data-toggle='tooltip', data-original-title='Crop in 320x180') 320×180
+            #getCroppedCanvasModal.modal.fade.docs-cropped(aria-hidden='true', aria-labelledby='getCroppedCanvasTitle', role='dialog', tabindex='-1')
+                .modal-dialog
+                    .modal-content
+                        .modal-header
+                            h5#getCroppedCanvasTitle.modal-title Cropped
+                            button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                span(aria-hidden='true') ×
+                        .modal-body
+                        .modal-footer
+                            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                            a#download.btn.btn-primary.btn-labeled.btn-labeled-left.btn-icon(href='javascript:void(0);', download='cropped.jpg')
+                                span.btn-label: i.fa.fa-download
+                                | Download

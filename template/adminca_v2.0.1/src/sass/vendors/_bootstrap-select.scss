@@ -1,0 +1,67 @@
+// Bootstrap-select customizing Bootstrap 4
+
+
+.bootstrap-select {
+    & > .dropdown-toggle {
+        padding-right: 30px;
+        &.btn-default {
+            background-color: transparent;
+            border-color: rgba(0,0,0,.1);
+        }
+        &.btn-solid {
+            background-color: #f4f5f9;
+            border-color: #f4f5f9;
+        }
+        &:focus {outline: none !important}
+        &:after {
+            display: inline-block;
+            font-family: LineAwesome;
+            content: "\f110";
+            text-decoration: inherit;
+            text-rendering: optimizeLegibility;
+            text-transform: none;
+            font-size: .85rem;
+            line-height: 0;
+            position: absolute;
+            top: 50%;
+            right: 2rem;
+            width: 0;
+            height: 0;
+            border: 0;
+        }
+    }
+    &.btn-group.show {
+        & > .dropdown-toggle.btn-default, & > .dropdown-toggle.btn-solid {
+            border-color: #5c6bc0;
+        }
+    }
+    .check-mark {
+        top: 50%;
+        margin-top:-8px !important;
+        font-family: 'themify';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        &:before {
+            content: "\e64c";
+        }
+    }
+    &.btn-group {
+        .dropdown-menu {
+            li.selected > a {
+                background-color: #ebedee;
+                color: inherit;
+            }
+            &.inner > li.hidden {display: none}
+        }
+        .dropdown-menu.inner {display: block}
+        .dropdown-toggle .caret {display:none}
+    }
+}
+.bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
+    color: #919ca8;
+}

@@ -1,0 +1,233 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'E-commerce Orders list'
+  - var pageUrl = 'ecommerce_orders_list.html'
+
+block plugins-styles
+  +link('dataTables/datatables.min.css','plugin')
+
+block plugins
+    +script('dataTables/datatables.min.js', 'plugin')
+
+block content
+  .ibox
+    .ibox-body
+      h5.font-strong.mb-4 ORDERS LIST
+      .flexbox.mb-4
+        .flexbox
+          label.mb-0.mr-2 Type:
+          select#type-filter.selectpicker.show-tick.form-control(title='Please select', data-style='btn-solid', data-width='150px')
+            option(value='') All
+            option Shipped
+            option Completed
+            option Pending
+            option Canceled
+        .input-group-icon.input-group-icon-left.mr-3
+          span.input-icon.input-icon-right.font-16
+            i.ti-search
+          input#key-search.form-control.form-control-rounded.form-control-solid(type='text', placeholder='Search ...')
+      .table-responsive.row
+        table#orders-table.table.table-bordered.table-hover
+          thead.thead-default.thead-lg
+            tr
+              th #
+              th Order ID
+              th Customer
+              th Total Price
+              th Status
+              th Payment
+              th Date
+              th.no-sort
+          tbody
+            tr
+              td 1
+              td
+                a(href='ecommerce_order_details.html') #1254
+              td Becky Brooks
+              td $457
+              td
+                span.badge.badge-success.badge-pill Shipped
+              td Paid
+              td 17.05.2018
+              td
+                a.text-muted.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 2
+              td
+                a(href='ecommerce_order_details.html') #1253
+              td Emma Johnson
+              td $1200
+              td
+                span.badge.badge-success.badge-pill Shipped
+              td Paid
+              td 17.05.2018
+              td
+                a.text-muted.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 3
+              td
+                a(href='ecommerce_order_details.html') #1252
+              td Noah Williams
+              td $780
+              td
+                span.badge.badge-primary.badge-pill Pending
+              td Paid
+              td 16.05.2018
+              td
+                a.text-muted.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 4
+              td
+                a(href='ecommerce_order_details.html') #1251
+              td Sophia Jones
+              td $105
+              td
+                span.badge.badge-success.badge-pill Completed
+              td Paid
+              td 15.05.2018
+              td
+                a.text-muted.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 5
+              td
+                a(href='ecommerce_order_details.html') #1250
+              td Jacob Brown
+              td $40
+              td
+                span.badge.badge-primary.badge-pill Pending
+              td _
+              td 12.05.2018
+              td
+                a.text-muted.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 6
+              td
+                a(href='ecommerce_order_details.html') #1249
+              td James Davis
+              td $78
+              td
+                span.badge.badge-success.badge-pill Shipped
+              td Paid
+              td 12.05.2018
+              td
+                a.text-muted.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 7
+              td
+                a(href='ecommerce_order_details.html') #1248
+              td Ava Wilson
+              td $1450
+              td
+                span.badge.badge-danger.badge-pill Canceled
+              td _
+              td 11.05.2018
+              td
+                a.text-muted.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 8
+              td
+                a(href='ecommerce_order_details.html') #1247
+              td Ethan Taylor
+              td $390
+              td
+                span.badge.badge-success.badge-pill Completed
+              td Paid
+              td 10.05.2018
+              td
+                a.text-muted.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 9
+              td
+                a(href='ecommerce_order_details.html') #1246
+              td Emily Thomas
+              td $850
+              td
+                span.badge.badge-success.badge-pill Completed
+              td Paid
+              td 10.05.2018
+              td
+                a.text-muted.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 10
+              td
+                a(href='ecommerce_order_details.html') #1245
+              td Noah Moore
+              td $220
+              td
+                span.badge.badge-danger.badge-pill Canceled
+              td _
+              td 09.05.2018
+              td
+                a.text-muted.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 11
+              td
+                a(href='ecommerce_order_details.html') #1244
+              td Mia Anderson
+              td $90
+              td
+                span.badge.badge-success.badge-pill Completed
+              td Paid
+              td 08.05.2018
+              td
+                a.text-muted.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 12
+              td
+                a(href='ecommerce_order_details.html') #1243
+              td Amelia Harris
+              td $670
+              td
+                span.badge.badge-success.badge-pill Completed
+              td Paid
+              td 08.05.2018
+              td
+                a.text-muted.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 13
+              td
+                a(href='ecommerce_order_details.html') #1242
+              td Sofia Jackson
+              td $1120
+              td
+                span.badge.badge-success.badge-pill Completed
+              td Paid
+              td 07.05.2018
+              td
+                a.text-muted.font-16(href='javascript:;')
+                  i.ti-trash
+
+block scripts
+  script.
+      $(function(){
+          $('#orders-table').DataTable({
+              pageLength: 10,
+              fixedHeader: true,
+              responsive: true,
+              "sDom":     'rtip',
+              columnDefs: [
+                { targets: 'no-sort', orderable: false }
+              ]
+          });
+
+          var table = $('#orders-table').DataTable();
+          $('#key-search').on( 'keyup', function () {
+            table.search( this.value ).draw();
+          });
+          $('#type-filter').on('change', function(){
+            table.column(4).search($(this).val()).draw();
+          });
+      });

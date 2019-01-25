@@ -1,0 +1,50 @@
+
+.badge, .label {
+    padding: 3px 6px;
+    line-height: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.badge-pill, .label-pill {border-radius: 10rem}
+
+.badge-default, .badge-secondary, .label-default {background-color: $badge-default-bg; color: $badge-default-color}
+.badge-primary, .label-primary {background-color: $badge-primary-bg}
+.badge-success, .label-success {background-color: $badge-success-bg}
+.badge-info, .label-info {background-color: $badge-info-bg}
+.badge-warning, .label-warning {background-color: $badge-warning-bg}
+.badge-danger, .label-danger {background-color: $badge-danger-bg}
+.badge-blue, .label-blue {background-color: $badge-blue-bg}
+.badge-pink, .label-pink {background-color: $badge-pink-bg}
+
+.badge-circle {
+    height: 20px;
+    min-width: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.badge-point {
+    display: inline-block !important;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+
+.static-badge {
+    width: 52px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    border-radius: 2px;
+    color: #fff;
+}

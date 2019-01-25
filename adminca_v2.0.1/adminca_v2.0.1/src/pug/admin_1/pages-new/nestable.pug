@@ -1,0 +1,99 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Nestable list'
+  - var pageUrl = 'nestable.html'
+  - var page_heading = 'Nestable list'
+  - var path = ['Components', 'Nestable list']
+
+block plugins
+  +script('nestable/jquery.nestable.js', 'plugin')
+
+block content
+    .alert.alert-primary.alert-bordered
+        p Drag & drop hierarchical list with mouse and touch compatibility (jQuery plugin).
+        p: a.btn.btn-primary(href='https://github.com/dbushell/Nestable', target='_blank') Official Website
+    +panel('Nestable Connected lists')
+      .row
+        .col-md-6
+            #nestable.dd
+                ol.dd-list
+                    li.dd-item(data-id='1')
+                        .dd-handle Item 1
+                    li.dd-item(data-id='2')
+                        .dd-handle Item 2
+                        ol.dd-list
+                            li.dd-item(data-id='3')
+                                .dd-handle Item 3
+                            li.dd-item(data-id='4')
+                                .dd-handle Item 4
+                            li.dd-item(data-id='5')
+                                .dd-handle Item 5
+                                ol.dd-list
+                                    li.dd-item(data-id='6')
+                                        .dd-handle Item 6
+                                    li.dd-item(data-id='7')
+                                        .dd-handle Item 7
+                                    li.dd-item(data-id='8')
+                                        .dd-handle Item 8
+                            li.dd-item(data-id='9')
+                                .dd-handle Item 9
+                            li.dd-item(data-id='10')
+                                .dd-handle Item 10
+                    li.dd-item(data-id='11')
+                        .dd-handle Item 11
+                    li.dd-item(data-id='12')
+                        .dd-handle Item 12
+            br
+            p Serialised Output
+            textarea#nestable-output.form-control(style='font-size: 14px')
+        .col-md-6
+            #nestable2.dd
+                ol.dd-list
+                    li.dd-item(data-id='13')
+                        .dd-handle Item 13
+                    li.dd-item(data-id='14')
+                        .dd-handle Item 14
+                    li.dd-item(data-id='15')
+                        .dd-handle Item 15
+                        ol.dd-list
+                            li.dd-item(data-id='16')
+                                .dd-handle Item 16
+                            li.dd-item(data-id='17')
+                                .dd-handle Item 17
+                            li.dd-item(data-id='18')
+                                .dd-handle Item 18
+            br
+            p Serialised Output
+            textarea#nestable2-output.form-control
+
+block scripts
+    script.
+        $(function(){
+            var updateOutput = function(e)
+            {
+                var list   = e.length ? e : $(e.target),
+                    output = list.data('output');
+                if (window.JSON) {
+                    output.val(window.JSON.stringify(list.nestable('serialize')));//, null, 2));
+                } else {
+                    output.val('JSON browser support required for this demo.');
+                }
+            };
+
+            // activate Nestable for list 1
+            $('#nestable').nestable({
+                group: 1
+            })
+            .on('change', updateOutput);
+
+            // activate Nestable for list 2
+            $('#nestable2').nestable({
+                group: 1
+            })
+            .on('change', updateOutput);
+
+            // output initial serialised data
+            updateOutput($('#nestable').data('output', $('#nestable-output')));
+            updateOutput($('#nestable2').data('output', $('#nestable2-output')));
+        });

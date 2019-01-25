@@ -1,0 +1,46 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'C3 Charts'
+  - var pageUrl = 'c3.html'
+  - var page_heading = 'C3 Charts'
+  - var path = ['Charts', 'C3 Charts']
+
+block plugins-styles
+  +link('c3/c3.min.css','plugin')
+
+block plugins
+  +script('d3/d3.min.js', 'plugin')
+  +script('c3/c3.min.js', 'plugin')
+
+block scripts
+  +script('c3-demo.js', 'page')
+
+block content
+    .alert.alert-info.alert-bordered
+        p A D3-based reusable chart library.
+        p
+            a.btn.btn-info(href='https://github.com/c3js/c3', target='_blank') Official Website
+    .row
+      .col-md-6
+        +panel('Line Chart')
+          #lineChart
+      .col-md-6
+        +panel('Spline Chart')
+          #splineChart
+    .row
+      .col-md-6
+        +panel('Stacked Bar')
+          #barStacked
+      .col-md-6
+        +panel('Area Chart')
+          #areaChart
+    .row
+      .col-md-6
+        +panel('Scatter Plot')
+          #scatterChart
+      .col-md-6
+        +panel('Pie Chart')
+          #pieChart
+    +panel('Gauge Chart')
+      #gaugeChart

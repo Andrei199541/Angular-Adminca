@@ -1,0 +1,91 @@
+extends ../layout-simple.pug
+
+block variables
+  - var pageTitle = 'Login v3'
+  - var pageUrl = 'login-3.html'
+
+block content
+  .row.login-content
+    .col-6.bg-white
+      .text-center
+        span.auth-head-icon
+          i.la.la-user
+      .ibox.m-0(style='box-shadow: none;')
+        form#login-form.ibox-body(action='javascript:;', method='POST')
+          h4.font-strong.text-center.mb-5 LOG IN
+          .form-group.mb-4
+            input.form-control.form-control-air(type='text', name='email', placeholder='Email')
+          .form-group.mb-4
+            input.form-control.form-control-air(type='password', name='password', placeholder='Password')
+          .flexbox.mb-5
+            span
+              label.ui-switch.switch-icon.mr-2.mb-0
+                input(type='checkbox', checked='')
+                span
+              | Remember
+            a.text-primary(href='forgot_password.html') Forgot password?
+          .text-center
+            button.btn.btn-primary.btn-rounded.btn-block.btn-air LOGIN
+    .col-6.d-inline-flex.align-items-center.text-white.py-4.px-5
+      div
+        .h2.mb-4 Not a member?
+        .mb-4.pt-3
+          button.btn.btn-outline.btn-icon-only.btn-circle.mr-3
+            i.fa.fa-facebook
+          button.btn.btn-outline.btn-icon-only.btn-circle.mr-3
+            i.fa.fa-twitter
+          button.btn.btn-outline.btn-icon-only.btn-circle.mr-3
+            i.fa.fa-pinterest-p
+        p
+          | Register and get the following benefits.
+          br
+          | Minim dolor in amet nulla laboris enim dolore.
+        .flexbox-b.mb-3
+          i.ti-check.mr-3.text-success
+          | Lorem Ipsum dolar set.
+        .flexbox-b.mb-3
+          i.ti-check.mr-3.text-success
+          | Lorem Ipsum dolar set.
+        .flexbox-b.mb-5
+          i.ti-check.mr-3.text-success
+          | Lorem Ipsum dolar set.
+        button.btn.btn-outline.btn-rounded.btn-fix Register
+  
+block page_styles
+  style.
+    body {
+      background-color: #4a5ab9;
+    }
+    .login-content {
+      max-width: 900px;
+      margin: 100px auto 50px;
+    }
+    .auth-head-icon {
+      position: relative;
+      height: 60px;
+      width: 60px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      background-color: #fff;
+      color: #5c6bc0;
+      box-shadow: 0 5px 20px #d6dee4;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+block scripts
+  script.
+    $(function(){
+      $('#login-form').validate({
+          errorClass:"help-block",
+          rules: {
+              email: {required:true,email:true},
+              password: {required:true}
+          },
+          highlight:function(e){$(e).closest(".form-group").addClass("has-error")},
+          unhighlight:function(e){$(e).closest(".form-group").removeClass("has-error")},
+      });
+    });

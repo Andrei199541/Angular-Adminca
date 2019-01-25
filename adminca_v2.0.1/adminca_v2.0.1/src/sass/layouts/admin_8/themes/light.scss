@@ -1,0 +1,26 @@
+.header-topbar {
+    background: #dde1e2;
+	.page-brand {
+	    color: #f75a5f;
+	    .brand-tip {color: #34495f}
+	}
+    .sidebar-toggler {
+        .icon-bar {background-color: #6d7c85}
+        &:hover .icon-bar {background-color: #34495f}
+    }
+    .navbar-toolbar > li 
+    {
+        & > a {
+            &, & > i {color: #6d7c85}
+            &:hover {
+                &, & > i {color: inherit}
+            }
+        }
+    }
+    .envelope-badge {
+        background-color: #f75a5f;
+    }
+}
+
+
+.theme-config .theme-config-toggle {background-color: #1abc9c}

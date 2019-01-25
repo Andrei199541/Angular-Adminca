@@ -1,0 +1,84 @@
+.nav-pills, .nav-tabs {
+    margin-bottom: 15px;
+    .nav-link {
+        color: #71808f;
+    }
+}
+
+.nav-tabs {
+    .nav-link {
+        padding: .7rem 1rem;
+    }
+}
+
+
+// LINE TABS
+// ================
+
+.tabs-line {
+    .nav-link {
+        transition: all .25s;
+        border-width: 0;
+        border-bottom: 1px solid transparent;
+        &:hover, &.active {
+            color: $purple;
+            border-bottom-color: $purple;
+        }
+    }
+    &.tabs-line-2x .nav-link {
+        border-bottom-width: 2px;
+    }
+}
+
+.tabs-line-success {
+    @include tab-line-variant($tab-success-color);
+}
+.tabs-line-info {
+    @include tab-line-variant($tab-info-color);
+}
+.tabs-line-warning {
+    @include tab-line-variant($tab-warning-color);
+}
+.tabs-line-danger {
+    @include tab-line-variant($tab-danger-color);
+}
+.tabs-line-pink {
+    @include tab-line-variant($tab-pink-color);
+}
+
+
+// Nav Pills
+// ===========
+
+.nav-pills {
+    .nav-link {
+        transition: all ease-in-out .15s;
+    }
+    .nav-link.active {
+        background-color: #5c6bc0; 
+        color: #fff;
+    }
+    &.nav-pills-rounded .nav-link.active {border-radius:50px}
+    &.nav-pills-air .nav-link.active {
+        box-shadow: 0 5px 20px #d6dee4;
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}
+
+.nav-pills-success {
+    @include nav-pill-variant($pill-success-bg);
+}
+.nav-pills-info {
+    @include nav-pill-variant($pill-info-bg);
+}
+.nav-pills-warning {
+    @include nav-pill-variant($pill-warning-bg);
+}
+.nav-pills-danger {
+    @include nav-pill-variant($pill-danger-bg);
+}
+.nav-pills-pink {
+    @include nav-pill-variant($pill-pink-bg);
+}

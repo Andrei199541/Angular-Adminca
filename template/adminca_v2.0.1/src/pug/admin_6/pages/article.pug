@@ -1,0 +1,149 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Article'
+  - var pageUrl = 'article.html'
+
+block content
+  .flexbox-b.mb-5
+    span.mr-4.static-badge.badge-pink
+      i.la.la-pencil
+    div
+      h5.font-strong Article
+      .text-light Adminca: Basic usage
+  .row
+    .col-lg-12.centered
+      .ibox
+        .ibox-body
+          .flexbox
+            .flexbox
+              .article-date.mr-4.text-primary.bg-primary-50
+                h5.font-strong.mb-0 16
+                span.font-13 Feb
+              .d-inline-flex
+                span.text-muted.pl-3.pr-3.text-center(style='border-right:1px solid rgba(0,0,0,.1);')
+                  i.fa.fa-heart-o.d-block.font-16.mb-2
+                  | 124
+                span.text-muted.pl-3.pr-3.text-center
+                  i.fa.fa-comment-o.d-block.font-16.mb-2
+                  | 56
+            div
+              button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air.mr-2
+                i.fa.fa-facebook
+              button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air.mr-2
+                i.fa.fa-twitter
+              button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air.mr-2
+                i.fa.fa-dribbble
+              button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air
+                i.fa.fa-linkedin
+          h1.text-center.my-5 Adminca: Basic usage
+          p
+            | Nulla vestibulum interdum imperdiet. Fusce sit amet erat quis erat rhoncus venenatis et non ipsum. Suspendisse sed velit consequat, pretium dolor vel, vestibulum massa. In tempor iaculis vehicula. 
+            b Duis pellentesque urna lectus
+            | , id lacinia eros lacinia non. Curabitur fermentum pretium erat, eu aliquet tortor tincidunt vel. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          p
+            span.text-success Fusce et quam
+            |  tristique, congue tellus sed, suscipit tellus. In quis placerat magna. Nunc blandit nulla id orci auctor vulputate. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas luctus rutrum erat sit amet pulvinar. Integer sit amet mollis ante, feugiat laoreet neque. Maecenas tincidunt sed orci eu euismod. Integer a turpis vestibulum, venenatis mi id, suscipit ex. Nam iaculis nulla a dictum dapibus. Vivamus volutpat convallis leo. Nam blandit justo sed sapien varius bibendum ut id nunc. In gravida, leo ac tristique fringilla, diam nunc consequat metus, eget faucibus lorem ligula quis erat. Phasellus rutrum pharetra felis eget commodo.
+          .row
+            .col-lg-6.mb-4.mt-4
+              +img('blog/07.jpeg')
+          h3.mb-3.mt-3 Nunc blandit nulla
+          p
+            em
+              | Donec dictum turpis nulla, ac venenatis nunc tincidunt vel. Etiam aliquam turpis sed orci varius tincidunt. Mauris quis molestie nibh. Mauris efficitur sollicitudin mauris eu lacinia.
+          p
+            | Quisque efficitur ex felis, eu molestie turpis convallis nec. Cras at bibendum tortor, in dictum quam. Donec dictum turpis nulla, ac venenatis nunc tincidunt vel. Etiam aliquam turpis sed orci varius tincidunt. Mauris quis molestie nibh. Mauris efficitur sollicitudin mauris eu lacinia.
+          p
+            | Vestibulum et venenatis ligula, eu efficitur ante. Pellentesque erat nulla, efficitur dictum tempus non, commodo volutpat libero. Pellentesque sagittis metus eu enim lacinia, in tempor orci iaculis. Cras dictum aliquet ex, ut placerat velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pharetra dolor sapien, at ultrices enim interdum vitae. Sed lacinia, nisi vulputate tempor tincidunt, mauris dolor semper ligula, eu commodo turpis odio nec velit. Mauris neque urna, vehicula ac nibh ut, efficitur malesuada ipsum. Nam id eros ultricies, laoreet sapien sed, lacinia mi.
+          ul
+            li Lorem ipsum dolor sit amet
+            li Consectetur adipiscing elit
+            li Facilisis in pretium nisl aliquet
+          p
+            | Ut pulvinar tellus mi, eget vehicula magna dictum ornare. In venenatis arcu non nibh porttitor pretium. Maecenas eu tortor ipsum. Donec posuere mattis enim at dictum. Mauris vitae lorem arcu. Pellentesque dapibus, nibh vel mollis tempus, magna mauris imperdiet diam, a sagittis dolor eros sed nisl. Sed mollis convallis porta.
+          hr.my-4
+          .flexbox
+            div
+              span.badge.badge-primary.mr-2 HTML
+              span.badge.badge-pink.mr-2 TRENDS
+              span.badge.badge-secondary BOOTSTRAP
+            span 205 views
+          hr.my-4
+          h5.font-strong.mb-3
+            i.fa.fa-comment-o.mr-2
+            | 5 comments
+          ul.media-list
+            li.media
+              a.media-img(href='javascript:;')
+                +img('users/u10.jpg')(width='45')
+              .media-body
+                .media-heading
+                  a.comment-author(href='javascript:;') Stella Obrien
+                  small.text-muted.ml-2 5 days ago
+                  .pull-right.font-13
+                    a.text-muted.mr-2(data-toggle='tooltip', data-original-title='Like')
+                      i.fa.fa-heart
+                    a.text-muted(data-toggle='tooltip', data-original-title='Reply')
+                      i.fa.fa-reply
+                p.m-0
+                  | Aliquam nec dui fermentum, fermentum est sed, molestie ligula. Donec ullamcorper eget purus eget vehicula. Morbi risus est, rhoncus vel faucibus eget,
+            li.media
+              a.media-img(href='javascript:;')
+                +img('users/u2.jpg')(width='45')
+              .media-body
+                .media-heading
+                  a.comment-author(href='javascript:;') Becky Brooks
+                  small.text-muted.ml-2 2 days ago
+                  .pull-right.font-13
+                    a.text-muted.mr-2(data-toggle='tooltip', data-original-title='Like')
+                      i.fa.fa-heart
+                    a.text-muted(data-toggle='tooltip', data-original-title='Reply')
+                      i.fa.fa-reply
+                p
+                  | Aliquam nec dui fermentum, fermentum est sed, molestie ligula. Donec ullamcorper eget purus eget vehicula. Morbi risus est, rhoncus vel faucibus eget,
+                .media
+                  a.media-img(href='javascript:;')
+                    +img('users/u11.jpg')(width='45')
+                  .media-body
+                    .media-heading
+                      a.comment-author(href='javascript:;') Tyrone Carroll
+                      small.text-muted.ml-2 Just now
+                      .pull-right.font-13
+                        a.text-muted.mr-2(data-toggle='tooltip', data-original-title='Like')
+                          i.fa.fa-heart
+                        a.text-muted(data-toggle='tooltip', data-original-title='Reply')
+                          i.fa.fa-reply
+                    p.m-0
+                      | Aliquam nec dui fermentum, fermentum est sed, molestie ligula. Donec ullamcorper eget purus eget vehicula. Morbi risus est, rhoncus vel faucibus eget,
+            li.media
+              a.media-img(href='javascript:;')
+                +img('users/u6.jpg')(width='45')
+              .media-body
+                .media-heading
+                  a.comment-author(href='javascript:;') Connor Perez
+                  small.text-muted.ml-2 1 hour ago
+                  .pull-right.font-13
+                    a.text-muted.mr-2(data-toggle='tooltip', data-original-title='Like')
+                      i.fa.fa-heart
+                    a.text-muted(data-toggle='tooltip', data-original-title='Reply')
+                      i.fa.fa-reply
+                p
+                  | Aliquam nec dui fermentum, fermentum est sed, molestie ligula. Donec ullamcorper eget purus eget vehicula. Morbi risus est, rhoncus vel faucibus eget,
+          h5.font-strong.mt-4.mb-3 Leave A Comment
+          form
+            .form-group
+              textarea.form-control(rows='5', placeholder='Comment here')
+            .form-group
+              button.btn.btn-primary(type='button') SUBMIT
+  
+block page_styles
+  style.
+    .article-date {
+      height: 48px;
+      width: 48px;
+      text-align: center;
+      color: #fff;
+      padding: 6px 5px;
+      border-radius: 50%;
+      line-height: 1;
+    }

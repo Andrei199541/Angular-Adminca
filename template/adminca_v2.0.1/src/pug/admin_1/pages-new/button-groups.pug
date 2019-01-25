@@ -1,0 +1,187 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Button Groups'
+  - var pageUrl = 'button-groups.html'
+  - var page_heading = 'Button Groups'
+  - var path = ['Buttons', 'Button Groups']
+
+block content
+  .row.btn-list-demo.dropdown-demo
+    .col-md-6
+      +panel('Button Groups')
+        h6.mb-4 Basic Example
+        .btn-group.mb-3.mr-2
+          .btn.btn-secondary Left
+          .btn.btn-secondary Middle
+          .btn.btn-secondary Right
+        .btn-group.mb-3
+          .btn.btn-pink Left
+          .btn.btn-pink Middle
+          .btn.btn-pink Right
+        br
+        .btn-group
+          .btn.btn-outline-info Left
+          .btn.btn-outline-info Middle
+          .btn.btn-outline-info Right
+        h6.mb-4.mt-5 Button toolbars
+        .btn-toolbar.mb-3
+          .btn-group.mr-2.mb-2
+            .btn.btn-secondary: i.ti-wand
+            .btn.btn-secondary: i.ti-brush-alt
+            .btn.btn-secondary: i.ti-files
+            .btn.btn-secondary: i.ti-image
+            .btn.btn-secondary: i.ti-link
+          .btn-group.mb-2
+            .btn.btn-secondary: i.ti-export
+            .btn.btn-secondary: i.ti-printer
+            .btn.btn-secondary: i.ti-zip
+        .btn-toolbar.mb-3
+          .btn-group.mr-2.mb-2
+            .btn.btn-outline-secondary: i.ti-wand
+            .btn.btn-outline-secondary: i.ti-brush-alt
+            .btn.btn-outline-secondary: i.ti-files
+            .btn.btn-outline-secondary: i.ti-image
+            .btn.btn-outline-secondary: i.ti-link
+          .btn-group.mb-2
+            .btn.btn-outline-secondary: i.ti-export
+            .btn.btn-outline-secondary: i.ti-printer
+            .btn.btn-outline-secondary: i.ti-zip
+        .btn-toolbar.mb-3
+          .btn-group.mr-2.mb-2
+            .btn.btn-primary: i.ti-align-right
+            .btn.btn-primary: i.ti-align-center
+            .btn.btn-primary: i.ti-align-left
+            .btn.btn-primary: i.ti-align-justify
+          .btn-group.mb-2
+            .btn.btn-primary: i.ti-text
+            .btn.btn-primary: i.ti-underline
+            .btn.btn-primary: i.ti-Italic
+            .btn-group
+              .btn.btn-primary.dropdon-toggle.dropdown-arrow(data-toggle='dropdown') Fonts
+              .dropdown-menu.dropdown-menu-right
+                a.dropdown-item(href='javascript:;') Arial
+                a.dropdown-item(href='javascript:;') Verdena
+                a.dropdown-item(href='javascript:;') Sans Serif
+                a.dropdown-item(href='javascript:;') Tahoma
+                a.dropdown-item(href='javascript:;') Arial Black
+                a.dropdown-item(href='javascript:;') Helvetica
+        .btn-toolbar.mb-3
+          .btn-group.mr-2.mb-2
+            .btn.btn-info 1
+            .btn.btn-info 2
+            .btn.btn-info 3
+            .btn.btn-info 4
+          .btn-group.mb-2
+            .btn.btn-info 5
+            .btn.btn-info 6
+            .btn.btn-info 7
+        .btn-group.mb-3
+          .btn.btn-pink: span.btn-icon
+            i.la.la-backward
+            | Back
+          .btn.btn-pink: span.btn-icon
+            i.la.la-play
+            | Play
+          .btn.btn-pink: span.btn-icon.btn-icon-right
+            | Next
+            i.la.la-forward
+        br
+        .btn-group.mb-3
+          .btn.btn-primary.btn-label.btn-label-left.btn-icon
+            label: i.la.la-step-backward
+            | Back
+          .btn.btn-primary: span.btn-icon
+            i.la.la-pause
+            | Stop
+          .btn.btn-primary.btn-label.btn-label-right.btn-icon
+            label: i.la.la-step-forward
+            | Next
+        h6.mb-4.mt-5 Rounded & air style
+        .btn-group.btn-rounded.mr-2.mb-3
+          .btn.btn-warning Left
+          .btn.btn-warning Middle
+          .btn.btn-warning Right
+        .btn-group.btn-rounded.btn-air.mb-3
+          .btn.btn-primary Left
+          .btn.btn-primary Middle
+          .btn.btn-primary Right
+        br
+        .btn-group.btn-rounded.mr-2.mb-3
+          .btn.btn-outline-danger Left
+          .btn.btn-outline-danger Middle
+          .btn.btn-outline-danger Right
+        br
+        .btn-toolbar.mb-3
+          .btn-group.btn-rounded.mr-2.mb-2
+            .btn.btn-info 1
+            .btn.btn-info 2
+            .btn.btn-info 3
+            .btn.btn-info 4
+          .btn-group.btn-rounded.mb-2.mr-2
+            .btn.btn-info 5
+            .btn.btn-info 6
+            .btn.btn-info 7
+
+    .col-md-6
+      +panel('Button Groups')
+        h6.mb-4 Vertical variation
+        .btn-group-vertical.mr-3.mb-3
+          .btn.btn-secondary Button
+          .btn.btn-secondary Button
+          .btn-group
+            .btn.btn-secondary.dropdon-toggle.dropdown-arrow(data-toggle='dropdown') More
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item(href='javascript:;') Dropdown Link
+              a.dropdown-item(href='javascript:;') Dropdown Link
+        .btn-group-vertical.mb-3.mr-3
+          .btn.btn-primary: span.btn-icon.m-0
+            i.la.la-cloud-download
+            | Download
+          .btn.btn-primary: span.btn-icon.m-0
+            i.la.la-comments
+            | Comment
+          .btn.btn-primary: span.btn-icon.m-0
+            i.la.la-heart-o
+            | Follow
+        .btn-group-vertical.mb-3
+          .btn.btn-pink.btn-label.btn-label-left.btn-icon
+            label: i.la.la-upload
+            | Export
+          .btn.btn-pink.btn-label.btn-label-left.btn-icon
+            label: i.la.la-file-zip-o
+            | Zip
+          .btn.btn-pink.btn-label.btn-label-left.btn-icon
+            label: i.la.la-print
+            | Print
+        br
+        .btn-group-vertical.mb-3.mr-3
+          .btn.btn-info: i.la.la-car
+          .btn.btn-info: i.la.la-bus
+          .btn.btn-info: i.la.la-plane
+        .btn-group-vertical.mb-3
+          .btn.btn-primary: i.ti-gift
+          .btn.btn-primary: i.ti-bell
+          .btn.btn-primary: i.ti-support
+        h6.mb-2.mt-4 Sizing
+        p Instead of applying button sizing classes to every button in a group, just add <code>.btn-group-*</code> to each <code>.btn-group</code>, including each one when nesting multiple groups.
+        .btn-group.btn-group-lg.mb-3
+          .btn.btn-secondary Left
+          .btn.btn-secondary Middle
+          .btn.btn-secondary Right
+        br
+        .btn-group.mb-3
+          .btn.btn-secondary Left
+          .btn.btn-secondary Middle
+          .btn.btn-secondary Right
+        br
+        .btn-group.btn-group-sm.mb-3
+          .btn.btn-secondary Left
+          .btn.btn-secondary Middle
+          .btn.btn-secondary Right
+        br
+
+block page_styles
+  style.
+    .btn-list-demo *:not(.btn-group):not(.btn-group-justified):not(.btn-group-vertical) > .btn {margin-bottom:15px;margin-right:5px;}
+    .dropdown-demo .dropdown {display:inline-block}

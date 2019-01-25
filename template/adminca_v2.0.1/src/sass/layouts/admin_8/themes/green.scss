@@ -1,0 +1,30 @@
+$green: #1abc9c;
+
+.header-topbar {
+	background: $green;
+	.page-brand {
+	    .brand-tip {color: #f75a5f}
+	}
+	.sidebar-toggler {
+	    .icon-bar {background-color: #eee}
+	    &:hover .icon-bar {background-color: #fff}
+	}
+	.navbar-toolbar > li 
+	{
+	    & > a {
+		    &, & > i {color: #eee}
+		    &:hover {
+		        &, & > i {color: #fff}
+		    }
+	    }
+	    &.timeout-toggler .notify-signal {
+	        background-color: #f75a5f;
+	        &::before {border-color: #f75a5f}
+	    }
+	}
+	.envelope-badge {
+	    background-color: #f75a5f;
+	}
+}
+
+.theme-config .theme-config-toggle {background-color: $green}

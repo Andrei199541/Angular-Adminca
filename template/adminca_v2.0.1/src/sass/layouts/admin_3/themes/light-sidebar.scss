@@ -1,0 +1,48 @@
+$sidebar-bg : #ebedee; // #eee; // #dee1e3;
+
+.page-wrapper, .page-sidebar {
+	background-color: $sidebar-bg;
+}
+.page-brand {
+	color: #fff;
+    background-color: #1abc9c;
+    .brand-tip {color: #f75a5f}
+}
+.side-menu {
+    color: #6d7c85;
+    & > li {
+        a {
+	        color: #6d7c85;
+	        &:hover, &:focus {
+	            color: #1abc9c;
+	        }
+	        &.active {color: #34495f}
+	    }
+	    &:hover {
+	        & > a {
+	            color: #1abc9c;
+	            background-color: darken($sidebar-bg, 5%);
+	        }
+	    }
+	    &.active {
+	        & > a, & > a:hover, & > a:focus {
+	            color: #1abc9c;
+	            background-color: darken($sidebar-bg, 5%);
+	        }
+	    }
+	    .nav-2-level ul {
+            background-color: #1abc9c;
+            &::before {border-right-color: #1abc9c}
+            a {
+                color: #fff;
+                &:hover, &:focus {background-color:rgba(0,0,0,.1)}
+            }
+	    }
+	    .nav-3-level {
+            background-color: #1abc9c;
+	    }
+    }
+}
+
+
+.theme-config .theme-config-toggle {background-color: #1abc9c}

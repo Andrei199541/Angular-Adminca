@@ -1,0 +1,291 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Switches'
+  - var pageUrl = 'form-switch.html'
+  - var page_heading = 'Switches'
+  - var path = ['Form Controls', 'Switches']
+
+block content
+  .row
+    .col-md-6
+      +panel(title='Basic Usage')
+        .form-group.row
+          .col-3 Default Switch
+          .col-3
+            label.ui-switch
+              input(type='checkbox')
+              span
+          .col-3 Checked
+          .col-3
+            label.ui-switch
+              input(type='checkbox', checked)
+              span
+        .form-group.row
+          .col-3 With icon
+          .col-3
+            label.ui-switch.switch-icon
+              input(type='checkbox')
+              span
+          .col-3 Checked
+          .col-3
+            label.ui-switch.switch-icon
+              input(type='checkbox', checked)
+              span
+        .form-group.row
+          .col-3 Large
+          .col-3
+            label.ui-switch.switch-icon.switch-large
+              input(type='checkbox')
+              span
+          .col-3 Checked
+          .col-3
+            label.ui-switch.switch-icon.switch-large
+              input(type='checkbox', checked)
+              span
+        .form-group.row
+          .col-3 Outline
+          .col-3
+            label.ui-switch.switch-icon.switch-large.switch-outline
+              input(type='checkbox')
+              span
+          .col-3 Checked
+          .col-3
+            label.ui-switch.switch-icon.switch-large.switch-outline
+              input(type='checkbox', checked)
+              span
+      +panel(title='Switch State Colors')
+        .form-group.row.mb-4
+          .col-3 Primary
+          .col-3
+            label.ui-switch.switch-icon
+              input(type='checkbox', checked)
+              span
+          .col-3 Success
+          .col-3
+            label.ui-switch.switch-icon.switch-success
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Info
+          .col-3
+            label.ui-switch.switch-icon.switch-info
+              input(type='checkbox', checked)
+              span
+          .col-3 Warning
+          .col-3
+            label.ui-switch.switch-icon.switch-warning
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Pink
+          .col-3
+            label.ui-switch.switch-icon.switch-pink
+              input(type='checkbox', checked)
+              span
+          .col-3 Danger
+          .col-3
+            label.ui-switch.switch-icon.switch-danger
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Blue
+          .col-3
+            label.ui-switch.switch-icon.switch-blue
+              input(type='checkbox', checked)
+              span
+          .col-3 Ebony
+          .col-3
+            label.ui-switch.switch-icon.switch-ebony
+              input(type='checkbox', checked)
+              span
+
+        .text-muted.mb-4 Outline
+        
+        .form-group.row.mb-4
+          .col-3 Primary
+          .col-3
+            label.ui-switch.switch-icon.switch-large.switch-outline
+              input(type='checkbox', checked)
+              span
+          .col-3 Success
+          .col-3
+            label.ui-switch.switch-icon.switch-success.switch-large.switch-outline
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Info
+          .col-3
+            label.ui-switch.switch-icon.switch-info.switch-large.switch-outline
+              input(type='checkbox', checked)
+              span
+          .col-3 Warning
+          .col-3
+            label.ui-switch.switch-icon.switch-warning.switch-large.switch-outline
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Pink
+          .col-3
+            label.ui-switch.switch-icon.switch-pink.switch-large.switch-outline
+              input(type='checkbox', checked)
+              span
+          .col-3 Danger
+          .col-3
+            label.ui-switch.switch-icon.switch-danger.switch-large.switch-outline
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Blue
+          .col-3
+            label.ui-switch.switch-icon.switch-blue.switch-large.switch-outline
+              input(type='checkbox', checked)
+              span
+          .col-3 Ebony
+          .col-3
+            label.ui-switch.switch-icon.switch-ebony.switch-large.switch-outline
+              input(type='checkbox', checked)
+              span
+
+    .col-md-6
+      +panel(title='Switch State Colors')
+        .text-muted.mb-4 Solid with icons
+        
+        .form-group.row.mb-4
+          .col-3 Primary
+          .col-3
+            label.ui-switch.switch-icon.switch-solid-primary.switch-large
+              input(type='checkbox', checked)
+              span
+          .col-3 Info
+          .col-3
+            label.ui-switch.switch-icon.switch-solid-info.switch-large
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Success
+          .col-3
+            label.ui-switch.switch-icon.switch-solid-success.switch-large
+              input(type='checkbox', checked)
+              span
+          .col-3 Warning
+          .col-3
+            label.ui-switch.switch-icon.switch-solid-warning.switch-large
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Pink
+          .col-3
+            label.ui-switch.switch-icon.switch-solid-pink.switch-large
+              input(type='checkbox', checked)
+              span
+          .col-3 Danger
+          .col-3
+            label.ui-switch.switch-icon.switch-solid-danger.switch-large
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Blue
+          .col-3
+            label.ui-switch.switch-icon.switch-solid-blue.switch-large
+              input(type='checkbox', checked)
+              span
+          .col-3 Ebony
+          .col-3
+            label.ui-switch.switch-icon.switch-solid-ebony.switch-large
+              input(type='checkbox', checked)
+              span
+
+        .text-muted.mb-4 Solid variant
+        
+        .form-group.row.mb-4
+          .col-3 Primary
+          .col-3
+            label.ui-switch.switch-solid-primary.switch-large
+              input(type='checkbox', checked)
+              span
+          .col-3 Info
+          .col-3
+            label.ui-switch.switch-solid-info.switch-large
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Success
+          .col-3
+            label.ui-switch.switch-solid-success.switch-large
+              input(type='checkbox', checked)
+              span
+          .col-3 Warning
+          .col-3
+            label.ui-switch.switch-solid-warning.switch-large
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Pink
+          .col-3
+            label.ui-switch.switch-solid-pink.switch-large
+              input(type='checkbox', checked)
+              span
+          .col-3 Danger
+          .col-3
+            label.ui-switch.switch-solid-danger.switch-large
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Blue
+          .col-3
+            label.ui-switch.switch-solid-blue.switch-large
+              input(type='checkbox', checked)
+              span
+          .col-3 Ebony
+          .col-3
+            label.ui-switch.switch-solid-ebony.switch-large
+              input(type='checkbox', checked)
+              span
+
+        .text-muted.mb-4 Square
+
+        .form-group.row.mb-4
+          .col-3 Primary
+          .col-3
+            label.ui-switch.switch-icon.switch-large.switch-square
+              input(type='checkbox', checked)
+              span
+          .col-3 Success
+          .col-3
+            label.ui-switch.switch-icon.switch-success.switch-large.switch-square
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Info
+          .col-3
+            label.ui-switch.switch-icon.switch-info.switch-large.switch-square
+              input(type='checkbox', checked)
+              span
+          .col-3 Warning
+          .col-3
+            label.ui-switch.switch-icon.switch-warning.switch-large.switch-square
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Pink
+          .col-3
+            label.ui-switch.switch-icon.switch-pink.switch-large.switch-square
+              input(type='checkbox', checked)
+              span
+          .col-3 Danger
+          .col-3
+            label.ui-switch.switch-icon.switch-danger.switch-large.switch-square
+              input(type='checkbox', checked)
+              span
+        .form-group.row.mb-4
+          .col-3 Blue
+          .col-3
+            label.ui-switch.switch-icon.switch-blue.switch-large.switch-square
+              input(type='checkbox', checked)
+              span
+          .col-3 Ebony
+          .col-3
+            label.ui-switch.switch-icon.switch-ebony.switch-large.switch-square
+              input(type='checkbox', checked)
+              span

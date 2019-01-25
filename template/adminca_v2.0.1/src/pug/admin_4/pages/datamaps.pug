@@ -1,0 +1,36 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Datamaps'
+  - var pageUrl = 'datamaps.html'
+  - var page_heading = 'Datamaps'
+  - var path = ['Maps', 'Datamaps']
+
+block plugins
+  +script('d3/d3.min.js', 'plugin')
+  +script('topojson/topojson.min.js', 'plugin')
+  +script('datamaps/dist/datamaps.all.min.js', 'plugin')
+
+block scripts
+  +script('datamaps-demo.js', 'page')
+
+block content
+    .alert.alert-primary.alert-bordered
+        p
+            | Customizable SVG map visualizations for the web in a single Javascript file using D3.js
+        p
+            a.btn.btn-primary(href='https://github.com/markmarkoh/datamaps', target='_blank') Official Website
+    .row
+      .col-md-6
+        +panel('Basic example with selected regions')
+          #selected_map
+      .col-md-6
+        +panel('USA scope with labels')
+          #usa_map
+    .row
+      .col-md-6
+        +panel('Map with arcs')
+          #arc_map
+      .col-md-6
+        +panel('USA scope with arcs')
+          #arc_map_usa

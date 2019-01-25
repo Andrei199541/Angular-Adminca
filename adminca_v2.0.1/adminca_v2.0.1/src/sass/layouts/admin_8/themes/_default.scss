@@ -1,0 +1,20 @@
+.header-topbar {
+	background: #2b3c4e;
+	.page-brand {
+		color: #fff;
+	    .brand-tip {color: #f75a5f}
+	}
+	.sidebar-toggler {
+	    .icon-bar {background-color: $navLinkColor}
+	    &:hover .icon-bar {background-color: #fff}
+	}
+	.navbar-toolbar > li > a {
+	    &, & > i {color: $navLinkColor}
+	    &:hover {
+	        &, & > i {color: #fff}
+	    }
+	}
+	.envelope-badge {
+	    background-color: #f75a5f;
+	}
+}

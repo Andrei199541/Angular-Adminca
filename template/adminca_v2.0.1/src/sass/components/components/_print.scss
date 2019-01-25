@@ -1,0 +1,11 @@
+
+/**
+** Media Print
+**/
+
+@media print {
+  .dashboard-sidebar, .admin-navbar, .theme-config, footer {display: none;}
+  .body {overflow: visible !important;}
+  .dashboard-wrapper {margin: 0 !important; padding: 0 !important}
+  [data-print-hidden] {display: none !important;}
+}

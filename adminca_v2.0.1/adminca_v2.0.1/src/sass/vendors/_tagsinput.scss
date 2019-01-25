@@ -1,0 +1,29 @@
+// Bootstrap tagsinput
+
+.bootstrap-tagsinput {
+    display: block; 
+    width: 100%; 
+    padding: 5px 6px;
+    border-color: rgba(0,0,0,.1);
+    border-radius: 2px;
+    padding: .5rem 1rem;
+    box-shadow: none;
+    transition: border-color ease-in-out .15s;
+    input {
+    	font-family: sans-serif,Arial;
+	    &::placeholder {
+	    	color: #919ca8;
+	    }
+    }
+    &.focus {
+    	border-color: #5c6bc0;
+    }
+    &.form-control-solid {
+    	background-color: #f4f5f9;
+        border-color: #f4f5f9;
+        &.focus {
+        	background-color: #e4e6f0;
+        	border-color: #5c6bc0;
+        }
+    }
+}

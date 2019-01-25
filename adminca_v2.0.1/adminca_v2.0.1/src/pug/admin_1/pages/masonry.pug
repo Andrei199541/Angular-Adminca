@@ -1,0 +1,71 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Masonry'
+  - var pageUrl = 'masonry.html'
+  - var page_heading = 'Masonry'
+  - var path = ['Components', 'Masonry']
+
+block plugins
+  +script('masonry/dist/masonry.pkgd.min.js', 'plugin')
+
+block content
+    .alert.alert-pink.alert-bordered
+        p Masonry is a JavaScript grid layout library. It works by placing elements in optimal position based on available vertical space, sort of like a mason fitting stones in a wall. You’ve probably seen it in use all over the Internet.
+        p: a.btn.btn-pink(href='http://masonry.desandro.com/', target='_blank') Official Website
+    .grid
+        .grid-item
+            +panel()
+              h4.font-strong masonary box example
+              +lipsum(100, 'words')
+        .grid-item
+            +panel()
+              h4.font-strong masonary box example
+              +lipsum(100, 'words')
+        .grid-item
+            +panel()
+              h4.font-strong masonary box example
+              +lipsum(100, 'words')
+        .grid-item
+            +panel()
+              h4.font-strong masonary box example
+              +lipsum(100, 'words')
+        .grid-item
+            +panel()
+              h4.font-strong masonary box example
+              +lipsum(100, 'words')
+        .grid-item
+            +panel()
+              h4.font-strong masonary box example
+              +lipsum(100, 'words')
+        .grid-item
+            +panel()
+              h4.font-strong masonary box example
+              +lipsum(100, 'words')
+        .grid-item
+            +panel()
+              h4.font-strong masonary box example
+              +lipsum(100, 'words')
+        .grid-item
+            +panel()
+              h4.font-strong masonary box example
+              +lipsum(100, 'words')
+        .grid-item
+            +panel()
+              h4.font-strong masonary box example
+              +lipsum(100, 'words')
+        
+block scripts
+    script.
+      $(function(){
+        $('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: 300,
+            gutter: 40, //spacing
+        });
+      });
+
+block page_styles
+    style.
+        .grid .ibox, .grid-2 .ibox {margin-bottom: 0;}
+        .grid-item {margin-bottom: 25px; width:300px;}

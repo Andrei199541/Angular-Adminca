@@ -1,0 +1,55 @@
+@import 'white-sidebar';
+$green: #18C5A9;
+
+.header {
+    &, .page-brand {
+        background-color: $green;
+        .brand-tip {color: #f75a5f}
+    }
+    .sidebar-toggler {
+        .icon-bar {background-color: #eee}
+        &:hover .icon-bar {background-color: #fff}
+    }
+    .toolbar-icon:hover {
+        background-color: rgba(0,0,0,.2);
+    }
+    .navbar-toolbar > li > a {
+        color: #eee;
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.side-menu {
+	& > li {
+		a:hover, a:focus {
+			color: $green;
+		}
+	    &:hover {
+	        & > a {
+	            color: $green;
+	            background-color: #fff;
+	        }
+	    }
+	    &.active {
+	        & > a, & > a:hover, & > a:focus {
+	            color: $green;
+	            background-color: #ebedf7;
+	        }
+	    }
+	    .nav-2-level ul {
+            background-color: $green;
+            &::before {border-right-color: $green;}
+            a {
+                color: #fff;
+                &:hover, &:focus {background-color:rgba(0,0,0,.1)}
+            }
+	    }
+	    .nav-3-level {
+            background-color: $green;
+	    }
+	}
+}
+
+.theme-config .theme-config-toggle {background-color: $green}

@@ -1,0 +1,519 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'User Widgets'
+  - var pageUrl = 'widgets-user.html'
+
+block content
+  .d-flex.align-items-center.mb-5.mt-4
+    i.ti-gift.mr-4.text-primary(style='font-size: 56px;')
+    div
+      .h2.text-primary.mb-1 Perfect design for you
+      div All web design trends in one framework.
+  .d-flex.flex-wrap.mb-5
+    .card.mb-4.mr-4(style='width:346px')
+      .rel
+        +img('blog/04.jpeg')(class='card-img-top')
+        .card-img-overlay.text-white
+          .text-right
+            a: i.la.la-heart-o.font-20
+          .overlay-panel.overlay-panel-bottom.color-white.mb-2
+            h4.card-title.mb-2: a Emma Johnson
+            div UI Designer
+      .card-body.d-flex
+        div
+          div
+            span.text-primary.pb-1.d-inline-block(style='border-bottom:2px solid') About
+          p.text-light.mt-3 Some quick example text to build on the card title and make up the bulk.
+          .mb-4.mt-4
+            a.text-muted.mr-3: i.fa.fa-dribbble
+            a.text-muted.mr-3: i.fa.fa-twitter
+            a.text-muted.mr-3: i.fa.fa-pinterest-p
+            a.text-muted: i.fa.fa-instagram
+          div
+            button.btn.btn-primary.btn-rounded.btn-air.mr-2 Follow
+            button.btn.btn-outline-primary.btn-rounded.mr-2 Message
+        .text-right.ml-4.mt-3
+          .mb-3
+            .h2.m-0.font-light 124
+            small.text-muted.font-11 PROJECTS
+          .mb-3
+            .h2.m-0.font-light 3.2k
+            small.text-muted.font-11 FOLLOWERS
+          div
+            .h2.m-0.font-light 25k
+            small.text-muted.font-11 VIEWS
+    .card.mb-4(style='width:346px')
+      .rel
+        +img('blog/01.jpeg')(class='card-img-top')
+        .card-img-overlay.text-white
+          .text-right
+            a: i.la.la-heart-o.font-20
+          .overlay-panel.overlay-panel-bottom.color-white.mb-2
+            h4.card-title.mb-2: a Emma Johnson
+            div UI Designer
+      .card-body.d-flex
+        div
+          div
+            span.text-info.pb-1.d-inline-block(style='border-bottom:2px solid') About
+          p.text-light.mt-3 Some quick example text to build on the card title and make up the bulk.
+          .mb-4.mt-4
+            a.text-muted.mr-3: i.fa.fa-dribbble
+            a.text-muted.mr-3: i.fa.fa-twitter
+            a.text-muted.mr-3: i.fa.fa-pinterest-p
+            a.text-muted: i.fa.fa-instagram
+          div
+            button.btn.btn-info.btn-rounded.btn-air.mr-2 Follow
+            button.btn.btn-outline-info.btn-rounded.mr-2 Message
+        .text-right.ml-4.mt-3
+          .mb-3
+            .h2.m-0.font-light 124
+            small.text-muted.font-11 PROJECTS
+          .mb-3
+            .h2.m-0.font-light 3.2k
+            small.text-muted.font-11 FOLLOWERS
+          div
+            .h2.m-0.font-light 25k
+            small.text-muted.font-11 VIEWS
+  .d-flex.flex-wrap.mb-5
+    .card.mb-4.mr-4(style='width:346px')
+      .rel
+        +img('blog/06.jpeg')(class='card-img-top')
+        .card-img-overlay.text-white
+          .text-right
+            a: i.la.la-heart-o.font-20
+          .overlay-panel.overlay-panel-bottom.color-white.mb-5
+            h4.card-title.mb-2: a Connor Perez
+            div UI Designer
+          a.card-abs-left-bottom
+            +img('users/u6.jpg')(class='img-circle img-bordered', width='70')
+      .card-body
+        p.text-light.mt-4.pt-3 Some quick example text to build on the card title and make up the bulk of the card's content.
+        .d-flex.align-items-center.justify-content-between.mb-5.mt-4
+          .text-center
+            h2.text-warning.m-0 124
+            .text-muted PROJECTS
+          .text-center
+            h2.text-warning.m-0 3.2k
+            .text-muted FOLLOWERS
+          .text-center
+            h2.text-warning.m-0 25k
+            .text-muted VIEWS
+        div
+          button.btn.btn-warning.btn-rounded.mr-2 Follow
+          button.btn.btn-outline-warning.btn-rounded.mr-2 Message
+    .card.mb-4.mr-4(style='width:346px')
+      .rel
+        +img('blog/07.jpeg')(class='card-img-top')
+        .card-img-overlay.text-white.card-overlay-dark.card-overlay-hover
+          .text-right
+            a: i.la.la-heart-o.font-20
+          .overlay-panel.overlay-panel-bottom.color-white.mb-5
+            h4.card-title.mb-2: a Tyrone Carroll
+            div Web Designer
+          a.card-abs-left-bottom
+            +img('users/u11.jpg')(class='img-circle img-bordered', width='70')
+      .card-body
+        .text-right
+          span.font-13.text-info
+            i.ti-location-pin.mr-2
+            | California, USA
+        .mt-4
+          span.text-info.pb-1.d-inline-block(style='border-bottom:2px solid') About
+        p.text-light.mt-4 Some quick example text to build on the card title and make up the bulk of the card's content.
+        .d-flex.align-items-center.justify-content-between.mt-4
+          .text-center
+            .h1.mb-1: i.la.la-camera.text-info
+            .text-muted 15 PHOTOS
+          .text-center
+            .h1.mb-1: i.la.la-users.text-info
+            .text-muted 99 FRIENDS
+          .text-center
+            .h1.mb-1: i.la.la-heart-o.text-info
+            .text-muted 2k LIKES
+    .card.mb-4(style='width:346px')
+      .rel
+        +img('blog/10.jpeg')(class='card-img-top')
+        .card-img-overlay.text-white
+          .text-right
+            a: i.la.la-heart-o.font-20
+          .overlay-panel.overlay-panel-bottom.color-white.mb-5
+            h4.card-title.mb-2: a Emma Johnson
+            div Photographer
+          a.card-abs-left-bottom
+            +img('users/u10.jpg')(class='img-circle img-bordered', width='70')
+      .card-body
+        .text-right
+          .d-inline-flex
+            span.pl-3.pr-3.text-center(style='border-right:1px solid rgba(255,255,255,.5)')
+              i.ti-location-pin.d-block.font-20.mb-2.text-primary
+              | USA
+            span.pl-3.pr-3.text-center
+              i.ti-calendar.d-block.font-20.mb-2.text-primary
+              | 22 y
+        .mt-2
+          span.text-primary.pb-1.d-inline-block(style='border-bottom:2px solid') About
+        p.text-light.mt-4 Some quick example text to build on the card title and make up the bulk of the card's content.
+        .d-flex.align-items-center.justify-content-between.mt-4
+          .text-center
+            .h1.mb-1: i.la.la-camera.text-primary
+            .text-muted 15 PHOTOS
+          .text-center
+            .h1.mb-1: i.la.la-users.text-primary
+            .text-muted 99 FRIENDS
+          .text-center
+            .h1.mb-1: i.la.la-heart-o.text-primary
+            .text-muted 2k LIKES
+  .card-deck
+    .card.text-center.card-air.centered.mb-4(style='max-width:320px')
+      .card-body
+        div.card-avatar.mt-3.mb-4
+          +img('users/u8.jpg')(class='img-circle')
+        h4.card-title.text-pink.mb-1 Lynn Weaver
+        .text-muted Director
+        p.mt-4.mb-5 Some quick example text to build on the card title and make up the bulk of the card's content.
+        .d-flex.justify-content-around.align-items-center.font-18
+          a.text-pink(href='javascript:;'): i.fa.fa-facebook
+          a.text-pink(href='javascript:;'): i.fa.fa-twitter
+          a.text-pink(href='javascript:;'): i.fa.fa-pinterest-p
+          a.text-pink(href='javascript:;'): i.fa.fa-instagram
+    .card.text-center.card-air.centered.mb-4(style='max-width:320px')
+      .card-body
+        div.card-avatar.mt-3.mb-4
+          +img('users/u5.jpg')(class='img-circle')
+        h4.card-title.mb-1 Bob Gonzalez
+        .text-muted Web Designer
+        p.mt-4.mb-5 Some quick example text to build on the card title and make up the bulk of the card's content.
+        .d-flex.justify-content-around.align-items-center.font-18
+          a.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-facebook
+          a.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-twitter
+          a.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-pinterest-p
+          a.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-instagram
+  h5.font-strong.mb-5.mt-5.text-center Small Widgets
+  .d-flex.flex-wrap.mb-4
+    a.card.mr-5.mb-4(href='javascript:;', style='width: 260px;')
+      .card-body.flexbox
+        +img('users/u6.jpg')(class='img-circle mr-3', width='48')
+        .text-right
+          h6.mb-1 Connor Perez
+          small.text-muted Web Designer
+    a.card.mb-4(href='javascript:;', style='width: 260px;')
+      .card-body.flexbox
+        div
+          h6.mb-1 Becky Brooks
+          small.text-muted Web Designer
+        +img('users/u2.jpg')(class='img-circle ml-3', width='48')
+  .row.mb-5
+    .col-md-6.col-lg-4
+      .card.overflow-visible.mt-5(style='max-width:260px')
+        .card-body.text-center.mt-4
+          +img('users/u10.jpg')(class='img-circle img-bordered card-abs-top-center', width='60')
+          h6.mb-1
+            a Emma Johnson
+          small.text-muted Web Designer
+          .d-flex.justify-content-around.align-items-center.mt-3.font-16
+            a.text-primary(href='javascript:;')
+              i.fa.fa-facebook
+            a.text-primary(href='javascript:;')
+              i.fa.fa-twitter
+            a.text-primary(href='javascript:;')
+              i.fa.fa-pinterest-p
+            a.text-primary(href='javascript:;')
+              i.fa.fa-instagram
+    .col-md-6.col-lg-4
+      .card.overflow-visible.mt-5(style='max-width:260px')
+        .card-body.text-center.mt-4
+          +img('users/u8.jpg')(class='img-circle img-bordered card-abs-top-center', width='60')
+          h6.mb-1
+            a Lynn Weaver
+          small.text-muted Web Designer
+          .d-flex.justify-content-around.align-items-center.mt-3.font-16
+            a.text-pink(href='javascript:;')
+              i.fa.fa-facebook
+            a.text-pink(href='javascript:;')
+              i.fa.fa-twitter
+            a.text-pink(href='javascript:;')
+              i.fa.fa-pinterest-p
+            a.text-pink(href='javascript:;')
+              i.fa.fa-instagram
+    .col-md-6.col-lg-4
+      .card.overflow-visible.mt-5(style='max-width:260px')
+        .card-body.text-center.mt-4
+          +img('users/u11.jpg')(class='img-circle img-bordered card-abs-top-center', width='60')
+          h6.mb-1
+            a Tyrone Carroll
+          small.text-muted Web Designer
+          .d-flex.justify-content-around.align-items-center.mt-3.font-16
+            a.text-info(href='javascript:;')
+              i.fa.fa-facebook
+            a.text-info(href='javascript:;')
+              i.fa.fa-twitter
+            a.text-info(href='javascript:;')
+              i.fa.fa-pinterest-p
+            a.text-info(href='javascript:;')
+              i.fa.fa-instagram
+  .row
+    .col-md-6.col-lg-4
+      .card.mb-4(style='max-width:260px')
+        .card-body.text-center
+          +img('users/u10.jpg')(class='img-circle mb-4 mt-3', width='90')
+          h5.mb-1
+            a Emma Johnson
+          small.text-muted Web Designer
+          .d-flex.justify-content-around.align-items-center.mt-3.font-16
+            a.text-primary(href='javascript:;')
+              i.fa.fa-facebook
+            a.text-primary(href='javascript:;')
+              i.fa.fa-twitter
+            a.text-primary(href='javascript:;')
+              i.fa.fa-pinterest-p
+            a.text-primary(href='javascript:;')
+              i.fa.fa-instagram
+    .col-md-6.col-lg-4
+      .card.mb-4(style='max-width:260px')
+        .card-body.text-center
+          .text-right
+            a.h3
+              i.la.la-heart-o
+          +img('users/u10.jpg')(class='img-circle mb-4', width='90')
+          h5.mb-1
+            a Emma Johnson
+          small.text-muted Web Designer
+    .col-md-6.col-lg-4
+      .card.mb-4(style='max-width:260px')
+        .card-body.text-center
+          +img('users/u10.jpg')(class='img-circle mb-4 mt-3', width='90')
+          h5.mb-1
+            a Emma Johnson
+          small.text-muted Web Designer
+          .d-flex.align-items-center.justify-content-between.mt-4
+            .text-center
+              .h1.mb-1
+                i.la.la-camera.text-primary
+              .text-muted 15 PHOTOS
+            .text-center
+              .h1.mb-1
+                i.la.la-users.text-primary
+              .text-muted 99 FRIENDS
+            .text-center
+              .h1.mb-1
+                i.la.la-heart-o.text-primary
+              .text-muted 2k LIKES
+  h5.font-strong.mb-5.mt-5.text-center Cards with Cap
+  .row
+    .col-lg-4
+      .card.text-center.has-cup.card-air.centered.mb-4(style='max-width:320px')
+        .card-cup.bg-gradient-purple
+        .card-body
+          div.card-avatar.mb-4
+            +img('users/u8.jpg')(class='img-circle')
+          h4.card-title.text-pink.mb-1 Lynn Weaver
+          .text-muted Director
+          p.mt-4.mb-5 Some quick example text to build on the card title and make up the bulk of the card's content.
+          .d-flex.justify-content-around.align-items-center.font-18
+            a.text-pink(href='javascript:;'): i.fa.fa-facebook
+            a.text-pink(href='javascript:;'): i.fa.fa-twitter
+            a.text-pink(href='javascript:;'): i.fa.fa-pinterest-p
+            a.text-pink(href='javascript:;'): i.fa.fa-instagram
+    .col-lg-4
+      .card.text-center.has-cup.card-air.centered.mb-4(style='max-width:320px')
+        .card-cup.bg-gradient-blue
+        .card-body
+          div.card-avatar.mb-4
+            +img('users/u11.jpg')(class='img-circle')
+          h4.card-title.text-primary.mb-1 Tyrone Carroll
+          .text-muted Web Designer
+          p.mt-4.mb-5 Some quick example text to build on the card title and make up the bulk of the card's content.
+          .d-flex.justify-content-around.align-items-center.font-18
+            a.text-primary(href='javascript:;'): i.fa.fa-facebook
+            a.text-primary(href='javascript:;'): i.fa.fa-twitter
+            a.text-primary(href='javascript:;'): i.fa.fa-pinterest-p
+            a.text-primary(href='javascript:;'): i.fa.fa-instagram
+    .col-lg-4
+      .card.text-center.has-cup.card-air.centered.mb-4(style='max-width:320px')
+        .card-cup.bg-gradient-peach
+        .card-body
+          div.card-avatar.mb-4
+            +img('users/u2.jpg')(class='img-circle')
+          h4.card-title.text-warning.mb-1 Becky Brooks
+          .text-muted Manager
+          p.mt-4.mb-5 Some quick example text to build on the card title and make up the bulk of the card's content.
+          .d-flex.justify-content-around.align-items-center.font-18
+            a.text-warning(href='javascript:;'): i.fa.fa-facebook
+            a.text-warning(href='javascript:;'): i.fa.fa-twitter
+            a.text-warning(href='javascript:;'): i.fa.fa-pinterest-p
+            a.text-warning(href='javascript:;'): i.fa.fa-instagram
+  h5.font-strong.mb-5.mt-5.text-center Card style 3 with fab button
+  .card-deck
+    .card.card-air.text-center.centered.mb-4(style='max-width:320px')
+      .card-body
+        div.card-avatar.mt-3.mb-4
+          +img('users/u6.jpg')(class='img-circle')
+        h4.card-title.mb-1 Connor Perez
+        .text-pink
+          i.ti-location-pin.mr-2
+          | California, USA
+        p.mt-4.mb-4 Some quick example text to build on the card title and make up the bulk of the card's content.
+        .d-flex.align-items-center.justify-content-between.mb-5
+          div.text-center
+            h2.text-pink.m-0 1200
+            .text-muted FOLLOWERS
+          div.text-center
+            h2.text-pink.m-0 480
+            .text-muted LIKES
+          div.text-center
+            h2.text-pink.m-0 14.2k
+            .text-muted VIEWS
+        .d-flex.justify-content-around.align-items-center
+          button.btn.btn-pink.btn-rounded.mr-2
+            span.btn-icon
+              i.la.la-heart-o
+              | Follow
+          button.btn.btn-secondary.btn-rounded
+            span.btn-icon
+              i.la.la-envelope
+              | Message
+      .fab.fab-bottom.card-fab-top-right
+        button.btn.btn-pink.btn-icon-only.btn-circle.btn-air(data-toggle='button')
+          i.la.la-share-alt.fab-icon
+          i.la.la-close.fab-icon-active
+        ul.fab-menu
+          li
+            a.btn.btn-soc-facebook.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-facebook
+          li
+            a.btn.btn-soc-twitter.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-twitter
+          li
+            a.btn.btn-soc-dribbble.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-dribbble
+    .card.card-air.text-center.centered.mb-4(style='max-width:320px')
+      .card-body
+        div.card-avatar.mt-3.mb-4
+          +img('users/u11.jpg')(class='img-circle')
+        h4.card-title.mb-1 Tyrone Carroll
+        .text-primary
+          i.ti-location-pin.mr-2
+          | California, USA
+        p.mt-4.mb-4 Some quick example text to build on the card title and make up the bulk of the card's content.
+        .d-flex.align-items-center.justify-content-between.mb-5
+          div.text-center
+            h2.text-primary.m-0 1200
+            .text-muted FOLLOWERS
+          div.text-center
+            h2.text-primary.m-0 480
+            .text-muted LIKES
+          div.text-center
+            h2.text-primary.m-0 14.2k
+            .text-muted VIEWS
+        .d-flex.justify-content-around.align-items-center
+          button.btn.btn-primary.btn-rounded.mr-2
+            span.btn-icon
+              i.la.la-heart-o
+              | Follow
+          button.btn.btn-secondary.btn-rounded
+            span.btn-icon
+              i.la.la-envelope
+              | Message
+  h5.font-strong.mb-5.mt-5.text-center Image Overlays
+  .row
+    .col-md-6
+      .card.mb-4
+        +img('blog/10.jpeg')(class='card-img')
+        .card-img-overlay.text-white
+          .text-right
+            a
+              i.la.la-heart-o.font-26
+          .overlay-panel.overlay-panel-bottom.overlay-panel-dark.flexbox
+            .d-inline-flex.align-items-center
+              a
+                +img('users/u10.jpg')(class='img-circle img-bordered mr-3' width='48')
+              div
+                h5.m-0
+                  a Stella Obrien
+                small Photographer
+            .d-inline-flex
+              span.pl-3.pr-3.text-center(style='border-right: 1px solid rgba(255,255,255,.5)')
+                i.la.la-camera.d-block.font-26.mb-2
+                | 124
+              span.pl-3.pr-3.text-center
+                i.la.la-users.d-block.font-26.mb-2
+                | 56
+    .col-md-6
+      .card.mb-4
+        +img('blog/07.jpeg')(class='card-img')
+        .card-img-overlay.text-white
+          .text-right
+            a
+              i.la.la-heart-o.font-26
+          .overlay-panel.overlay-panel-bottom.overlay-panel-dark.flexbox
+            .d-inline-flex.align-items-center
+              a
+                +img('users/u11.jpg')(class='img-circle img-bordered mr-3' width='48')
+              div
+                h5.m-0
+                  a Tyrone Carroll
+                small Web Designer
+            .d-inline-flex
+              .pl-3.pr-3.text-center
+                div FOLLOWERS
+                .h3.m-0 1200
+              .pl-3.pr-3.text-center
+                div LIKES
+                .h3.m-0 480
+              .pl-3.pr-3.text-center
+                div VIEWS
+                .h3.m-0 14.2k
+  .row
+    .col-md-6
+      .card.mb-4
+        #carousel_1.carousel.slide(data-ride='carousel')
+          ol.carousel-indicators(style='top:1.25rem;bottom:auto;')
+            li.active(data-target='#carousel_1', data-slide-to='0')
+            li(data-target='#carousel_1', data-slide-to='1')
+            li(data-target='#carousel_1', data-slide-to='2')
+          .carousel-inner
+            .carousel-item.active
+              +img('blog/11.jpeg')(class='card-img')
+            .carousel-item
+              +img('blog/12.jpeg')(class='card-img')
+            .carousel-item
+              +img('blog/15.jpeg')(class='card-img')
+        .card-img-overlay
+          .overlay-panel.overlay-panel-bottom.overlay-panel-dark.flexbox
+            .d-inline-flex.align-items-center
+              a
+                +img('users/u7.jpg')(class='img-circle img-bordered mr-3' width='48')
+              div
+                h5.m-0
+                  a Jeanne Smith
+                small Photographer
+            .d-inline-flex
+              span.pl-3.pr-3.text-center(style='border-right: 1px solid rgba(255,255,255,.5)')
+                i.la.la-camera.d-block.font-26.mb-2
+                | 124
+              span.pl-3.pr-3.text-center
+                i.la.la-users.d-block.font-26.mb-2
+                | 56
+    .col-md-6
+      .card.mb-4
+        +img('blog/14.jpeg')(class='card-img')
+        .card-img-overlay.text-white
+          .text-right
+            a
+              i.la.la-heart-o.font-26
+          .text-center
+            a
+              +img('users/u1.jpg')(class='img-circle img-bordered' width='90')
+            h4.mt-4
+              a Jeanne Gonzalez
+            .font-13
+              i.ti-location-pin.mr-2
+              | California, USA
+          .overlay-panel.overlay-panel-bottom.overlay-panel-dark.flexbox
+            .pl-3.pr-3.text-center
+              div FOLLOWERS
+              .h3.m-0 1200
+            .pl-3.pr-3.text-center
+              div LIKES
+              .h3.m-0 480
+            .pl-3.pr-3.text-center
+              div VIEWS
+              .h3.m-0 14.2k

@@ -1,0 +1,303 @@
+// QUICK SIDEBAR
+.quick-sidebar
+    ul.nav.nav-tabs.tabs-line
+      li.nav-item
+        a.nav-link.active(href='#tab-1', data-toggle="tab")
+          i.ti-comment
+          div Messages
+      li.nav-item
+        a.nav-link(href='#tab-2', data-toggle="tab")
+          i.ti-settings
+          div Settings
+      li.nav-item
+        a.nav-link(href='#tab-3', data-toggle="tab")
+          i.ti-notepad
+          div Logs
+    .tab-content
+      .tab-pane.chat-panel.active#tab-1
+        .chat-list
+          .scroller
+            .media-list
+              a.media(href='javascript:;', data-toggle='show-chat')
+                .media-img
+                  +img('users/u3.jpg')(class='img-circle', width='40')
+                .media-body
+                  small.float-right.text-muted 12:05
+                  .media-heading Frank Cruz
+                  .font-13.text-lighter Lorem Ipsum is simply dummy.
+              a.media(href='javascript:;', data-toggle='show-chat')
+                .media-img
+                  +img('users/u8.jpg')(class='img-circle', width='40')
+                .media-body
+                  small.float-right.text-right.text-success
+                    i.badge-point.badge-success.mr-2
+                    | 12:05
+                    br
+                    span.badge.badge-danger.badge-circle 3
+                  .media-heading Lynn Weaver
+                  .font-13.text-lighter Lorem Ipsum is simply dummy.
+              a.media(href='javascript:;', data-toggle='show-chat')
+                .media-img
+                  +img('users/u2.jpg')(class='img-circle', width='40')
+                .media-body
+                  small.float-right.text-muted 12:05
+                  .media-heading Becky Brooks
+                  .font-13.text-lighter Lorem Ipsum is simply dummy.
+              a.media(href='javascript:;', data-toggle='show-chat')
+                .media-img
+                  +img('users/u5.jpg')(class='img-circle', width='40')
+                .media-body
+                  small.float-right.text-muted 12:05
+                  .media-heading Bob Gonzalez
+                  .font-13.text-lighter Lorem Ipsum is simply dummy.
+              a.media(href='javascript:;', data-toggle='show-chat')
+                .media-img
+                  +img('users/u6.jpg')(class='img-circle', width='40')
+                .media-body
+                  small.float-right.text-right.text-success
+                    i.badge-point.badge-success.mr-2
+                    | 12:05
+                  .media-heading Connor Perez
+                  .font-13.text-lighter Lorem Ipsum is simply dummy.
+              a.media(href='javascript:;', data-toggle='show-chat')
+                .media-img
+                  +img('users/u11.jpg')(class='img-circle', width='40')
+                .media-body
+                  small.float-right.text-muted 12:05
+                  .media-heading Tyrone Carroll
+                  .font-13.text-lighter Lorem Ipsum is simply dummy.
+              a.media(href='javascript:;', data-toggle='show-chat')
+                .media-img
+                  +img('users/u9.jpg')(class='img-circle', width='40')
+                .media-body
+                  small.float-right.text-right.text-success
+                    i.badge-point.badge-success.mr-2
+                    | 12:05
+                    br
+                    span.badge.badge-danger.badge-circle 1
+                  .media-heading Tammy Newman
+                  .font-13.text-lighter Lorem Ipsum is simply dummy.
+              a.media(href='javascript:;', data-toggle='show-chat')
+                .media-img
+                  +img('users/u1.jpg')(class='img-circle', width='40')
+                .media-body
+                  small.float-right.text-muted 12:05
+                  .media-heading Jeanne Gonzalez
+                  .font-13.text-lighter Lorem Ipsum is simply dummy.
+              a.media(href='javascript:;', data-toggle='show-chat')
+                .media-img
+                  +img('users/u10.jpg')(class='img-circle', width='40')
+                .media-body
+                  small.float-right.text-muted 12:05
+                  .media-heading Stella Obrien
+                  .font-13.text-lighter Lorem Ipsum is simply dummy.
+              a.media(href='javascript:;', data-toggle='show-chat')
+                .media-img
+                  +img('users/u7.jpg')(class='img-circle', width='40')
+                .media-body
+                  small.float-right.text-muted 12:05
+                  .media-heading Jeanne Smith
+                  .font-13.text-lighter Lorem Ipsum is simply dummy.
+
+        .messenger
+          .messenger-header
+            a.messenger-return(href='javascript:;')
+              span.ti-angle-left
+            .text-center.text-white
+              h6.mb-1.font-16 Lynn Weaver
+              div
+                span.badge-point.badge-danger.mr-2
+                small Online
+            div.dropdown
+              a.messenger-more.dropdown-toggle(data-toggle="dropdown")
+                span.ti-more-alt
+              .dropdown-menu.dropdown-menu-right
+                a.dropdown-item
+                  span.ti-heart.m-r-10
+                  | Add to favorite
+                a.dropdown-item
+                  span.ti-close.m-r-10
+                  | Clear chat
+          .messenger-messages
+            .scroller
+              .messenger-message
+                .message-image
+                  +img('users/u8.jpg')
+                .message-body Hi Jack. You are comfortable today.
+              .messenger-message.messenger-message-answer
+                .message-body Hi Lynn. Yes Sure.
+              .messenger-message
+                .message-image
+                  +img('users/u8.jpg')
+                .message-body Hi. What is your main principle in work.
+              .messenger-message.messenger-message-answer
+                .message-body Our main principle: We work hard to make our client comfortable.
+              .message-time 4.30 PM
+              .messenger-message
+                .message-image
+                  +img('users/u8.jpg')
+                .message-body
+                  p Here are some beautiful photos.
+                  .mb-3
+                    +img('blog/culinary-1.jpeg')
+                  div
+                    +img('blog/01.jpeg')
+              .messenger-message.messenger-message-answer
+                .message-body Thanks, they are beautiful.
+              .messenger-message
+                .message-image
+                  +img('users/u8.jpg')
+                .message-body How many hours are you comfortable.
+              .messenger-message.messenger-message-answer
+                .message-body In the evening at 6.30 clock.
+          .messenger-form
+            .messenger-form-inner
+              input.messenger-input(type='text', placeholder='Type a message')
+              .messenger-actions
+                span.messanger-button.messanger-paperclip
+                  input(type='file')
+                  i.la.la-paperclip
+                a.messanger-button(href='javascript:;')
+                  i.fa.fa-send-o
+
+      .tab-pane#tab-2
+        .scroller
+          .font-bold.mb-4.mt-2 APP SETTINGS
+          .settings-item
+            | Show notifications
+            label.ui-switch.switch-icon
+              input(type='checkbox')
+              span
+          .settings-item
+            | Enable autologout
+            label.ui-switch.switch-icon
+              input(type='checkbox', checked)
+              span
+          .settings-item
+            | Show recent activity
+            label.ui-switch.switch-icon
+              input(type='checkbox')
+              span
+          .settings-item
+            | Chat history
+            label.ui-switch.switch-icon
+              input(type='checkbox')
+              span
+          .settings-item
+            | Users activity
+            label.ui-switch.switch-icon
+              input(type='checkbox', checked)
+              span
+          .settings-item
+            | Orders history
+            label.ui-switch.switch-icon
+              input(type='checkbox')
+              span
+          .settings-item
+            | SMS Alerts
+            label.ui-switch.switch-icon
+              input(type='checkbox')
+              span
+          .font-bold.mb-4 SYSTEM SETTINGS
+          .settings-item
+            | Error Reporting
+            label.ui-switch.switch-icon
+              input(type='checkbox', checked)
+              span
+          .settings-item
+            | Server logs
+            label.ui-switch.switch-icon
+              input(type='checkbox')
+              span
+          .settings-item
+            | Global search
+            label.ui-switch.switch-icon
+              input(type='checkbox')
+              span
+
+      .tab-pane#tab-3
+        .log-tabs
+          a.active(href='javascript:;', data-type='all', data-toggle="tooltip", data-original-title="All logs")
+            i.ti-view-grid
+          a(href='javascript:;', data-type='server', data-toggle="tooltip", data-original-title="Server logs")
+            i.ti-harddrives
+          a(href='javascript:;', data-type='app', data-toggle="tooltip", data-original-title="App logs")
+            i.ti-pulse
+        .logs
+          .scroller
+            ul.logs-list
+              li.log-item(data-type='app')
+                i.ti-check.log-icon.text-success
+                div
+                  a 2 Issue fixed
+                  small.float-right.text-muted Just now
+              li.log-item(data-type='app')
+                i.ti-announcement.log-icon
+                div
+                  a 7 new feedback
+                  span.badge.badge-warning.badge-pill.ml-1 important
+                  small.float-right.text-muted 5 mins
+              li.log-item(data-type='server')
+                i.ti-check.log-icon.text-success
+                div
+                  a Production server up
+                  small.float-right.text-muted 24 mins
+              li.log-item(data-type='app')
+                i.ti-shopping-cart.log-icon
+                div
+                  a 12 New orders
+                  small.float-right.text-muted 45 mins
+              li.log-item(data-type='server')
+                i.ti-info-alt.log-icon.text-danger
+                div
+                  a Server error
+                  span.badge.badge-primary.badge-pill.ml-1 resolved
+                  small.float-right.text-muted 1 hrs
+              li.log-item(data-type='server')
+                i.ti-harddrives.log-icon.text-danger
+                div
+                  a Server overloaded 91%
+                  small.float-right.text-muted 2 hrs
+              li.log-item(data-type='app')
+                i.ti-user.log-icon
+                div
+                  a 18 new users registered
+                  small.float-right.text-muted 12.07
+              li.log-item(data-type='app')
+                i.ti-shopping-cart.log-icon
+                div
+                  a 5 New orders
+                  span.badge.badge-success.badge-pill.ml-1 pending
+                  small.float-right.text-muted 12.30
+              li.log-item(data-type='server')
+                i.ti-info-alt.log-icon.text-danger
+                div
+                  a System error
+                  small.float-right.text-muted 13.45
+              li.log-item(data-type='app')
+                i.fa.fa-file-excel-o.log-icon
+                div
+                  a The invoice is ready
+                  small.float-right.text-muted 16.30
+              li.log-item(data-type='server')
+                i.ti-server.log-icon.text-danger
+                div
+                  a Database overloaded 92%
+                  small.float-right.text-muted 17.15
+              li.log-item(data-type='server')
+                i.ti-check.log-icon.text-success
+                div
+                  a Production server up
+                  small.float-right.text-muted 18.05
+              li.log-item(data-type='app')
+                i.ti-user.log-icon
+                div
+                  a 12 new users registered
+                  small.float-right.text-muted 18.22
+              li.log-item(data-type='app')
+                i.ti-shopping-cart.log-icon
+                div
+                  a 8 New orders
+                  small.float-right.text-muted 20.00
+
+// END QUICK SIDEBAR

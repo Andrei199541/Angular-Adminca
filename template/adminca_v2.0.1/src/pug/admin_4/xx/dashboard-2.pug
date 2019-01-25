@@ -1,0 +1,99 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Dashboard v2'
+  - var pageUrl = 'dashboard-2.html'
+
+block plugins-styles
+  +link('morris.js/morris.css','plugin')
+
+block plugins
+  +script('chart.js/dist/Chart.min.js', 'plugin')
+  +script('jquery.easy-pie-chart/dist/jquery.easypiechart.min.js', 'plugin')
+  +script('jquery-sparkline/dist/jquery.sparkline.min.js', 'plugin')
+  +script('morris.js/morris.min.js', 'plugin')
+  +script('raphael/raphael.min.js', 'plugin')
+  +script('printThis/printThis.js', 'plugin')
+  +script('printMe/jquery-printme.min.js', 'plugin')
+
+block content
+  .row.mb-4
+    .col-lg-4.col-md-6
+      .card.mb-4
+        .card-body.flexbox-b
+          .easypie.mr-4(data-percent='73', data-bar-color='#18C5A9', data-size='80', data-line-width='8')
+            span.easypie-data.font-26.text-success
+              i.ti-harddrives
+          div
+            h5.font-strong STORAGE
+            .text-muted Used 315 Gb / Free 35 Gb
+    .col-lg-4.col-md-6
+      .card.mb-4
+        .card-body.flexbox-b
+          .easypie.mr-4(data-percent='42', data-bar-color='#5c6bc0', data-size='80', data-line-width='8')
+            span.easypie-data.font-26.text-purple
+              i.ti-world
+          div
+            h5.font-strong TODAY'S VISITS
+            .text-muted Used 315 Gb / Free 35 Gb
+    .col-lg-4.col-md-6
+      .card.mb-4
+        .card-body.flexbox-b
+          .easypie.mr-4(data-percent='70', data-bar-color='#ff4081', data-size='80', data-line-width='8')
+            span.easypie-data.font-26.text-pink
+              i.ti-shopping-cart
+          div
+            h5.font-strong TODAY'S SALES
+            .text-muted Used 315 Gb / Free 35 Gb
+  .row
+    .col-lg-8
+      .ibox
+        .ibox-body
+          .d-flex.justify-content-between.m-b-20
+            div
+              h3.m-0 Sales Analytics
+              div Example of sales analytics
+            .rel
+              button.btn.btn-white.btn-icon-only.btn-circle(data-toggle='dropdown')
+                i.ti-settings
+              .dropdown-menu.dropdown-menu-right
+                a.dropdown-item
+                  i.la.la-upload
+                  | Export
+                a.dropdown-item
+                  i.la.la-file-excel-o
+                  | Download
+                a.dropdown-item(data-action='print', data-target='#diagram_1')
+                  i.la.la-print
+                  | Print
+          div
+            canvas#line_chart(style='height:260px;')
+        hr
+        .ibox-body
+          .d-flex
+            .p-3(style='border-right: 1px solid rgba(0,0,0,.1)')
+              h6.mb-3 GENDER
+              span.h2.mr-3
+                i.fa.fa-male.text-purple.h1.mb-0.mr-2
+                span 56%
+              span.h2.mr-3
+                i.fa.fa-female.text-pink.h1.mb-0.mr-2
+                span 32%
+              span.h2
+                i.fa.fa-question.text-light.h1.mb-0.mr-2
+                span 12%
+      .row
+        .col-lg-6
+          +panel('Visitors Screens')
+            div
+              canvas#screens_chart(style='height:260px;')
+        .col-lg-6
+          +panel('Visitors Screens')
+            div
+    .col-lg-4
+      +panel('Visitors Age')
+        div
+          canvas#age_chart(style='height:260px;')
+
+block scripts
+    +script('dashboard_2_demo.js', 'page')

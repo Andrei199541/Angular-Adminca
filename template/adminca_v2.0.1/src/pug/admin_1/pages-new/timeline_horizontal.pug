@@ -1,0 +1,100 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Horizontal Timeline'
+  - var pageUrl = 'timeline_horizontal.html'
+  - var page_heading = 'Horizontal Timeline'
+  - var path = ['Pages', 'Horizontal Timeline']
+
+block page_styles
+  +link('horizontal-timeline/horizontal-timeline.css','plugin')
+
+block plugins
+  +script('horizontal-timeline/horizontal-timeline.js', 'plugin')
+
+block content
+  .row
+    .col-md-8.centered
+      +panel()
+        .cd-horizontal-timeline
+            .cd-timeline
+                .events-wrapper
+                    .events
+                        ol
+                            li
+                                a.selected(href='#0', data-date='16/01/2018') 16 Jan
+                            li
+                                a(href='#0', data-date='28/02/2018') 28 Feb
+                            li
+                                a(href='#0', data-date='20/04/2018') 20 Apr
+                            li
+                                a(href='#0', data-date='20/05/2018') 20 May
+                            li
+                                a(href='#0', data-date='09/07/2018') 09 July
+                            li
+                                a(href='#0', data-date='30/08/2018') 30 Aug
+                            li
+                                a(href='#0', data-date='15/09/2018') 15 Sep
+                            li
+                                a(href='#0', data-date='01/11/2018') 01 Oct
+                        span.filling-line(aria-hidden='true')
+                    // .events
+                // .events-wrapper
+                ul.cd-timeline-navigation
+                    li
+                        a.prev.inactive(href='#0')
+                            i.fa.fa-chevron-left(style='margin-left:-3px')
+                    li
+                        a.next(href='#0')
+                            i.fa.fa-chevron-right(style='margin-right:-3px')
+                // .cd-timeline-navigation
+            .events-content.pt-4
+                ol
+                    li.selected(data-date='16/01/2018')
+                        h2 Timeline section title
+                        .mb-3
+                            em 16 January, 2018
+                        p
+                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    li(data-date='28/02/2018')
+                        h2 Timeline section title
+                        .mb-3
+                            em 28 February, 2018
+                        p
+                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    li(data-date='20/04/2018')
+                        h2 Timeline section title
+                        .mb-3
+                            em 20 April, 2018
+                        p
+                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    li(data-date='20/05/2018')
+                        h2 Timeline section title
+                        .mb-3
+                            em 20 May, 2018
+                        p
+                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    li(data-date='09/07/2018')
+                        h2 Timeline section title
+                        .mb-3
+                            em 09 July, 2018
+                        p
+                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    li(data-date='30/08/2018')
+                        h2 Timeline section title
+                        .mb-3
+                            em 30 August, 2018
+                        p
+                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    li(data-date='15/09/2018')
+                        h2 Timeline section title
+                        .mb-3
+                            em 15 September, 2018
+                        p
+                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    li(data-date='01/11/2018')
+                        h2 Timeline section title
+                        .mb-3
+                            em 01 October, 2018
+                        p
+                            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.

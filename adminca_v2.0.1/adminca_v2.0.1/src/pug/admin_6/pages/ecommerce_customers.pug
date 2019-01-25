@@ -1,0 +1,167 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'E-commerce Customers list'
+  - var pageUrl = 'ecommerce_customers.html'
+
+block plugins-styles
+  +link('dataTables/datatables.min.css','plugin')
+
+block plugins
+    +script('dataTables/datatables.min.js', 'plugin')
+
+block content
+  .ibox
+    .ibox-body
+      .flexbox.mb-5
+        h5.font-strong CUSTOMERS LIST
+        .flexbox
+          .input-group-icon.input-group-icon-left.mr-3
+            span.input-icon.input-icon-right.font-16
+              i.ti-search
+            input#key-search.form-control.form-control-rounded.form-control-solid(type='text', placeholder='Search ...')
+          a.btn.btn-rounded.btn-primary.btn-air(href='ecommerce_add_product.html') Add Product
+      .table-responsive.row
+        table#customers-table.table.table-bordered.table-hover
+          thead.thead-default.thead-lg
+            tr
+              th ID
+              th Customer
+              th Email
+              th Purchases
+              th Phone
+              th.no-sort
+          tbody
+            tr
+              td 1
+              td
+                +img('users/u6.jpg')(class='img-circle mr-3', width='40')
+                | Connor Perez
+              td example@gmail.com
+              td $2420
+              td +1-202-555-0134
+              td
+                a.text-light.font-16(href='javascript:;')
+                  i.fa.fa-heart-o
+            tr
+              td 2
+              td
+                +img('users/u8.jpg')(class='img-circle mr-3', width='40')
+                | Lynn Weaver
+              td example@gmail.com
+              td $1470
+              td +1-202-555-0134
+              td
+                a.text-pink.font-16(href='javascript:;')
+                  i.fa.fa-heart
+            tr
+              td 3
+              td
+                +img('users/u11.jpg')(class='img-circle mr-3', width='40')
+                | Tyrone Carroll
+              td example@gmail.com
+              td $560
+              td +1-202-555-0134
+              td
+                a.text-light.font-16(href='javascript:;')
+                  i.fa.fa-heart-o
+            tr
+              td 4
+              td
+                +img('users/u10.jpg')(class='img-circle mr-3', width='40')
+                | Stella Obrien
+              td example@gmail.com
+              td $560
+              td +1-202-555-0134
+              td
+                a.text-light.font-16(href='javascript:;')
+                  i.fa.fa-heart-o
+            tr
+              td 5
+              td
+                +img('users/u2.jpg')(class='img-circle mr-3', width='40')
+                | Becky Brooks
+              td example@gmail.com
+              td $3570
+              td +1-202-555-0134
+              td
+                a.text-pink.font-16(href='javascript:;')
+                  i.fa.fa-heart
+            tr
+              td 6
+              td
+                +img('users/u5.jpg')(class='img-circle mr-3', width='40')
+                | Bob Gonzalez
+              td example@gmail.com
+              td $1360
+              td +1-202-555-0134
+              td
+                a.text-light.font-16(href='javascript:;')
+                  i.fa.fa-heart-o
+            tr
+              td 7
+              td
+                +img('users/u9.jpg')(class='img-circle mr-3', width='40')
+                | Tammy Newman
+              td example@gmail.com
+              td $480
+              td +1-202-555-0134
+              td
+                a.text-pink.font-16(href='javascript:;')
+                  i.fa.fa-heart
+            tr
+              td 8
+              td
+                +img('users/u7.jpg')(class='img-circle mr-3', width='40')
+                | Jeanne Smith
+              td example@gmail.com
+              td $45
+              td +1-202-555-0134
+              td
+                a.text-light.font-16(href='javascript:;')
+                  i.fa.fa-heart-o
+            tr
+              td 9
+              td
+                +img('users/u3.jpg')(class='img-circle mr-3', width='40')
+                | Frank Cruz
+              td example@gmail.com
+              td $140
+              td +1-202-555-0134
+              td
+                a.text-light.font-16(href='javascript:;')
+                  i.fa.fa-heart-o
+            tr
+              td 10
+              td
+                +img('users/u1.jpg')(class='img-circle mr-3', width='40')
+                | Jeanne Gonzalez
+              td example@gmail.com
+              td $85
+              td +1-202-555-0134
+              td
+                a.text-light.font-16(href='javascript:;')
+                  i.fa.fa-heart-o
+
+
+block scripts
+  script.
+    $(function(){
+      $('#customers-table').DataTable({
+          pageLength: 10,
+          fixedHeader: true,
+          responsive: true,
+          "sDom":     'rtip',
+          columnDefs: [
+            { targets: 'no-sort', orderable: false }
+          ]
+      });
+          
+      var table = $('#customers-table').DataTable();
+      $('#key-search').on( 'keyup', function () {
+          table.search( this.value ).draw();
+      });
+      $('#type-filter').on('change', function(){
+          table.column(2).search($(this).val()).draw();
+      });
+    });

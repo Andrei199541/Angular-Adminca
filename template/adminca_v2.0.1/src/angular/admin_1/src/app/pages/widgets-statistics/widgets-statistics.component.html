@@ -1,0 +1,948 @@
+<div class="page-content fade-in-up">
+    <div class="row mb-4">
+        <div class="col-lg-4 col-md-6">
+            <div class="card mb-4">
+                <div class="card-body flexbox-b">
+                    <div class="easypie mr-4" data-percent="73" data-bar-color="#18C5A9" data-size="80" data-line-width="8">
+                        <span class="easypie-data text-success" style="font-size:32px;"><i class="la la-users"></i></span>
+                    </div>
+                    <div>
+                        <h3 class="font-strong text-success">128</h3>
+                        <div class="text-muted">NEW CUSTOMERS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card mb-4">
+                <div class="card-body flexbox-b">
+                    <div class="easypie mr-4" data-percent="42" data-bar-color="#5c6bc0" data-size="80" data-line-width="8">
+                        <span class="easypie-data font-26 text-primary"><i class="ti-world"></i></span>
+                    </div>
+                    <div>
+                        <h3 class="font-strong text-primary">6400</h3>
+                        <div class="text-muted">TODAY'S VISITS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card mb-4">
+                <div class="card-body flexbox-b">
+                    <div class="easypie mr-4" data-percent="70" data-bar-color="#ff4081" data-size="80" data-line-width="8">
+                        <span class="easypie-data text-pink" style="font-size:32px;"><i class="la la-tags"></i></span>
+                    </div>
+                    <div>
+                        <h3 class="font-strong text-pink">210</h3>
+                        <div class="text-muted">SUPPORT TICKETS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            <div class="ibox">
+                <div class="ibox-body">
+                    <div class="d-flex justify-content-between m-b-20">
+                        <div>
+                            <h3 class="m-0">Visitors Analytics</h3>
+                            <div>Your site visitors analytics</div>
+                        </div>
+                        <ul class="nav nav-pills nav-pills-rounded nav-pills-air" id="chart_tabs">
+                            <li class="nav-item ml-1">
+                                <a class="nav-link active" data-toggle="tab" data-id="1" href="javascript:;">This Week</a>
+                            </li>
+                            <li class="nav-item ml-1">
+                                <a class="nav-link" data-toggle="tab" data-id="2" href="javascript:;">Last Week</a>
+                            </li>
+                            <li class="nav-item ml-1">
+                                <a class="nav-link" data-toggle="tab" data-id="3" href="javascript:;">Last Year</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <canvas id="visitors_chart" style="height:260px;"></canvas>
+                    </div>
+                </div>
+                <hr>
+                <div class="ibox-body">
+                    <div class="row">
+                        <div class="col-6 pl-4">
+                            <h6 class="mb-3">GENDER</h6>
+                            <span class="h2 mr-3"><i class="fa fa-male text-primary h1 mb-0 mr-2"></i>
+                                <span>56<sup>%</sup></span>
+                            </span>
+                            <span class="h2 mr-3"><i class="fa fa-female text-pink h1 mb-0 mr-2"></i>
+                                <span>32<sup>%</sup></span>
+                            </span>
+                            <span class="h2"><i class="fa fa-question text-light h1 mb-0 mr-2"></i>
+                                <span>12<sup>%</sup></span>
+                            </span>
+                        </div>
+                        <div class="col-6">
+                            <h6 class="mb-3">SCREENS</h6>
+                            <span class="h2 mr-3"><i class="ti-desktop text-primary mr-2"></i>
+                                <span>49<sup>%</sup></span>
+                            </span>
+                            <span class="h2 mr-3"><i class="ti-tablet text-pink mr-2"></i>
+                                <span>29<sup>%</sup></span>
+                            </span>
+                            <span class="h2"><i class="ti-mobile text-success mr-2"></i>
+                                <span>22<sup>%</sup></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="ibox ibox-fullheight">
+                <div class="ibox-head">
+                    <div class="ibox-title">VISITORS AGE</div>
+                    <div class="ibox-tools">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-more-alt"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item"><i class="la la-upload"></i>Export</a>
+                            <a class="dropdown-item"><i class="la la-file-excel-o"></i>Download</a>
+                            <a class="dropdown-item"><i class="la la-print"></i>Print</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <div class="mb-5">
+                        <div class="flexbox-b mb-2">
+                            <span class="badge-point badge-success mr-2"></span>20-27
+                            <span class="h4 mb-0 ml-4">25%</span>
+                        </div>
+                        <div class="flexbox-b mb-2">
+                            <span class="badge-point badge-primary mr-2"></span>35-50
+                            <span class="h4 mb-0 ml-4">22%</span>
+                        </div>
+                        <div class="flexbox-b mb-2">
+                            <span class="badge-point badge-pink mr-2"></span>27-35
+                            <span class="h4 mb-0 ml-4">17%</span>
+                        </div>
+                    </div>
+                    <div class="ibox-fullwidth-block">
+                        <canvas id="age_chart" style="height:260px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            <div class="ibox ibox-fullheight">
+                <div class="ibox-body">
+                    <div class="d-flex justify-content-between m-b-20">
+                        <div>
+                            <h3 class="m-0">Sales Analytics</h3>
+                            <div>Your shop sales analytics</div>
+                        </div>
+                        <ul class="nav nav-pills nav-pills-rounded nav-pills-air" id="sales_tabs">
+                            <li class="nav-item ml-1">
+                                <a class="nav-link active" data-toggle="tab" data-id="1" href="javascript:;">This Week</a>
+                            </li>
+                            <li class="nav-item ml-1">
+                                <a class="nav-link" data-toggle="tab" data-id="2" href="javascript:;">Last Week</a>
+                            </li>
+                            <li class="nav-item ml-1">
+                                <a class="nav-link" data-toggle="tab" data-id="3" href="javascript:;">Last Year</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <canvas id="sales_chart_1" style="height:260px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-6">
+            <div class="ibox ibox-fullheight" style="min-height:400px;">
+                <div class="ibox-head">
+                    <div>
+                        <div class="ibox-title">Weekly Profit</div><small class="text-lighter">24.02 - 24.09</small></div>
+                    <div class="ibox-tools">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-more-alt"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item"><i class="la la-upload"></i>Export</a>
+                            <a class="dropdown-item"><i class="la la-file-excel-o"></i>Download</a>
+                            <a class="dropdown-item"><i class="la la-print"></i>Print</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <div class="h1 mt-4">$32,400<sup>.60</sup><i class="ti-stats-up float-right text-success" style="font-size:40px;"></i></div>
+                    <div class="text-lighter">26% Higher then last week</div>
+                    <div class="abs-bottom">
+                        <canvas id="revenue_chart" style="height:220px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-4">
+            <div class="ibox ibox-fullheight" style="min-height:480px;">
+                <div class="ibox-head">
+                    <div class="ibox-title">SUBSCRIPTIONS</div>
+                    <div class="ibox-tools">
+                        <a class="font-18" href="javascript:;"><i class="ti-control-record"></i></a>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <div class="flexbox mb-3">
+                        <span class="flexbox">
+                            <span class="btn-icon-only btn-circle bg-primary-50 text-primary mr-3"><i class="ti-cup"></i></span>
+                            <span>BASIC PLAN</span>
+                        </span>
+                        <span class="h3 mb-0 text-primary font-strong ml-2">+1250</span>
+                    </div>
+                    <div class="flexbox mb-3">
+                        <span class="flexbox">
+                            <span class="btn-icon-only btn-circle bg-success-50 text-success mr-3"><i class="ti-briefcase"></i></span>
+                            <span>BUSINESS PLAN</span>
+                        </span>
+                        <span class="h3 mb-0 text-success font-strong ml-2">+890</span>
+                    </div>
+                    <div class="flexbox mb-3">
+                        <span class="flexbox">
+                            <span class="btn-icon-only btn-circle bg-pink-50 text-pink mr-3"><i class="ti-gift"></i></span>
+                            <span>EXPANDED PLAN</span>
+                        </span>
+                        <span class="h3 mb-0 text-pink font-strong ml-2">+720</span>
+                    </div>
+                    <div class="abs-bottom">
+                        <canvas id="subscriptions_chart" style="height:220px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="ibox ibox-fullheight">
+                <div class="ibox-head">
+                    <div class="ibox-title">EARNINGS</div>
+                    <div class="ibox-tools">
+                        <a class="font-18" href="javascript:;"><i class="ti-control-record"></i></a>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <div class="row m-b-20">
+                        <div class="col-6 text-center" style="border-right: 1px solid rgba(0,0,0,.1);">
+                            <div class="text-muted">DAILY PROFIT</div>
+                            <div class="h2 text-success mt-1">$540</div>
+                        </div>
+                        <div class="col-6 text-center">
+                            <div class="text-muted">SUBSCRIPTIONS</div>
+                            <div class="h2 text-success mt-1">36</div>
+                        </div>
+                    </div>
+                    <div class="h1 mt-4">$7,400<sup>.60</sup><i class="ti-stats-up float-right text-warning" style="font-size:40px;"></i></div>
+                    <div class="text-lighter">26% Higher then last week</div>
+                    <div class="mt-5 mb-5">
+                        <canvas id="earnings_chart" style="height:100px;"></canvas>
+                    </div>
+                    <div class="d-flex">
+                        <button class="btn btn-gradient-purple mr-2">View More</button>
+                        <button class="btn btn-outline-secondary">Print</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="ibox ibox-fullheight" style="min-height:480px;">
+                <div class="ibox-head">
+                    <div class="ibox-title">Statistics</div>
+                    <div class="ibox-tools">
+                        <a class="font-18" href="javascript:;"><i class="ti-control-record"></i></a>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <div class="row align-items-center mt-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="easypie centered" data-percent="73" data-bar-color="#18C5A9" data-size="120" data-line-width="8">
+                                <span class="easypie-data h3 font-strong">73<sup>%</sup></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-4 text-success"><i class="ti-desktop mr-2"></i>Desktop 52%</div>
+                            <div class="mb-4 text-warning"><i class="ti-tablet mr-2"></i>Tablet 27%</div>
+                            <div class="mb- text-info"><i class="ti-mobile mr-2"></i>Mobile 21%</div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between mb-4">
+                        <div class="text-center">
+                            <div class="mb-1 text-success h2">2400</div>
+                            <div class="text-muted">PAGE VIEWS</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="mb-1 text-success h2">$5200</div>
+                            <div class="text-muted">MONTH INCOME</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="abs-bottom" style="background-color:#f3f6fb;">
+                    <canvas id="earnings_chart_2" style="height:100px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="ibox ibox-fullheight">
+                        <div class="ibox-body bg-success">
+                            <h5 class="text-center text-white mb-3">Statistics</h5>
+                            <div>
+                                <canvas id="chart_a" style="height:180px;"></canvas>
+                            </div>
+                        </div>
+                        <div class="ibox-body">
+                            <div class="text-lighter mb-2">Lorem Ipsum is simply dummy text</div>
+                            <div>
+                                <span class="h1 mr-3 text-success font-40">72.5%</span>
+                                <span class="text-lighter">34.5% Higher then last month</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="ibox ibox-fullheight">
+                        <div class="ibox-body bg-pink">
+                            <h5 class="text-center text-white mb-3">Statistics</h5>
+                            <div>
+                                <canvas id="chart_b" style="height:180px;"></canvas>
+                            </div>
+                        </div>
+                        <div class="ibox-body">
+                            <div class="text-lighter mb-2">Lorem Ipsum is simply dummy text</div>
+                            <div>
+                                <span class="h1 mr-3 text-pink font-40">72.5%</span>
+                                <span class="text-lighter">34.5% Higher</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="ibox ibox-fullheight">
+                <div class="ibox-head">
+                    <div class="ibox-title">Statistics</div>
+                    <div class="ibox-tools">
+                        <a class="font-18" href="javascript:;"><i class="ti-control-record"></i></a>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <ul class="media-list media-list-divider">
+                        <li class="media flexbox">
+                            <div>
+                                <div class="media-heading font-16">Earnings</div>
+                                <div class="font-13 text-light">Lorem ipsum dolar set...</div>
+                            </div>
+                            <h4 class="font-strong mb-0 ml-3 text-primary">+$1200</h4>
+                        </li>
+                        <li class="media flexbox">
+                            <div>
+                                <div class="media-heading font-16">Orders</div>
+                                <div class="font-13 text-light">Lorem ipsum dolar set...</div>
+                            </div>
+                            <h4 class="font-strong mb-0 ml-3 text-success">+840</h4>
+                        </li>
+                        <li class="media flexbox">
+                            <div>
+                                <div class="media-heading font-16">Visits</div>
+                                <div class="font-13 text-light">Lorem ipsum dolar set...</div>
+                            </div>
+                            <h4 class="font-strong mb-0 ml-3 text-warning">+24%</h4>
+                        </li>
+                        <li class="media flexbox">
+                            <div>
+                                <div class="media-heading font-16">Customers</div>
+                                <div class="font-13 text-light">Lorem ipsum dolar set...</div>
+                            </div>
+                            <h4 class="font-strong mb-0 ml-3 text-pink">+725</h4>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ibox ibox-fullheight">
+                        <div class="ibox-head">
+                            <div class="ibox-title">VISITORS SCREENS</div>
+                            <div class="ibox-tools">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-desktop"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item"><i class="ti-pencil mr-2"></i>Create</a>
+                                    <a class="dropdown-item"><i class="ti-pencil-alt mr-2"></i>Edit</a>
+                                    <a class="dropdown-item"><i class="ti-close mr-2"></i>Remove</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ibox-body">
+                            <div>
+                                <canvas id="screens_chart" style="height:260px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ibox ibox-fullheight">
+                        <div class="ibox-head">
+                            <div class="ibox-title">VISITORS BROWSERS</div>
+                        </div>
+                        <div class="ibox-body">
+                            <ul class="list-group list-group-divider list-group-full">
+                                <li class="list-group-item flexbox">
+                                    <span class="flexbox"><i class="la la-chrome mr-3 font-40"></i>Google Chrome</span>
+                                    <span class="badge badge-success badge-pill">34.7%</span>
+                                </li>
+                                <li class="list-group-item flexbox">
+                                    <span class="flexbox"><i class="la la-firefox mr-3 font-40"></i>Mozila Firefox</span>
+                                    <span class="badge badge-primary badge-pill">34.7%</span>
+                                </li>
+                                <li class="list-group-item flexbox">
+                                    <span class="flexbox"><i class="la la-opera mr-3 font-40"></i>Opera</span>
+                                    <span class="badge badge-pink badge-pill">34.7%</span>
+                                </li>
+                                <li class="list-group-item flexbox">
+                                    <span class="flexbox"><i class="la la-internet-explorer mr-3 font-40"></i>Internet Explorer</span>
+                                    <span class="badge badge-info badge-pill">34.7%</span>
+                                </li>
+                                <li class="list-group-item flexbox">
+                                    <span class="flexbox"><i class="la la-safari mr-3 font-40"></i>Safari</span>
+                                    <span class="badge badge-warning badge-pill">34.7%</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-body">
+                    <div class="flexbox mb-5">
+                        <div class="flexbox">
+                            <span class="mr-4" style="width:60px;height:60px;background-color:#e7e9f6;color:#5c6bc0;display:inline-flex;align-items:center;justify-content:center;font-size:35px;"><i class="ti-files"></i></span>
+                            <div>
+                                <h5 class="font-strong">TOP 5 PAGES</h5>
+                                <div class="text-light">Top 5 visited pages on your site.</div>
+                            </div>
+                        </div>
+                        <ul class="nav nav-pills nav-pills-rounded nav-pills-air">
+                            <li class="nav-item ml-1">
+                                <a class="nav-link active" href="#tab_1" data-toggle="tab">This Week</a>
+                            </li>
+                            <li class="nav-item ml-1">
+                                <a class="nav-link" href="#tab_2" data-toggle="tab">Last Week</a>
+                            </li>
+                            <li class="nav-item ml-1">
+                                <a class="nav-link" href="#tab_3" data-toggle="tab">This Month</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab_1">
+                            <div class="flexbox">
+                                <div class="text-center">
+                                    <div class="mb-3">Blog Catalog</div>
+                                    <div class="easypie" data-percent="44" data-bar-color="#5c6bc0" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">44<sup>%</sup></span>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="mb-3">Shop Catalog</div>
+                                    <div class="easypie" data-percent="28" data-bar-color="#18c5a9" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">28<sup>%</sup></span>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="mb-3">Profile</div>
+                                    <div class="easypie" data-percent="9" data-bar-color="#5c6bc0" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">9<sup>%</sup></span>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="mb-3">Main Page</div>
+                                    <div class="easypie" data-percent="13" data-bar-color="#ff4081" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">13<sup>%</sup></span>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="mb-3">Profile</div>
+                                    <div class="easypie" data-percent="6" data-bar-color="#5c6bc0" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">6<sup>%</sup></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab_2">
+                            <div class="flexbox">
+                                <div class="text-center">
+                                    <div class="mb-3">Blog Catalog</div>
+                                    <div class="easypie" data-percent="33" data-bar-color="#5c6bc0" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">33<sup>%</sup></span>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="mb-3">Shop Catalog</div>
+                                    <div class="easypie" data-percent="42" data-bar-color="#18c5a9" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">42<sup>%</sup></span>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="mb-3">Profile</div>
+                                    <div class="easypie" data-percent="8" data-bar-color="#5c6bc0" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">8<sup>%</sup></span>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="mb-3">Main Page</div>
+                                    <div class="easypie" data-percent="11" data-bar-color="#ff4081" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">11<sup>%</sup></span>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="mb-3">Profile</div>
+                                    <div class="easypie" data-percent="6" data-bar-color="#5c6bc0" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">6<sup>%</sup></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab_3">
+                            <div class="flexbox">
+                                <div class="text-center">
+                                    <div class="mb-3">Blog Catalog</div>
+                                    <div class="easypie" data-percent="41" data-bar-color="#5c6bc0" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">41<sup>%</sup></span>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="mb-3">Shop Catalog</div>
+                                    <div class="easypie" data-percent="32" data-bar-color="#18c5a9" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">32<sup>%</sup></span>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="mb-3">Profile</div>
+                                    <div class="easypie" data-percent="10" data-bar-color="#5c6bc0" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">10<sup>%</sup></span>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="mb-3">Main Page</div>
+                                    <div class="easypie" data-percent="12" data-bar-color="#ff4081" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">12<sup>%</sup></span>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="mb-3">Profile</div>
+                                    <div class="easypie" data-percent="5" data-bar-color="#5c6bc0" data-size="80" data-line-width="8">
+                                        <span class="easypie-data h3 font-strong">5<sup>%</sup></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="ibox ibox-fullheight">
+                <div class="ibox-head">
+                    <div class="ibox-title">NEW CUSTOMERS</div>
+                    <div class="ibox-tools">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-user"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item"><i class="ti-pencil mr-2"></i>Create</a>
+                            <a class="dropdown-item"><i class="ti-pencil-alt mr-2"></i>Edit</a>
+                            <a class="dropdown-item"><i class="ti-close mr-2"></i>Remove</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <ul class="media-list media-list-divider mr-2 scroller" data-height="580px">
+                        <li class="media align-items-center">
+                            <a class="media-img" href="javascript:;">
+                                <img class="img-circle" src="./assets/img/users/u8.jpg" alt="image" width="54" />
+                            </a>
+                            <div class="media-body d-flex align-items-center">
+                                <div class="flex-1">
+                                    <div class="media-heading">Lynn Weaver</div><small class="text-muted">Lorem Ipsum is simply dummy</small></div>
+                                <button class="btn btn-sm btn-outline-secondary btn-rounded">Follow</button>
+                            </div>
+                        </li>
+                        <li class="media align-items-center">
+                            <a class="media-img" href="javascript:;">
+                                <img class="img-circle" src="./assets/img/users/u6.jpg" alt="image" width="54" />
+                            </a>
+                            <div class="media-body d-flex align-items-center">
+                                <div class="flex-1">
+                                    <div class="media-heading">Connor Perez</div><small class="text-muted">Lorem Ipsum is simply dummy</small></div>
+                                <button class="btn btn-sm btn-primary btn-rounded">Followed</button>
+                            </div>
+                        </li>
+                        <li class="media align-items-center">
+                            <a class="media-img" href="javascript:;">
+                                <img class="img-circle" src="./assets/img/users/u11.jpg" alt="image" width="54" />
+                            </a>
+                            <div class="media-body d-flex align-items-center">
+                                <div class="flex-1">
+                                    <div class="media-heading">Tyrone Carroll</div><small class="text-muted">Lorem Ipsum is simply dummy</small></div>
+                                <button class="btn btn-sm btn-outline-secondary btn-rounded">Follow</button>
+                            </div>
+                        </li>
+                        <li class="media align-items-center">
+                            <a class="media-img" href="javascript:;">
+                                <img class="img-circle" src="./assets/img/users/u10.jpg" alt="image" width="54" />
+                            </a>
+                            <div class="media-body d-flex align-items-center">
+                                <div class="flex-1">
+                                    <div class="media-heading">Stella Obrien</div><small class="text-muted">Lorem Ipsum is simply dummy</small></div>
+                                <button class="btn btn-sm btn-outline-secondary btn-rounded">Follow</button>
+                            </div>
+                        </li>
+                        <li class="media align-items-center">
+                            <a class="media-img" href="javascript:;">
+                                <img class="img-circle" src="./assets/img/users/u2.jpg" alt="image" width="54" />
+                            </a>
+                            <div class="media-body d-flex align-items-center">
+                                <div class="flex-1">
+                                    <div class="media-heading">Becky Brooks</div><small class="text-muted">Lorem Ipsum is simply dummy</small></div>
+                                <button class="btn btn-sm btn-outline-secondary btn-rounded">Follow</button>
+                            </div>
+                        </li>
+                        <li class="media align-items-center">
+                            <a class="media-img" href="javascript:;">
+                                <img class="img-circle" src="./assets/img/users/u5.jpg" alt="image" width="54" />
+                            </a>
+                            <div class="media-body d-flex align-items-center">
+                                <div class="flex-1">
+                                    <div class="media-heading">Bob Gonzalez</div><small class="text-muted">Lorem Ipsum is simply dummy</small></div>
+                                <button class="btn btn-sm btn-primary btn-rounded">Followed</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h5 class="font-strong mt-4 mb-4">SMALL WIDGETS</h5>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 m-b-20">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title m-0">Widget title</div>
+                </div>
+                <div style="background-color:#f3f6fb;">
+                    <canvas id="chart_1" style="height:100px;"></canvas>
+                </div>
+                <div class="card-body h3 d-flex justify-content-between m-0">
+                    <span>$250</span><i class="ti-stats-up text-success"></i></div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 m-b-20">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title m-0">Widget title</div>
+                </div>
+                <div style="background-color:#f3f6fb;">
+                    <canvas id="chart_2" style="height:100px;"></canvas>
+                </div>
+                <div class="card-body h3 d-flex justify-content-between m-0">
+                    <span>$74</span><i class="ti-stats-down text-warning"></i></div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 m-b-20">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title m-0">Widget title</div>
+                </div>
+                <div style="background-color:#f3f6fb;">
+                    <canvas id="chart_3" style="height:100px;"></canvas>
+                </div>
+                <div class="card-body h3 d-flex justify-content-between m-0">
+                    <span>14%</span><i class="ti-stats-down text-danger"></i></div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 m-b-20">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title m-0">Widget title</div>
+                </div>
+                <div style="background-color:#f3f6fb;">
+                    <canvas id="chart_4" style="height:100px;"></canvas>
+                </div>
+                <div class="card-body h3 d-flex justify-content-between m-0">
+                    <span>68%</span><i class="ti-stats-up text-success"></i></div>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-5 mt-5">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 m-b-20">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="m-b-5">$250 <i class="ti-stats-up text-success float-right"></i></h2>
+                    <div class="text-muted">MONTH INCOME</div>
+                </div>
+                <div id="spark_1">34, 43, 35, 44, 32, 15, 22, 33, 86, 54, 23, 65, 23, 63, 53, 42, 34, 54, 23, 44</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 m-b-20">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="m-b-5">$250 <i class="ti-stats-down text-danger float-right"></i></h2>
+                    <div class="text-muted">MONTH INCOME</div>
+                </div>
+                <div id="spark_2">34, 43, 35, 44, 32, 15, 22, 33, 86, 54, 23, 65, 23, 63, 53, 42, 34, 54, 23, 44</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 m-b-20">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="m-b-5">$250 <i class="ti-stats-up text-success float-right"></i></h2>
+                    <div class="text-muted">MONTH INCOME</div>
+                </div>
+                <div id="spark_3">Loading...</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 m-b-20">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="m-b-5">$250 <i class="ti-stats-down text-warning float-right"></i></h2>
+                    <div class="text-muted">MONTH INCOME</div>
+                </div>
+                <div id="spark_4">34, 43, 35, 44, 32, 15, 22, 33, 86, 54, 23, 65, 23, 63, 53, 42, 34, 54, 23, 44</div>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-5 mt-5">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card bg-success">
+                <div class="card-body">
+                    <h2 class="text-white">510 <i class="ti-shopping-cart float-right"></i></h2>
+                    <div>MONTH ORDERS</div>
+                    <div class="text-white mt-1"><i class="ti-stats-up mr-1"></i><small>25% higher than last month</small></div>
+                </div>
+                <div class="progress mb-2 widget-dark-progress">
+                    <div class="progress-bar" role="progressbar" style="width:50%; height:5px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card bg-primary">
+                <div class="card-body">
+                    <h2 class="text-white">$2400 <i class="la la-money float-right"></i></h2>
+                    <div>MONTH INCOME</div>
+                    <div class="text-white mt-1">
+                        <span>IOS</span>
+                        <span class="ml-2"><i class="fa fa-caret-up text-success"></i> 14%</span>
+                        <span class="ml-4">MAC</span>
+                        <span class="ml-2"><i class="fa fa-caret-down text-danger"></i> 9%</span>
+                    </div>
+                </div>
+                <div class="progress mb-2 widget-dark-progress">
+                    <div class="progress-bar" role="progressbar" style="width:50%; height:5px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card bg-danger">
+                <div class="card-body">
+                    <h2 class="text-white">510 <i class="ti-user float-right"></i></h2>
+                    <div>NEW USERS</div>
+                    <div class="text-white mt-1">
+                        <span class="badge mr-1 widget-dark-badge">43%</span><small>Higher</small></div>
+                </div>
+                <div class="progress mb-2 widget-dark-progress">
+                    <div class="progress-bar" role="progressbar" style="width:50%; height:5px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card bg-secondary">
+                <div class="card-body">
+                    <h2>7200 <i class="ti-world float-right"></i></h2>
+                    <div>PAGE VEWS</div>
+                    <div class="text-white">
+                        <span>IOS</span>
+                        <span class="ml-2"><i class="fa fa-caret-up text-success"></i> 14%</span>
+                        <span class="ml-4">MAC</span>
+                        <span class="ml-2"><i class="fa fa-caret-down text-danger"></i> 9%</span>
+                    </div>
+                </div>
+                <div class="progress mb-2 widget-dark-progress">
+                    <div class="progress-bar" role="progressbar" style="width:50%; height:5px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-5 mt-5">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card bg-success">
+                <div class="card-body">
+                    <h2 class="text-white mb-1">$250 <i class="ti-stats-up float-right"></i></h2>
+                    <div>MONTH INCOME</div>
+                </div>
+                <div id="spark_5">34, 43, 35, 44, 32, 15, 22, 33, 86, 54, 23, 65, 23, 63, 53, 42, 34, 54, 23, 44</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card bg-primary">
+                <div class="card-body">
+                    <h2 class="text-white mb-1">$250 <i class="ti-stats-down float-right"></i></h2>
+                    <div>MONTH INCOME</div>
+                </div>
+                <div id="spark_6">34, 43, 35, 44, 32, 15, 22, 33, 86, 54, 23, 65, 23, 63, 53, 42, 34, 54, 23, 44</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card bg-info">
+                <div class="card-body">
+                    <h2 class="text-white mb-1">$250 <i class="ti-stats-up float-right"></i></h2>
+                    <div>MONTH INCOME</div>
+                </div>
+                <div id="spark_7">Loading...</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card bg-warning">
+                <div class="card-body">
+                    <h2 class="text-white mb-1">$250 <i class="ti-stats-down float-right"></i></h2>
+                    <div>MONTH INCOME</div>
+                </div>
+                <div id="spark_8">34, 43, 35, 44, 32, 15, 22, 33, 86, 54, 23, 65, 23, 63, 53, 42, 34, 54, 23, 44</div>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-5 mt-5">
+    <div class="row">
+        <div class="col-lg-3 col-md-6">
+            <div class="ibox">
+                <div class="ibox-body">
+                    <h2 class="mb-1">202</h2>
+                    <div class="text-muted">NEW USERS</div><i class="ti-user widget-stat-icon text-success"></i>
+                    <div class="mt-1">
+                        <span class="text-success font-13 mr-1"><i class="fa fa-level-up"></i> +35%</span><small>than last week</small></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="ibox">
+                <div class="ibox-body">
+                    <h2 class="mb-1">605</h2>
+                    <div class="text-muted">NEW ORDERS</div><i class="ti-shopping-cart widget-stat-icon text-success"></i>
+                    <div class="mt-1">
+                        <span class="text-danger font-13 mr-1"><i class="fa fa-level-down"></i> -12%</span><small>than last week</small></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="ibox">
+                <div class="ibox-body">
+                    <h2 class="mb-1">$5800</h2>
+                    <div class="text-muted">TOTAL INCOME</div><i class="la la-money widget-stat-icon text-success"></i>
+                    <div class="mt-1">
+                        <span class="text-success font-13 mr-1"><i class="fa fa-level-up"></i> +22%</span><small>than last week</small></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="ibox">
+                <div class="ibox-body">
+                    <h2 class="mb-1">405</h2>
+                    <div class="text-muted">PAGE VIEWS</div><i class="ti-world widget-stat-icon text-success"></i>
+                    <div class="mt-1">
+                        <span class="text-danger font-13 mr-1"><i class="fa fa-level-up"></i> -17%</span><small>than last week</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-6">
+            <div class="ibox">
+                <div class="ibox-body">
+                    <h2 class="mb-1">202</h2>
+                    <div class="text-muted mb-4">NEW USERS</div><i class="ti-user widget-stat-icon text-success"></i>
+                    <div class="progress mb-1">
+                        <div class="progress-bar bg-success" role="progressbar" style="width:50%; height:5px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="d-flex justify-content-between"><small>Progress</small>
+                        <span class="text-success font-12"><i class="fa fa-level-up"></i> +24%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="ibox">
+                <div class="ibox-body">
+                    <h2 class="mb-1">605</h2>
+                    <div class="text-muted mb-4">NEW ORDERS</div><i class="ti-shopping-cart widget-stat-icon text-success"></i>
+                    <div class="progress mb-1">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width:50%; height:5px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="d-flex justify-content-between"><small>Progress</small>
+                        <span class="text-warning font-12"><i class="fa fa-level-down"></i> -12%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="ibox">
+                <div class="ibox-body">
+                    <h2 class="mb-1">$5800</h2>
+                    <div class="text-muted mb-4">TOTAL INCOME</div><i class="la la-money widget-stat-icon text-success"></i>
+                    <div class="progress mb-1">
+                        <div class="progress-bar bg-success" role="progressbar" style="width:50%; height:5px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="d-flex justify-content-between"><small>Progress</small>
+                        <span class="text-success font-12"><i class="fa fa-level-up"></i> +33%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="ibox">
+                <div class="ibox-body">
+                    <h2 class="mb-1">405</h2>
+                    <div class="text-muted mb-4">PAGE VIEWS</div><i class="ti-world widget-stat-icon text-success"></i>
+                    <div class="progress mb-1">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width:50%; height:5px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="d-flex justify-content-between"><small>Progress</small>
+                        <span class="text-danger font-12"><i class="fa fa-level-down"></i> -22%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-5 mt-5">
+    <div class="d-flex flex-wrap mb-5">
+        <div class="static-widget bg-pink text-white"><i class="ti-music-alt"></i>
+            <h4 class="m-0">124</h4><small>MUSIC</small></div>
+        <div class="static-widget bg-primary text-white"><i class="ti-paint-bucket"></i>
+            <h4 class="m-0">47</h4><small>COLORS</small></div>
+        <div class="static-widget bg-success"><i class="ti-user"></i>
+            <h4 class="m-0">1,200</h4><small>USERS</small></div>
+        <div class="static-widget bg-danger"><i class="ti-heart"></i>
+            <h4 class="m-0">5,400</h4><small>LIKES</small></div>
+        <div class="static-widget text-white" style="background-color:#34495f;"><i class="ti-gift"></i>
+            <h4 class="m-0">34</h4><small>GIFTS</small></div>
+        <div class="static-widget bg-info"><i class="ti-shopping-cart"></i>
+            <h4 class="m-0">450</h4><small>ORDERS</small></div>
+        <div class="static-widget bg-warning"><i class="ti-camera"></i>
+            <h4 class="m-0">850</h4><small>PHOTOS</small></div>
+        <div class="static-widget bg-secondary"><i class="ti-bar-chart"></i>
+            <h4 class="m-0">120</h4><small>CHARTS</small></div>
+    </div>
+</div>

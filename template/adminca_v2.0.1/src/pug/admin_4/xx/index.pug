@@ -1,0 +1,593 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Dashboard'
+  - var pageUrl = 'index.html'
+
+block plugins-styles
+  +link('morris.js/morris.css','plugin')
+
+block plugins
+  +script('chart.js/dist/Chart.min.js', 'plugin')
+  +script('jquery.easy-pie-chart/dist/jquery.easypiechart.min.js', 'plugin')
+  +script('jquery-sparkline/dist/jquery.sparkline.min.js', 'plugin')
+  +script('morris.js/morris.min.js', 'plugin')
+  +script('raphael/raphael.min.js', 'plugin')
+
+block content
+  .row
+    .col-lg-8
+      .ibox
+        .ibox-body
+          .d-flex.justify-content-between.m-b-20
+            div
+              h3.m-0 Sales Analytics
+              div Example of sales analytics
+            .rel
+              button.btn.btn-white.btn-icon-only.btn-circle(data-toggle='dropdown')
+                i.ti-settings
+              .dropdown-menu.dropdown-menu-right
+                a.dropdown-item
+                  i.la.la-upload
+                  | Export
+                a.dropdown-item
+                  i.la.la-file-excel-o
+                  | Download
+                a.dropdown-item(data-action='print', data-target='#diagram_1')
+                  i.la.la-print
+                  | Print
+          div
+            canvas#line_chart(style='height:260px;')
+        .ibox-body.bg-silver-100#diagram_1
+          .text-muted.m-b-20 Statistics
+          .row.align-items-center
+            .col-6(data-print-hidden)
+              canvas#chart_1(style='height:100px;')
+            .col-6
+              h2.text-success +2250$
+              .text-muted
+                span.text-success.m-r-10
+                  i.ti-stats-up.m-r-5
+                  | 32%
+                | FROM LAST YEAR
+          hr
+          .row
+            .col-4.text-center(style='border-right: 1px solid rgba(0,0,0,.1)')
+              .text-muted MONTH INCOME
+              h2.text-success.m-t-5 $305
+            .col-4.text-center(style='border-right: 1px solid rgba(0,0,0,.1)')
+              .text-muted MONTH SALES
+              h2.text-success.m-t-5 1680
+            .col-4.text-center
+              .text-muted MONTH ORDERS
+              h2.text-success.m-t-5 5800
+      .row
+        .col-lg-6
+          +panel('Statistics')
+            .row.align-items-center
+              .col-6
+                div
+                  canvas#doughnut_chart(style='height:200px')
+              .col-6.text-center
+                div.mb-4
+                  div: i.la.la-heart-o.text-pink.font-26
+                  .h1.m-0 220
+                  .text-lighter month income
+                div.mb-4
+                  div: i.ti-shopping-cart.text-pink.font-26
+                  .h1.m-0 220
+                  .text-lighter month income
+                div
+                  div: i.la.la-server.text-pink.font-26
+                  .h1.m-0
+                    | +28
+                    sup %
+                  .text-lighter Issue Fixed
+        .col-lg-6
+          .ibox
+            .ibox-head
+              div
+                .ibox-title Weekly earnings
+                small.text-lighter 24.02 - 24.09
+              .ibox-tools
+                a.dropdown-toggle(data-toggle='dropdown'): i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.la.la-upload
+                    | Export
+                  a.dropdown-item
+                    i.la.la-file-excel-o
+                    | Download
+                  a.dropdown-item
+                    i.la.la-print
+                    | Print
+            .ibox-body
+              .h1.mt-4
+                | $12,400
+                sup .60
+                i.ti-stats-up.float-right.text-success(style='font-size:40px;')
+              .text-lighter 26% Higher then last week
+              .mt-5.mb-5: canvas#chart_a(style='height:100px')
+              .d-flex
+                button.btn.btn-gradient-purple.mr-2 View More
+                button.btn.btn-outline-secondary Print
+      .row
+        .col-lg-7
+          .ibox
+            .ibox-body.bg-green
+              h5.text-center.text-white.mb-3 Statistics
+              div
+                canvas#chart_c(style='height:180px')
+            .ibox-body
+              .text-lighter.mb-2 Lorem Ipsum is simply dummy text
+              div
+                span.h1.mr-3.text-success.font-40 72.5%
+                span.text-lighter 34.5% Higher then last month
+        .col-lg-5
+          .ibox
+            .ibox-body.bg-pink
+              h5.text-center.text-white.mb-3 Statistics
+              div
+                canvas#chart_d(style='height:180px')
+            .ibox-body
+              .text-lighter.mb-2 Lorem Ipsum is simply dummy text
+              div
+                span.h1.mr-3.text-pink.font-40 72.5%
+                span.text-lighter 34.5% Higher
+      
+    .col-lg-4
+      .card.border-0.card-air.text-center.centered.mb-4.d-none(style='max-width:400px')
+        .carousel.slide.carousel-hover-controls#carousel_1(data-ride='carousel')
+          .carousel-inner
+            .carousel-item.active
+              .card-body
+                div.card-avatar.mt-3.mb-4
+                  +img('users/u6.jpg')(class='img-circle')
+                h4.card-title.mb-1 Connor Perez
+                .text-pink
+                  i.ti-location-pin.mr-2
+                  | California, USA
+                p.mt-4.mb-4 Some quick example text to build on the card title and make up the bulk of the card's content.
+                .d-flex.align-items-center.justify-content-between.mb-5
+                  div.text-center
+                    h2.text-pink.m-0 1200
+                    .text-muted FOLLOWERS
+                  div.text-center
+                    h2.text-pink.m-0 480
+                    .text-muted LIKES
+                  div.text-center
+                    h2.text-pink.m-0 14.2k
+                    .text-muted VIEWS
+                .d-flex.justify-content-around.align-items-center
+                  button.btn.btn-pink.btn-rounded.mr-2
+                    span.btn-icon
+                      i.la.la-heart-o
+                      | Follow
+                  button.btn.btn-secondary.btn-rounded
+                    span.btn-icon
+                      i.la.la-envelope
+                      | Message
+              .fab.fab-bottom.card-fab-top-right
+                button.btn.btn-pink.btn-icon-only.btn-circle.btn-air(data-toggle='button')
+                  i.la.la-share-alt.fab-icon
+                  i.la.la-close.fab-icon-active
+                ul.fab-menu
+                  li
+                    a.btn.btn-soc-facebook.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-facebook
+                  li
+                    a.btn.btn-soc-twitter.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-twitter
+                  li
+                    a.btn.btn-soc-dribbble.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-dribbble
+            
+            .carousel-item
+              .card-body
+                div.card-avatar.mt-3.mb-4
+                  +img('users/u11.jpg')(class='img-circle')
+                h4.card-title.mb-1 Tyrone Carroll
+                .text-purple
+                  i.ti-location-pin.mr-2
+                  | California, USA
+                p.mt-4.mb-4 Some quick example text to build on the card title and make up the bulk of the card's content.
+                .d-flex.align-items-center.justify-content-between.mb-5
+                  div.text-center
+                    h2.text-purple.m-0 1200
+                    .text-muted FOLLOWERS
+                  div.text-center
+                    h2.text-purple.m-0 480
+                    .text-muted LIKES
+                  div.text-center
+                    h2.text-purple.m-0 14.2k
+                    .text-muted VIEWS
+                .d-flex.justify-content-around.align-items-center
+                  button.btn.btn-purple.btn-rounded.mr-2
+                    span.btn-icon
+                      i.la.la-heart-o
+                      | Follow
+                  button.btn.btn-secondary.btn-rounded
+                    span.btn-icon
+                      i.la.la-envelope
+                      | Message
+              .fab.fab-bottom
+                button.btn.btn-purple.btn-icon-only.btn-circle.btn-air(data-toggle='button')
+                  i.la.la-share-alt.fab-icon
+                  i.la.la-close.fab-icon-active
+                ul.fab-menu
+                  li
+                    a.btn.btn-soc-facebook.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-facebook
+                  li
+                    a.btn.btn-soc-twitter.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-twitter
+                  li
+                    a.btn.btn-soc-dribbble.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-dribbble
+            
+            .carousel-item
+              .card-body
+                div.card-avatar.mt-3.mb-4
+                  +img('users/u6.jpg')(class='img-circle')
+                h4.card-title.mb-1 Connor Perez
+                .text-pink
+                  i.ti-location-pin.mr-2
+                  | California, USA
+                p.mt-4.mb-4 Some quick example text to build on the card title and make up the bulk of the card's content.
+                .d-flex.align-items-center.justify-content-between.mb-5
+                  div.text-center
+                    h2.text-pink.m-0 1200
+                    .text-muted FOLLOWERS
+                  div.text-center
+                    h2.text-pink.m-0 480
+                    .text-muted LIKES
+                  div.text-center
+                    h2.text-pink.m-0 14.2k
+                    .text-muted VIEWS
+                .d-flex.justify-content-around.align-items-center
+                  button.btn.btn-pink.btn-rounded.mr-2
+                    span.btn-icon
+                      i.la.la-heart-o
+                      | Follow
+                  button.btn.btn-secondary.btn-rounded
+                    span.btn-icon
+                      i.la.la-envelope
+                      | Message
+              .fab.fab-bottom
+                button.btn.btn-pink.btn-icon-only.btn-circle.btn-air(data-toggle='button')
+                  i.la.la-share-alt.fab-icon
+                  i.la.la-close.fab-icon-active
+                ul.fab-menu
+                  li
+                    a.btn.btn-soc-facebook.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-facebook
+                  li
+                    a.btn.btn-soc-twitter.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-twitter
+                  li
+                    a.btn.btn-soc-dribbble.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-dribbble
+            
+          a.carousel-control-prev.text-lighter(href='#carousel_1', data-slide='prev', role='button')
+            span.carousel-control-prev-icon
+            span.sr-only Previous
+          a.carousel-control-next.text-lighter(href='#carousel_1', data-slide='next', role='button')
+            span.carousel-control-next-icon
+            span.sr-only Next
+      .card.border-0.card-air.text-center.centered.mb-4(style='max-width:400px')
+        .card-body
+          div.card-avatar.mt-3.mb-4
+            +img('users/u6.jpg')(class='img-circle')
+          h4.card-title.mb-1 Connor Perez
+          .text-pink
+            i.ti-location-pin.mr-2
+            | California, USA
+          p.mt-4.mb-4 Some quick example text to build on the card title and make up the bulk of the card's content.
+          .d-flex.align-items-center.justify-content-between.mb-5
+            div.text-center
+              h2.text-pink.m-0 1200
+              .text-muted FOLLOWERS
+            div.text-center
+              h2.text-pink.m-0 480
+              .text-muted LIKES
+            div.text-center
+              h2.text-pink.m-0 14.2k
+              .text-muted VIEWS
+          .d-flex.justify-content-around.align-items-center
+            button.btn.btn-pink.btn-rounded.mr-2
+              span.btn-icon
+                i.la.la-heart-o
+                | Follow
+            button.btn.btn-secondary.btn-rounded
+              span.btn-icon
+                i.la.la-envelope
+                | Message
+        .fab.fab-bottom
+          button.btn.btn-pink.btn-icon-only.btn-circle.btn-air(data-toggle='button')
+            i.la.la-share-alt.fab-icon
+            i.la.la-close.fab-icon-active
+          ul.fab-menu
+            li
+              a.btn.btn-soc-facebook.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-facebook
+            li
+              a.btn.btn-soc-twitter.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-twitter
+            li
+              a.btn.btn-soc-dribbble.btn-icon-only.btn-circle.btn-air(href='javascript:;'): i.fa.fa-dribbble
+      
+      .ibox
+        .ibox-head
+          .ibox-title New Customers
+          .ibox-tools
+            a.dropdown-toggle(data-toggle='dropdown')
+              i.ti-pencil
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item 
+                i.ti-pencil-alt.m-r-10
+                | Edit
+              a.dropdown-item 
+                i.ti-close.m-r-10
+                | Remove
+        .ibox-body
+          ul.media-list.media-list-divider.m-0.scroller(data-height='480px')
+            li.media.align-items-center.pt-3.pb-3
+              a.media-img(href='javascript:;')
+                +img('users/u8.jpg')(class='img-circle', width='54px')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Lynn Weaver
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center.pt-3.pb-3
+              a.media-img(href='javascript:;')
+                +img('users/u6.jpg')(class='img-circle', width='54px')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Connor Perez
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center.pt-3.pb-3
+              a.media-img(href='javascript:;')
+                +img('users/u11.jpg')(class='img-circle', width='54px')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Tyrone Carroll
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center.pt-3.pb-3
+              a.media-img(href='javascript:;')
+                +img('users/u10.jpg')(class='img-circle', width='54px')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Stella Obrien
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center.pt-3.pb-3
+              a.media-img(href='javascript:;')
+                +img('users/u2.jpg')(class='img-circle', width='54px')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Becky Brooks
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center.pt-3.pb-3
+              a.media-img(href='javascript:;')
+                +img('users/u5.jpg')(class='img-circle', width='54px')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Bob Gonzalez
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+  
+  
+  .row.d-none
+    .col-lg-6
+      .ibox
+        .ibox-head
+          .ibox-title Feeds
+          .ibox-tools
+            a.dropdown-toggle(data-toggle='dropdown')
+              i.ti-announcement
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item 
+                i.ti-pencil-alt.m-r-10
+                | Edit
+              a.dropdown-item 
+                i.ti-close.m-r-10
+                | Remove
+        .ibox-body
+          ul.media-list.media-list-divider.m-0
+            li.media
+              .media-img
+                i.ti-user.font-18.text-muted
+              .media-body
+                .media-heading
+                  | New customer 
+                  small.float-right.text-muted 12:05
+                .font-13 Lorem Ipsum is simply dummy text.
+            li.media
+              .media-img
+                i.ti-info-alt.font-18.text-muted
+              .media-body
+                .media-heading.text-warning
+                  | Server Warning 
+                  small.float-right.text-muted 12:05
+                .font-13 Lorem Ipsum is simply dummy text.
+            li.media
+              .media-img
+                i.ti-announcement.font-18.text-muted
+              .media-body
+                .media-heading
+                  | 7 new feedback 
+                  small.float-right.text-muted Today
+                .font-13 Lorem Ipsum is simply dummy text.
+            li.media
+              .media-img
+                i.ti-check.font-18.text-muted
+              .media-body
+                .media-heading.text-success
+                  | Issue fixed 
+                  small.float-right.text-muted 12:05
+                .font-13 Lorem Ipsum is simply dummy text.
+            li.media
+              .media-img
+                i.ti-shopping-cart.font-18.text-muted
+              .media-body
+                .media-heading
+                  | 7 New orders 
+                  small.float-right.text-muted 12:05
+                .font-13 Lorem Ipsum is simply dummy text.
+            li.media
+              .media-img
+                i.ti-reload.font-18.text-muted
+              .media-body
+                .media-heading.text-danger
+                  | Server warning 
+                  small.float-right.text-muted 12:05
+                .font-13 Lorem Ipsum is simply dummy text.
+    .col-lg-6
+      .ibox
+        .ibox-head
+          .ibox-title Statistics
+          .ibox-tools
+            a.dropdown-toggle(data-toggle='dropdown')
+              i.ti-eye
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item 
+                i.ti-pencil-alt.m-r-10
+                | Edit
+              a.dropdown-item 
+                i.ti-close.m-r-10
+                | Remove
+        .ibox-body
+          .row.align-items-center
+            .col-md-6
+              .easyPieChart.easyPieChart-big.centered.m-t-20.m-b-20(data-percent='73', data-bar-color='#18C5A9')
+                span.h3.font-strong.line-height-inherit
+                  | 73
+                  sup %
+            .col-md-6
+              .m-b-20.text-success
+                i.ti-desktop.m-r-10
+                | Desktop 52%
+              .m-b-20.text-warning
+                i.ti-tablet.m-r-10
+                | Tablet 27%
+              .m-b-20.text-info
+                i.ti-mobile.m-r-10
+                | Mobile 21%
+          .d-flex.justify-content-between.m-b-20
+            div
+              .m-0.text-success.h3 2400
+              small PAGE VIEWS
+            div
+              .m-0.text-success.h3
+                | $410
+                sup .50
+              small MONTH INCOME
+        .pt-1.pb-1(style='background-color:#f3f6fb;')
+          canvas#chart_2(style='height:100px;')
+
+  .row
+    .col-lg-8
+      +panel('Best Sellers')(tools={'menu':1}, boxClass='ibox-fullheight')
+        ul.media-list.media-list-divider.m-0
+          li.media
+            a.media-img(href='javascript:;')
+              +img('products/01.jpg')(height='100px')
+            .media-body.d-flex
+              .flex-1
+                h5.media-heading
+                  a(href='javascript:;') Product name
+                p.font-13 Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                .font-13
+                  span.mr-4
+                    | Author: 
+                    a.text-success(href='javascript:;') @Creative
+                  span.text-muted.mr-4
+                    i.fa.fa-calendar.mr-1
+                    |  10.08.2018
+                  span.text-muted
+                    i.fa.fa-heart.mr-1
+                    |  56
+              .text-right(style='width:100px')
+                h3.mb-1.font-strong.text-success 1200
+                .text-muted sales
+          li.media
+            a.media-img(href='javascript:;')
+              +img('products/02.jpg')(height='100px')
+            .media-body.d-flex
+              .flex-1
+                h5.media-heading
+                  a(href='javascript:;') Product name
+                p.font-13 Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                .font-13
+                  span.mr-4
+                    | Author: 
+                    a.text-success(href='javascript:;') @Creative
+                  span.text-muted.mr-4
+                    i.fa.fa-calendar.mr-1
+                    |  10.08.2018
+                  span.text-muted
+                    i.fa.fa-heart.mr-1
+                    |  56
+              .text-right(style='width:100px')
+                h3.mb-1.font-strong.text-success 1130
+                .text-muted sales
+          li.media
+            a.media-img(href='javascript:;')
+              +img('products/03.jpg')(height='100px')
+            .media-body.d-flex
+              .flex-1
+                h5.media-heading
+                  a(href='javascript:;') Product name
+                p.font-13 Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                .font-13
+                  span.mr-4
+                    | Author: 
+                    a.text-success(href='javascript:;') @Creative
+                  span.text-muted.mr-4
+                    i.fa.fa-calendar.mr-1
+                    |  10.08.2018
+                  span.text-muted
+                    i.fa.fa-heart.mr-1
+                    |  56
+              .text-right(style='width:100px')
+                h3.mb-1.font-strong.text-success 980
+                .text-muted sales
+    .col-lg-4
+      +panel('Payment Systems')(tools={'menu':1}, boxClass='ibox-fullheight')
+        ul.media-list.media-list-divider.m-0
+          li.media
+            a.media-img(href='javascript:;')
+              +img('logos/payment/visa.png')(width='60px')
+            .media-body
+              .media-heading
+                | Visa card 
+                h4.font-strong.float-right.text-right $1100
+              p.font-13 Lorem ipsum dolar set...
+          li.media
+            a.media-img(href='javascript:;')
+              +img('logos/payment/paypal.png')(width='60px')
+            .media-body
+              .media-heading
+                | PayPal 
+                h4.font-strong.float-right.text-right $985
+              p.font-13 Lorem ipsum dolar set...
+          li.media
+            a.media-img(href='javascript:;')
+              +img('logos/payment/mastercard.png')(width='60px')
+            .media-body
+              .media-heading
+                | MasterCard 
+                h4.font-strong.float-right.text-right $850
+              p.font-13 Lorem ipsum dolar set...
+          li.media
+            a.media-img(href='javascript:;')
+              +img('logos/payment/jcb.png')(width='60px')
+            .media-body
+              .media-heading
+                | JCB 
+                h4.font-strong.float-right.text-right $690
+              p.font-13 Lorem ipsum dolar set...
+          li.media
+            a.media-img(href='javascript:;')
+              +img('logos/payment/eps.png')(width='60px')
+            .media-body
+              .media-heading
+                | EPS 
+                h4.font-strong.float-right.text-right $520
+              p.font-13 Lorem ipsum dolar set...
+
+block scripts
+    +script('dashboard_1_demo.js', 'page')

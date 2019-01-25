@@ -1,0 +1,87 @@
+// Floating Action Buttons
+
+.fab {
+	display: inline-block;
+	position: relative;
+	z-index: 5;
+	& > .btn {z-index: 1}
+	.fab-icon, .fab-icon-active {
+		position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        transition: .3s;
+	}
+	.fab-icon-active {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0);
+	}
+	.fab-menu {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		position: absolute;
+		display: flex;
+		visibility: hidden;
+		li {
+			padding: 5px;
+			.btn {
+				transform: scaleY(0.4) scaleX(0.4) translateY(0px) translateX(40px);
+				opacity: 0;
+				transition: .3s;
+			}
+		}
+	}
+
+	&.fab-top {
+		.fab-menu {
+			bottom: 64px;
+			left: 50%;
+            transform: translateX(-50%);
+            flex-direction: column;
+            li .btn{transform: scale(0.4) translateX(0px) translateY(40px)}
+		}
+	}
+	&.fab-bottom {
+		.fab-menu {
+			top: 64px;
+			left: 50%;
+            transform: translateX(-50%);
+            flex-direction: column;
+            li .btn{transform: scale(0.4) translateX(0px) translateY(-40px)}
+		}
+	}
+	&.fab-left {
+		.fab-menu {
+			right: 64px;
+			top: 50%;
+            transform: translateY(-50%);
+            li .btn{transform: scale(0.4) translateX(40px) translateY(0px)}
+		}
+	}
+	&.fab-right {
+		.fab-menu {
+			left: 64px;
+			top: 50%;
+            transform: translateY(-50%);
+            li .btn{transform: scale(0.4) translateX(-40px) translateY(0px)}
+		}
+	}
+	& > .btn.active {
+		.fab-icon-active {
+			opacity: 1;
+			transform: translate(-50%, -50%) scale(1);
+		}
+		.fab-icon {
+			opacity: 0;
+			transform: translate(-50%, -50%) scale(0);
+		}
+		& + .fab-menu {
+			visibility: visible;
+			& > li > .btn {
+				transform: scale(1) translate(0px);
+	            opacity: 1;
+		    }
+		}
+	}
+}

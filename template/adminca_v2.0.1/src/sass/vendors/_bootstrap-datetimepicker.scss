@@ -1,0 +1,39 @@
+// Bootstrap datetimepicker
+
+.datetimepicker {
+	padding: 10px;
+}
+.datetimepicker thead th.next, .datetimepicker thead th.prev, .datetimepicker thead th.switch {
+	font-weight: 500
+}
+.datetimepicker td, .datetimepicker th {
+    width: 35px;
+    height: 35px;
+    border-radius: 2px;
+}
+
+.datetimepicker thead th.next>span, .datetimepicker thead th.prev>span {
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+}
+.datetimepicker thead th.prev>span:before {
+	content: "\e64a";
+}
+.datetimepicker thead th.next>span:before {
+    content: "\e649";
+}
+.datetimepicker thead th.dow {
+    font-weight: 500;
+}
+.datetimepicker table tr td.active,
+.datetimepicker table tr td span.active {
+	background: #5c6bc0 !important;
+    color: #fff !important;
+}

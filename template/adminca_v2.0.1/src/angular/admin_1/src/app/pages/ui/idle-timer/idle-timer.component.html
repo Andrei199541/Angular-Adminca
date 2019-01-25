@@ -1,0 +1,54 @@
+<div class="page-heading">
+    <h1 class="page-title">jQuery Idle Timer</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html"><i class="la la-home font-20"></i></a>
+        </li>
+        <li class="breadcrumb-item">Components</li>
+        <li class="breadcrumb-item">jQuery Idle Timer</li>
+    </ol>
+</div>
+<div class="page-content fade-in-up">
+    <div class="alert alert-primary alert-bordered">
+        <p>provides you a way to monitor user activity with a page.</p>
+        <p>
+            <a class="btn btn-primary" href="https://github.com/thorst/jquery-idletimer" target="_blank">Official Website</a>
+        </p>
+    </div>
+    <div class="ibox">
+        <div class="ibox-body">            
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Document <small><span id="docTimeout"></span> second timeout</small></h3>
+                    <div class="btn-group">
+                        <a href="#" id="btPause" class="btn btn-secondary btn-sm">Pause</a>
+                        <a href="#" id="btResume" class="btn btn-secondary btn-sm">Resume</a>
+                        <a href="#" id="btElapsed" class="btn btn-secondary btn-sm">Elapsed</a>
+                        <a href="#" id="btInit" class="btn btn-secondary btn-sm">Init</a>
+                        <a href="#" id="btDestroy" class="btn btn-secondary btn-sm">Destroy</a>
+                    </div>
+                    <textarea rows="10" cols="30" id="docStatus" class="form-control"></textarea><br />
+                </div>
+                <div class="col-md-6">
+                    <h3>Element <small><span id="elTimeout"></span> second timeout</small></h3>
+                    <div class="btn-group">
+                        <a href="#" id="btReset" class="btn btn-secondary btn-sm">Reset</a>
+                        <a href="#" id="btLastActive" class="btn btn-secondary btn-sm">Last Active</a>
+                        <a href="#" id="btRemaining" class="btn btn-secondary btn-sm">Remaining</a>
+                        <a href="#" id="btState" class="btn btn-secondary btn-sm">State</a>
+                    </div>
+                    <textarea rows="10" cols="30" id="elStatus" class="form-control"></textarea><br />
+                </div>
+            </div>
+
+            <p>The idle timer is built on jQuery and provides two events: idle.idleTimer and active.idleTimer, which fire when the user's idle state has changed.</p>
+            <p>When you move your mouse over the page or start typing, you're considered "active".</p>
+            <p>Fires a custom event when the user is "idle". Idle is defined by not...</p>
+            <ul>
+                <li>moving the mouse</li>
+                <li>scrolling the mouse wheel</li>
+                <li>using the keyboard</li>
+            </ul><br>
+        </div>
+    </div>
+</div>

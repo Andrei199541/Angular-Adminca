@@ -1,0 +1,42 @@
+@import 'default';
+
+.page-sidebar {
+    background-color: #253544;
+}
+
+.header {
+	&, .page-brand {background: #2b3c4e}
+	.page-brand .brand-tip {color: #f75a5f}
+	
+	.sidebar-toggler {
+	    .icon-bar {background-color: #b4bcc8}
+	    &:hover .icon-bar {background-color: #fff}
+	}
+    .toolbar-icon:hover {
+        background-color: rgba(0,0,0,.2);
+    }
+	.navbar-toolbar > li > a {
+	    &, & > i {color: #b4bcc8}
+	    &:hover {
+	        &, & > i {color: #fff}
+	    }
+	}
+	.envelope-badge {
+	    box-shadow: none;
+	    background-color: #f75a5f;
+	}
+}
+.side-menu {
+	& > li {
+	    &.active, {
+	        & > a, & > a:hover, & > a:focus {
+	            background-color: lighten(#253544, 10%);
+	        }
+	    }
+	    &:hover > a {
+	        background-color: lighten(#253544, 10%);
+	    }
+	}
+}
+
+.theme-config .theme-config-toggle {background-color: #f75a5f;}

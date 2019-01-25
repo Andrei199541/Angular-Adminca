@@ -1,0 +1,118 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Code Mirror - code editor'
+  - var pageUrl = 'code_editor.html'
+  - var page_heading = 'Code Mirror - code editor'
+  - var path = ['Components', 'Code Mirror']
+
+block plugins-styles
+  +link('codemirror/codemirror.css','plugin')
+  +link('codemirror/theme/ambiance.css','plugin')
+  +link('codemirror/theme/material.css','plugin')
+
+block plugins
+  +script('codemirror/codemirror.js', 'plugin')
+  +script('codemirror/mode/xml.js', 'plugin')
+  +script('codemirror/mode/javascript.js', 'plugin')
+  +script('codemirror/mode/css.js', 'plugin')
+
+block content
+    .alert.alert-info.alert-bordered
+        p
+            | CodeMirror is a versatile text editor implemented in JavaScript for the browser. It is specialized for editing code, and comes with a number of language modes and addons that implement more advanced editing functionality.
+        p
+            a.btn.btn-info(href='http://codemirror.net/', target='_blank') Official Website
+    .row
+      .col-md-6
+          +panel('Some mode examples')
+            h5 XML mode
+            form
+                textarea#code-1(name='code')
+                    | <html style="color: green">
+                    | <!-- this is a comment -->
+                    | <head>
+                    |   <title>HTML Example</title>
+                    | </head>
+                    | <body>
+                    |   The indentation tries to be <em>somewhat &quot;do what
+                    |   I mean&quot;</em>... but might not match your style.
+                    | </body>
+                    | </html>
+            br
+            h5 JavaScript mode
+            form
+                textarea#code-2(name='code')
+                    | CodeMirror.fromTextArea(document.getElementById("code-2"), {
+                    |   mode: "javascript",
+                    |   lineNumbers: true
+                    | });
+            br
+            h5 CSS mode
+            form
+                textarea#code-3(name='code')
+                    | @import url("something.css");
+                    | body {
+                    |   padding: 3em 6em;
+                    |   font-family: tahoma, arial, sans-serif;
+                    | }
+
+      .col-md-6
+          +panel('Some theme example')          
+            h5 material theme
+            form
+                textarea#code-4(name='code')
+                    | CodeMirror.fromTextArea(document.getElementById("code-4"), {
+                    |   mode: "javascript",
+                    |   lineNumbers: true,
+                    |   theme: 'material',
+                    | });
+            br
+            form
+                textarea#code-5(name='code')
+                    | @import url("something.css");
+                    | body {
+                    |   padding: 3em 6em;
+                    |   font-family: tahoma, arial, sans-serif;
+                    | }
+            h5 ambiance theme
+            form
+                textarea#code-6(name='code')
+                    | CodeMirror.fromTextArea(document.getElementById("code-4"), {
+                    |   mode: "javascript",
+                    |   lineNumbers: true,
+                    |   theme: 'ambiance',
+                    | });
+            br
+
+block scripts
+  script.
+        $(function(){
+            CodeMirror.fromTextArea(document.getElementById("code-1"), {
+                mode: "text/html",
+                lineNumbers: true
+            });
+            CodeMirror.fromTextArea(document.getElementById("code-2"), {
+                mode: "javascript",
+                lineNumbers: true,
+            });
+            CodeMirror.fromTextArea(document.getElementById("code-3"), {
+                mode: "css",
+                lineNumbers: true,
+            });
+            CodeMirror.fromTextArea(document.getElementById("code-4"), {
+                mode: "javascript",
+                lineNumbers: true,
+                theme: 'material',
+            });
+            CodeMirror.fromTextArea(document.getElementById("code-5"), {
+                mode: "javascript",
+                lineNumbers: true,
+                theme: 'material',
+            });
+            CodeMirror.fromTextArea(document.getElementById("code-6"), {
+                mode: "javascript",
+                lineNumbers: true,
+                theme: 'ambiance',
+            });
+        });

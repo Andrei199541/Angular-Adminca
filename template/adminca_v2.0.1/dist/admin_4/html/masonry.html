@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Adminca bootstrap 4 &amp; angular 5 admin template, Шаблон админки | Masonry</title>
+    <!-- GLOBAL MAINLY STYLES-->
+    <link href="./assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="./assets/vendors/line-awesome/css/line-awesome.min.css" rel="stylesheet" />
+    <link href="./assets/vendors/themify-icons/css/themify-icons.css" rel="stylesheet" />
+    <link href="./assets/vendors/animate.css/animate.min.css" rel="stylesheet" />
+    <link href="./assets/vendors/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="./assets/vendors/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+    <!-- PLUGINS STYLES-->
+    <!-- THEME STYLES-->
+    <link href="assets/css/main.min.css" rel="stylesheet" />
+    <!-- PAGE LEVEL STYLES-->
+    <style>
+        .grid .ibox,
+        .grid-2 .ibox {
+            margin-bottom: 0;
+        }
+
+        .grid-item {
+            margin-bottom: 25px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- START HEADER-->
+        <header class="header">
+            <div class="wrapper">
+                <a class="page-brand" href="index.html">
+                    <span class="brand">Admin
+                        <span class="brand-tip">Ca</span>
+                    </span>
+                </a>
+                <div class="flexbox flex-1">
+                    <!-- START TOP-LEFT TOOLBAR-->
+                    <ul class="nav navbar-toolbar">
+                        <li class="dropdown mega-menu">
+                            <a class="nav-link dropdown-toggle toolbar-icon" data-toggle="dropdown"><i class="ti-view-grid"></i></a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-arrow"></div>
+                                <div class="mega-toolbar-menu">
+                                    <div class="d-flex">
+                                        <a class="mega-toolbar-item" href="javascript:;">
+                                            <div class="item-icon"><i class="ti-file"></i></div>
+                                            <div class="item-name">Reports</div>
+                                            <div class="item-text">Lorem Ipsum is simply dummy.</div>
+                                            <div class="item-details">74 New</div>
+                                        </a>
+                                        <a class="mega-toolbar-item" href="javascript:;">
+                                            <div class="item-icon"><i class="ti-shopping-cart-full"></i></div>
+                                            <div class="item-name">Orders</div>
+                                            <div class="item-text">Lorem Ipsum is simply dummy.</div>
+                                            <div class="item-details">125 New</div>
+                                        </a>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a class="mega-toolbar-item" href="javascript:;">
+                                            <div class="item-icon"><i class="ti-wallet"></i></div>
+                                            <div class="item-name">Profit</div>
+                                            <div class="item-text">Lorem Ipsum is simply dummy.</div>
+                                            <div class="item-details">+1200<sup>$</sup></div>
+                                        </a>
+                                        <a class="mega-toolbar-item" href="javascript:;">
+                                            <div class="item-icon"><i class="ti-support"></i></div>
+                                            <div class="item-name">Support</div>
+                                            <div class="item-text">Lorem Ipsum is simply dummy.</div>
+                                            <div class="item-details">54 New Ticket</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="nav-link search-toggler js-search-toggler"><i class="ti-search"></i>
+                                <span>Search here...</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- END TOP-LEFT TOOLBAR-->
+                    <!-- START TOP-RIGHT TOOLBAR-->
+                    <ul class="nav navbar-toolbar">
+                        <li class="timeout-toggler">
+                            <a class="nav-link toolbar-icon" data-toggle="modal" data-target="#session-dialog"><i class="ti-alarm-clock timeout-toggler-icon rel"><span class="notify-signal"></span></i></a>
+                        </li>
+                        <li class="dropdown dropdown-inbox">
+                            <a class="nav-link dropdown-toggle toolbar-icon" data-toggle="dropdown"><i class="ti-email"></i>
+                                <span class="envelope-badge">7</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-media">
+                                <div class="dropdown-arrow"></div>
+                                <div class="dropdown-header text-center">
+                                    <div>
+                                        <span class="font-18"><strong>7 New</strong> Messages</span>
+                                    </div>
+                                    <a class="text-muted font-13" href="javascript:;">view all</a>
+                                </div>
+                                <div class="media-list media-list-divider scroller" data-height="350px" data-color="#71808f">
+                                    <a class="media p-3">
+                                        <div class="media-img">
+                                            <img class="img-circle" src="./assets/img/users/u8.jpg" alt="image" />
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="media-heading">Lynn Weaver<small class="text-muted float-right">Just now</small></div>
+                                            <div class="font-13 text-muted">Your proposal interested me.</div>
+                                            <div class="font-13 mt-1">
+                                                <span class="d-inline-flex align-items-center text-primary"><i class="ti-support mr-2"></i>Support</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="media p-3">
+                                        <div class="media-img">
+                                            <img class="img-circle" src="./assets/img/users/u6.jpg" alt="image" />
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="font-strong">Connor Perez<small class="text-muted float-right">18 mins</small></div>
+                                            <div class="font-13 text-muted">Your proposal interested me.</div>
+                                            <div class="font-13 mt-1">
+                                                <span class="d-inline-flex align-items-center text-success mr-3"><i class="ti-lock mr-2"></i>Security</span>
+                                                <span class="d-inline-flex align-items-center text-pink"><i class="ti-credit-card mr-2"></i>Payment</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="media p-3">
+                                        <div class="media-img">
+                                            <img class="img-circle" src="./assets/img/users/u11.jpg" alt="image" />
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="font-strong">Tyrone Carroll<small class="text-muted float-right">42 mins</small></div>
+                                            <div class="font-13 text-muted">Your proposal interested me.</div>
+                                        </div>
+                                    </a>
+                                    <a class="media p-3">
+                                        <div class="media-img">
+                                            <img class="img-circle" src="./assets/img/users/u10.jpg" alt="image" />
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="font-strong">Stella Obrien<small class="text-muted float-right">1 hrs</small></div>
+                                            <div class="font-13 text-muted">Your proposal interested me.</div>
+                                            <div class="font-13 mt-1">
+                                                <span class="d-inline-flex align-items-center text-purple"><i class="ti-settings mr-2"></i>Technical</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="media p-3">
+                                        <div class="media-img">
+                                            <img class="img-circle" src="./assets/img/users/u2.jpg" alt="image" />
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="font-strong">Becky Brooks<small class="text-muted float-right">3 hrs</small></div>
+                                            <div class="font-13 text-muted">Your proposal interested me.</div>
+                                        </div>
+                                    </a>
+                                    <a class="media p-3">
+                                        <div class="media-img">
+                                            <img class="img-circle" src="./assets/img/users/u5.jpg" alt="image" />
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="font-strong">Bob Gonzalez<small class="text-muted float-right">3 hrs</small></div>
+                                            <div class="font-13 text-muted">Your proposal interested me.</div>
+                                            <div class="font-13 mt-1">
+                                                <span class="d-inline-flex align-items-center text-primary mr-3"><i class="ti-support mr-2"></i>Support</span>
+                                                <span class="d-inline-flex align-items-center text-pink"><i class="ti-shopping-cart mr-2"></i>Shopping</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="media p-3">
+                                        <div class="media-img">
+                                            <img class="img-circle" src="./assets/img/users/u9.jpg" alt="image" />
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="font-strong">Tammy Newman<small class="text-muted float-right">3 hrs</small></div>
+                                            <div class="font-13 text-muted">Your proposal interested me.</div>
+                                            <div class="font-13 mt-1">
+                                                <span class="d-inline-flex align-items-center text-primary"><i class="ti-ticket mr-2"></i>Client Support</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown dropdown-notification">
+                            <a class="nav-link dropdown-toggle toolbar-icon" data-toggle="dropdown"><i class="ti-bell rel"><span class="notify-signal"></span></i></a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-media">
+                                <div class="dropdown-arrow"></div>
+                                <div class="dropdown-header text-center">
+                                    <div>
+                                        <span class="font-18"><strong>14 New</strong> Notifications</span>
+                                    </div>
+                                    <a class="text-muted font-13" href="javascript:;">view all</a>
+                                </div>
+                                <div class="p-3">
+                                    <div class="scroller" data-height="320px" data-color="#71808f">
+                                        <ul class="logs-list">
+                                            <li class="log-item" data-type="app"><i class="ti-check log-icon text-success"></i>
+                                                <div>
+                                                    <a>2 Issue fixed</a><small class="float-right text-muted">Just now</small></div>
+                                            </li>
+                                            <li class="log-item" data-type="app"><i class="ti-announcement log-icon"></i>
+                                                <div>
+                                                    <a>7 new feedback</a>
+                                                    <span class="badge badge-warning badge-pill ml-1">important</span><small class="float-right text-muted">5 mins</small></div>
+                                            </li>
+                                            <li class="log-item" data-type="server"><i class="ti-check log-icon text-success"></i>
+                                                <div>
+                                                    <a>Production server up</a><small class="float-right text-muted">24 mins</small></div>
+                                            </li>
+                                            <li class="log-item" data-type="app"><i class="ti-shopping-cart log-icon"></i>
+                                                <div>
+                                                    <a>12 New orders</a><small class="float-right text-muted">45 mins</small></div>
+                                            </li>
+                                            <li class="log-item" data-type="server"><i class="ti-info-alt log-icon text-danger"></i>
+                                                <div>
+                                                    <a>Server error</a>
+                                                    <span class="badge badge-success badge-pill ml-1">resolved</span><small class="float-right text-muted">1 hrs</small></div>
+                                            </li>
+                                            <li class="log-item" data-type="server"><i class="ti-harddrives log-icon text-danger"></i>
+                                                <div>
+                                                    <a>Server overloaded 91%</a><small class="float-right text-muted">2 hrs</small></div>
+                                            </li>
+                                            <li class="log-item" data-type="app"><i class="ti-user log-icon"></i>
+                                                <div>
+                                                    <a>18 new users registered</a><small class="float-right text-muted">12.07</small></div>
+                                            </li>
+                                            <li class="log-item" data-type="app"><i class="ti-shopping-cart log-icon"></i>
+                                                <div>
+                                                    <a>5 New orders</a>
+                                                    <span class="badge badge-success badge-pill ml-1">pending</span><small class="float-right text-muted">12.30</small></div>
+                                            </li>
+                                            <li class="log-item" data-type="server"><i class="ti-info-alt log-icon text-danger"></i>
+                                                <div>
+                                                    <a>System error</a><small class="float-right text-muted">13.45</small></div>
+                                            </li>
+                                            <li class="log-item" data-type="app"><i class="fa fa-file-excel-o log-icon"></i>
+                                                <div>
+                                                    <a>The invoice is ready</a><small class="float-right text-muted">16.30</small></div>
+                                            </li>
+                                            <li class="log-item" data-type="server"><i class="ti-server log-icon text-danger"></i>
+                                                <div>
+                                                    <a>Database overloaded 92%</a><small class="float-right text-muted">17.15</small></div>
+                                            </li>
+                                            <li class="log-item" data-type="server"><i class="ti-check log-icon text-success"></i>
+                                                <div>
+                                                    <a>Production server up</a><small class="float-right text-muted">18.05</small></div>
+                                            </li>
+                                            <li class="log-item" data-type="app"><i class="ti-user log-icon"></i>
+                                                <div>
+                                                    <a>12 new users registered</a><small class="float-right text-muted">18.22</small></div>
+                                            </li>
+                                            <li class="log-item" data-type="app"><i class="ti-shopping-cart log-icon"></i>
+                                                <div>
+                                                    <a>8 New orders</a><small class="float-right text-muted">20.00</small></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown dropdown-user">
+                            <a class="nav-link dropdown-toggle link" data-toggle="dropdown">
+                                <span>Super User</span>
+                                <img src="./assets/img/users/admin-image.png" alt="image" />
+                            </a>
+                            <div class="dropdown-menu dropdown-arrow dropdown-menu-right admin-dropdown-menu">
+                                <div class="dropdown-arrow"></div>
+                                <div class="dropdown-header">
+                                    <div class="admin-avatar">
+                                        <img src="./assets/img/users/admin-image.png" alt="image" />
+                                    </div>
+                                    <div>
+                                        <h5 class="font-strong text-white">Super User</h5>
+                                        <div>
+                                            <span class="admin-badge mr-3"><i class="ti-alarm-clock mr-2"></i>30m.</span>
+                                            <span class="admin-badge"><i class="ti-lock mr-2"></i>Safe Mode</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="admin-menu-features">
+                                    <a class="admin-features-item" href="javascript:;"><i class="ti-user"></i>
+                                        <span>PROFILE</span>
+                                    </a>
+                                    <a class="admin-features-item" href="javascript:;"><i class="ti-support"></i>
+                                        <span>SUPPORT</span>
+                                    </a>
+                                    <a class="admin-features-item" href="javascript:;"><i class="ti-settings"></i>
+                                        <span>SETTINGS</span>
+                                    </a>
+                                </div>
+                                <div class="admin-menu-content">
+                                    <div class="text-muted mb-2">Your Wallet</div>
+                                    <div><i class="ti-wallet h1 mr-3 text-light"></i>
+                                        <span class="h1 text-success"><sup>$</sup>12.7k</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mt-2">
+                                        <a class="text-muted" href="javascript:;">Earnings history</a>
+                                        <a class="d-flex align-items-center" href="javascript:;">Logout<i class="ti-shift-right ml-2 font-20"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- END TOP-RIGHT TOOLBAR-->
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER-->
+        <div class="fade-in-up">
+            <!-- START TOP NAVBAR-->
+            <div class="top-navbar">
+                <div class="wrapper">
+                    <div class="navbar-tabs-wrapper">
+                        <ul class="nav nav-tabs top-navbar-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#tab-1" data-toggle="tab">DASHBOARDS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tab-2" data-toggle="tab">PAGES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tab-3" data-toggle="tab">WIDGETS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tab-4" data-toggle="tab">COMPONENTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tab-5" data-toggle="tab">WIDGETS</a>
+                            </li>
+                            <li class="nav-item dropdown tabs-dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="ti-more"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#tab-6" data-toggle="tab">Charts</a>
+                                    <a class="dropdown-item" href="#tab-7" data-toggle="tab">Tables</a>
+                                    <a class="dropdown-item" href="#tab-8" data-toggle="tab">Forms</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tab-1">
+                            <a class="active" href="index.html">Dashboard</a>
+                            <a href="dashboard_visitors.html">Visitors</a>
+                            <a href="dashboard_ecommerce.html">E-Commerce</a>
+                            <a href="dashboard_blog.html">Blog</a>
+                            <a href="dashboard_5.html">Dashboard v5</a>
+                            <a href="dashboard_6.html">Dashboard v6</a>
+                            <a href="dashboard_7.html">Dashboard v7</a>
+                        </div>
+                        <div class="tab-pane fade" id="tab-2">
+                            <a href="mailbox.html">Mailbox</a>
+                            <a href="calendar.html">Calendar</a>
+                            <a href="search.html">Search</a>
+                            <a href="faq.html">FAQ</a>
+                        </div>
+                        <div class="tab-pane fade" id="tab-3"></div>
+                        <div class="tab-pane fade" id="tab-4"></div>
+                        <div class="tab-pane fade" id="tab-5"></div>
+                        <div class="tab-pane fade" id="tab-6"></div>
+                        <div class="tab-pane fade" id="tab-7"></div>
+                        <div class="tab-pane fade" id="tab-8"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- END TOP NAVBAR-->
+            <div class="wrapper content-wrapper">
+                <!-- START PAGE CONTENT-->
+                <div class="page-heading">
+                    <h1 class="page-title">Masonry</h1>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html"><i class="la la-home font-20"></i></a>
+                        </li>
+                        <li class="breadcrumb-item">Components</li>
+                        <li class="breadcrumb-item">Masonry</li>
+                    </ol>
+                </div>
+                <div class="page-content">
+                    <div class="alert alert-pink alert-bordered">
+                        <p>Masonry is a JavaScript grid layout library. It works by placing elements in optimal position based on available vertical space, sort of like a mason fitting stones in a wall. You’ve probably seen it in use all over the Internet.</p>
+                        <p>
+                            <a class="btn btn-pink" href="http://masonry.desandro.com/" target="_blank">Official Website</a>
+                        </p>
+                    </div>
+                    <div class="grid">
+                        <div class="grid-item">
+                            <div class="ibox">
+                                <div class="ibox-body">
+                                    <h4 class="font-strong">masonary box example</h4>Laborum consectetur sed eu sint eiusmod in voluptate ad exercitation veniam dolor eiusmod qui ex nostrud dolor adipiscing aliqua veniam dolor ut minim dolore aliqua laboris proident in id ad
+                                    mollit voluptate pariatur ut reprehenderit elit in nisi aliqua amet nulla irure laborum dolor nulla adipiscing nisi sunt mollit irure ex minim ut mollit nisi deserunt dolor nostrud ut eu culpa voluptate occaecat nisi
+                                    quis cupidatat sit proident dolore voluptate sunt amet nisi cupidatat sed elit minim laborum nulla est veniam eiusmod veniam cupidatat excepteur elit aliquip nostrud ut id pariatur in duis ipsum in labore dolor dolor
+                                    officia excepteur </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="ibox">
+                                <div class="ibox-body">
+                                    <h4 class="font-strong">masonary box example</h4>Magna sunt est nostrud aliquip pariatur irure et veniam occaecat pariatur consequat minim aute anim quis consequat sit tempor magna id consectetur laboris dolor culpa dolor aliquip veniam amet
+                                    sit adipiscing ex et dolor culpa irure elit aute tempor consectetur aliquip do quis lorem cillum ex ut officia culpa ipsum nulla ullamco tempor ea dolor incididunt fugiat id commodo enim irure et amet incididunt amet
+                                    enim consectetur aliquip deserunt anim non qui excepteur aute duis sunt laboris excepteur ut mollit nulla sit duis consectetur deserunt est dolore duis pariatur sunt dolore nisi qui minim ut duis amet ea fugiat consectetur
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="ibox">
+                                <div class="ibox-body">
+                                    <h4 class="font-strong">masonary box example</h4>Elit non esse quis amet dolor officia amet ullamco id eiusmod aliqua culpa sint dolor excepteur reprehenderit duis pariatur occaecat irure reprehenderit aute ea aute esse in sint ex tempor ipsum
+                                    sed nulla non mollit occaecat labore incididunt commodo fugiat deserunt ullamco ex est ut velit et nostrud aute reprehenderit occaecat culpa sit sunt do in esse non irure incididunt officia irure enim amet velit ut
+                                    fugiat eu irure sint ad excepteur dolore aliqua minim id nulla ex fugiat ut dolore ut incididunt occaecat sed ut et ex eiusmod voluptate deserunt do mollit culpa proident et exercitation exercitation fugiat ipsum </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="ibox">
+                                <div class="ibox-body">
+                                    <h4 class="font-strong">masonary box example</h4>Ut irure consequat ipsum in voluptate anim dolor aute tempor lorem consequat sint ut nostrud ipsum duis quis occaecat officia sunt in sed est nulla in et dolore sunt in enim voluptate minim
+                                    duis sint nostrud do nostrud et in quis ea dolore veniam irure ex ex sunt laborum ipsum ut proident laboris officia non et ad culpa lorem ut consequat ex qui laborum irure adipiscing magna et consectetur dolor ut ad
+                                    nulla dolor consequat sunt culpa do id ut occaecat pariatur est adipiscing excepteur ex dolore dolor non velit ullamco magna nulla nostrud ipsum est non laboris voluptate amet </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="ibox">
+                                <div class="ibox-body">
+                                    <h4 class="font-strong">masonary box example</h4>Elit qui labore exercitation eu et excepteur ex in deserunt consectetur aute quis dolor dolor ut excepteur ut proident velit et eiusmod labore incididunt duis laboris qui consectetur et dolor
+                                    velit qui ut minim eu sit laborum pariatur ut labore est enim eu in occaecat magna adipiscing enim ut qui commodo commodo sint et elit id irure pariatur nostrud veniam et proident veniam enim id ut mollit proident est
+                                    adipiscing nisi ex ipsum magna consequat ullamco consequat proident sit nisi sint eu ipsum velit est ut culpa in excepteur commodo elit aliquip proident ad incididunt dolore est veniam eiusmod ex </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="ibox">
+                                <div class="ibox-body">
+                                    <h4 class="font-strong">masonary box example</h4>Aute laborum id incididunt ut ex voluptate reprehenderit in irure velit proident cupidatat deserunt eiusmod sit in fugiat sit irure occaecat ut incididunt excepteur consequat aute minim dolore
+                                    minim lorem tempor culpa aliquip tempor dolore cillum ullamco laboris ut excepteur cupidatat dolore dolor in ut id ad irure sed enim officia est in lorem enim ex eiusmod ex consequat enim irure velit elit sunt dolor
+                                    dolore aliqua sed non sit sed ut fugiat in anim qui et ipsum occaecat velit excepteur ipsum consectetur voluptate quis amet ullamco occaecat magna ullamco nostrud tempor dolor nisi reprehenderit deserunt et elit ea
+                                    labore </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="ibox">
+                                <div class="ibox-body">
+                                    <h4 class="font-strong">masonary box example</h4>Mollit et ea in lorem amet ad sint id incididunt ut quis qui labore dolor nulla ipsum sint lorem ut cillum non et fugiat ut deserunt sed officia officia eiusmod voluptate incididunt laborum
+                                    consectetur deserunt anim elit qui minim sint ea fugiat consequat quis commodo duis sed veniam anim ad fugiat tempor esse id in ut exercitation nulla in in amet nostrud nisi qui eu duis irure mollit excepteur sit in
+                                    laborum ex nostrud elit minim et dolor duis minim ad tempor laboris anim dolore incididunt in dolor minim lorem ut qui qui officia exercitation nisi consectetur esse dolore exercitation </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="ibox">
+                                <div class="ibox-body">
+                                    <h4 class="font-strong">masonary box example</h4>Irure adipiscing ut ea ut dolore nulla eu officia deserunt in consectetur exercitation proident non cillum veniam aliqua laboris incididunt tempor non esse consequat fugiat minim quis adipiscing
+                                    laborum esse sit laborum exercitation dolore irure laboris in sunt proident laboris sit aliqua eu cupidatat duis non aute deserunt laborum tempor et sed irure quis do cupidatat et veniam consequat magna tempor elit
+                                    in aliqua sed ipsum irure ut esse sit dolor lorem labore adipiscing elit voluptate eu veniam magna fugiat sed pariatur duis irure magna aliquip culpa elit tempor amet lorem elit ut do anim ut commodo eiusmod dolor exercitation
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="ibox">
+                                <div class="ibox-body">
+                                    <h4 class="font-strong">masonary box example</h4>Pariatur in tempor magna ullamco sed culpa sit eiusmod ullamco sunt in nostrud est ut duis commodo sint elit cupidatat lorem anim ea velit officia esse dolore anim est laboris dolore ut deserunt
+                                    laboris sit enim exercitation culpa amet exercitation aliquip minim culpa id aliquip eu qui sed mollit sed quis enim fugiat ipsum mollit nulla occaecat duis cillum esse pariatur ad laborum lorem commodo irure dolore
+                                    labore occaecat sed ut mollit labore deserunt sit sint ut enim minim incididunt proident labore ut ex non enim nostrud dolor voluptate pariatur ut velit pariatur incididunt sunt tempor eiusmod quis lorem culpa </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="ibox">
+                                <div class="ibox-body">
+                                    <h4 class="font-strong">masonary box example</h4>Sit eiusmod eiusmod et irure dolor enim ut anim ea proident duis reprehenderit pariatur occaecat anim cillum aliqua eiusmod enim enim eiusmod eiusmod ut excepteur ullamco nulla laborum minim
+                                    consequat commodo voluptate ut veniam in dolor in esse deserunt deserunt nostrud lorem aute ipsum pariatur tempor in adipiscing magna nostrud anim adipiscing sit dolor non excepteur ut velit tempor exercitation ut minim
+                                    esse in voluptate officia sit lorem mollit nostrud incididunt incididunt sit adipiscing aute culpa sed reprehenderit ullamco pariatur ex in cupidatat cupidatat exercitation nulla minim ut cupidatat quis dolor consectetur
+                                    consequat sed consectetur amet in dolor consectetur enim </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PAGE CONTENT-->
+                <footer class="page-footer">
+                    <div class="font-13">2018 © <b>Adminca</b> - Save your time, choose the best</div>
+                    <div>
+                        <a class="px-3 pl-4" href="http://themeforest.net/item/adminca-responsive-bootstrap-4-3-angular-4-admin-dashboard-template/20912589" target="_blank">Purchase</a>
+                        <a class="px-3" href="http://admincast.com/adminca/documentation.html" target="_blank">Docs</a>
+                    </div>
+                    <div class="to-top"><i class="fa fa-angle-double-up"></i></div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!-- START SEARCH PANEL-->
+    <form class="search-top-bar" action="search.html">
+        <input class="form-control search-input" type="text" placeholder="Search...">
+        <button class="reset input-search-icon"><i class="ti-search"></i></button>
+        <button class="reset input-search-close" type="button"><i class="ti-close"></i></button>
+    </form>
+    <!-- END SEARCH PANEL-->
+    <!-- BEGIN THEME CONFIG PANEL-->
+    <div class="theme-config">
+        <div class="theme-config-toggle"><i class="ti-settings theme-config-show"></i><i class="ti-close theme-config-close"></i></div>
+        <div class="theme-config-box">
+            <h5 class="text-center mb-4 mt-3">SETTINGS</h5>
+            <div class="font-strong mb-3">LAYOUT STYLE</div>
+            <div class="check-list mb-4">
+                <label class="radio radio-grey radio-primary">
+                    <input type="radio" name="layout-style" value="" checked>
+                    <span class="input-span"></span>Fluid</label>
+                <label class="radio radio-grey radio-primary mt-3">
+                    <input type="radio" name="layout-style" value="1">
+                    <span class="input-span"></span>Boxed</label>
+            </div>
+            <div class="mt-4 mb-2 font-strong">THEME COLORS</div>
+            <div>
+                <div class="color-skin-box" data-toggle="tooltip" data-original-title="Gradient Blue" style="background-image: linear-gradient(45deg,#00dcaf 0,#7536e6 100%);">
+                    <label>
+                        <input type="radio" name="setting-theme" value="default" checked>
+                        <span class="color-check-icon"><i class="fa fa-check"></i></span>
+                    </label>
+                </div>
+                <div class="color-skin-box" data-toggle="tooltip" data-original-title="Peach" style="background-image: linear-gradient(45deg,#f39c12 0,#e91e63 100%);">
+                    <label>
+                        <input type="radio" name="setting-theme" value="gradient-peach">
+                        <span class="color-check-icon"><i class="fa fa-check"></i></span>
+                    </label>
+                </div>
+                <div class="color-skin-box" data-toggle="tooltip" data-original-title="Gradient Purple" style="background-image: linear-gradient(45deg,#ff4081 0,#7536e6 100%);">
+                    <label>
+                        <input type="radio" name="setting-theme" value="gradient-purple">
+                        <span class="color-check-icon"><i class="fa fa-check"></i></span>
+                    </label>
+                </div>
+                <div class="color-skin-box bg-primary" data-toggle="tooltip" data-original-title="Purple">
+                    <label>
+                        <input type="radio" name="setting-theme" value="purple">
+                        <span class="color-check-icon"><i class="fa fa-check"></i></span>
+                    </label>
+                </div>
+                <div class="color-skin-box" data-toggle="tooltip" data-original-title="Bright purple" style="background-color:#7536e6;">
+                    <label>
+                        <input type="radio" name="setting-theme" value="bright-purple">
+                        <span class="color-check-icon"><i class="fa fa-check"></i></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END THEME CONFIG PANEL-->
+    <!-- BEGIN PAGA BACKDROPS-->
+    <div class="sidenav-backdrop backdrop"></div>
+    <div class="preloader-backdrop">
+        <div class="page-preloader">Loading</div>
+    </div>
+    <!-- END PAGA BACKDROPS-->
+    <!-- New question dialog-->
+    <div class="modal fade" id="session-dialog">
+        <div class="modal-dialog" style="width:400px;" role="document">
+            <div class="modal-content timeout-modal">
+                <div class="modal-body">
+                    <button class="close" data-dismiss="modal" aria-label="Close"></button>
+                    <div class="text-center mt-3 mb-4"><i class="ti-lock timeout-icon"></i></div>
+                    <div class="text-center h4 mb-3">Set Auto Logout</div>
+                    <p class="text-center mb-4">You are about to be signed out due to inactivity.<br>Select after how many minutes of inactivity you log out of the system.</p>
+                    <div id="timeout-reset-box" style="display:none;">
+                        <div class="form-group text-center">
+                            <button class="btn btn-danger btn-fix btn-air" id="timeout-reset">Deactivate</button>
+                        </div>
+                    </div>
+                    <div id="timeout-activate-box">
+                        <form class="form-purple" id="timeout-form" action="javascript:;">
+                            <div class="form-group pl-3 pr-3 mb-4">
+                                <input class="form-control form-control-line" type="text" name="timeout_count" placeholder="Minutes" id="timeout-count">
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="btn btn-purple btn-fix btn-air" id="timeout-activate">Activate</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End New question dialog-->
+    <!-- CORE PLUGINS-->
+    <script src="./assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="./assets/vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./assets/vendors/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="./assets/vendors/jquery-idletimer/dist/idle-timer.min.js"></script>
+    <script src="./assets/vendors/toastr/toastr.min.js"></script>
+    <script src="./assets/vendors/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="./assets/vendors/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <!-- PAGE LEVEL PLUGINS-->
+    <script src="./assets/vendors/masonry/dist/masonry.pkgd.min.js"></script>
+    <!-- CORE SCRIPTS-->
+    <script src="assets/js/app.min.js"></script>
+    <!-- PAGE LEVEL SCRIPTS-->
+    <script>
+        $(function() {
+            $('.grid').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: 300,
+                gutter: 40, //spacing
+            });
+        });
+    </script>
+</body>
+
+</html>

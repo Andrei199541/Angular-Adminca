@@ -1,0 +1,403 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Basic Tables'
+  - var pageUrl = 'table_basic.html'
+  - var page_heading = 'Basic Tables'
+  - var path = ['Tables','Basic Tables']
+
+block content
+  .row
+    .col-xl-6
+      .ibox
+        .ibox-head
+          .ibox-title Basic Table
+        .ibox-body
+          table.table
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+    .col-xl-6
+      .ibox
+        .ibox-head
+          .ibox-title Bordered Table
+        .ibox-body
+          table.table.table-bordered
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+  .row
+    .col-xl-6
+      .ibox
+        .ibox-head
+          .ibox-title Gray head
+        .ibox-body
+          table.table
+            thead.thead-default
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+    .col-xl-6
+      .ibox
+        .ibox-head
+          .ibox-title Gray head
+        .ibox-body
+          table.table.table-bordered
+            thead.thead-default
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+  .row
+    .col-xl-6
+      .ibox
+        .ibox-head
+          .ibox-title Striped rows
+        .ibox-body
+          table.table.table-striped
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+    .col-xl-6
+      .ibox
+        .ibox-head
+          .ibox-title Hover rows
+        .ibox-body
+          table.table.table-hover
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+  .row
+    .col-xl-6
+      .ibox
+        .ibox-head
+          .ibox-title Colored Tables
+        .ibox-body
+          p.mb-4
+            | Add the class 
+            code .table-head-purple
+            |  to &lt;table> to make &lt;thead> appear purple.
+          table.table.table-head-purple.mb-5
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+          table.table.table-head-success
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+          p.mb-5.mt-5
+            | Add the class 
+            code .table-border-purple
+            |  to &lt;table> for purple borders.
+          table.table.table-bordered.table-head-purple.table-border-purple.mb-5
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+          table.table.table-bordered.table-head-success.table-border-success.mb-4
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Username
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td @mdo
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td @fat
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td @twitter
+    .col-xl-6
+      .ibox
+        .ibox-head
+          .ibox-title Responsive Table
+        .ibox-body
+          .table-responsive
+            table.table
+              thead
+                tr
+                  th #
+                  th First Name
+                  th Last Name
+                  th Username
+              tbody
+                tr
+                  td 1
+                  td Mark
+                  td Otto
+                  td @mdo
+                tr
+                  td 2
+                  td Jacob
+                  td Thornton
+                  td @fat
+                tr
+                  td 3
+                  td Larry
+                  td the Bird
+                  td @twitter
+      .ibox
+        .ibox-head
+          .ibox-title Contextual classes
+        .ibox-body
+          table.table.table-hover
+            caption Optional table caption.
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Date
+            tbody
+              tr.active
+                td 1
+                td Mark
+                td Otto
+                td 02/08/2017
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td 04/10/2017
+              tr.info
+                td 3
+                td Larry
+                td the Bird
+                td 08/11/2017
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td 04/10/2017
+              tr.success
+                td 3
+                td Larry
+                td the Bird
+                td 08/11/2017
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td 04/10/2017
+              tr.warning
+                td 3
+                td Larry
+                td the Bird
+                td 08/11/2017
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td 04/10/2017
+              tr.danger
+                td 3
+                td Larry
+                td the Bird
+                td 08/11/2017
+      .ibox
+        .ibox-head
+          .ibox-title Condensed Table
+        .ibox-body
+          table.table.table-condensed
+            thead
+              tr
+                th #
+                th First Name
+                th Last Name
+                th Status
+            tbody
+              tr
+                td 1
+                td Mark
+                td Otto
+                td
+                  i.ti-check.text-success
+              tr
+                td 2
+                td Jacob
+                td Thornton
+                td
+                  i.ti-check.text-success
+              tr
+                td 3
+                td Larry
+                td the Bird
+                td
+                  i.ti-info-alt.text-warning

@@ -1,0 +1,72 @@
+// DataTables
+
+table.dataTable {
+    width:100% !important;
+    border-collapse: collapse !important;
+}
+.html5buttons {
+    float:right;
+    margin-top: 5px;
+}
+.dataTables_length {
+    float:left;
+    margin-top: 5px;
+}
+.dataTables_filter label {
+    margin-right:5px;
+        margin-top: 5px;
+}
+.html5buttons a {
+    font-size:12px;
+    line-height: 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 13px;
+}
+@media (max-width: 768px) {
+	.html5buttons {float:none;margin-top:8px;text-align: center;}
+    div.dt-buttons {width:auto}
+	.dataTables_length {float:none}
+}
+.dataTables_filter input{height:30px}
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, 
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before
+{
+    content: "\f067";
+    font: normal normal normal 14px/1 FontAwesome;
+    top: 50%;
+    margin-top: -7px;
+    border: 0;
+    box-shadow: none;
+    background-color: transparent;
+    color:#99A4AF;
+}
+table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td:first-child:before, 
+table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th:first-child:before {
+    content: "\f068";
+    font: normal normal normal 14px/1 FontAwesome;
+    top: 50%;
+    margin-top: -7px;
+    border: 0;
+    box-shadow: none;
+    background-color: transparent;
+    color:#99A4AF;
+}
+table.dataTable>tbody>tr.child span.dtr-title {
+    font-weight: 600;
+}
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
+    bottom: 50%;
+    transform: translateY(45%);
+}
+
+
+.dataTables_paginate {
+    .page-item.previous .page-link, .page-item.next .page-link {
+        width: auto;
+        padding: 0 10px;
+        &:hover {
+            background-color: #fff;
+        }
+    }
+}

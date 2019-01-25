@@ -1,0 +1,55 @@
+// Footables
+
+.fooicon {
+	font-family: 'themify' !important;
+}
+.fooicon-search:before {
+    content: "\e610";
+}
+.fooicon-sort:before {
+    content: "\e63f";
+}
+.fooicon-sort-asc:before {
+    content: "\e627";
+}
+.fooicon-sort-desc:before {
+    content: "\e62a";
+}
+.fooicon-remove:before {
+    content: "\e646";
+}
+.fooicon-trash:before {
+	content: "\e605";
+}
+.fooicon-loader:before{
+    content: "\e619";
+}
+.fooicon-plus:before{
+    content: "\e61a";
+}
+.fooicon-minus:before{
+    content: "\e622";
+}
+.fooicon-pencil:before{
+    content: "\e61c";
+}
+.fooicon-eye-close:before{
+    content: "\e63d";
+}
+.fooicon-flash:before{
+    content: "\e652";
+}
+.fooicon-cog:before{
+    content: "\e60f";
+}
+.fooicon-stats:before{
+    content: "\e6bb";
+}
+table>tbody>tr>td>span.footable-toggle {
+	opacity: .5;
+}
+.footable {
+    .open>.dropdown-menu {
+        display: block;
+    }
+}

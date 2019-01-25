@@ -1,0 +1,45 @@
+// BEGIN THEME CONFIG PANEL
+.theme-config
+    .theme-config-toggle
+        i.ti-settings.theme-config-show
+        i.ti-close.theme-config-close
+    .theme-config-box
+        h5.text-center.mb-4.mt-3 SETTINGS
+        .font-strong.mb-3 LAYOUT STYLE
+        .check-list.mb-4
+            label.radio.radio-grey.radio-primary
+                input(type='radio', name='layout-style', value='', checked)
+                span.input-span
+                | Fluid
+            label.radio.radio-grey.radio-primary.mt-3
+                input(type='radio', name='layout-style', value='1')
+                span.input-span
+                | Boxed
+        .mt-4.mb-2.font-strong THEME COLORS
+        div
+            .color-skin-box(data-toggle='tooltip', data-original-title='Gradient Blue', style='background-image: linear-gradient(45deg,#00dcaf 0,#7536e6 100%)')
+                label
+                    input(type='radio', name='setting-theme', value='default', checked)
+                    span.color-check-icon
+                        i.fa.fa-check
+            .color-skin-box(data-toggle='tooltip', data-original-title='Peach', style='background-image: linear-gradient(45deg,#f39c12 0,#e91e63 100%)')
+                label
+                    input(type='radio', name='setting-theme', value='gradient-peach')
+                    span.color-check-icon
+                        i.fa.fa-check
+            .color-skin-box(data-toggle='tooltip', data-original-title='Gradient Purple', style='background-image: linear-gradient(45deg,#ff4081 0,#7536e6 100%)')
+                label
+                    input(type='radio', name='setting-theme', value='gradient-purple')
+                    span.color-check-icon
+                        i.fa.fa-check
+            .color-skin-box.bg-primary(data-toggle='tooltip', data-original-title='Purple')
+                label
+                    input(type='radio', name='setting-theme', value='purple')
+                    span.color-check-icon
+                        i.fa.fa-check
+            .color-skin-box(data-toggle='tooltip', data-original-title='Bright purple' style='background-color:#7536e6')
+                label
+                    input(type='radio', name='setting-theme', value='bright-purple')
+                    span.color-check-icon
+                        i.fa.fa-check
+// END THEME CONFIG PANEL

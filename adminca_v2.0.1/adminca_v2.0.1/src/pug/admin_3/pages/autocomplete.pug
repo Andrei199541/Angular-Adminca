@@ -1,0 +1,34 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Autocomplete'
+  - var pageUrl = 'autocomplete.html'
+  - var page_heading = 'Autocomplete'
+  - var path = ['Forms', 'Autocomplete']
+
+block plugins
+  +script('typeahead.js/dist/typeahead.bundle.min.js', 'plugin')
+
+block content
+  .alert.alert-primary.alert-bordered
+    h4 typeahead.js
+    p a flexible JavaScript library that provides a strong foundation for building robust typeaheads
+    p: a.btn.btn-primary(href='https://twitter.github.io/typeahead.js/', target='_blank') Official Website
+  .row
+    .col-lg-6
+      +panel('Basic Demo')
+        p When initializing a typeahead using the typeahead.js jQuery plugin, you pass the plugin method one or more datasets. The source of a dataset is responsible for computing a set of suggestions for a given query.
+        input#typeahead_1.form-control(placeholder="Countries")
+      +panel('Bloodhound')
+        p For more advanced use cases, rather than implementing the source for your dataset yourself, you can take advantage of Bloodhound, the typeahead.js suggestion engine.
+        input#typeahead_2.form-control(placeholder="Countries")
+    .col-lg-6
+      +panel('Prefetch')
+        p Prefetched data is fetched and processed on initialization. If the browser supports local storage, the processed data will be cached there to prevent additional network requests on subsequent page loads.
+        input#typeahead_3.form-control(placeholder="Countries")
+      +panel('Default Suggestions')
+        p Default suggestions can be shown for empty queries by setting the minLength option to 0 and having the source return suggestions for empty queries.
+        input#typeahead_4.form-control(placeholder="NFL Teams")
+
+block scripts
+  +script('typehead-demo.js', 'page')

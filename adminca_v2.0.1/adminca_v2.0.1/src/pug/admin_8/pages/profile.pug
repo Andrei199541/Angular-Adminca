@@ -1,0 +1,242 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Profile'
+  - var pageUrl = 'profile.html'
+
+block page-header
+  .page-header
+    .ibox.flex-1
+      .ibox-body
+        .flexbox
+          .flexbox-b
+            .ml-5.mr-5
+              +img('users/u8.jpg')(class='img-circle' width='110')
+            div
+              h4 Lynn Weaver
+              .text-muted.font-13.mb-3
+                span.mr-3
+                  i.ti-location-pin.mr-2
+                  | New York, USA
+                span
+                  i.ti-calendar.mr-2
+                  | 12.04.2018
+              div
+                span.mr-3
+                  span.badge.badge-primary.badge-circle.mr-2.font-14(style='height:30px;width:30px')
+                    i.ti-briefcase
+                  | Partner
+                span
+                  span.badge.badge-pink.badge-circle.mr-2.font-14(style='height:30px;width:30px')
+                    i.ti-cup
+                  | Vip Status
+          .d-inline-flex
+            .px-4.text-center
+              .text-muted.font-13 ARTICLES
+              .h2.mt-2 134
+            .px-4.text-center
+              .text-muted.font-13 FOLLOWERS
+              .h2.mt-2 540
+      ul.nav.nav-tabs.tabs-line.m-0.pl-5.pr-3
+        li.nav-item
+          a.nav-link.active(data-toggle='tab') Overview
+        li.nav-item
+          a.nav-link(data-toggle='tab') Profile
+        li.nav-item
+          a.nav-link(data-toggle='tab') Settings
+        li.nav-item
+          a.nav-link(data-toggle='tab') Activity
+
+
+block content
+  .row
+    .col-lg-5
+      .ibox
+        .ibox-body
+          h5.font-strong.mb-4 GENERAL INFORMATION
+          .row.mb-2
+            .col-6.text-muted First Name:
+            .col-6 Lynn
+          .row.mb-2
+            .col-6.text-muted Last Name:
+            .col-6 Weaver
+          .row.mb-2
+            .col-6.text-muted Age:
+            .col-6 26
+          .row.mb-2
+            .col-6.text-muted Position:
+            .col-6 Web Designer
+          .row.mb-2
+            .col-6.text-muted City:
+            .col-6 New York, USA
+          .row.mb-2
+            .col-6.text-muted Address:
+            .col-6 228 Park Ave Str.
+          .row.mb-2
+            .col-6.text-muted Phone:
+            .col-6 +1-202-555-0134
+          .row.mb-2
+            .col-6.text-muted Email:
+            .col-6 lweaver@gmail.com
+      .ibox
+        .ibox-body
+          h5.font-strong.mb-4 SOCIAL ACCOUNTS
+          .flexbox-b.mb-3
+            span.btn-soc-facebook.badge.badge-circle.mr-3
+              i.fa.fa-facebook
+            a.text-primary(href='javascript:;') example.com/lynnweaver
+          .flexbox-b.mb-3
+            span.btn-soc-twitter.badge.badge-circle.mr-3
+              i.fa.fa-twitter
+            a.text-primary(href='javascript:;') example.com/lynnweaver
+          .flexbox-b.mb-3
+            span.btn-soc-pinterest.badge.badge-circle.mr-3
+              i.fa.fa-pinterest-p
+            a.text-primary(href='javascript:;') example.com/lynnweaver
+          .flexbox-b.mb-3
+            span.btn-soc-linkedin.badge.badge-circle.mr-3
+              i.fa.fa-linkedin
+            a.text-primary(href='javascript:;') example.com/lynnweaver
+          .flexbox-b.mb-3
+            span.btn-soc-dribbble.badge.badge-circle.mr-3
+              i.fa.fa-dribbble
+            a.text-primary(href='javascript:;') example.com/lynnweaver
+      .ibox
+        .ibox-body
+          h5.font-strong.mb-4 FOLLOWERS
+          ul.media-list.media-list-divider.mr-2
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u6.jpg')(class='img-circle' width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Connor Perez
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u11.jpg')(class='img-circle' width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Tyrone Carroll
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-primary.btn-rounded Followed
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u10.jpg')(class='img-circle' width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Stella Obrien
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u2.jpg')(class='img-circle' width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Becky Brooks
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u5.jpg')(class='img-circle' width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Bob Gonzalez
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-primary.btn-rounded Followed
+    .col-lg-7
+      .ibox
+        .ibox-body
+          h5.font-strong.mb-4 BIOGRAPHY
+          p
+            | Lorem Ipsum Aliqua id consequat laborum incididunt adipiscing ut consectetur dolor voluptate non est ex dolore voluptate fugiat adipiscing qui deserunt nisi magna irure tempor non cupidatat amet fugiat est ad sint adipiscing est officia cillum consectetur reprehenderit non.
+      .ibox
+        .ibox-body
+          h5.font-strong.mb-4 PROJECTS
+          .flexbox-b.mb-4
+            span.btn-icon-only.btn-pink.font-20.mr-3 AC
+            .flex-1
+              .font-strong.font-16
+                | ADMINCA
+                small.text-muted.float-right 12.07.2018
+              .text-muted Bootstrap Admin Template
+          .row
+            .col-6.flexbox-b
+              i.la.la-calendar-check-o.font-26.text-light.mr-3
+              .flex-1
+                div
+                  span.text-light.mr-3 Tasks:
+                  | 13 / 25
+                .progress.mt-1
+                  .progress-bar(role='progressbar', style='width:52%; height:5px;', aria-valuenow='52', aria-valuemin='0', aria-valuemax='100')
+            .col-6.flexbox-b
+              i.la.la-hourglass-1.font-26.text-light.mr-3
+              .flex-1
+                div
+                  span.text-light.mr-3 Expiration:
+                  | 25.04
+                .progress.mt-1
+                  .progress-bar.bg-success(role='progressbar', style='width:67%; height:5px;', aria-valuenow='67', aria-valuemin='0', aria-valuemax='100')
+      .ibox
+        .ibox-body
+          h5.font-strong.mb-4 ACTIVITY
+          ul.timeline
+            li.timeline-item
+              span.timeline-point
+              | 2 Issue fixed
+              small.float-right.text-muted.ml-2.nowrap Just now
+            li.timeline-item
+              span.timeline-point.bg-warning
+              span
+                | 7 new feedback
+                span.badge.badge-warning.badge-pill.ml-2 important
+              small.float-right.text-muted 5 mins
+            li.timeline-item
+              span.timeline-point.bg-purple
+              span.flexbox
+                | 25 new orders sent
+                i.la.la-truck.font-16.ml-2.text-purple
+              small.float-right.text-muted.ml-2.nowrap 24 mins
+            li.timeline-item
+              span.timeline-point
+              | 12 New orders
+              small.float-right.text-muted.ml-2.nowrap 45 mins
+            li.timeline-item
+              span.timeline-point.bg-warning
+              | 18 new users registered
+              small.float-right.text-muted.ml-2.nowrap 1 hrs
+            li.timeline-item
+              span.timeline-point
+              span
+                | Server Error
+                span.badge.badge-success.badge-pill.ml-2 resolved
+              small.float-right.text-muted 2 hrs
+            li.timeline-item
+              span.timeline-point.bg-purple
+              span
+                | System Warning
+                a.text-purple.ml-2 Check
+              small.float-right.text-muted.ml-2.nowrap 12:07
+            li.timeline-item
+              span.timeline-point.bg-warning
+              | The invoice is ready
+              small.float-right.text-muted.ml-2.nowrap 12:30
+            li.timeline-item
+              span.timeline-point.bg-purple
+              | 5 New Orders
+              small.float-right.text-muted.ml-2.nowrap 13:45
+            li.timeline-item
+              span.timeline-point
+              span.flexbox
+                | Production server up
+                i.la.la-arrow-circle-up.font-18.ml-2.text-success
+              small.float-right.text-muted.ml-2.nowrap 1 days ago
+            li.timeline-item
+              span.timeline-point
+              | Server overloaded 91%
+              small.float-right.text-muted.ml-2.nowrap 2 days ago
+            li.timeline-item
+              span.timeline-point.bg-warning
+              | Server error
+              small.float-right.text-muted.ml-2.nowrap 2 days ago

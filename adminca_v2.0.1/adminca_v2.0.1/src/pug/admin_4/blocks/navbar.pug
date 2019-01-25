@@ -1,0 +1,36 @@
+.top-navbar
+  .wrapper
+    .navbar-tabs-wrapper
+      ul.nav.nav-tabs.top-navbar-tabs
+        li.nav-item: a.nav-link.active(href='#tab-1', data-toggle="tab") DASHBOARDS
+        li.nav-item: a.nav-link(href='#tab-2', data-toggle="tab") PAGES
+        li.nav-item: a.nav-link(href='#tab-3', data-toggle="tab") WIDGETS
+        li.nav-item: a.nav-link(href='#tab-4', data-toggle="tab") COMPONENTS
+        li.nav-item: a.nav-link(href='#tab-5', data-toggle="tab") WIDGETS
+        li.nav-item.dropdown.tabs-dropdown
+          a.nav-link.dropdown-toggle(data-toggle='dropdown'): i.ti-more
+          .dropdown-menu.dropdown-menu-right
+            a.dropdown-item(href='#tab-6', data-toggle='tab') Charts
+            a.dropdown-item(href='#tab-7', data-toggle='tab') Tables
+            a.dropdown-item(href='#tab-8', data-toggle='tab') Forms
+      
+    .tab-content
+      .tab-pane.fade.show.active#tab-1
+        a.active(href='index.html') Dashboard
+        a(href='dashboard_visitors.html') Visitors
+        a(href='dashboard_ecommerce.html') E-Commerce
+        a(href='dashboard_blog.html') Blog
+        a(href='dashboard_5.html') Dashboard v5
+        a(href='dashboard_6.html') Dashboard v6
+        a(href='dashboard_7.html') Dashboard v7
+      .tab-pane.fade#tab-2
+        a(href='mailbox.html') Mailbox
+        a(href='calendar.html') Calendar
+        a(href='search.html') Search
+        a(href='faq.html') FAQ
+      .tab-pane.fade#tab-3
+      .tab-pane.fade#tab-4
+      .tab-pane.fade#tab-5
+      .tab-pane.fade#tab-6
+      .tab-pane.fade#tab-7
+      .tab-pane.fade#tab-8

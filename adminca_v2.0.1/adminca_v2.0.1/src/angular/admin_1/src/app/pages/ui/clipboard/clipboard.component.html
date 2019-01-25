@@ -1,0 +1,35 @@
+<div class="page-heading">
+    <h1 class="page-title">Clipboard.js</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html"><i class="la la-home font-20"></i></a>
+        </li>
+        <li class="breadcrumb-item">Components</li>
+        <li class="breadcrumb-item">Clipboard.js</li>
+    </ol>
+</div>
+<div class="page-content fade-in-up">
+    <div class="alert alert-bordered alert-primary">
+        <p>A modern approach to copy text to clipboard</p>
+        <p>
+            <a class="btn btn-primary" href="https://clipboardjs.com/" target="_blank">Official Website</a>
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Copy to clipboard</div>
+                </div>
+                <div class="ibox-body">
+                    <input class="form-control mb-2" id="input" type="text" value="https://example.com">
+                    <button class="btn btn-primary" data-clipboard="" data-clipboard-target="#input">Copy to clipboard</button>
+                    <button class="btn btn-primary" data-clipboard="" data-clipboard-action="cut" data-clipboard-target="#input">Cut to clipboard</button><br><br>
+                    <p id="copyText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                        make a type specimen book. It has survived not only five centuries.</p>
+                    <button class="btn btn-primary" data-clipboard="" data-clipboard-target="#copyText">Copy paragraph</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

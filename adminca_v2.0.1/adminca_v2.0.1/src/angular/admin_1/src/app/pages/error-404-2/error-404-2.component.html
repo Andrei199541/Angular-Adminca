@@ -1,0 +1,37 @@
+<div class="overlay"></div>
+<div class="error-content">
+    <h1 class="error-code">404</h1>
+    <h3 class="font-strong">NOT FOUND</h3>
+    <p class="mb-4">Sorry, the page you were looking for could not found.</p>
+    <div>
+        <a class="btn btn-primary btn-rounded btn-fix btn-air" routerLink="/index">HOME</a>
+    </div>
+</div>
+
+<style>
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-image: url(./assets/img/icons/search-document-2.svg);
+        background-position: 85% 10px;
+    }
+    .error-content {
+        position: relative;
+        max-width: 400px;
+        margin-top: 100px;
+        margin-left: 80px;
+    }
+
+    .error-code {
+        font-size: 120px;
+        color: #5c6bc0;
+    }
+    body.empty-layout .theme-config, body.empty-layout .to-top{
+        display: none !important;
+    }
+</style>

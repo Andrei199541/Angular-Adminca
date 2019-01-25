@@ -1,0 +1,8 @@
+// Dropzone
+
+.dropzone {border: 2px dashed #5c6bc0;}
+.dz-progress, .dz-image {border-radius: 0 !important}
+.dropzone .dz-preview .dz-progress {border-color: #18C5A9}
+.dropzone .dz-preview .dz-progress .dz-upload {
+	background-color: #18C5A9;
+}

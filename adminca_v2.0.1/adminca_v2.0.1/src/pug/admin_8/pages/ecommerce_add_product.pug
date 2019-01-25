@@ -1,0 +1,90 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'E-commerce Add Product'
+  - var pageUrl = 'ecommerce_add_product.html'
+
+block plugins-styles
+  +link('bootstrap-tagsinput/dist/bootstrap-tagsinput.css','plugin')
+
+block plugins
+  +script('bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js', 'plugin')
+
+block content
+  .ibox
+    .ibox-body
+      h5.font-strong.mb-5 ADD NEW PRODUCT
+      .row
+        .col-lg-4
+          div
+            +img('products/27.jpg')
+          .flexbox-b.mt-4
+            .mr-2
+              +img('products/28.jpg')
+            .mr-2
+              +img('products/29.jpg')
+            .mr-2
+              +img('products/30.jpg')
+            .file-input-plus.file-input
+              i.la.la-plus-circle
+              input(type='file')
+        .col-lg-8
+          form(action='javascript:;')
+            .form-group.mb-4
+              label Product Name
+              input.form-control.form-control-solid(type='text', placeholder='Enter Product Name')
+            .row
+              .col-sm-6.form-group.mb-4
+                label Category
+                div
+                  select.selectpicker.show-tick.form-control(title='Please select', data-style='btn-solid')
+                    optgroup(label='Electronics')
+                      option TV & Video
+                      option Cameras & Photo
+                      option Computers & Tablets
+                    optgroup(label='Fashion')
+                      option Health & Beauty
+                      option Shoes
+                      option Handbags & Purses
+                      option Jewelry and Watches
+              .col-sm-6.form-group.mb-4
+                label SKU
+                input.form-control.form-control-solid(type='text', placeholder='SKU Number')
+            .row
+              .col-sm-4.form-group.mb-4
+                label Price
+                input.form-control.form-control-solid(type='text', placeholder='Unit Price')
+              .col-sm-4.form-group.mb-4
+                label Currency 
+                div
+                  select.selectpicker.show-tick.form-control(title='Please select', data-style='btn-solid')
+                    option USD
+                    option Euro
+                    option Rouble
+                    option Pound
+              .col-sm-4.form-group.mb-4
+                label Quantity
+                input.form-control.form-control-solid(type='text', placeholder='Quantity')
+            .form-group.mb-4
+              label Tags
+              input.tagsinput.form-control.form-control-solid(type='text', placeholder='Tags', value='Fashion,Dress,Broadway,Autumn collection,Shop')
+            .form-group.mb-4
+              label Description
+              textarea.form-control.form-control-solid(rows='4', placeholder='Description')
+            .form-group.mb-4
+              label.ui-switch.switch-icon.mr-3.mb-0
+                input(type='checkbox', checked='')
+                span
+              | Available
+            .text-right
+              button.btn.btn-primary.btn-air.mr-2 Save
+              button.btn.btn-secondary Cancel
+
+block scripts
+  script.
+    $(function(){
+        $('.tagsinput').tagsinput({
+          tagClass: 'label label-primary'
+        });
+        $('.tagsinput.form-control-solid').siblings('.bootstrap-tagsinput').addClass('form-control-solid');
+    });

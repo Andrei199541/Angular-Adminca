@@ -1,0 +1,81 @@
+//== ICON BUTTONS
+
+.btn-icon-only {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    [class*=" la-"] {
+        font-size: 1.4rem;
+    }
+    [class^="ti-"] {
+        font-size: 1.2rem;
+    }
+    [class*=" fa-"] {
+        font-size: 1.3rem;
+    }
+    &.btn-lg, .btn-group-lg & {
+        height: 56px;
+        width: 56px;
+        [class^="ti-"] {
+            font-size: 1.7rem;
+        }
+        [class*="la-"] {
+            font-size: 1.9rem;
+        }
+    }
+    &.btn-sm, .btn-group-sm & {
+        height: 33px;
+        width: 33px;
+        [class^="ti-"] {
+            font-size: 1.1rem;
+        }
+        [class*="la-"] {
+            font-size: 1.3rem;
+        }
+    }
+}
+.btn-icon:not(.btn-labeled) {
+    display: table;
+    margin: 0 auto;
+    & > i {
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 0;
+        padding-right: .5rem;
+    }
+    &.btn-icon-right > i {
+        padding-right: 0;
+        padding-left: .5rem;
+    }
+}
+.btn-icon {
+    [class*=" la-"] {
+        font-size: 1.35rem;
+    }
+    [class^="ti-"] {
+        font-size: 1.1rem;
+    }
+    .btn-lg &, &.btn-lg, .btn-group-lg & {
+        [class^="ti-"] {
+            font-size: 1.35rem;
+        }
+        [class*=" la-"] {
+            font-size: 1.5rem;
+        }
+    }
+    .btn-sm &, &.btn-sm, .btn-group-sm & {
+        [class^="ti-"] {
+            font-size: 1rem;
+        }
+        [class*=" la-"] {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+.btn-circle {
+    border-radius: 50px;
+}

@@ -1,0 +1,147 @@
+<div class="page-heading">
+    <h1 class="page-title">Toastr notifications</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html"><i class="la la-home font-20"></i></a>
+        </li>
+        <li class="breadcrumb-item">Components</li>
+        <li class="breadcrumb-item">Toastr notifications</li>
+    </ol>
+</div>
+<div class="page-content fade-in-up">
+    <a class="btn btn-primary mb-4" href="http://codeseven.github.io/toastr/" target="_blank">Official Website</a>
+    <div class="ibox">
+        <div class="ibox-head">
+            <div class="ibox-title">Toastr Notification</div>
+        </div>
+        <div class="ibox-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input class="form-control" id="title" type="text" placeholder="Enter a title ...">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" id="message" placeholder="Enter a message ..." rows="3"></textarea>
+                    </div>
+                    <div class="form-group check-list">
+                        <label class="checkbox">
+                            <input id="closeButton" type="checkbox" value="checked" checked="">
+                            <span class="input-span"></span>Close Button</label>
+                        <label class="checkbox">
+                            <input id="addBehaviorOnToastClick" type="checkbox" value="checked">
+                            <span class="input-span"></span>Add behavior on toast click</label>
+                        <label class="checkbox">
+                            <input id="debugInfo" type="checkbox" value="checked">
+                            <span class="input-span"></span>Debug</label>
+                        <label class="checkbox">
+                            <input id="progressBar" type="checkbox" value="checked" checked="">
+                            <span class="input-span"></span>Progress Bar</label>
+                        <label class="checkbox">
+                            <input id="preventDuplicates" type="checkbox" value="checked">
+                            <span class="input-span"></span> Prevent Duplicates</label>
+                        <label class="checkbox">
+                            <input id="addClear" type="checkbox" value="checked">
+                            <span class="input-span"></span> Add button to force clearing a toast, ignoring focus</label>
+                        <label class="checkbox">
+                            <input id="newestOnTop" type="checkbox" value="checked">
+                            <span class="input-span"></span> Newest on top</label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group check-list" id="toastTypeGroup">
+                        <label>Toast Type</label>
+                        <label class="radio">
+                            <input type="radio" name="toast" value="success" checked="">
+                            <span class="input-span"></span>Success</label>
+                        <label class="radio">
+                            <input type="radio" name="toast" value="info">
+                            <span class="input-span"></span>Info</label>
+                        <label class="radio">
+                            <input type="radio" name="toast" value="warning">
+                            <span class="input-span"></span>Warning</label>
+                        <label class="radio">
+                            <input type="radio" name="toast" value="error">
+                            <span class="input-span"></span>Error</label>
+                    </div>
+                    <div class="form-group check-list" id="positionGroup">
+                        <label>Position</label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-top-right" checked="">
+                            <span class="input-span"></span>Top Right</label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-bottom-right">
+                            <span class="input-span"></span>Bottom Right</label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-bottom-left">
+                            <span class="input-span"></span>Bottom Left</label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-top-left">
+                            <span class="input-span"></span>Top Left</label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-top-full-width">
+                            <span class="input-span"></span>Top Full Width</label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-bottom-full-width">
+                            <span class="input-span"></span>Bottom Full Width</label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-top-center">
+                            <span class="input-span"></span>Top Center</label>
+                        <label class="radio">
+                            <input type="radio" name="positions" value="toast-bottom-center">
+                            <span class="input-span"></span>Bottom Center</label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label>Show Easing</label>
+                        <input class="form-control" id="showEasing" type="text" value="swing" placeholder="swing, linear">
+                    </div>
+                    <div class="form-group">
+                        <label>Hide Easing</label>
+                        <input class="form-control" id="hideEasing" type="text" value="linear" placeholder="swing, linear">
+                    </div>
+                    <div class="form-group">
+                        <label>Show Method</label>
+                        <input class="form-control" id="showMethod" type="text" value="fadeIn" placeholder="show, fadeIn, slideDown">
+                    </div>
+                    <div class="form-group">
+                        <label>Hide Method</label>
+                        <input class="form-control" id="hideMethod" type="text" value="fadeOut" placeholder="hide, fadeOut, slideUp">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Show Duration</label>
+                        <input class="form-control" id="showDuration" type="text" value="300" placeholder="ms">
+                    </div>
+                    <div class="form-group">
+                        <label>Hide Duration</label>
+                        <input class="form-control" id="hideDuration" type="text" value="1000" placeholder="ms">
+                    </div>
+                    <div class="form-group">
+                        <label>Time out</label>
+                        <input class="form-control" id="timeOut" type="text" value="5000" placeholder="ms">
+                    </div>
+                    <div class="form-group">
+                        <label>Extended time out</label>
+                        <input class="form-control" id="extendedTimeOut" type="text" value="1000" placeholder="ms">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn btn-primary" id="showtoast">Show Toast</button>
+                    <button class="btn btn-secondary" id="cleartoasts">Clear Toasts</button>
+                    <button class="btn btn-secondary" id="clearlasttoast">Clear Last Toast</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <pre id="toastrOptions">\nSettings...            </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

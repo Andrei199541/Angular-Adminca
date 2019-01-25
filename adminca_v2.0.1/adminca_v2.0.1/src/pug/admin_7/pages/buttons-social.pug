@@ -1,0 +1,149 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Social Buttons'
+  - var pageUrl = 'buttons-social.html'
+  - var page_heading = 'Social Buttons'
+  - var path = ['Social Buttons']
+
+block content
+  +panel(title='Social Buttons', boxClass='btn-list-demo')
+    .text-center
+      h5.mb-5 Full name buttons
+      button.btn.btn-soc-facebook.btn-fix: span.btn-icon
+        i.fa.fa-facebook
+        | Facebook
+      button.btn.btn-soc-twitter.btn-fix: span.btn-icon
+        i.fa.fa-twitter
+        | Twitter
+      button.btn.btn-soc-google.btn-fix: span.btn-icon
+        i.fa.fa-google-plus
+        | Google
+      button.btn.btn-soc-linkedin.btn-fix: span.btn-icon
+        i.fa.fa-linkedin
+        | Linkedin
+      button.btn.btn-soc-pinterest.btn-fix: span.btn-icon
+        i.fa.fa-pinterest-p
+        | Pinterest
+      button.btn.btn-soc-vk.btn-fix: span.btn-icon
+        i.fa.fa-vk
+        | Vkontakte
+      button.btn.btn-soc-instagram.btn-fix: span.btn-icon
+        i.fa.fa-instagram
+        | Instagram
+      button.btn.btn-soc-youtube.btn-fix: span.btn-icon
+        i.fa.fa-youtube
+        | Youtube
+      button.btn.btn-soc-dribbble.btn-fix: span.btn-icon
+        i.fa.fa-dribbble
+        | Dribbble
+      button.btn.btn-soc-github.btn-fix: span.btn-icon
+        i.fa.fa-github
+        | Github
+      button.btn.btn-soc-tumblr.btn-fix: span.btn-icon
+        i.fa.fa-tumblr
+        | Tumblr
+      button.btn.btn-soc-flickr.btn-fix: span.btn-icon
+        i.fa.fa-flickr
+        | Flickr
+      button.btn.btn-soc-ok.btn-fix: span.btn-icon
+        i.fa.fa-odnoklassniki
+        | OK
+      button.btn.btn-soc-rss.btn-fix: span.btn-icon
+        i.fa.fa-rss
+        | RSS
+      h5.mb-5.mt-5 Labeled buttons
+      button.btn.btn-soc-facebook.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-facebook
+        | Facebook
+      button.btn.btn-soc-twitter.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-twitter
+        | Twitter
+      button.btn.btn-soc-google.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-google-plus
+        | Google
+      button.btn.btn-soc-linkedin.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-linkedin
+        | Linkedin
+      button.btn.btn-soc-pinterest.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-pinterest-p
+        | Pinterest
+      button.btn.btn-soc-vk.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-vk
+        | Vkontakte
+      button.btn.btn-soc-linkedin.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-linkedin
+        | Linkedin
+      button.btn.btn-soc-instagram.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-instagram
+        | Instagram
+      button.btn.btn-soc-youtube.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-youtube
+        | Youtube
+      button.btn.btn-soc-dribbble.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-dribbble
+        | Dribbble
+      button.btn.btn-soc-github.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-github
+        | Github
+      button.btn.btn-soc-tumblr.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-tumblr
+        | Tumblr
+      button.btn.btn-soc-flickr.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-flickr
+        | Flickr
+      button.btn.btn-soc-ok.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-odnoklassniki
+        | Odnoklassniki
+      button.btn.btn-soc-rss.btn-fix.btn-labeled.btn-labeled-left
+        span.btn-label: i.fa.fa-rss
+        | RSS
+      h5.mb-5.mt-5 Only Icon buttons
+      button.btn.btn-soc-facebook.btn-icon-only: i.fa.fa-facebook
+      button.btn.btn-soc-twitter.btn-icon-only: i.fa.fa-twitter
+      button.btn.btn-soc-google.btn-icon-only: i.fa.fa-google-plus
+      button.btn.btn-soc-linkedin.btn-icon-only: i.fa.fa-linkedin
+      button.btn.btn-soc-pinterest.btn-icon-only: i.fa.fa-pinterest-p
+      button.btn.btn-soc-vk.btn-icon-only: i.fa.fa-vk
+      button.btn.btn-soc-instagram.btn-icon-only: i.fa.fa-instagram
+      button.btn.btn-soc-youtube.btn-icon-only: i.fa.fa-youtube
+      button.btn.btn-soc-dribbble.btn-icon-only: i.fa.fa-dribbble
+      button.btn.btn-soc-github.btn-icon-only: i.fa.fa-github
+      button.btn.btn-soc-tumblr.btn-icon-only: i.fa.fa-tumblr
+      button.btn.btn-soc-flickr.btn-icon-only: i.fa.fa-flickr
+      button.btn.btn-soc-ok.btn-icon-only: i.fa.fa-odnoklassniki
+      button.btn.btn-soc-rss.btn-icon-only: i.fa.fa-rss
+      h5.mb-5.mt-5 Only Icon circle buttons
+      button.btn.btn-soc-facebook.btn-icon-only.btn-circle: i.fa.fa-facebook
+      button.btn.btn-soc-twitter.btn-icon-only.btn-circle: i.fa.fa-twitter
+      button.btn.btn-soc-google.btn-icon-only.btn-circle: i.fa.fa-google-plus
+      button.btn.btn-soc-linkedin.btn-icon-only.btn-circle: i.fa.fa-linkedin
+      button.btn.btn-soc-pinterest.btn-icon-only.btn-circle: i.fa.fa-pinterest-p
+      button.btn.btn-soc-vk.btn-icon-only.btn-circle: i.fa.fa-vk
+      button.btn.btn-soc-instagram.btn-icon-only.btn-circle: i.fa.fa-instagram
+      button.btn.btn-soc-youtube.btn-icon-only.btn-circle: i.fa.fa-youtube
+      button.btn.btn-soc-dribbble.btn-icon-only.btn-circle: i.fa.fa-dribbble
+      button.btn.btn-soc-github.btn-icon-only.btn-circle: i.fa.fa-github
+      button.btn.btn-soc-tumblr.btn-icon-only.btn-circle: i.fa.fa-tumblr
+      button.btn.btn-soc-flickr.btn-icon-only.btn-circle: i.fa.fa-flickr
+      button.btn.btn-soc-ok.btn-icon-only.btn-circle: i.fa.fa-odnoklassniki
+      button.btn.btn-soc-rss.btn-icon-only.btn-circle: i.fa.fa-rss
+      h5.mb-5.mt-5 White Buttons
+      button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air: i.fa.fa-facebook
+      button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air: i.fa.fa-twitter
+      button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air: i.fa.fa-google-plus
+      button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air: i.fa.fa-linkedin
+      button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air: i.fa.fa-pinterest-p
+      button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air: i.fa.fa-vk
+      button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air: i.fa.fa-instagram
+      button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air: i.fa.fa-youtube
+      button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air: i.fa.fa-dribbble
+      button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air: i.fa.fa-github
+      button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air: i.fa.fa-tumblr
+      button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air: i.fa.fa-flickr
+      button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air: i.fa.fa-odnoklassniki
+      button.btn.btn-outline-secondary.btn-icon-only.btn-circle.btn-air: i.fa.fa-rss
+
+block page_styles
+  style.
+    .btn-list-demo *:not(.btn-group):not(.btn-group-justified):not(.btn-group-vertical) > .btn {margin-bottom:15px;margin-right:5px;}

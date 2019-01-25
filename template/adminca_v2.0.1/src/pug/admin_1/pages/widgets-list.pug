@@ -1,0 +1,790 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'App & List Widgets'
+  - var pageUrl = 'widgets-list.html'
+
+block content
+  .row
+    .col-lg-6
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title New Customers
+          .ibox-tools
+            a.dropdown-toggle(data-toggle='dropdown')
+              i.ti-user
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item
+                i.ti-pencil.mr-2
+                | Create
+              a.dropdown-item
+                i.ti-pencil-alt.mr-2
+                | Edit
+              a.dropdown-item
+                i.ti-close.mr-2
+                | Remove
+        .ibox-body
+          ul.media-list.media-list-divider.mr-2.scroller(data-height='470px')
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u8.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Lynn Weaver
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u6.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Connor Perez
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-primary.btn-rounded Followed
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u11.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Tyrone Carroll
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u10.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Stella Obrien
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u2.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Becky Brooks
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u5.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Bob Gonzalez
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-primary.btn-rounded Followed
+    .col-lg-6
+      +panel(title='Logs Timeline', tools={'menu':1}, boxClass='ibox-fullheight')
+        ul.timeline.scroller(data-height='470px')
+          li.timeline-item
+            span.timeline-point
+            | 2 Issue fixed
+            small.float-right.text-muted.ml-2.nowrap Just now
+          li.timeline-item
+            span.timeline-point.bg-warning
+            span
+              | 7 new feedback
+              span.badge.badge-warning.badge-pill.ml-2 important
+            small.float-right.text-muted 5 mins
+          li.timeline-item
+            span.timeline-point.bg-primary
+            span.flexbox
+              | 25 new orders sent
+              i.la.la-truck.font-16.ml-2.text-primary
+            small.float-right.text-muted.ml-2.nowrap 24 mins
+          li.timeline-item
+            span.timeline-point
+            | 12 New orders
+            small.float-right.text-muted.ml-2.nowrap 45 mins
+          li.timeline-item
+            span.timeline-point.bg-warning
+            | 18 new users registered
+            small.float-right.text-muted.ml-2.nowrap 1 hrs
+          li.timeline-item
+            span.timeline-point
+            span
+              | Server Error
+              span.badge.badge-success.badge-pill.ml-2 resolved
+            small.float-right.text-muted 2 hrs
+          li.timeline-item
+            span.timeline-point.bg-primary
+            span
+              | System Warning
+              a.text-primary.ml-2 Check
+            small.float-right.text-muted.ml-2.nowrap 12:07
+          li.timeline-item
+            span.timeline-point.bg-warning
+            | The invoice is ready
+            small.float-right.text-muted.ml-2.nowrap 12:30
+          li.timeline-item
+            span.timeline-point.bg-primary
+            | 5 New Orders
+            small.float-right.text-muted.ml-2.nowrap 13:45
+          li.timeline-item
+            span.timeline-point
+            span.flexbox
+              | Production server up
+              i.la.la-arrow-circle-up.font-18.ml-2.text-success
+            small.float-right.text-muted.ml-2.nowrap 1 days ago
+          li.timeline-item
+            span.timeline-point
+            | Server overloaded 91%
+            small.float-right.text-muted.ml-2.nowrap 2 days ago
+          li.timeline-item
+            span.timeline-point.bg-warning
+            | Server error
+            small.float-right.text-muted.ml-2.nowrap 2 days ago
+  .row
+    .col-xl-6
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title Support Tickets
+          .ibox-tools
+            a.dropdown-toggle.font-18(data-toggle='dropdown')
+              i.ti-ticket
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item
+                i.ti-pencil.mr-2
+                | Create
+              a.dropdown-item
+                i.ti-pencil-alt.mr-2
+                | Edit
+              a.dropdown-item
+                i.ti-close.mr-2
+                | Remove
+        .ibox-body
+          ul.media-list.media-list-divider.scroller.mr-2(data-height='470px')
+            li.media
+              .media-body.d-flex
+                .flex-1
+                  h5.media-heading
+                    a(href='javascript:;') How to install new Adminca
+                  p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla
+                  .d-flex.align-items-center.font-13
+                    +img('users/u11.jpg')(class='img-circle mr-2', width='22')
+                    a.mr-2.text-success(href='javascript:;') Tyrone Carroll
+                    span.text-muted 18 mins ago
+                .text-right(style='width:100px;')
+                  span.badge.badge-primary.badge-pill.mb-2 Open
+                  div
+                    small.text-muted.font-12
+                      i.fa.fa-reply.mr-2
+                      | 2 reply
+            li.media
+              .media-body.d-flex
+                .flex-1
+                  h5.media-heading
+                    a(href='javascript:;') How to compile SaSS
+                  p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla
+                  .d-flex.align-items-center.font-13
+                    +img('users/u10.jpg')(class='img-circle mr-2', width='22')
+                    a.mr-2.text-success(href='javascript:;') Stella Obrien
+                    span.text-muted 45 mins ago
+                .text-right(style='width:100px;')
+                  span.badge.badge-success.badge-pill.mb-2 Pending
+            li.media
+              .media-body.d-flex
+                .flex-1
+                  h5.media-heading
+                    a(href='javascript:;') I need help to update bower
+                  p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla
+                  .d-flex.align-items-center.font-13
+                    +img('users/u6.jpg')(class='img-circle mr-2', width='22')
+                    a.mr-2.text-success(href='javascript:;') Connor Perez
+                    span.text-muted 1 hrs ago
+                .text-right(style='width:100px;')
+                  span.badge.badge-primary.badge-pill.mb-2 In Progress
+                  div
+                    small.text-muted.font-12
+                      i.fa.fa-reply.mr-2
+                      | 2 reply
+            li.media
+              .media-body.d-flex
+                .flex-1
+                  h5.media-heading
+                    a(href='javascript:;') IE7 problem
+                  p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla
+                  .d-flex.align-items-center.font-13
+                    +img('users/u2.jpg')(class='img-circle mr-2', width='22')
+                    a.mr-2.text-success(href='javascript:;') Becky Brooks
+                    span.text-muted 2 hrs ago
+                .text-right(style='width:100px;')
+                  span.badge.badge-success.badge-pill.mb-2 Pending
+            li.media
+              .media-body.d-flex
+                .flex-1
+                  h5.media-heading
+                    a(href='javascript:;') I need help to install Adminca Angular
+                  p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla
+                  .d-flex.align-items-center.font-13
+                    +img('users/u5.jpg')(class='img-circle mr-2', width='22')
+                    a.mr-2.text-success(href='javascript:;') Bob Gonzalez
+                    span.text-muted 2 days ago
+                .text-right(style='width:100px;')
+                  span.badge.badge-secondary.badge-pill.mb-2 Closed
+                  div
+                    small.text-muted.font-12
+                      i.fa.fa-reply.mr-2
+                      | 3 reply
+    .col-lg-6
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title Feeds
+          .ibox-tools
+            a.dropdown-toggle(data-toggle='dropdown')
+              i.ti-notepad
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item
+                i.ti-pencil.mr-2
+                | Create
+              a.dropdown-item
+                i.ti-pencil-alt.mr-2
+                | Edit
+              a.dropdown-item
+                i.ti-close.mr-2
+                | Remove
+        .ibox-body
+          ul.media-list.media-list-divider.scroller(data-height='470px')
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-check
+              .media-body
+                .media-heading
+                  | 2 Issue fixed
+                  small.float-right.text-muted.ml-2 5 mins
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-support
+              .media-body
+                .media-heading.text-success
+                  | 4 New Support Tickets
+                  small.float-right.text-muted.ml-2 7 mins
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-shopping-cart-full
+              .media-body
+                .media-heading
+                  | 7 New Orders
+                  small.float-right.text-muted.ml-2 25 mins
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-harddrives
+              .media-body
+                .media-heading.text-danger
+                  | Server overloaded 91%
+                  small.float-right.text-muted.ml-2 48 mins
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-reload
+              .media-body
+                .media-heading.text-warning
+                  | System Reloaded
+                  small.float-right.text-muted.ml-2 2 hrs
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-user
+              .media-body
+                .media-heading
+                  | 4 New customers
+                  small.float-right.text-muted.ml-2 2 hrs
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-arrow-circle-up
+              .media-body
+                .media-heading.text-success
+                  | Production server up
+                  small.float-right.text-muted.ml-2 12.05
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+            li.media.py-3
+              .media-img
+                span.btn-icon-only.btn-circle.bg-primary-50.text-primary
+                  i.ti-announcement
+              .media-body
+                .media-heading.text-primary
+                  | 7 new feedback
+                  small.float-right.text-muted.ml-2 13:45
+                .font-13.text-light Lorem Ipsum is simply dummy text.
+  .row
+    .col-lg-6
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title Tasks
+          .ibox-tools
+            a.font-18
+              i.ti-plus
+        .ibox-body
+          ul.list-group.list-group-divider.list-group-full.tasks-list
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox', checked='')
+                  span.input-span
+                  span.task-title Make Adminca the best and the most easy admin template
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Create Financial Report
+              .task-data
+                small.text-muted No due date
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox', checked='')
+                  span.input-span
+                  span.task-title Meeting with Ann
+                span.badge.badge-warning.ml-1
+                  i.ti-alarm-clock
+                  |  1 hrs
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Edit the blog post
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Send photos to Jack
+                span.badge.badge-success.ml-1 Today
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Send Financial Reports
+                span.badge.badge-danger.ml-1 Important
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Send message to Bob
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+    
+    .col-lg-6
+      +panel(title='Logs Timeline', tools={'menu':1}, boxClass='ibox-fullheight')
+        ul.timeline.scroller(data-height='400px')
+          li.timeline-item
+            i.ti-check.timeline-icon
+            | 2 Issue fixed
+            small.float-right.text-muted.ml-2.nowrap Just now
+          li.timeline-item
+            i.ti-announcement.timeline-icon
+            span
+              | 7 new feedback
+              span.badge.badge-warning.badge-pill.ml-2 important
+            small.float-right.text-muted 5 mins
+          li.timeline-item
+            i.ti-truck.timeline-icon
+            | 25 new orders sent
+            small.float-right.text-muted.ml-2.nowrap 24 mins
+          li.timeline-item
+            i.ti-shopping-cart.timeline-icon
+            | 12 New orders
+            small.float-right.text-muted.ml-2.nowrap 45 mins
+          li.timeline-item
+            i.ti-user.timeline-icon
+            | 18 new users registered
+            small.float-right.text-muted.ml-2.nowrap 1 hrs
+          li.timeline-item
+            i.ti-harddrives.timeline-icon
+            span
+              | Server Error
+              span.badge.badge-success.badge-pill.ml-2 resolved
+            small.float-right.text-muted 2 hrs
+          li.timeline-item
+            i.ti-info-alt.timeline-icon
+            span
+              | System Warning
+              a.text-primary.ml-2 Check
+            small.float-right.text-muted.ml-2.nowrap 12:07
+          li.timeline-item
+            i.fa.fa-file-excel-o.timeline-icon
+            | The invoice is ready
+            small.float-right.text-muted.ml-2.nowrap 12:30
+          li.timeline-item
+            i.ti-shopping-cart.timeline-icon
+            | 5 New Orders
+            small.float-right.text-muted.ml-2.nowrap 13:45
+          li.timeline-item
+            i.ti-arrow-circle-up.timeline-icon
+            | Production server up
+            small.float-right.text-muted.ml-2.nowrap 1 days ago
+          li.timeline-item
+            i.ti-harddrives.timeline-icon
+            | Server overloaded 91%
+            small.float-right.text-muted.ml-2.nowrap 2 days ago
+          li.timeline-item
+            i.ti-info-alt.timeline-icon
+            | Server error
+            small.float-right.text-muted.ml-2.nowrap 2 days ago
+  
+  .row
+    .col-xl-8
+      +panel('Best Sellers')(tools={'menu':1}, boxClass='ibox-fullheight')
+        ul.media-list.media-list-divider
+          li.media
+            a.media-img(href='javascript:;')
+              +img('products/01.jpg')(height='100')
+            .media-body.d-flex
+              .flex-1
+                h5.media-heading
+                  a(href='javascript:;') Product name
+                .h4.text-success $25
+                p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                .font-13
+                  span.mr-4
+                    | Author: 
+                    a.text-success(href='javascript:;') @Creative
+                  span.text-light.mr-4
+                    i.la.la-heart-o.mr-2.font-16
+                    | 4.8
+                  i.la.la-truck.font-16.text-light(data-toggle='tooltip', data-original-title='Delivery')
+              .text-right(style='width:100px')
+                h3.mb-1.font-strong.text-success
+                  sup $
+                  | 7800
+                .text-muted 312 sales
+          li.media
+            a.media-img(href='javascript:;')
+              +img('products/02.jpg')(height='100')
+            .media-body.d-flex
+              .flex-1
+                h5.media-heading
+                  a(href='javascript:;') Product name
+                .mb-2
+                  span.h4.text-success.mr-2 $28
+                  span.text-muted(style='text-decoration:line-through') $36
+                p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                .font-13
+                  span.mr-4
+                    | Author: 
+                    a.text-success(href='javascript:;') @Creative
+                  span.text-light.mr-4
+                    i.la.la-heart-o.mr-2.font-16
+                    | 4.7
+                  span.text-light.mr-4(data-toggle='tooltip', data-original-title='Discount 30%')
+                    i.la.la-tags.mr-2.font-16
+                    | 30%
+                  i.la.la-truck.font-16.text-light(data-toggle='tooltip', data-original-title='Delivery')
+              .text-right(style='width:100px')
+                h3.mb-1.font-strong.text-success
+                  sup $
+                  | 7560
+                .text-muted 270 sales
+          li.media
+            a.media-img(href='javascript:;')
+              +img('products/03.jpg')(height='100')
+            .media-body.d-flex
+              .flex-1
+                h5.media-heading
+                  a(href='javascript:;') Product name
+                .mb-2
+                  span.h4.text-success.mr-2 $28
+                  span.text-muted(style='text-decoration:line-through') $35
+                p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                .font-13
+                  span.mr-4
+                    | Author: 
+                    a.text-success(href='javascript:;') @Creative
+                  span.text-light.mr-4
+                    i.la.la-heart-o.mr-2.font-16
+                    | 4.5
+                  span.text-light(data-toggle='tooltip', data-original-title='Discount 25%')
+                    i.la.la-tags.mr-2.font-16
+                    | 25%
+              .text-right(style='width:100px')
+                h3.mb-1.font-strong.text-success
+                  sup $
+                  | 6916
+                .text-muted 247 sales
+    .col-xl-4.col-lg-6
+      +panel('Payment Systems')(tools={'menu':1}, boxClass='ibox-fullheight')
+        ul.media-list.media-list-divider
+          li.media
+            a.media-img(href='javascript:;')
+              +img('logos/payment/visa.png')(width='60')
+            .media-body
+              .media-heading
+                | Visa card 
+                h4.font-strong.float-right.text-right
+                  sup $
+                  | 1100
+              p.font-13.m-0.text-light Lorem ipsum dolar set...
+          li.media
+            a.media-img(href='javascript:;')
+              +img('logos/payment/paypal.png')(width='60')
+            .media-body
+              .media-heading
+                | PayPal 
+                h4.font-strong.float-right.text-right
+                  sup $
+                  | 985
+              p.font-13.m-0.text-light Lorem ipsum dolar set...
+          li.media
+            a.media-img(href='javascript:;')
+              +img('logos/payment/mastercard.png')(width='60')
+            .media-body
+              .media-heading
+                | MasterCard 
+                h4.font-strong.float-right.text-right
+                  sup $
+                  | 850
+              p.font-13.m-0.text-light Lorem ipsum dolar set...
+          li.media
+            a.media-img(href='javascript:;')
+              +img('logos/payment/jcb.png')(width='60')
+            .media-body
+              .media-heading
+                | JCB 
+                h4.font-strong.float-right.text-right
+                  sup $
+                  | 690
+              p.font-13.m-0.text-light Lorem ipsum dolar set...
+          li.media
+            a.media-img(href='javascript:;')
+              +img('logos/payment/eps.png')(width='60')
+            .media-body
+              .media-heading
+                | EPS 
+                h4.font-strong.float-right.text-right
+                  sup $
+                  | 520
+              p.font-13.m-0.text-light Lorem ipsum dolar set...
+  
+  .row
+    .col-xl-8
+      +panel('Latest Posts')(tools={'menu':1}, boxClass='ibox-fullheight')
+        ul.media-list.media-list-divider
+          li.media
+            a.media-img.pr-4(href='javascript:;')
+              +img('blog/07.jpeg')(width='120')
+            .media-body.d-flex
+              .flex-1
+                h5.media-heading: a(href='article.html') Web Design Trends
+                p.font-13.text-light Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                .font-13
+                  span.mr-4
+                    | Created: 
+                    a.text-success(href='javascript:;') 10.08.2018
+                  span.text-muted.mr-4
+                    i.fa.fa-heart.mr-2
+                    | 56
+                  span.text-muted
+                    i.fa.fa-comment.mr-2
+                    | 124
+              .text-right(style='width:100px')
+                h3.mb-1.font-strong.text-primary 5800
+                .text-muted views
+          li.media
+            a.media-img.pr-4(href='javascript:;')
+              +img('blog/culinary-1.jpeg')(width='120')
+            .media-body.d-flex
+              .flex-1
+                h5.media-heading: a(href='article.html') Dish of the day
+                p.font-13.text-light Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                .font-13
+                  span.mr-4
+                    | Created: 
+                    a.text-success(href='javascript:;') 10.08.2018
+                  span.text-muted.mr-4
+                    i.fa.fa-heart.mr-2
+                    | 56
+                  span.text-muted
+                    i.fa.fa-comment.mr-2
+                    | 124
+              .text-right(style='width:100px')
+                h3.mb-1.font-strong.text-primary 5240
+                .text-muted views
+          li.media
+            a.media-img.pr-4(href='javascript:;')
+              +img('blog/02.jpg')(width='120')
+            .media-body.d-flex
+              .flex-1
+                h5.media-heading: a(href='article.html') Fashion Trends
+                p.font-13.text-light Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                .font-13
+                  span.mr-4
+                    | Created: 
+                    a.text-success(href='javascript:;') 10.08.2018
+                  span.text-muted.mr-4
+                    i.fa.fa-heart.mr-2
+                    | 56
+                  span.text-muted
+                    i.fa.fa-comment.mr-2
+                    | 124
+              .text-right(style='width:100px')
+                h3.mb-1.font-strong.text-primary 4780
+                .text-muted views
+          li.media
+            a.media-img.pr-4(href='javascript:;')
+              +img('blog/04.jpeg')(width='120')
+            .media-body.d-flex
+              .flex-1
+                h5.media-heading: a(href='article.html') Style of the week
+                p.font-13.text-light Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                .font-13
+                  span.mr-4
+                    | Created: 
+                    a.text-success(href='javascript:;') 10.08.2018
+                  span.text-muted.mr-4
+                    i.fa.fa-heart.mr-2
+                    | 56
+                  span.text-muted
+                    i.fa.fa-comment.mr-2
+                    | 124
+              .text-right(style='width:100px')
+                h3.mb-1.font-strong.text-primary 4200
+                .text-muted views
+    .col-xl-4.col-lg-6
+      +panel('Best Tags')(tools={'menu':1}, boxClass='ibox-fullheight')
+        ul.media-list.media-list-divider
+          li.media
+            a.media-img(href='javascript:;')
+              +img('devicons/bootstrap.svg')(width='40')
+            .media-body.d-flex
+              .flex-1
+                .media-heading Bootstrap
+                p.font-13.m-0.text-light Lorem ipsum dolar set...
+              .text-right.ml-2
+                h4.mb-1.font-strong 1200
+                .text-muted posts
+          li.media
+            a.media-img(href='javascript:;')
+              +img('devicons/angularjs.svg')(width='40')
+            .media-body.d-flex
+              .flex-1
+                .media-heading AngularJS
+                p.font-13.m-0.text-light Lorem ipsum dolar set...
+              .text-right.ml-2
+                h4.mb-1.font-strong 1140
+                .text-muted posts
+          li.media
+            a.media-img(href='javascript:;')
+              +img('devicons/laravel.svg')(width='40')
+            .media-body.d-flex
+              .flex-1
+                .media-heading Laravel
+                p.font-13.m-0.text-light Lorem ipsum dolar set...
+              .text-right.ml-2
+                h4.mb-1.font-strong 980
+                .text-muted posts
+          li.media
+            a.media-img(href='javascript:;')
+              +img('devicons/php.svg')(width='40')
+            .media-body.d-flex
+              .flex-1
+                .media-heading PHP
+                p.font-13.m-0.text-light Lorem ipsum dolar set...
+              .text-right.ml-2
+                h4.mb-1.font-strong 745
+                .text-muted posts
+          li.media
+            a.media-img(href='javascript:;')
+              +img('devicons/react.svg')(width='40')
+            .media-body.d-flex
+              .flex-1
+                .media-heading ReactJS
+                p.font-13.m-0.text-light Lorem ipsum dolar set...
+              .text-right.ml-2
+                h4.mb-1.font-strong 620
+                .text-muted posts
+

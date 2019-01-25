@@ -1,0 +1,34 @@
+
+.pagination {
+    li {
+        margin-right: 5px;
+        & > a, & > span {
+            height: 31px;
+            width: 31px;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: inherit;
+            border-radius: 50% !important;
+            &:hover, &:focus {
+                color: $pagination-item-hover-color;
+                background-color: #e9ecef;
+            }
+        }
+        .page-link-solid {
+            color: $pagination-active-item-color;
+            background-color: #e9ecef;
+        }
+    }
+    .page-item.active .page-link,
+    // support bootstrap 3 for plugins
+    & .active > a, & .active > a:hover, & .active > a:focus,
+    & .active > span, & .active > span:hover, & .active > span:focus {
+        background-color: $pagination-active-item-color;
+        border-color:     $pagination-active-item-color;
+        color: #fff;
+    }
+}

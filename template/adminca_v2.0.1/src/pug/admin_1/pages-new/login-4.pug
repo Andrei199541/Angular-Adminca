@@ -1,0 +1,67 @@
+extends ../layout-simple.pug
+
+block variables
+  - var pageTitle = 'Login v4'
+  - var pageUrl = 'login-4.html'
+
+block content
+  .ibox.login-content
+    .text-center
+      span.auth-head-icon
+        i.la.la-user
+    form#login-form.ibox-body.form-pink(action='javascript:;', method='POST')
+      h4.font-strong.text-center.mb-5 LOG IN
+      .form-group.mb-4
+        input.form-control.form-control-rounded.form-control-air.form-control-lg(type='text', name='email', placeholder='Email')
+      .form-group.mb-4
+        input.form-control.form-control-rounded.form-control-air.form-control-lg(type='password', name='password', placeholder='Password')
+      .flexbox.mb-5
+        span
+          label.ui-switch.ui-switch-pink.switch-icon.mr-2.mb-0
+            input(type='checkbox', checked='')
+            span
+          | Remember
+        a.text-pink(href='forgot_password.html') Forgot password?
+      .text-center.mb-4
+        button.btn.btn-pink.btn-lg.btn-rounded.btn-fix.btn-air(style='width:200px') LOGIN
+  
+block page_styles
+  style.
+    body {
+      background-image: url(./assets/img/blog/18.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .login-content {
+      max-width: 400px;
+      margin: 100px auto 50px;
+    }
+    .auth-head-icon {
+      position: relative;
+      height: 60px;
+      width: 60px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      background-color: #fff;
+      color: #ff4081;
+      box-shadow: 0 5px 20px #d6dee4;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+block scripts
+  script.
+    $(function(){
+      $('#login-form').validate({
+          errorClass:"help-block",
+          rules: {
+              email: {required:true,email:true},
+              password: {required:true}
+          },
+          highlight:function(e){$(e).closest(".form-group").addClass("has-error")},
+          unhighlight:function(e){$(e).closest(".form-group").removeClass("has-error")},
+      });
+    });

@@ -1,0 +1,20 @@
+@import 'white-sidebar';
+
+.header {
+    background-image: linear-gradient(45deg,#00dcaf 0,#7536e6 100%);
+    .page-brand {
+        background-color: transparent;
+    }
+    .sidebar-toggler {
+        .icon-bar {background-color: #fff}
+    }
+    .toolbar-icon:hover {
+        background-color: rgba(0,0,0,.2);
+    }
+    .navbar-toolbar > li > a {
+        color: #fff;
+        &:hover {
+            color: #fff;
+        }
+    }
+}

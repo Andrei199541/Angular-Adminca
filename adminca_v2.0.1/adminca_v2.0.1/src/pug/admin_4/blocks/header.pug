@@ -1,0 +1,53 @@
+header.header
+  .wrapper
+    a(href='index.html').page-brand
+      span.brand Admin<span class="brand-tip">Ca</span>
+    .flexbox.flex-1 
+      // START TOP-LEFT TOOLBAR
+      ul.nav.navbar-toolbar
+        li.dropdown.mega-menu
+          a.nav-link.dropdown-toggle(data-toggle='dropdown').toolbar-icon: i.ti-view-grid
+          .dropdown-menu
+            .dropdown-arrow
+            .mega-toolbar-menu
+              .d-flex
+                a.mega-toolbar-item(href='javascript:;')
+                  .item-icon: i.ti-file
+                  .item-name Reports
+                  .item-text Lorem Ipsum is simply dummy.
+                  .item-details 74 New
+                a.mega-toolbar-item(href='javascript:;')
+                  .item-icon: i.ti-shopping-cart-full
+                  .item-name Orders
+                  .item-text Lorem Ipsum is simply dummy.
+                  .item-details 125 New
+              .d-flex
+                a.mega-toolbar-item(href='javascript:;')
+                  .item-icon: i.ti-wallet
+                  .item-name Profit
+                  .item-text Lorem Ipsum is simply dummy.
+                  .item-details
+                    | +1200
+                    sup $
+                a.mega-toolbar-item(href='javascript:;')
+                  .item-icon: i.ti-support
+                  .item-name Support
+                  .item-text Lorem Ipsum is simply dummy.
+                  .item-details 54 New Ticket
+
+        li
+          a.nav-link.search-toggler.js-search-toggler
+            i.ti-search
+            span Search here...
+      // END TOP-LEFT TOOLBAR
+      // START TOP-RIGHT TOOLBAR
+      ul.nav.navbar-toolbar
+        li.timeout-toggler
+          a.nav-link(data-toggle='modal' data-target='#session-dialog').toolbar-icon
+            i.ti-alarm-clock.timeout-toggler-icon.rel
+              span.notify-signal
+        include header/inbox.pug
+        include header/notification.pug
+        include header/user.pug
+      // END TOP-RIGHT TOOLBAR
+

@@ -1,0 +1,48 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Dropzone File Upload'
+  - var pageUrl = 'form_dropzone.html'
+  - var page_heading = 'Dropzone File Upload'
+  - var path = ['Forms', 'Dropzone File Upload']
+
+block plugins-styles
+  +link('dropzone/dist/min/dropzone.min.css','plugin')
+  +link('dropzone/dist/min/basic.min.css','plugin')
+
+block plugins
+  +script('dropzone/dist/min/dropzone.min.js', 'plugin')
+
+block content
+  .ibox
+    .ibox-head
+      .ibox-title
+        | Dropzone File Upload
+        a.btn.btn-sm.btn-primary.ml-2(href="http://www.dropzonejs.com/" target="_blank") Official site
+    .ibox-body
+      form#mydropzone.dropzone(action='./assets/demo/server.php')
+        .fallback: input(name='file', type='file', multiple='multiple')
+      br
+      div
+        | All avalible options and full documentation you can find in: 
+        a(href='http://www.dropzonejs.com/', target='_blank') http://www.dropzonejs.com/
+
+block scripts
+  script.
+        Dropzone.options.mydropzone = {
+            paramName: "file", // The name that will be used to transfer the file
+            maxFilesize: 5, // MB
+            dictDefaultMessage: '<div class="text-center mb-3"><i class="la la-cloud-upload text-primary" style="font-size:50px"></i></div> <strong>Drop files here or click to upload. </strong></br> (This is just a demo dropzone. Selected files are not actually uploaded.)',
+            init: function() {
+                this.on("addedfile", function(file){
+                    var removeButton = Dropzone.createElement("<a href='javascript:;'' class='btn btn-danger btn-sm btn-block'>Remove</a>");
+                    var _this = this;
+                    removeButton.addEventListener("click", function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        _this.removeFile(file);
+                    });
+                    file.previewElement.appendChild(removeButton);
+                });
+            }
+        }

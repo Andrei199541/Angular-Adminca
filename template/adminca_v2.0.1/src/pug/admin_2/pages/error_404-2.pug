@@ -1,0 +1,31 @@
+extends ../layout-simple.pug
+
+block variables
+  - var pageTitle = 'Error 404 v2'
+  - var pageUrl = 'error_404-2.html'
+
+block content
+  .error-content
+    h1.error-code 404
+    h3.font-strong NOT FOUND
+    p.mb-4 Sorry, the page you were looking for could not found.
+    div
+      a.btn.btn-primary.btn-rounded.btn-fix.btn-air(href="index.html") HOME
+
+block page_styles
+  style.
+    body {
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-image: url(./assets/img/icons/search-document-2.svg);
+      background-position: 85% 10px;
+    }
+    .error-content {
+      max-width: 400px;
+      margin-top: 100px;
+      margin-left: 80px;
+    }
+    .error-code {
+      font-size:120px;
+      color: #5c6bc0;
+    }

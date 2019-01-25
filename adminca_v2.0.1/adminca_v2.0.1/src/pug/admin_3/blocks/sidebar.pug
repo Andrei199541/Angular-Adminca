@@ -1,0 +1,34 @@
+
+mixin navItem(item, current)
+  if !item.header
+    if !item.childrens
+      li
+        a(href=item.url class=current===item.url ? 'active' : '')
+          i.sidebar-item-icon(class=item.icon)
+          span.nav-label!= item.name
+    else
+      - var x = 0;
+      each i in item.childrens
+        if current === i.url
+          - x = current;
+      li(class=current===x ? 'active' : '')
+        a(href='javascript:;')
+          i.sidebar-item-icon(class=item.icon)
+          span.nav-label= item.name
+        .nav-2-level
+          ul
+            each i in item.childrens
+              li
+                if !i.childrens
+                  a(href=i.url class=current===i.url ? 'active' : '')= i.name
+                else
+                  a(href='javascript:;')= i.name
+                  ul.nav-3-level
+                    each ii in i.childrens
+                      li: a(href=i.url ? i.url : 'javascript:;')= ii.name
+
+nav#sidebar.page-sidebar
+  #sidebar-collapse
+    ul.side-menu
+      each i in menu1
+        +navItem(i, pageUrl)

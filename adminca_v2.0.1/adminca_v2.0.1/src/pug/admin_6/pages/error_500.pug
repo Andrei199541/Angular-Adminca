@@ -1,0 +1,40 @@
+extends ../layout-simple.pug
+
+block variables
+  - var pageTitle = 'Error 500'
+  - var pageUrl = 'error_500.html'
+
+block content
+  .error-content.flexbox
+    span.error-icon
+    .flex-1
+      h1.error-code 500
+      h3.font-strong Internal Server Error
+      p.mb-4 There is a problem with server.
+      div
+        a.text-primary(href="index.html") Go Homepage
+
+block page_styles
+  style.
+    body {
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-image: url(./assets/img/icons/server-error-2.svg);
+      background-position: 80% 10px;
+    }
+    .error-content {
+      max-width: 620px;
+      margin: 200px auto 0;
+    }
+    .error-icon {
+      height: 160px;
+      width: 160px;
+      background-image: url(./assets/img/icons/server-error.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-right: 80px;
+    }
+    .error-code {
+      font-size:120px;
+      color: #5c6bc0;
+    }

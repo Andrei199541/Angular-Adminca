@@ -1,0 +1,85 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Tree view'
+  - var pageUrl = 'tree_view.html'
+  - var page_heading = 'Tree view'
+  - var path = ['Components', 'Tree view']
+
+block plugins-styles
+  +link('jstree/dist/themes/default/style.min.css','plugin')
+
+block plugins
+  +script('jstree/dist/jstree.min.js', 'plugin')
+
+block scripts
+  +script('tree-view-demo.js', 'page')
+
+block content
+    .alert.alert-primary.alert-bordered
+        h4 jsTree jQuery Plugin
+        p jsTree is jquery plugin, that provides interactive trees. It is absolutely free, open source and distributed under the MIT license. jsTree is easily extendable, themable and configurable, it supports HTML & JSON data sources and AJAX loading.
+        p: a.btn.btn-primary(href='https://www.jstree.com/', target='_blank') Official Website
+    .row
+      .col-md-6
+        +panel('Basic')
+            p Basic example with icons Drag & Drop and Contextual Menu
+            #jstree
+                ul
+                    li.jstree-open
+                        | Admin theme
+                        ul
+                            li.jstree-open
+                                | assets
+                                ul
+                                    li.jstree-open
+                                        | html
+                                        ul
+                                            li(data-jstree='{"type":"html"}') index.html
+                                            li(data-jstree='{"type":"html"}') dashboard.html
+                                    li
+                                        | css
+                                        ul
+                                            li(data-jstree='{"type":"css"}') style.css
+                                            li(data-jstree='{"type":"css"}') plugins.css
+                                    li.jstree-open
+                                        | js
+                                        ul
+                                            li(data-jstree='{"type":"js"}') bootstrap.js
+                                            li(data-jstree='{"type":"js"}') jquery.js
+                                            li(data-jstree='{"type":"js"}') app.js
+                            li
+                                | fonts
+                                ul
+                                    li(data-jstree='{"type":"file"}') glyphicons-halflings-regular.eot
+                                    li(data-jstree='{"type":"file"}') glyphicons-halflings-regular.svg
+                                    li(data-jstree='{"type":"file"}') glyphicons-halflings-regular.ttf
+                                    li(data-jstree='{"type":"file"}') glyphicons-halflings-regular.woff
+                            li.jstree-open
+                                | img
+                                ul
+                                    li(data-jstree='{"type":"img"}') logo.jpg
+                                    li(data-jstree='{"type":"img"}') logo-small.png
+                                    li(data-jstree='{"type":"img"}') avatar.png
+                            li
+                                | Media
+                                ul
+                                    li(data-jstree='{"type":"video"}') video.avi
+                                    li(data-jstree='{"type":"video"}') video2.avi
+                                    li(data-jstree='{"type":"audio"}') audio.mp3
+                                    li(data-jstree='{"type":"audio"}') audio2.mp3
+                            li
+                                | Docs
+                                ul
+                                    li(data-jstree='{"icon":"fa fa-file-excel-o"}') excel.xlsx
+                                    li(data-jstree='{"icon":"fa fa-file-word-o"}') word.docx
+                                    li(data-jstree='{"icon":"fa fa-file-powerpoint-o"}') powerpoint.pptx
+                                    li(data-jstree='{"icon":"fa fa-file-pdf-o"}') layout.pdf
+                            li.text-success(data-jstree='{"type":"html"}')  index.html
+                            li(data-jstree='{"type":"file"}')  .htaccess
+                            li(data-jstree='{"icon":"fa fa-file-image-o"}')  favicon.ico
+                            li(data-jstree='{"icon":"fa fa-file-archive-o"}')  archive.zip
+      
+      .col-md-6
+        +panel('JSON data')
+          #jstree-json

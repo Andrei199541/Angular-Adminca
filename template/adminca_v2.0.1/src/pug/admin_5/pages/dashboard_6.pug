@@ -1,0 +1,909 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Dashboard v6'
+  - var pageUrl = 'dashboard_6.html'
+
+block plugins-styles
+  +link('fullcalendar/dist/fullcalendar.min.css', 'plugin')
+  +link('fullcalendar/dist/fullcalendar.print.min.css', 'plugin')(media='print')
+  +link('smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css', 'plugin')
+
+block plugins
+  +script('chart.js/dist/Chart.min.js', 'plugin')
+  +script('jquery.easy-pie-chart/dist/jquery.easypiechart.min.js', 'plugin')
+  +script('moment/min/moment.min.js', 'plugin')
+  +script('fullcalendar/dist/fullcalendar.min.js', 'plugin')
+  +script('smalot-bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js', 'plugin')
+
+block content
+  .row
+    .col-xl-4
+      .ibox.ibox-fullheight(style='min-height:480px;')
+        .ibox-head
+          .ibox-title SUBSCRIPTIONS
+          .ibox-tools
+            a.font-18(href='javascript:;')
+              i.ti-control-record
+        .ibox-body
+          .flexbox.mb-3
+            span.flexbox
+              span.btn-icon-only.btn-circle.bg-primary-50.text-primary.mr-3
+                i.ti-cup
+              span BASIC PLAN
+            span.h3.mb-0.text-primary.font-strong.ml-2 +1250
+          .flexbox.mb-3
+            span.flexbox
+              span.btn-icon-only.btn-circle.bg-success-50.text-success.mr-3
+                i.ti-briefcase
+              span BUSINESS PLAN
+            span.h3.mb-0.text-success.font-strong.ml-2 +890
+          .flexbox.mb-3
+            span.flexbox
+              span.btn-icon-only.btn-circle.bg-pink-50.text-pink.mr-3
+                i.ti-gift
+              span EXPANDED PLAN
+            span.h3.mb-0.text-pink.font-strong.ml-2 +720
+          .abs-bottom
+            canvas#chart_1(style='height:220px;')
+    .col-xl-4
+      .ibox.ibox-fullheight(style='min-height:480px;')
+        .ibox-head
+          .ibox-title Statistics
+          .ibox-tools
+            a.font-18(href='javascript:;')
+              i.ti-control-record
+        .ibox-body
+          .row.align-items-center.mt-4.mb-4
+            .col-md-6
+              .easypie.centered(data-percent='73', data-bar-color='#18C5A9', data-size="120", data-line-width="8")
+                span.easypie-data.h3.font-strong
+                  | 73
+                  sup %
+            .col-md-6
+              .mb-4.text-success
+                i.ti-desktop.mr-2
+                | Desktop 52%
+              .mb-4.text-warning
+                i.ti-tablet.mr-2
+                | Tablet 27%
+              .mb-.text-info
+                i.ti-mobile.mr-2
+                | Mobile 21%
+          .d-flex.justify-content-between.mb-4
+            .text-center
+              .mb-1.text-success.h2 2400
+              .text-muted PAGE VIEWS
+            .text-center
+              .mb-1.text-success.h2 $5200
+              .text-muted MONTH INCOME
+        .abs-bottom(style='background-color:#f3f6fb;')
+          canvas#chart_b(style='height:100px;')
+    .col-xl-4
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title LOGS TIMELINE
+          .ibox-tools
+            a.dropdown-toggle(data-toggle='dropdown')
+              i.ti-more-alt
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item
+                i.ti-pencil
+                | Create
+              a.dropdown-item
+                i.ti-pencil-alt
+                | Edit
+              a.dropdown-item
+                i.ti-close
+                | Remove
+        .ibox-body
+          ul.timeline.scroller(data-height='370px')
+            li.timeline-item
+              span.timeline-point
+              | 2 Issue fixed
+              small.float-right.text-muted.ml-2.nowrap Just now
+            li.timeline-item
+              span.timeline-point.bg-warning
+              span
+                | 7 new feedback
+                span.badge.badge-warning.badge-pill.ml-2 important
+              small.float-right.text-muted 5 mins
+            li.timeline-item
+              span.timeline-point.bg-primary
+              span.flexbox
+                | 25 new orders sent
+                i.la.la-truck.font-16.ml-2.text-primary
+              small.float-right.text-muted.ml-2.nowrap 24 mins
+            li.timeline-item
+              span.timeline-point
+              | 12 New orders
+              small.float-right.text-muted.ml-2.nowrap 45 mins
+            li.timeline-item
+              span.timeline-point.bg-warning
+              | 18 new users registered
+              small.float-right.text-muted.ml-2.nowrap 1 hrs
+            li.timeline-item
+              span.timeline-point
+              span
+                | Server Error
+                span.badge.badge-success.badge-pill.ml-2 resolved
+              small.float-right.text-muted 2 hrs
+            li.timeline-item
+              span.timeline-point.bg-primary
+              span
+                | System Warning
+                a.text-primary.ml-2 Check
+              small.float-right.text-muted.ml-2.nowrap 12:07
+            li.timeline-item
+              span.timeline-point.bg-warning
+              | The invoice is ready
+              small.float-right.text-muted.ml-2.nowrap 12:30
+            li.timeline-item
+              span.timeline-point.bg-primary
+              | 5 New Orders
+              small.float-right.text-muted.ml-2.nowrap 13:45
+            li.timeline-item
+              span.timeline-point
+              span.flexbox
+                | Production server up
+                i.la.la-arrow-circle-up.font-18.ml-2.text-success
+              small.float-right.text-muted.ml-2.nowrap 1 days ago
+            li.timeline-item
+              span.timeline-point
+              | Server overloaded 91%
+              small.float-right.text-muted.ml-2.nowrap 2 days ago
+            li.timeline-item
+              span.timeline-point.bg-warning
+              | Server error
+              small.float-right.text-muted.ml-2.nowrap 2 days ago
+  .row
+    .col-xl-8
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title LATEST POSTS
+          .ibox-tools
+            a.dropdown-toggle(data-toggle='dropdown')
+              i.ti-more-alt
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item
+                i.ti-pencil
+                | Create
+              a.dropdown-item
+                i.ti-pencil-alt
+                | Edit
+              a.dropdown-item
+                i.ti-close
+                | Remove
+        .ibox-body
+          ul.media-list.media-list-divider
+            li.media
+              a.media-img.pr-4(href='javascript:;')
+                +img('blog/07.jpeg')(width='120')
+              .media-body.d-flex
+                .flex-1
+                  h5.media-heading
+                    a(href='article.html') Web Design Trends
+                  p.font-13.text-light Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                  .font-13
+                    span.mr-4
+                      | Created: 
+                      a.text-success(href='javascript:;') 10.08.2018
+                    span.text-muted.mr-4
+                      i.fa.fa-heart.mr-2
+                      | 56
+                    span.text-muted
+                      i.fa.fa-comment.mr-2
+                      | 124
+                .text-right.ml-3
+                  h3.mb-1.font-strong.text-primary 5800
+                  .text-muted views
+            li.media
+              a.media-img.pr-4(href='javascript:;')
+                +img('blog/culinary-1.jpeg')(width='120')
+              .media-body.d-flex
+                .flex-1
+                  h5.media-heading
+                    a(href='article.html') Dish of the day
+                  p.font-13.text-light Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                  .font-13
+                    span.mr-4
+                      | Created: 
+                      a.text-success(href='javascript:;') 10.08.2018
+                    span.text-muted.mr-4
+                      i.fa.fa-heart.mr-2
+                      | 56
+                    span.text-muted
+                      i.fa.fa-comment.mr-2
+                      | 124
+                .text-right.ml-3
+                  h3.mb-1.font-strong.text-primary 5240
+                  .text-muted views
+            li.media
+              a.media-img.pr-4(href='javascript:;')
+                +img('blog/02.jpg')(width='120')
+              .media-body.d-flex
+                .flex-1
+                  h5.media-heading
+                    a(href='article.html') Fashion Trends
+                  p.font-13.text-light Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                  .font-13
+                    span.mr-4
+                      | Created: 
+                      a.text-success(href='javascript:;') 10.08.2018
+                    span.text-muted.mr-4
+                      i.fa.fa-heart.mr-2
+                      | 56
+                    span.text-muted
+                      i.fa.fa-comment.mr-2
+                      | 124
+                .text-right.ml-3
+                  h3.mb-1.font-strong.text-primary 4780
+                  .text-muted views
+            li.media
+              a.media-img.pr-4(href='javascript:;')
+                +img('blog/04.jpeg')(width='120')
+              .media-body.d-flex
+                .flex-1
+                  h5.media-heading
+                    a(href='article.html') Style of the week
+                  p.font-13.text-light Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                  .font-13
+                    span.mr-4
+                      | Created: 
+                      a.text-success(href='javascript:;') 10.08.2018
+                    span.text-muted.mr-4
+                      i.fa.fa-heart.mr-2
+                      | 56
+                    span.text-muted
+                      i.fa.fa-comment.mr-2
+                      | 124
+                .text-right.ml-3
+                  h3.mb-1.font-strong.text-primary 4200
+                  .text-muted views
+    .col-xl-4
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title NEW CUSTOMERS
+          .ibox-tools
+            a.dropdown-toggle(data-toggle='dropdown')
+              i.ti-user
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item
+                i.ti-pencil.mr-2
+                | Create
+              a.dropdown-item
+                i.ti-pencil-alt.mr-2
+                | Edit
+              a.dropdown-item
+                i.ti-close.mr-2
+                | Remove
+        .ibox-body
+          ul.media-list.media-list-divider.mr-2.scroller(data-height='480px')
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u8.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Lynn Weaver
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u6.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Connor Perez
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-primary.btn-rounded Followed
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u11.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Tyrone Carroll
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u10.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Stella Obrien
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u2.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Becky Brooks
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u5.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Bob Gonzalez
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-primary.btn-rounded Followed
+  .ibox
+    .ibox-head
+      .ibox-title CALENDAR
+      button.btn.btn-primary.btn-rounded.btn-air.my-3(data-toggle="modal", data-target="#new-event-modal")
+        span.btn-icon
+          i.la.la-plus
+          | New Event
+    .ibox-body
+      #calendar
+  .row
+    .col-xl-7
+      +panel('LATEST ORDERS')(tools={'menu':1}, boxClass='ibox-fullheight')
+        .flexbox.mb-4
+          .flexbox
+            span.flexbox.mr-3
+              span.mr-2.text-muted Paid
+              span.h3.mb-0.text-primary.font-strong 310
+            span.flexbox
+              span.mr-2.text-muted Unpaid
+              span.h3.mb-0.text-pink.font-strong 105
+          a.flexbox(href='ecommerce_orders_list.html', target='_blank')
+            | VIEW ALL
+            i.ti-arrow-circle-right.ml-2.font-18
+        .ibox-fullwidth-block
+          table.table.table-hover
+            thead.thead-default.thead-lg
+              tr
+                th.pl-4 Order ID
+                th Customer
+                th Amount
+                th Status
+                th.pr-4(style='width:91px') Date
+            tbody
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1254
+                td Becky Brooks
+                td $457.00
+                td
+                  span.badge.badge-success.badge-pill Shipped
+                td.pr-4 17.05.2018
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1253
+                td Emma Johnson
+                td $1200.00
+                td
+                  span.badge.badge-success.badge-pill Shipped
+                td.pr-4 17.05.2018
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1252
+                td Noah Williams
+                td $780.00
+                td
+                  span.badge.badge-primary.badge-pill Pending
+                td.pr-4 17.05.2018
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1251
+                td Sophia Jones
+                td $105.60
+                td
+                  span.badge.badge-success.badge-pill Completed
+                td.pr-4 17.05.2018
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1250
+                td Jacob Brown
+                td $40.00
+                td
+                  span.badge.badge-primary.badge-pill Pending
+                td.pr-4 17.05.2018
+              tr
+                td.pl-4: a(href='ecommerce_order_details.html', target='_blank') #1249
+                td James Davis
+                td $78.00
+                td
+                  span.badge.badge-danger.badge-pill Canceled
+                td.pr-4 17.05.2018
+    .col-xl-5
+      +panel('PAYMENT SYSTEMS')(tools={'menu':1}, boxClass='ibox-fullheight')
+        ul.media-list.media-list-divider
+          li.media
+            .media-img
+              +img('logos/payment/visa.png')(width='60')
+            .media-body
+              .media-heading
+                | Visa card 
+                h4.font-strong.float-right.text-right
+                  sup $
+                  | 1100
+              p.font-13.m-0.text-light Lorem ipsum dolar set...
+          li.media
+            .media-img
+              +img('logos/payment/paypal.png')(width='60')
+            .media-body
+              .media-heading
+                | PayPal 
+                h4.font-strong.float-right.text-right
+                  sup $
+                  | 985
+              p.font-13.m-0.text-light Lorem ipsum dolar set...
+          li.media
+            .media-img
+              +img('logos/payment/mastercard.png')(width='60')
+            .media-body
+              .media-heading
+                | MasterCard 
+                h4.font-strong.float-right.text-right
+                  sup $
+                  | 850
+              p.font-13.m-0.text-light Lorem ipsum dolar set...
+          li.media
+            .media-img
+              +img('logos/payment/jcb.png')(width='60')
+            .media-body
+              .media-heading
+                | JCB 
+                h4.font-strong.float-right.text-right
+                  sup $
+                  | 690
+              p.font-13.m-0.text-light Lorem ipsum dolar set...
+          li.media
+            .media-img
+              +img('logos/payment/eps.png')(width='60')
+            .media-body
+              .media-heading
+                | EPS 
+                h4.font-strong.float-right.text-right
+                  sup $
+                  | 520
+              p.font-13.m-0.text-light Lorem ipsum dolar set...
+  .row
+    .col-xl-8
+      +panel('BEST SELLERS')(tools={'menu':1}, boxClass='ibox-fullheight')
+        ul.media-list.media-list-divider
+          li.media
+            a.media-img(href='javascript:;')
+              +img('products/01.jpg')(height='100')
+            .media-body.d-flex
+              .flex-1
+                h5.media-heading
+                  a(href='javascript:;') Product name
+                .h4.text-success $25
+                p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                .font-13
+                  span.mr-4
+                    | Author: 
+                    a.text-success(href='javascript:;') @Creative
+                  span.text-light.mr-4
+                    i.la.la-heart-o.mr-2.font-16
+                    | 4.8
+                  i.la.la-truck.font-16.text-light(data-toggle='tooltip', data-original-title='Delivery')
+              .text-right(style='width:100px')
+                h3.mb-1.font-strong.text-success
+                  sup $
+                  | 7800
+                .text-muted 312 sales
+          li.media
+            a.media-img(href='javascript:;')
+              +img('products/02.jpg')(height='100')
+            .media-body.d-flex
+              .flex-1
+                h5.media-heading
+                  a(href='javascript:;') Product name
+                .mb-2
+                  span.h4.text-success.mr-2 $28
+                  span.text-muted(style='text-decoration:line-through') $36
+                p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                .font-13
+                  span.mr-4
+                    | Author: 
+                    a.text-success(href='javascript:;') @Creative
+                  span.text-light.mr-4
+                    i.la.la-heart-o.mr-2.font-16
+                    | 4.7
+                  span.text-light.mr-4(data-toggle='tooltip', data-original-title='Discount 30%')
+                    i.la.la-tags.mr-2.font-16
+                    | 30%
+                  i.la.la-truck.font-16.text-light(data-toggle='tooltip', data-original-title='Delivery')
+              .text-right(style='width:100px')
+                h3.mb-1.font-strong.text-success
+                  sup $
+                  | 7560
+                .text-muted 270 sales
+          li.media
+            a.media-img(href='javascript:;')
+              +img('products/03.jpg')(height='100')
+            .media-body.d-flex
+              .flex-1
+                h5.media-heading
+                  a(href='javascript:;') Product name
+                .mb-2
+                  span.h4.text-success.mr-2 $28
+                  span.text-muted(style='text-decoration:line-through') $35
+                p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla ut sint
+                .font-13
+                  span.mr-4
+                    | Author: 
+                    a.text-success(href='javascript:;') @Creative
+                  span.text-light.mr-4
+                    i.la.la-heart-o.mr-2.font-16
+                    | 4.5
+                  span.text-light(data-toggle='tooltip', data-original-title='Discount 25%')
+                    i.la.la-tags.mr-2.font-16
+                    | 25%
+              .text-right(style='width:100px')
+                h3.mb-1.font-strong.text-success
+                  sup $
+                  | 6916
+                .text-muted 247 sales
+    .col-xl-4.col-lg-6
+      +panel('POPULAR CATEGORIES')(tools={'menu':1}, boxClass='ibox-fullheight')
+        ul.media-list.media-list-divider
+          li.media.flexbox
+            div
+              .media-heading TV & Video
+              .font-13.text-light Lorem ipsum dolar set...
+            h4.font-strong.mb-0.ml-3.text-primary +1200
+          li.media.flexbox
+            div
+              .media-heading Health & Beauty
+              .font-13.text-light Lorem ipsum dolar set...
+            h4.font-strong.mb-0.ml-3.text-primary +1005
+          li.media.flexbox
+            div
+              .media-heading Computers & Tablets
+              .font-13.text-light Lorem ipsum dolar set...
+            h4.font-strong.mb-0.ml-3.text-primary +880
+          li.media.flexbox
+            div
+              .media-heading Jewelry and Watches
+              .font-13.text-light Lorem ipsum dolar set...
+            h4.font-strong.mb-0.ml-3.text-primary +725
+          li.media.flexbox
+            div
+              .media-heading Handbags & Purses
+              .font-13.text-light Lorem ipsum dolar set...
+            h4.font-strong.mb-0.ml-3.text-primary +510
+          li.media.flexbox
+            div
+              .media-heading Cameras & Photo
+              .font-13.text-light Lorem ipsum dolar set...
+            h4.font-strong.mb-0.ml-3.text-primary +323
+  .row
+    .col-lg-8
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title
+            span.btn-icon-only.btn-circle.bg-primary-50.text-primary.mr-3
+              i.ti-email
+            | Email distribution
+        .ibox-body
+          .flexbox.mb-4
+            .flexbox
+              span.flexbox.mr-3
+                span.mr-2.text-muted Sent
+                span.h3.mb-0.text-primary.font-strong 310
+              span.flexbox
+                span.mr-2.text-muted Queue
+                span.h3.mb-0.text-pink.font-strong 105
+            a.flexbox(href='javascript:;', target='_blank')
+              | VIEW ALL
+              i.ti-arrow-circle-right.ml-2.font-18
+          .ibox-fullwidth-block
+            table.table
+              thead.thead-default.thead-lg
+                tr
+                  th.pl-4 Subject
+                  th Quantity
+                  th Reference
+                  th.pr-4 Percent
+              tbody
+                tr
+                  td.pl-4
+                    .flexbox-b
+                      span.btn-icon-only.btn-primary.font-20.mr-3 AC
+                      div
+                        h6.mb-1 Try New version of Adminca
+                        div
+                          span.text-muted.font-13
+                            i.ti-calendar.mr-2
+                            | 20.04.2018
+                  td
+                    h4.font-strong.text-light.mb-0 1400
+                  td
+                    h4.font-strong.text-primary.mb-0 820
+                  td.pr-4
+                    .easypie(data-percent='59', data-bar-color='#5c6bc0', data-size='56', data-line-width='3')
+                      span.easypie-data.h5.font-strong 59%
+                tr
+                  td.pl-4
+                    .flexbox-b
+                      span.btn-icon-only.btn-pink.mr-3: i.ti-gift.font-20
+                      div
+                        h6.mb-1 Adminca Big Bundle 6 in 1
+                        div
+                          span.text-muted.font-13
+                            i.ti-calendar.mr-2
+                            | 20.04.2018
+                  td
+                    h4.font-strong.text-light.mb-0 1250
+                  td
+                    h4.font-strong.text-pink.mb-0 575
+                  td.pr-4
+                    .easypie(data-percent='46', data-bar-color='#ff4081', data-size='56', data-line-width='3')
+                      span.easypie-data.h5.font-strong 46%
+                tr
+                  td.pl-4
+                    .flexbox-b
+                      span.btn-icon-only.btn-success.font-20.mr-3 LV
+                      div
+                        h6.mb-1 Adminca - Save your time, choose the best
+                        div
+                          span.text-muted.font-13
+                            i.ti-calendar.mr-2
+                            | 20.04.2018
+                  td
+                    h4.font-strong.text-light.mb-0 1320
+                  td
+                    h4.font-strong.text-success.mb-0 554
+                  td.pr-4
+                    .easypie(data-percent='42', data-bar-color='#18c5a9', data-size='56', data-line-width='3')
+                      span.easypie-data.h5.font-strong 42%
+                tr
+                  td.pl-4
+                    .flexbox-b
+                      span.btn-icon-only.btn-warning.mr-3: i.ti-support.font-20
+                      div
+                        h6.mb-1 High Quality Support & Easy Code
+                        div
+                          span.text-muted.font-13
+                            i.ti-calendar.mr-2
+                            | 20.04.2018
+                  td
+                    h4.font-strong.text-light.mb-0 870
+                  td
+                    h4.font-strong.text-warning.mb-0 478
+                  td.pr-4
+                    .easypie(data-percent='56', data-bar-color='#f39c12', data-size='56', data-line-width='3')
+                      span.easypie-data.h5.font-strong 56%
+    .col-lg-4
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title TASKS
+          .ibox-tools
+            a.font-18
+              i.ti-plus
+        .ibox-body
+          ul.list-group.list-group-divider.list-group-full.tasks-list
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox', checked='')
+                  span.input-span
+                  span.task-title Make Adminca the best and the most easy admin template
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Create Financial Report
+              .task-data
+                small.text-muted No due date
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox', checked='')
+                  span.input-span
+                  span.task-title Meeting with Ann
+                span.badge.badge-warning.ml-1
+                  i.ti-alarm-clock
+                  |  1 hrs
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Edit the blog post
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Send photos to Jack
+                span.badge.badge-success.ml-1 Today
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Send Financial Reports
+                span.badge.badge-danger.ml-1 Important
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Send message to Bob
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+    
+  
+  // New Event Dialog
+  #new-event-modal.modal.fade(tabindex='-1', role='dialog')
+      .modal-dialog(role='document')
+          form.modal-content.form-horizontal#newEventForm(action='javascript:;')
+              .modal-header.p-4
+                  h5.modal-title NEW EVENT
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                      span(aria-hidden='true') ×
+              .modal-body.p-4
+                  .form-group.mb-4
+                    label.text-muted.mb-3 Category
+                    div
+                      label.radio.radio-outline-primary.radio-inline.check-single(data-toggle='tooltip', data-original-title='General')
+                        input(type='radio', name='category', checked, value='fc-event-primary')
+                        span.input-span
+                      label.radio.radio-outline-warning.radio-inline.check-single(data-toggle='tooltip', data-original-title='Payment')
+                        input(type='radio', name='category', value='fc-event-warning')
+                        span.input-span
+                      label.radio.radio-outline-success.radio-inline.check-single(data-toggle='tooltip', data-original-title='Technical')
+                        input(type='radio', name='category', value='fc-event-success')
+                        span.input-span
+                      label.radio.radio-outline-danger.radio-inline.check-single(data-toggle='tooltip', data-original-title='Registration')
+                        input(type='radio', name='category', value='fc-event-danger')
+                        span.input-span
+                      label.radio.radio-outline-info.radio-inline.check-single(data-toggle='tooltip', data-original-title='Security')
+                        input(type='radio', name='category', value='fc-event-info')
+                        span.input-span
+                  .form-group.mb-4
+                    input#new-event-title.form-control.form-control-line(type='text', name='title', placeholder='Title')
+                  .row
+                    .col-6.form-group.mb-4
+                      label.col-form-label.text-muted Start:
+                      .input-group-icon.input-group-icon-right
+                        span.input-icon.input-icon-right: i.fa.fa-calendar-check-o
+                        input#new-event-start.form-control.form-control-line.datepicker.date(type='text', name='start', value='')
+                    .col-6.form-group.mb-4
+                      label.col-form-label.text-muted End:
+                      .input-group-icon.input-group-icon-right
+                        span.input-icon.input-icon-right: i.fa.fa-calendar-check-o
+                        input#new-event-end.form-control.form-control-line.datepicker.date(type='text', name='end', value='')
+                  .form-group.mb-4.pt-3
+                    label.ui-switch.switch-icon.mr-3.mb-0
+                      input#new-event-allDay(type='checkbox', checked)
+                      span
+                    | All Day
+              .modal-footer.justify-content-start.bg-primary-50
+                  button#addEventButton.btn.btn-primary.btn-rounded(type='submit') Add event
+  // End New Event Dialog
+  // Event Detail Dialog
+  #event-modal.modal.fade(tabindex='-1', role='dialog')
+      .modal-dialog(role='document')
+          form.modal-content.form-horizontal#eventForm(action='javascript:;')
+              .modal-header.p-4
+                  h5.modal-title EDIT EVENT
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                      span(aria-hidden='true') ×
+              .modal-body.p-4
+                  .form-group.mb-4
+                    label.text-muted.mb-3 Category
+                    div
+                      label.radio.radio-outline-primary.radio-inline.check-single(data-toggle='tooltip', data-original-title='General')
+                        input(type='radio', name='category', checked, value='fc-event-primary')
+                        span.input-span
+                      label.radio.radio-outline-warning.radio-inline.check-single(data-toggle='tooltip', data-original-title='Payment')
+                        input(type='radio', name='category', value='fc-event-warning')
+                        span.input-span
+                      label.radio.radio-outline-success.radio-inline.check-single(data-toggle='tooltip', data-original-title='Technical')
+                        input(type='radio', name='category', value='fc-event-success')
+                        span.input-span
+                      label.radio.radio-outline-danger.radio-inline.check-single(data-toggle='tooltip', data-original-title='Registration')
+                        input(type='radio', name='category', value='fc-event-danger')
+                        span.input-span
+                      label.radio.radio-outline-info.radio-inline.check-single(data-toggle='tooltip', data-original-title='Security')
+                        input(type='radio', name='category', value='fc-event-info')
+                        span.input-span
+                  .form-group.mb-4
+                      input#event-title.form-control.form-control-line(type='text', name='title', placeholder='Title')
+                  .row
+                    .col-6.form-group.mb-4
+                      label.col-form-label.text-muted Start:
+                      .input-group-icon.input-group-icon-right
+                        span.input-icon.input-icon-right: i.fa.fa-calendar-check-o
+                        input#event-start.form-control.form-control-line.datepicker.date(type='text', name='start', value='')
+                    .col-6.form-group.mb-4
+                      label.col-form-label.text-muted End:
+                      .input-group-icon.input-group-icon-right
+                        span.input-icon.input-icon-right: i.fa.fa-calendar-check-o
+                        input#event-end.form-control.form-control-line.datepicker.date(type='text', name='end', value='')
+                  .form-group.mb-4.pt-3
+                    label.ui-switch.switch-icon.mr-3.mb-0
+                      input#event-allDay(type='checkbox')
+                      span
+                    | All Day
+              .modal-footer.justify-content-between.bg-primary-50
+                  button#editEventButton.btn.btn-primary.btn-rounded(type='submit',) Submit
+                  a.text-danger#deleteEventButton(data-dismiss='modal'): i.la.la-trash.font-20
+  // End Event Detail Dialog
+
+block scripts
+  +script('dashboard_6.js', 'page')
+  +script('calendar-demo.js', 'page')

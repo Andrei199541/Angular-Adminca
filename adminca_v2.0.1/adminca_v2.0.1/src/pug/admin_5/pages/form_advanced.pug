@@ -1,0 +1,457 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Form Advanced Plugins'
+  - var pageUrl = 'form_advanced.html'
+  - var page_heading = 'Advanced Plugins'
+  - var path = ['Forms', 'Advanced Plugins']
+
+block plugins-styles
+  +link('select2/dist/css/select2.min.css','plugin')
+  +link('ion.rangeSlider/css/ion.rangeSlider.css','plugin')
+  +link('ion.rangeSlider/css/ion.rangeSlider.skinFlat.css','plugin')
+  +link('bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css','plugin')
+  +link('smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css','plugin')
+  +link('bootstrap-daterangepicker/daterangepicker.css','plugin')
+  +link('clockpicker/dist/bootstrap-clockpicker.min.css','plugin')
+  +link('jquery-minicolors/jquery.minicolors.css','plugin')
+  +link('multiselect/css/multi-select.css','plugin')
+  +link('bootstrap-tagsinput/dist/bootstrap-tagsinput.css','plugin')
+  +link('bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css','plugin')
+
+block plugins
+  +script('select2/dist/js/select2.full.min.js', 'plugin')
+  +script('jquery-knob/dist/jquery.knob.min.js', 'plugin')
+  +script('ion.rangeSlider/js/ion.rangeSlider.min.js', 'plugin')
+  +script('moment/min/moment.min.js', 'plugin')
+  +script('bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js', 'plugin')
+  +script('smalot-bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js', 'plugin')
+  +script('bootstrap-daterangepicker/daterangepicker.js', 'plugin')
+  +script('clockpicker/dist/bootstrap-clockpicker.min.js', 'plugin')
+  +script('jquery-minicolors/jquery.minicolors.min.js', 'plugin')
+  +script('multiselect/js/jquery.multi-select.js', 'plugin')
+  +script('bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js', 'plugin')
+  +script('bootstrap-maxlength/src/bootstrap-maxlength.js', 'plugin')
+  +script('bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js', 'plugin')
+
+block scripts
+  +script('form-plugins.js', 'page')
+
+block content
+  .row
+    .col-lg-6
+      +panel('Select 2 <a class="btn btn-sm btn-primary ml-2" href="https://select2.github.io/" target="_blank">Official site</a>')
+        .form-group
+          label.form-control-label Single select
+          select.form-control.select2_demo_1
+            optgroup(label='Alaskan/Hawaiian Time Zone')
+              option(value='AK') Alaska
+              option(value='HI') Hawaii
+            optgroup(label='Pacific Time Zone')
+              option(value='CA') California
+              option(value='NV') Nevada
+              option(value='OR') Oregon
+              option(value='WA') Washington
+            optgroup(label='Mountain Time Zone')
+              option(value='AZ') Arizona
+              option(value='CO') Colorado
+              option(value='ID') Idaho
+              option(value='MT') Montana
+              option(value='NE') Nebraska
+              option(value='NM') New Mexico
+              option(value='ND') North Dakota
+              option(value='UT') Utah
+              option(value='WY') Wyoming
+            optgroup(label='Central Time Zone')
+              option(value='AL') Alabama
+              option(value='AR') Arkansas
+              option(value='IL') Illinois
+              option(value='IA') Iowa
+              option(value='KS') Kansas
+              option(value='KY') Kentucky
+              option(value='LA') Louisiana
+              option(value='MN') Minnesota
+              option(value='MS') Mississippi
+              option(value='MO') Missouri
+              option(value='OK') Oklahoma
+              option(value='SD') South Dakota
+              option(value='TX') Texas
+              option(value='TN') Tennessee
+              option(value='WI') Wisconsin
+            optgroup(label='Eastern Time Zone')
+              option(value='CT') Connecticut
+              option(value='DE') Delaware
+              option(value='FL') Florida
+              option(value='GA') Georgia
+              option(value='IN') Indiana
+              option(value='ME') Maine
+              option(value='MD') Maryland
+              option(value='MA') Massachusetts
+              option(value='MI') Michigan
+              option(value='NH') New Hampshire
+              option(value='NJ') New Jersey
+              option(value='NY') New York
+              option(value='NC') North Carolina
+              option(value='OH') Ohio
+              option(value='PA') Pennsylvania
+              option(value='RI') Rhode Island
+              option(value='SC') South Carolina
+              option(value='VT') Vermont
+              option(value='VA') Virginia
+              option(value='WV') West Virginia
+        .form-group
+          label.form-control-label Multiple select
+          select.form-control.select2_demo_1(multiple='')
+            optgroup(label='Alaskan/Hawaiian Time Zone')
+              option(value='AK') Alaska
+              option(value='HI') Hawaii
+            optgroup(label='Pacific Time Zone')
+              option(value='CA') California
+              option(value='NV') Nevada
+              option(value='OR') Oregon
+              option(value='WA') Washington
+            optgroup(label='Mountain Time Zone')
+              option(value='AZ') Arizona
+              option(value='CO') Colorado
+              option(value='ID') Idaho
+              option(value='MT') Montana
+              option(value='NE') Nebraska
+              option(value='NM') New Mexico
+              option(value='ND') North Dakota
+              option(value='UT') Utah
+              option(value='WY') Wyoming
+        .form-group
+          label.form-control-label With Placeholder & allow clear
+          select.form-control.select2_demo_2
+            optgroup(label='Alaskan/Hawaiian Time Zone')
+              option(value='AK') Alaska
+              option(value='HI') Hawaii
+            optgroup(label='Pacific Time Zone')
+              option(value='CA') California
+              option(value='NV') Nevada
+              option(value='OR') Oregon
+              option(value='WA') Washington
+            optgroup(label='Mountain Time Zone')
+              option(value='AZ') Arizona
+              option(value='CO') Colorado
+              option(value='ID') Idaho
+              option(value='MT') Montana
+              option(value='NE') Nebraska
+              option(value='NM') New Mexico
+              option(value='ND') North Dakota
+              option(value='UT') Utah
+              option(value='WY') Wyoming
+      +panel('Bootstrap Select <a class="btn btn-sm btn-primary ml-2" href="http://silviomoreto.github.io/bootstrap-select/" target="_blank">Official site</a>', tools={'collapse':1, 'expend':1})
+        .form-group
+            label.form-control-label Default
+            select.selectpicker.form-control
+                option Mustard
+                option Ketchup
+                option(disabled='') Disabled
+                option Mayonnaise
+                option Barbecue Sauce
+                option Salad Dressing
+                option Tabasco
+                option Salsa
+        .form-group
+            label.form-control-label Checkmark on selected option
+            select.selectpicker.show-tick.form-control
+                option Mustard
+                option Ketchup
+                option(disabled='') Disabled
+                option Tabasco
+        .form-group
+            label.form-control-label Multiple
+            select.selectpicker.form-control(title='Please select', multiple='')
+                optgroup(label='Camping')
+                    option Mustard
+                    option Ketchup
+                    option Relish
+                    option Tabasco
+                optgroup(label='Disabled group', disabled='')
+                    option Tent
+                    option Flashlight
+                    option Toilet Paper
+        .form-group
+            label.form-control-label Live search
+            select.selectpicker.form-control(data-live-search='true')
+                option Mustard
+                option Ketchup
+                option Flashlight
+                option Tabasco Nick
+        .form-group
+            label.form-control-label Custom Sizes
+            div
+                select.selectpicker.show-tick.form-control(data-width='200px')
+                    option Mustard
+                    option Ketchup
+                    option Flashlight
+                    option Tabasco
+        .form-group
+            label.form-control-label Subtext
+            select.selectpicker.form-control(data-selected-text-format='count', multiple='')
+                option(data-subtext='French') Mustard
+                option(data-subtext='Heinz') Ketchup
+                option(data-subtext='Sweet') Relish
+                option(data-subtext='Miracle Whip') Tabasco
+        .form-group
+            label.form-control-label Custom content
+            select.selectpicker.form-control(data-selected-text-format='count', multiple='')
+                option(data-content="Mustard <span class='badge badge-success badge-square ml-2'>NEW</span>") .
+                option(data-content="Ketchup <i class='fa fa-star font-16 text-info ml-2'></i>") .
+                option(data-content="Relish <i class='fa fa-star font-16 text-warning ml-2'></i>") .
+                option(data-content="Tabasco <span class='label label-default ml-2'>Relish</span>") .
+        .form-group
+            label.form-control-label Icons
+            select.selectpicker.form-control(data-selected-text-format='count', multiple='')
+                option(data-icon='ti-cup mr-1') Mustard
+                option(data-icon='ti-anchor mr-1') Ketchup
+                option(data-icon='ti-briefcase mr-1') Relish
+                option(data-icon='ti-world mr-1') Tabasco
+        .form-group
+            label.form-control-label Selected text format
+            select.selectpicker.form-control(data-selected-text-format='count', multiple='')
+                option Mustard
+                option Ketchup
+                option Relish
+                option Tabasco
+        .form-group
+            label.form-control-label Select/deselect all options
+            select.selectpicker.form-control(data-selected-text-format='count', data-actions-box='true', multiple='')
+                option Mustard
+                option Ketchup
+                option Relish
+                option Tabasco
+        .form-group
+            label.form-control-label
+                | Button styles 
+                small
+                    a(href='buttons.html', target='_blank') Allowed all button styles
+            .row
+                .col-sm-6
+                    select.selectpicker.show-tick.form-control.mb-4(data-style='btn-primary')
+                        option Mustard
+                        option Ketchup
+                        option Flashlight
+                        option Tabasco
+                    select.selectpicker.show-tick.form-control.mb-4(data-style='btn-success')
+                        option Mustard
+                        option Ketchup
+                        option Flashlight
+                        option Tabasco
+                    select.selectpicker.show-tick.form-control.mb-4(data-style='btn-info')
+                        option Mustard
+                        option Ketchup
+                        option Flashlight
+                        option Tabasco
+                    select.selectpicker.show-tick.form-control.mb-4(data-style='btn-outline-warning')
+                        option Mustard
+                        option Ketchup
+                        option Flashlight
+                        option Tabasco
+                .col-sm-6
+                    select.selectpicker.show-tick.form-control.mb-4(data-style='btn-secondary')
+                        option Mustard
+                        option Ketchup
+                        option Flashlight
+                        option Tabasco
+                    select.selectpicker.show-tick.form-control.mb-4(data-style='btn-warning')
+                        option Mustard
+                        option Ketchup
+                        option Flashlight
+                        option Tabasco
+                    select.selectpicker.show-tick.form-control.mb-4(data-style='btn-danger')
+                        option Mustard
+                        option Ketchup
+                        option Flashlight
+                        option Tabasco
+                    select.selectpicker.show-tick.form-control.mb-4(data-style='btn-outline-info')
+                        option Mustard
+                        option Ketchup
+                        option Flashlight
+                        option Tabasco
+      +panel('Data picker <a class="btn btn-sm btn-primary ml-2" href="https://github.com/uxsolutions/bootstrap-datepicker" target="_blank">Official site</a>')
+        #date_1.form-group
+            label.font-normal
+            .input-group.date
+                span.input-group-addon.bg-white
+                    i.fa.fa-calendar
+                input.form-control(type='text', value='04/12/2017')
+        #date_2.form-group
+            label.font-normal One Year view
+            .input-group.date
+                span.input-group-addon
+                    i.fa.fa-calendar
+                input.form-control(type='text', value='07/11/2017')
+        #date_3.form-group
+            label.font-normal Decade view
+            .input-group.date
+                span.input-group-addon
+                    i.fa.fa-calendar
+                input.form-control(type='text', value='08/12/2017')
+        #date_4.form-group
+            label.font-normal Month select
+            .input-group.date
+                span.input-group-addon
+                    i.fa.fa-calendar
+                input.form-control(type='text', value='06/12/2017')
+        #date_5.form-group
+            label.font-normal Range select
+            #datepicker.input-daterange.input-group
+                input.input-sm.form-control(type='text', name='start', value='04/12/2017')
+                span.input-group-addon.pl-2.pr-2 to
+                input.input-sm.form-control(type='text', name='end', value='08/17/2018')
+        .form-group
+            label Inline
+            #date_6(data-date-format='mm/dd/yyyy')  
+      +panel('DateTime Picker <a class="btn btn-sm btn-primary ml-2" href="https://www.malot.fr/bootstrap-datetimepicker" target="_blank">Official site</a>')
+        .form-group
+          label.font-normal Basic example
+          .input-group.date.form_datetime
+            span.input-group-addon.bg-white
+              i.fa.fa-calendar
+            input.form-control
+      +panel('Date Range Picker <a class="btn btn-sm btn-primary ml-2" href="http://www.daterangepicker.com/" target="_blank">Official site</a>')
+        .form-group
+            label Date Range Picker
+            .input-group
+                span.input-group-addon
+                    i.fa.fa-calendar
+                input#daterange_1.form-control(type='text')
+        .form-group
+            label Date and Time
+            .input-group
+                span.input-group-addon.bg-white
+                    i.fa.fa-calendar
+                input#daterange_2.form-control(type='text')
+        .form-group
+            label Predefined Ranges
+            #reportrange(style='background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%')
+                i.fa.fa-calendar.mr-2
+                span
+                b.caret
+        .form-group
+            label Single Date Picker
+            .input-group
+                span.input-group-addon
+                    i.fa.fa-calendar
+                input#daterange_3.form-control(type='text')
+      +panel('Clockpicker <a class="btn btn-sm btn-primary ml-2" href="http://weareoutman.github.io/clockpicker/" target="_blank">Official site</a>')
+        .input-group.clockpicker(data-autoclose='true')
+            input.form-control(type='text', value='11:30')
+            span.input-group-addon
+                span.fa.fa-clock-o
+      +panel('jQuery MiniColors <a class="btn btn-sm btn-primary ml-2" href="http://labs.abeautifulsite.net/jquery-minicolors/" target="_blank">Official site</a>')
+        .form-group
+            label Hue (default)
+            input.form-control.minicolors(type='text', data-control='hue', value='#F75A5F')
+        .form-group
+            label Saturation
+            input.form-control.minicolors(type='text', data-control='saturation', value='#18C5A9')
+        .form-group
+            label Brightness
+            input.form-control.minicolors(type='text', data-control='brightness', value='#F39C12')
+        .form-group
+            label Wheel
+            input.form-control.minicolors(type='text', data-control='wheel', value='#23B7E5')
+        .form-group
+            label Hidden input
+            input.form-control.minicolors(type='hidden', value='#3498DB')
+        .form-group
+            label RGB
+            input.form-control.minicolors(type='text', data-format='rgb', value='rgb(33, 147, 58)')
+        .form-group
+            label RGBA
+            input.form-control.minicolors(type='text', data-format='rgb', data-opacity='0.50', value='rgba(52, 64, 158, 0.5)')
+        .form-group
+            label Swatches
+            input.form-control.minicolors(type='text', data-swatches='#fff|#000|#f00|#0f0|#00f|#ff0|#0ff', value='#17e8c9')
+        .form-group
+            label Swatches and opacity
+            input.form-control.minicolors(type='text', data-format='rgb', data-opacity='0.50', data-swatches='#fff|#000|#f00|#0f0|#00f|#ff0|rgba(0,0,255,0.5)', value='rgba(14, 206, 235, .5)')
+        .form-group
+            label bottom right
+            input.form-control.minicolors(type='text', data-position='bottom right', value='#6654a8')
+        p
+            | Valid positions include 
+            code bottom left
+            | , 
+            code bottom right
+            | , 
+            code top left
+            | , and 
+            code top right
+            | .
+
+    .col-lg-6
+      +panel('Knob - Dial <a class="btn btn-sm btn-primary ml-2" href="https://github.com/aterrien/jQuery-Knob" target="_blank">Official site</a>')
+        .row
+            .col-sm-4.mb-4
+                input.dial(value='45', data-width='85', data-height='85', type='text')
+            .col-sm-4.mb-4
+                input.dial(value='550', data-width='85', data-height='85', data-thickness='.2', data-fgcolor='#18C5A9', data-min='-1000', data-max='1000', data-step='10', data-displayprevious='true', type='text')
+            .col-sm-4.mb-4
+                input.dial(value='20', data-width='85', data-height='85', data-fgcolor='#f75a5f', data-cursor='true', data-thicknessx='.3', type='text')
+        .row
+            .col-sm-4.mb-4
+                input.dial(value='45', data-width='85', data-height='85', data-fgcolor='#F39C12', data-angleoffset='90', type='text')
+            .col-sm-4.mb-4
+                input.dial(value='10.4', data-width='85', data-height='85', data-fgcolor='#2CC4CB', data-step='.1', data-min='-100', data-displayprevious='true', type='text')
+            .col-sm-4.mb-4
+                input.dial(value='42', data-width='85', data-height='85', data-fgcolor='#f75a5f', data-angleoffset='-125', data-anglearc='250', data-rotation='anticlockwise', type='text')
+        .row
+            .col-sm-6.mb-4.text-center
+                input.dial(value='0', data-width='110', data-height='110', data-thickness='.2', data-fgcolor='#18C5A9', data-max='500', data-min='-500', data-displayprevious='true', type='text')
+            .col-sm-6.mb-4.text-center
+                input.dial(value='22.6', data-width='110', data-height='110', data-fgcolor='#2CC4CB', data-step='.1', data-min='-100', data-displayprevious='true', type='text')
+      +panel('Ion Range Sliders <a class="btn btn-sm btn-primary ml-2" href="https://github.com/IonDen/ion.rangeSlider" target="_blank">Official site</a>')
+        input#ionrange_1(type='text')
+        br
+        br
+        input#ionrange_2(type='text')
+        br
+        br
+        input#ionrange_3(type='text')
+        br
+        br
+        input#ionrange_4(type='text')
+        br
+        br
+        input#ionrange_5(type='text')
+        br
+        br
+      +panel('Tags Input <a class="btn btn-sm btn-primary ml-2" href="https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/" target="_blank">Official site</a>')
+        input.tagsinput.form-control(type='text', value='Amsterdam,Washington,Sydney,Beijing,Cairo')
+      +panel('Maxlength Control <a class="btn btn-sm btn-primary ml-2" href="https://github.com/mimo84/bootstrap-maxlength" target="_blank">Official site</a>')
+        .form-group
+            input.form-control(type='text', maxlength='25', placeholder='This input has a limit of 25 chars.')
+        .form-group
+            textarea.form-control(rows='3', maxlength='75', placeholder='This textarea has a limit of 75 chars.')
+      +panel('TouchSpin  <a class="btn btn-sm btn-primary ml-2" href="http://www.virtuosoft.eu/code/bootstrap-touchspin/" target="_blank">Official site</a>')
+        .form-group
+            label Basic example with empty value
+            input.touchspin1(value='', type='text')
+        .form-group
+            label Example with postfix
+            input.touchspin2(type='text')
+        .form-group
+            label Vertical button alignment
+            input.touchspin3(type='text')
+      +panel('Multi-Select <a class="btn btn-sm btn-primary ml-2" href="http://loudev.com/" target="_blank">Official site</a>')
+          select#multi_select.multi-select(multiple='multiple', name='multi_select[]')
+            option Dallas Cowboys
+            option New York Giants
+            option(selected='') Philadelphia Eagles
+            option(selected='') Washington Redskins
+            option Chicago Bears
+            option Detroit Lions
+            option Green Bay Packers
+            option Minnesota Vikings
+            option(selected='') Atlanta Falcons
+            option Carolina Panthers
+            option New Orleans Saints
+            option Tampa Bay Buccaneers
+            option Arizona Cardinals
+            option St. Louis Rams
+            option San Francisco 49ers
+            option Seattle Seahawks

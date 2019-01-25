@@ -1,0 +1,222 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'FAQ'
+  - var pageUrl = 'faq.html'
+
+block content
+  .flexbox-b.mb-5
+    span.mr-4.static-badge.badge-info
+      i.ti-support
+    div
+      h5.font-strong FAQ
+      .text-light Found 42 Questions in 5 categories
+  .input-group-icon.input-group-icon-left.input-group-lg.mb-5
+    span.input-icon.input-icon-right
+      i.ti-search
+    input.form-control.form-control-air.font-light.font-poppins.border-0(type='text', placeholder='Search ...', style='box-shadow:0 3px 6px rgba(10,16,20,.15);')
+  .row
+    .col-lg-3
+      button.btn.btn-primary.btn-rounded.btn-block.mb-4(data-toggle='modal', data-target='#new-question-dialog')
+        span.btn-icon
+          i.la.la-plus-circle
+          | New Question
+      ul.list-group.list-group-divider.faq-tabs
+        li.list-group-item
+          a.active(href='#accordion-1', data-toggle='tab')
+            i.badge-point.badge-primary.mr-3
+            | General
+        li.list-group-item
+          a(href='#accordion-2', data-toggle='tab')
+            i.badge-point.badge-warning.mr-3
+            | Payment
+        li.list-group-item
+          a(href='#accordion-3', data-toggle='tab')
+            i.badge-point.badge-info.mr-3
+            | Technical issues
+        li.list-group-item
+          a(href='#accordion-3', data-toggle='tab')
+            i.badge-point.badge-danger.mr-3
+            | Registration
+        li.list-group-item
+          a(href='#accordion-3', data-toggle='tab')
+            i.badge-point.badge-blue.mr-3
+            | Security
+    .col-lg-9
+      .ibox
+        .ibox-body.tab-content
+          #accordion-1.tab-pane.fade.active.show
+            h5.font-strong.mb-4.text-primary GENERAL QUESTIONS — 10
+            ul.list-group.list-group-divider.list-group-full.faq-list
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq1-1') How to install the new version of Adminca.
+                #faq1-1.collapse.show
+                  .p-3.bg-primary-50.mt-3
+                    | Excepteur eiusmod et occaecat irure dolor adipiscing sit do ullamco aute adipiscing et sint ut ex non nulla exercitation adipiscing in in ea dolor proident laborum duis in ut mollit
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq1-2') Ea velit aliqua cillum ut nisi 
+                #faq1-2.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Nisi exercitation nisi proident ea ut esse sit pariatur dolore consectetur id velit ut irure esse et ut qui irure lorem dolore officia consectetur cupidatat sed labore qui duis dolor
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq1-3') Consequat consequat dolor eu consequat in 
+                #faq1-3.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Consectetur culpa occaecat incididunt non quis aliqua ut aliqua ut ullamco aute in cupidatat esse incididunt labore occaecat dolore eiusmod dolore do dolore ullamco non laborum est occaecat cillum sed
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq1-4') Proident cillum aliquip occaecat eiusmod dolor 
+                #faq1-4.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Id amet do non non dolore est ut consectetur ea ex excepteur commodo sint dolore ut tempor et ullamco adipiscing minim tempor officia magna dolore ad velit dolore mollit adipiscing
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq1-5') Et pariatur incididunt irure ut officia 
+                #faq1-5.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Duis aute pariatur consequat et sit in ullamco velit laboris id deserunt commodo irure aliquip qui laboris dolor sed pariatur ut nulla laboris cupidatat ex veniam ut dolor in cillum
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq1-6') Magna nisi eiusmod eu in commodo 
+                #faq1-6.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Magna tempor ipsum amet elit ut anim minim enim cupidatat dolore consectetur sunt ut laboris dolore aliqua non consectetur cillum cillum nulla quis ut aliqua nisi ea ut reprehenderit lorem
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq1-7') Sed eiusmod minim in aliquip elit 
+                #faq1-7.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Magna dolor commodo occaecat in laborum sunt aliqua fugiat quis nisi pariatur tempor aliqua mollit in in non sint aliqua duis deserunt ut ex duis eiusmod laboris veniam amet laboris
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq1-8') Magna mollit veniam mollit laboris esse 
+                #faq1-8.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Occaecat nostrud magna mollit eu laborum non duis duis voluptate nisi fugiat dolore deserunt non exercitation magna in fugiat ut dolor dolor officia duis ullamco voluptate non sed eiusmod do
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq1-9') Sit quis lorem fugiat dolor sed 
+                #faq1-9.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Pariatur elit mollit est lorem occaecat in ut cupidatat cupidatat et exercitation sint deserunt quis aute occaecat non sunt irure dolor in excepteur cupidatat incididunt proident culpa aliqua sit occaecat
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq1-10') Nulla in dolor exercitation labore consequat 
+                #faq1-10.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Officia minim tempor laborum laborum proident consectetur tempor velit elit velit ipsum laboris labore reprehenderit excepteur in tempor adipiscing esse mollit fugiat pariatur aliqua elit tempor dolor ad aliqua in
+          #accordion-2.tab-pane.fade
+            h5.font-strong.mb-4.text-warning PAYMENT QUESTIONS — 7
+            ul.list-group.list-group-divider.list-group-full.faq-list
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq2-1') Esse exercitation do veniam labore officia 
+                #faq2-1.collapse.show
+                  .p-3.bg-primary-50.mt-3
+                    | Ut do ullamco non aliqua aute quis velit ad exercitation anim eiusmod dolor aliquip in sint nisi in velit in esse deserunt esse consectetur ut excepteur tempor aute adipiscing ut
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq2-2') Mollit irure incididunt veniam incididunt ut 
+                #faq2-2.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Exercitation excepteur nostrud elit irure exercitation pariatur sint irure nulla do labore irure non occaecat ipsum cillum culpa cupidatat qui eu occaecat sit sit in nulla mollit sunt enim cupidatat
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq2-3') Quis elit sit nostrud in excepteur 
+                #faq2-3.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Ut nostrud dolor laboris occaecat magna ut ipsum officia ipsum cupidatat esse sed dolor ex ut veniam reprehenderit ut amet dolore in aliqua culpa in sed tempor exercitation anim ipsum
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq2-4') Ut aliquip lorem proident occaecat excepteur 
+                #faq2-4.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Anim non laborum et dolore elit aliquip in ipsum anim occaecat sit laborum quis ipsum aliqua elit cupidatat cillum consectetur amet proident ad cillum mollit ut dolore id cillum est
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq2-5') Elit do ut lorem in non 
+                #faq2-5.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Enim elit officia anim consequat eu proident veniam tempor est minim ut excepteur ullamco aliqua eu aliqua reprehenderit velit ullamco eiusmod aliqua quis nisi officia dolor officia aute elit sint
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq2-6') Ex cillum fugiat dolor eiusmod sunt 
+                #faq2-6.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Aliqua culpa laborum officia magna cillum ullamco commodo ipsum ut cupidatat ea ea consectetur enim in officia dolor tempor dolore nulla in tempor anim cupidatat dolor adipiscing proident excepteur labore
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq2-7') Dolor dolor nostrud nisi consectetur reprehenderit 
+                #faq2-7.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Nostrud excepteur eiusmod enim mollit non enim minim consectetur adipiscing quis tempor anim pariatur magna nulla aute dolor consectetur reprehenderit sunt irure fugiat duis esse commodo ipsum aute commodo dolore
+          #accordion-3.tab-pane.fade
+            h5.font-strong.mb-4.text-info TECHNICAL QUESTIONS — 5
+            ul.list-group.list-group-divider.list-group-full.faq-list
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq3-1') Ad laborum ut cillum nostrud pariatur 
+                #faq3-1.collapse.show
+                  .p-3.bg-primary-50.mt-3
+                    | Dolore minim enim veniam ipsum laboris do aute quis cupidatat est officia nostrud proident dolor ut laborum est ea nisi adipiscing laboris dolore deserunt esse in eiusmod ad dolore officia
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq3-2') Minim pariatur aliquip dolore enim ut 
+                #faq3-2.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Veniam pariatur ut et esse occaecat veniam excepteur commodo irure eiusmod id ex quis officia labore mollit non ex enim proident consequat anim dolor ea officia et in et excepteur
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq3-3') Incididunt laborum et velit enim minim 
+                #faq3-3.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Consectetur laborum laborum ut commodo dolore aliqua consectetur irure pariatur mollit enim ea ut tempor anim magna magna laborum duis in ullamco amet ut et ipsum laborum ullamco incididunt est
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq3-4') Id dolore ex minim ex et 
+                #faq3-4.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Veniam amet pariatur cillum deserunt reprehenderit tempor ullamco excepteur duis est laborum elit velit veniam duis do ut dolor adipiscing fugiat qui esse aliqua commodo sint nostrud nostrud ea laborum
+              li.list-group-item
+                a.font-strong(data-toggle='collapse', href='#faq3-5') Velit officia ex anim laboris ex 
+                #faq3-5.collapse
+                  .p-3.bg-primary-50.mt-3
+                    | Irure ipsum dolore nostrud aliqua est ut mollit id proident ea ipsum dolor eu deserunt ex commodo labore dolor id cupidatat dolore irure excepteur et laborum voluptate eiusmod incididunt minim
+      
+  #new-question-dialog.modal.fade(aria-labelledby='new-question-dialog', tabindex='-1', role='dialog')
+    .modal-dialog(role='document')
+      form.modal-content
+        .modal-header.p-4
+          h5.modal-title NEW QUESTION
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body.p-4
+          .form-group.mb-4
+            label.text-muted.mb-3 Category
+            div
+              label.radio.radio-outline-primary.radio-inline.check-single(data-toggle='tooltip', data-original-title='General')
+                input(type='radio', name='cat', checked='')
+                span.input-span
+              label.radio.radio-outline-warning.radio-inline.check-single(data-toggle='tooltip', data-original-title='Payment')
+                input(type='radio', name='cat')
+                span.input-span
+              label.radio.radio-outline-info.radio-inline.check-single(data-toggle='tooltip', data-original-title='Technical')
+                input(type='radio', name='cat')
+                span.input-span
+              label.radio.radio-outline-danger.radio-inline.check-single(data-toggle='tooltip', data-original-title='Registration')
+                input(type='radio', name='cat')
+                span.input-span
+              label.radio.radio-outline-blue.radio-inline.check-single(data-toggle='tooltip', data-original-title='Security')
+                input(type='radio', name='cat')
+                span.input-span
+          .form-group.mb-4
+            input.form-control.form-control-line(type='text', placeholder='Question')
+          .form-group.mb-4
+            textarea.form-control.form-control-line(placeholder='Answer of the question', rows='4')
+        .modal-footer.justify-content-start.bg-primary-50
+          button.btn.btn-primary.btn-rounded.mr-3(type='button') Submit
+
+
+block page_styles
+  style.
+    .faq-list a[data-toggle="collapse"] {display:block; position:relative}
+    .faq-list a[data-toggle="collapse"]:after {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'themify';
+      content: "\e61a";
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+    }
+    .faq-list a[data-toggle="collapse"][aria-expanded=true]:after {
+      content: "\e622";
+    }

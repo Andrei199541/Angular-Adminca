@@ -1,0 +1,592 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Checkbox & Radio'
+  - var pageUrl = 'form-checkbox-radio.html'
+  - var page_heading = 'Checkbox & Radio'
+  - var path = ['Form Controls', 'Checkbox & Radio']
+
+block content
+  .row
+    .col-md-6
+      +panel(title='Checkboxes')
+        .form-group
+          label.checkbox
+            input(type='checkbox')
+            span.input-span
+            | Default checkbox
+        .form-group
+          label.checkbox
+            input(type='checkbox', checked)
+            span.input-span
+            | Checked
+        .form-group
+          label.checkbox.checkbox-grey
+            input(type='checkbox')
+            span.input-span
+            | Grey checkbox
+        .form-group
+          label.checkbox.disabled
+            input(type='checkbox', disabled)
+            span.input-span
+            | Disabled
+        .text-muted.mb-4.mt-4 Checkbox State Colors
+        .row
+          .col-6
+            .form-group
+              label.checkbox.checkbox-primary
+                input(type='checkbox')
+                span.input-span
+                | Primary
+            .form-group
+              label.checkbox.checkbox-success
+                input(type='checkbox')
+                span.input-span
+                | Success
+            .form-group
+              label.checkbox.checkbox-info
+                input(type='checkbox')
+                span.input-span
+                | Info
+            .form-group
+              label.checkbox.checkbox-warning
+                input(type='checkbox')
+                span.input-span
+                | Warning
+            .form-group
+              label.checkbox.checkbox-danger
+                input(type='checkbox')
+                span.input-span
+                | Danger
+            .form-group
+              label.checkbox.checkbox-pink
+                input(type='checkbox')
+                span.input-span
+                | Pink
+            .form-group
+              label.checkbox.checkbox-blue
+                input(type='checkbox')
+                span.input-span
+                | Blue
+            .form-group
+              label.checkbox.checkbox-ebony
+                input(type='checkbox')
+                span.input-span
+                | Ebony
+          .col-6
+            .form-group
+              label.checkbox.checkbox-primary
+                input(type='checkbox', checked)
+                span.input-span
+                | Primary
+            .form-group
+              label.checkbox.checkbox-success
+                input(type='checkbox', checked)
+                span.input-span
+                | Success
+            .form-group
+              label.checkbox.checkbox-info
+                input(type='checkbox', checked)
+                span.input-span
+                | Info
+            .form-group
+              label.checkbox.checkbox-warning
+                input(type='checkbox', checked)
+                span.input-span
+                | Warning
+            .form-group
+              label.checkbox.checkbox-danger
+                input(type='checkbox', checked)
+                span.input-span
+                | Danger
+            .form-group
+              label.checkbox.checkbox-pink
+                input(type='checkbox', checked)
+                span.input-span
+                | Pink
+            .form-group
+              label.checkbox.checkbox-blue
+                input(type='checkbox', checked)
+                span.input-span
+                | Blue
+            .form-group
+              label.checkbox.checkbox-ebony
+                input(type='checkbox', checked)
+                span.input-span
+                | Ebony
+        
+        .text-muted.mb-4.mt-4 Checkbox State Colors
+        .row
+          .col-6
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-primary
+                input(type='checkbox')
+                span.input-span
+                | Primary
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-success
+                input(type='checkbox')
+                span.input-span
+                | Success
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-info
+                input(type='checkbox')
+                span.input-span
+                | Info
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-warning
+                input(type='checkbox')
+                span.input-span
+                | Warning
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-danger
+                input(type='checkbox')
+                span.input-span
+                | Danger
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-pink
+                input(type='checkbox')
+                span.input-span
+                | Pink
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-blue
+                input(type='checkbox')
+                span.input-span
+                | Blue
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-ebony
+                input(type='checkbox')
+                span.input-span
+                | Ebony
+          .col-6
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-primary
+                input(type='checkbox', checked)
+                span.input-span
+                | Primary
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-success
+                input(type='checkbox', checked)
+                span.input-span
+                | Success
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-info
+                input(type='checkbox', checked)
+                span.input-span
+                | Info
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-warning
+                input(type='checkbox', checked)
+                span.input-span
+                | Warning
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-danger
+                input(type='checkbox', checked)
+                span.input-span
+                | Danger
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-pink
+                input(type='checkbox', checked)
+                span.input-span
+                | Pink
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-blue
+                input(type='checkbox', checked)
+                span.input-span
+                | Blue
+            .form-group
+              label.checkbox.checkbox-grey.checkbox-ebony
+                input(type='checkbox', checked)
+                span.input-span
+                | Ebony
+        .text-muted.mb-4.mt-4 Checkbox Outline State
+        .row
+          .col-6
+            .form-group
+              label.checkbox.checkbox-outline-primary
+                input(type='checkbox')
+                span.input-span
+                | Primary
+            .form-group
+              label.checkbox.checkbox-outline-success
+                input(type='checkbox')
+                span.input-span
+                | Success
+            .form-group
+              label.checkbox.checkbox-outline-info
+                input(type='checkbox')
+                span.input-span
+                | Info
+            .form-group
+              label.checkbox.checkbox-outline-warning
+                input(type='checkbox')
+                span.input-span
+                | Warning
+            .form-group
+              label.checkbox.checkbox-outline-danger
+                input(type='checkbox')
+                span.input-span
+                | Danger
+            .form-group
+              label.checkbox.checkbox-outline-pink
+                input(type='checkbox')
+                span.input-span
+                | Pink
+            .form-group
+              label.checkbox.checkbox-outline-blue
+                input(type='checkbox')
+                span.input-span
+                | Blue
+            .form-group
+              label.checkbox.checkbox-outline-ebony
+                input(type='checkbox')
+                span.input-span
+                | Ebony
+          .col-6
+            .form-group
+              label.checkbox.checkbox-outline-primary
+                input(type='checkbox', checked)
+                span.input-span
+                | Primary
+            .form-group
+              label.checkbox.checkbox-outline-success
+                input(type='checkbox', checked)
+                span.input-span
+                | Success
+            .form-group
+              label.checkbox.checkbox-outline-info
+                input(type='checkbox', checked)
+                span.input-span
+                | Info
+            .form-group
+              label.checkbox.checkbox-outline-warning
+                input(type='checkbox', checked)
+                span.input-span
+                | Warning
+            .form-group
+              label.checkbox.checkbox-outline-danger
+                input(type='checkbox', checked)
+                span.input-span
+                | Danger
+            .form-group
+              label.checkbox.checkbox-outline-pink
+                input(type='checkbox', checked)
+                span.input-span
+                | Pink
+            .form-group
+              label.checkbox.checkbox-outline-blue
+                input(type='checkbox', checked)
+                span.input-span
+                | Blue
+            .form-group
+              label.checkbox.checkbox-outline-ebony
+                input(type='checkbox', checked)
+                span.input-span
+                | Ebony
+        .text-muted.mb-4.mt-4 Inline Checkboxes
+        .form-group
+          .mb-2
+            label.checkbox.checkbox-inline
+              input(type='checkbox')
+              span.input-span
+              | Option 1
+            label.checkbox.checkbox-inline
+              input(type='checkbox')
+              span.input-span
+              | Option 2
+            label.checkbox.checkbox-inline
+              input(type='checkbox')
+              span.input-span
+              | Option 3
+
+    .col-md-6
+      +panel(title='Radios')
+        .form-group
+          label.radio
+            input(type='radio', name='a')
+            span.input-span
+            | Default radio
+        .form-group
+          label.radio
+            input(type='radio', name='a', checked)
+            span.input-span
+            | Checked
+        .form-group
+          label.radio.radio-grey
+            input(type='radio', name='a')
+            span.input-span
+            | Grey radio
+        .form-group
+          label.radio.disabled
+            input(type='radio', name='a', disabled)
+            span.input-span
+            | Disabled
+        .text-muted.mb-4.mt-4 Radio State Colors
+        .row
+          .col-6
+            .form-group
+              label.radio.radio-primary
+                input(type='radio', name='b')
+                span.input-span
+                | Primary
+            .form-group
+              label.radio.radio-success
+                input(type='radio', name='b')
+                span.input-span
+                | Success
+            .form-group
+              label.radio.radio-info
+                input(type='radio', name='b')
+                span.input-span
+                | Info
+            .form-group
+              label.radio.radio-warning
+                input(type='radio', name='b')
+                span.input-span
+                | Warning
+            .form-group
+              label.radio.radio-danger
+                input(type='radio', name='b')
+                span.input-span
+                | Danger
+            .form-group
+              label.radio.radio-pink
+                input(type='radio', name='b')
+                span.input-span
+                | Pink
+            .form-group
+              label.radio.radio-blue
+                input(type='radio', name='b')
+                span.input-span
+                | Blue
+            .form-group
+              label.radio.radio-ebony
+                input(type='radio', name='b')
+                span.input-span
+                | Ebony
+          .col-6
+            .form-group
+              label.radio.radio-primary
+                input(type='radio', checked)
+                span.input-span
+                | Primary
+            .form-group
+              label.radio.radio-success
+                input(type='radio', checked)
+                span.input-span
+                | Success
+            .form-group
+              label.radio.radio-info
+                input(type='radio', checked)
+                span.input-span
+                | Info
+            .form-group
+              label.radio.radio-warning
+                input(type='radio', checked)
+                span.input-span
+                | Warning
+            .form-group
+              label.radio.radio-danger
+                input(type='radio', checked)
+                span.input-span
+                | Danger
+            .form-group
+              label.radio.radio-pink
+                input(type='radio', checked)
+                span.input-span
+                | Pink
+            .form-group
+              label.radio.radio-blue
+                input(type='radio', checked)
+                span.input-span
+                | Blue
+            .form-group
+              label.radio.radio-ebony
+                input(type='radio', checked)
+                span.input-span
+                | Ebony
+        
+        .text-muted.mb-4.mt-4 Radio State Colors
+        .row
+          .col-6
+            .form-group
+              label.radio.radio-grey.radio-primary
+                input(type='radio', name='c')
+                span.input-span
+                | Primary
+            .form-group
+              label.radio.radio-grey.radio-success
+                input(type='radio', name='c')
+                span.input-span
+                | Success
+            .form-group
+              label.radio.radio-grey.radio-info
+                input(type='radio', name='c')
+                span.input-span
+                | Info
+            .form-group
+              label.radio.radio-grey.radio-warning
+                input(type='radio', name='c')
+                span.input-span
+                | Warning
+            .form-group
+              label.radio.radio-grey.radio-danger
+                input(type='radio', name='c')
+                span.input-span
+                | Danger
+            .form-group
+              label.radio.radio-grey.radio-pink
+                input(type='radio', name='c')
+                span.input-span
+                | Pink
+            .form-group
+              label.radio.radio-grey.radio-blue
+                input(type='radio', name='c')
+                span.input-span
+                | Blue
+            .form-group
+              label.radio.radio-grey.radio-ebony
+                input(type='radio', name='c')
+                span.input-span
+                | Ebony
+          .col-6
+            .form-group
+              label.radio.radio-grey.radio-primary
+                input(type='radio', checked)
+                span.input-span
+                | Primary
+            .form-group
+              label.radio.radio-grey.radio-success
+                input(type='radio', checked)
+                span.input-span
+                | Success
+            .form-group
+              label.radio.radio-grey.radio-info
+                input(type='radio', checked)
+                span.input-span
+                | Info
+            .form-group
+              label.radio.radio-grey.radio-warning
+                input(type='radio', checked)
+                span.input-span
+                | Warning
+            .form-group
+              label.radio.radio-grey.radio-danger
+                input(type='radio', checked)
+                span.input-span
+                | Danger
+            .form-group
+              label.radio.radio-grey.radio-pink
+                input(type='radio', checked)
+                span.input-span
+                | Pink
+            .form-group
+              label.radio.radio-grey.radio-blue
+                input(type='radio', checked)
+                span.input-span
+                | Blue
+            .form-group
+              label.radio.radio-grey.radio-ebony
+                input(type='radio', checked)
+                span.input-span
+                | Ebony
+        
+        .text-muted.mb-4.mt-4 Radio Outline State
+        .row
+          .col-6
+            .form-group
+              label.radio.radio-outline-primary
+                input(type='radio', name='d')
+                span.input-span
+                | Primary
+            .form-group
+              label.radio.radio-outline-success
+                input(type='radio', name='d')
+                span.input-span
+                | Success
+            .form-group
+              label.radio.radio-outline-info
+                input(type='radio', name='d')
+                span.input-span
+                | Info
+            .form-group
+              label.radio.radio-outline-warning
+                input(type='radio', name='d')
+                span.input-span
+                | Warning
+            .form-group
+              label.radio.radio-outline-danger
+                input(type='radio', name='d')
+                span.input-span
+                | Danger
+            .form-group
+              label.radio.radio-outline-pink
+                input(type='radio', name='d')
+                span.input-span
+                | Pink
+            .form-group
+              label.radio.radio-outline-blue
+                input(type='radio', name='d')
+                span.input-span
+                | Blue
+            .form-group
+              label.radio.radio-outline-ebony
+                input(type='radio', name='d')
+                span.input-span
+                | Ebony
+          .col-6
+            .form-group
+              label.radio.radio-outline-primary
+                input(type='radio', checked)
+                span.input-span
+                | Primary
+            .form-group
+              label.radio.radio-outline-success
+                input(type='radio', checked)
+                span.input-span
+                | Success
+            .form-group
+              label.radio.radio-outline-info
+                input(type='radio', checked)
+                span.input-span
+                | Info
+            .form-group
+              label.radio.radio-outline-warning
+                input(type='radio', checked)
+                span.input-span
+                | Warning
+            .form-group
+              label.radio.radio-outline-danger
+                input(type='radio', checked)
+                span.input-span
+                | Danger
+            .form-group
+              label.radio.radio-outline-pink
+                input(type='radio', checked)
+                span.input-span
+                | Pink
+            .form-group
+              label.radio.radio-outline-blue
+                input(type='radio', checked)
+                span.input-span
+                | Blue
+            .form-group
+              label.radio.radio-outline-ebony
+                input(type='radio', checked)
+                span.input-span
+                | Ebony
+        .text-muted.mb-4.mt-4 Inline Radios
+        .form-group
+          .mb-2
+            label.radio.radio-inline
+              input(type='radio', name='e')
+              span.input-span
+              | Option 1
+            label.radio.radio-inline
+              input(type='radio', name='e')
+              span.input-span
+              | Option 2
+            label.radio.radio-inline
+              input(type='radio', name='e')
+              span.input-span
+              | Option 3

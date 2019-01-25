@@ -1,0 +1,315 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Line Tabs'
+  - var pageUrl = 'tabs-line.html'
+  - var page_heading = 'Line Tabs'
+  - var path = ['Basic UI', 'Tabs', 'Line Tabs']
+
+block content
+  .row
+    .col-lg-6
+      .ibox
+        .ibox-head
+          .ibox-title Line Tabs
+          ul.nav.nav-tabs.tabs-line
+            li.nav-item
+              a.nav-link.active(href='#tab-1-1', data-toggle='tab') Active
+            li.nav-item
+              a.nav-link(href='#tab-1-2', data-toggle='tab') Second
+            li.nav-item
+              a.nav-link(href='#tab-1-3', data-toggle='tab') Third
+        .ibox-body
+          .tab-content
+            #tab-1-1.tab-pane.fade.show.active.text-center
+              .h1.mt-5.mb-3 TAB 1
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-1-2.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 2
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-1-3.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 3
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+    .col-lg-6
+      .ibox
+        .ibox-head.flex-row-reverse
+          .ibox-title Line Tabs
+          ul.nav.nav-tabs.tabs-line
+            li.nav-item
+              a.nav-link.active(href='#tab-2-1', data-toggle='tab') Active
+            li.nav-item
+              a.nav-link(href='#tab-2-2', data-toggle='tab') Second
+            li.nav-item
+              a.nav-link(href='#tab-2-3', data-toggle='tab') Third
+        .ibox-body
+          .tab-content
+            #tab-2-1.tab-pane.fade.show.active.text-center
+              .h1.mt-5.mb-3 TAB 1
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-2-2.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 2
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-2-3.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 3
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+  .row
+    .col-lg-6
+      .ibox
+        .ibox-head
+          .ibox-title With dropdowns
+          ul.nav.nav-tabs.tabs-line.tabs-line-pink
+            li.nav-item
+              a.nav-link.active(href='#tab-3-1', data-toggle='tab') Active
+            li.nav-item
+              a.nav-link(href='#tab-3-2', data-toggle='tab') Second
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(data-toggle='dropdown', href='javascript:;')
+                | More
+                i.fa.fa-angle-down.ml-1
+              .dropdown-menu
+                a.dropdown-item(href='#tab-3-3', data-toggle='tab') Third tab
+                a.dropdown-item(href='#tab-3-4', data-toggle='tab') Fourth tab
+        .ibox-body
+          .tab-content
+            #tab-3-1.tab-pane.fade.show.active.text-center
+              .h1.mt-5.mb-3 TAB 1
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-3-2.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 2
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-3-3.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 3
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-3-4.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 4
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+      .ibox
+        .ibox-head
+          .ibox-title 2x Border
+          ul.nav.nav-tabs.tabs-line.tabs-line-2x.tabs-line-success
+            li.nav-item
+              a.nav-link.active(href='#tab-4-1', data-toggle='tab') Active
+            li.nav-item
+              a.nav-link(href='#tab-4-2', data-toggle='tab') Second
+            li.nav-item
+              a.nav-link(href='#tab-4-3', data-toggle='tab') Third
+        .ibox-body
+          .tab-content
+            #tab-4-1.tab-pane.fade.show.active.text-center
+              .h1.mt-5.mb-3 TAB 1
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-4-2.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 2
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-4-3.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 3
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+      .ibox
+        .ibox-head
+          .ibox-title With Icons
+          ul.nav.nav-tabs.tabs-line.tabs-line-2x
+            li.nav-item
+              a.nav-link.active(href='#tab-10-1', data-toggle='tab')
+                i.ti-briefcase.mr-2
+                | Active
+            li.nav-item
+              a.nav-link(href='#tab-10-2', data-toggle='tab')
+                i.ti-support.mr-2
+                | Second
+            li.nav-item
+              a.nav-link(href='#tab-10-3', data-toggle='tab')
+                i.ti-settings.mr-2
+                | Third
+        .ibox-body
+          .tab-content
+            #tab-10-1.tab-pane.fade.show.active.text-center
+              .h1.mt-5.mb-3 TAB 1
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-10-2.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 2
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-10-3.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 3
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+      .ibox
+        .ibox-head
+          .ibox-title Fill and justify
+        .ibox-body
+          ul.nav.nav-tabs.tabs-line.tabs-line-2x.nav-fill
+            li.nav-item
+              a.nav-link.active(href='#tab-11-1', data-toggle='tab')
+                i.ti-briefcase.mr-2
+                | Active
+            li.nav-item
+              a.nav-link(href='#tab-11-2', data-toggle='tab')
+                i.ti-support.mr-2
+                | Second
+            li.nav-item
+              a.nav-link(href='#tab-11-3', data-toggle='tab')
+                i.ti-settings.mr-2
+                | Third
+          .tab-content
+            #tab-11-1.tab-pane.fade.show.active.text-center
+              .h1.mt-5.mb-3 TAB 1
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-11-2.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 2
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-11-3.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 3
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+          hr.mt-5.mb-5
+          ul.nav.nav-tabs.tabs-line.tabs-line-2x.nav-justified.tabs-line-pink
+            li.nav-item
+              a.nav-link.active(href='#tab-12-1', data-toggle='tab')
+                i.ti-briefcase.mr-2
+                | Active
+            li.nav-item
+              a.nav-link(href='#tab-12-2', data-toggle='tab')
+                i.ti-support.mr-2
+                | Second
+            li.nav-item
+              a.nav-link(href='#tab-12-3', data-toggle='tab')
+                i.ti-settings.mr-2
+                | Third
+          .tab-content
+            #tab-12-1.tab-pane.fade.show.active.text-center
+              .h1.mt-5.mb-3 TAB 1
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-12-2.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 2
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-12-3.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 3
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+    .col-lg-6
+      .ibox
+        .ibox-head
+          .ibox-title State Colors
+        .ibox-body
+          ul.nav.nav-tabs.tabs-line.tabs-line-pink
+            li.nav-item
+              a.nav-link.active(href='#tab-5-1', data-toggle='tab') Active
+            li.nav-item
+              a.nav-link(href='#tab-5-2', data-toggle='tab') Second
+            li.nav-item
+              a.nav-link(href='#tab-5-3', data-toggle='tab') Third
+          .tab-content
+            #tab-5-1.tab-pane.fade.show.active.text-center
+              .h1.mt-5.mb-3 TAB 1
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-5-2.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 2
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-5-3.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 3
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+          hr.mt-5.mb-5
+          ul.nav.nav-tabs.tabs-line.tabs-line-info
+            li.nav-item
+              a.nav-link.active(href='#tab-6-1', data-toggle='tab') Active
+            li.nav-item
+              a.nav-link(href='#tab-6-2', data-toggle='tab') Second
+            li.nav-item
+              a.nav-link(href='#tab-6-3', data-toggle='tab') Third
+          .tab-content
+            #tab-6-1.tab-pane.fade.show.active.text-center
+              .h1.mt-5.mb-3 TAB 1
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-6-2.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 2
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-6-3.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 3
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+          hr.mt-5.mb-5
+          ul.nav.nav-tabs.tabs-line.tabs-line-warning
+            li.nav-item
+              a.nav-link.active(href='#tab-7-1', data-toggle='tab') Active
+            li.nav-item
+              a.nav-link(href='#tab-7-2', data-toggle='tab') Second
+            li.nav-item
+              a.nav-link(href='#tab-7-3', data-toggle='tab') Third
+          .tab-content
+            #tab-7-1.tab-pane.fade.show.active.text-center
+              .h1.mt-5.mb-3 TAB 1
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-7-2.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 2
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-7-3.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 3
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+          hr.mt-5.mb-5
+          ul.nav.nav-tabs.tabs-line.tabs-line-success
+            li.nav-item
+              a.nav-link.active(href='#tab-8-1', data-toggle='tab') Active
+            li.nav-item
+              a.nav-link(href='#tab-8-2', data-toggle='tab') Second
+            li.nav-item
+              a.nav-link(href='#tab-8-3', data-toggle='tab') Third
+          .tab-content
+            #tab-8-1.tab-pane.fade.show.active.text-center
+              .h1.mt-5.mb-3 TAB 1
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-8-2.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 2
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-8-3.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 3
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+          hr.mt-5.mb-5
+          ul.nav.nav-tabs.tabs-line.tabs-line-danger
+            li.nav-item
+              a.nav-link.active(href='#tab-9-1', data-toggle='tab') Active
+            li.nav-item
+              a.nav-link(href='#tab-9-2', data-toggle='tab') Second
+            li.nav-item
+              a.nav-link(href='#tab-9-3', data-toggle='tab') Third
+          .tab-content
+            #tab-9-1.tab-pane.fade.show.active.text-center
+              .h1.mt-5.mb-3 TAB 1
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-9-2.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 2
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.
+            #tab-9-3.tab-pane.fade.text-center
+              .h1.mt-5.mb-3 TAB 3
+              p.mb-5
+                | Laborum dolore consectetur occaecat in ex sunt et dolore dolore aliqua aute qui cupidatat et ullamco in pariatur dolor quis laboris ut.

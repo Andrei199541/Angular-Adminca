@@ -1,0 +1,63 @@
+<div class="page-heading">
+    <h1 class="page-title">Autocomplete</h1>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.html"><i class="la la-home font-20"></i></a>
+        </li>
+        <li class="breadcrumb-item">Forms</li>
+        <li class="breadcrumb-item">Autocomplete</li>
+    </ol>
+</div>
+<div class="page-content fade-in-up">
+    <div class="alert alert-primary alert-bordered">
+        <h4>typeahead.js</h4>
+        <p>a flexible JavaScript library that provides a strong foundation for building robust typeaheads</p>
+        <p>
+            <a class="btn btn-primary" href="https://twitter.github.io/typeahead.js/" target="_blank">Official Website</a>
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Basic Demo</div>
+                </div>
+                <div class="ibox-body">
+                    <p>When initializing a typeahead using the typeahead.js jQuery plugin, you pass the plugin method one or more datasets. The source of a dataset is responsible for computing a set of suggestions for a given query.</p>
+                    <input
+                        class="form-control" id="typeahead_1" placeholder="Countries">
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Bloodhound</div>
+                </div>
+                <div class="ibox-body">
+                    <p>For more advanced use cases, rather than implementing the source for your dataset yourself, you can take advantage of Bloodhound, the typeahead.js suggestion engine.</p>
+                    <input class="form-control" id="typeahead_2" placeholder="Countries">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Prefetch</div>
+                </div>
+                <div class="ibox-body">
+                    <p>Prefetched data is fetched and processed on initialization. If the browser supports local storage, the processed data will be cached there to prevent additional network requests on subsequent page loads.</p>
+                    <input class="form-control"
+                        id="typeahead_3" placeholder="Countries">
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Default Suggestions</div>
+                </div>
+                <div class="ibox-body">
+                    <p>Default suggestions can be shown for empty queries by setting the minLength option to 0 and having the source return suggestions for empty queries.</p>
+                    <input class="form-control" id="typeahead_4" placeholder="NFL Teams">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

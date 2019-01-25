@@ -1,0 +1,418 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Mailbox'
+  - var pageUrl = 'mailbox.html'
+
+block scripts
+    +script('mailbox.js', 'page')
+
+block content
+  .flexbox-b.mb-5
+    span.mr-4.static-badge.badge-pink
+      i.la.la-envelope
+    div
+      h5.font-strong Mailbox
+      .text-light James Brian, james@example.com
+  .row
+    .col-lg-3.col-md-4
+      a.btn.btn-primary.btn-block(data-toggle='modal', data-target='#new-mail-modal', href='javascript:;')
+        span.btn-icon
+          i.la.la-pencil
+          | Compose
+      h6.mt-5.mb-2 FOLDERS
+      ul.list-group.list-group-divider
+        li.list-group-item.flexbox
+          a.flexbox-b(href='javascript:;')
+            i.la.la-inbox.mr-3.font-18
+            | Inbox
+          span.badge.badge-warning.badge-circle 17
+        li.list-group-item
+          a.flexbox-b(href='javascript:;')
+            i.la.la-send-o.mr-3.font-18
+            | Sent
+        li.list-group-item.flexbox
+          a.flexbox-b(href='javascript:;')
+            i.la.la-star-o.mr-3.font-18
+            | Important
+          span.badge.badge-success.badge-circle 2
+        li.list-group-item
+          a.flexbox-b(href='javascript:;')
+            i.la.la-envelope.mr-3.font-18
+            | Drafts
+        li.list-group-item
+          a.flexbox-b(href='javascript:;')
+            i.la.la-trash-o.mr-3.font-18
+            | Trash
+      h6.mt-4.mb-2 LABELS
+      ul.list-group.list-group-divider
+        li.list-group-item
+          a(href='javascript:;')
+            i.badge-point.badge-success.mr-3
+            | Support
+        li.list-group-item
+          a(href='javascript:;')
+            i.badge-point.badge-warning.mr-3
+            | Shopping
+        li.list-group-item
+          a(href='javascript:;')
+            i.badge-point.badge-primary.mr-3
+            | Payment
+        li.list-group-item
+          a(href='javascript:;')
+            i.badge-point.badge-danger.mr-3
+            | System
+        li.list-group-item
+          a(href='javascript:;')
+            i.badge-point.badge-blue.mr-3
+            | Social
+    .col-lg-9.col-md-8
+      #mailbox-container.ibox
+        .flexbox-b.p-4
+          h5.font-strong.m-0.mr-3 INBOX
+          span#counter-selected(style='display:none;')
+            | Selected
+            span#counter-count.font-strong.text-danger.ml-2 0
+        .flexbox.px-4.py-3.bg-primary-50
+          .flexbox-b
+            label.checkbox.checkbox-primary.check-single.pt-1
+              input(type='checkbox', data-select='all')
+              span.input-span
+            .btn-group.mr-2(style='margin-left: -4px;')
+              button.btn.btn-transparent.btn-sm.dropdown-toggle(data-toggle='dropdown')
+                i.fa.fa-angle-down
+              ul.dropdown-menu
+                li(data-select='read')
+                  a.dropdown-item Select read
+                li(data-select='unread')
+                  a.dropdown-item Select unread
+                li.dropdown-divider
+                li(data-select='clear')
+                  a.dropdown-item Clear selection
+            #inbox-actions
+              button.btn.btn-sm.btn-transparent.btn-primary.btn-icon-only.btn-circle.disabled(data-action='mark_as_read', data-toggle='tooltip', data-original-title='Mark as read')
+                i.la.la-eye
+              button.btn.btn-sm.btn-transparent.btn-pink.btn-icon-only.btn-circle.disabled(data-action='mark_as_important', data-toggle='tooltip', data-original-title='Mark as important')
+                i.la.la-star-o
+              button.btn.btn-sm.btn-transparent.btn-info.btn-icon-only.btn-circle.disabled(data-action='reply', data-toggle='tooltip', data-original-title='Reply')
+                i.la.la-reply
+              button.btn.btn-sm.btn-transparent.btn-danger.btn-icon-only.btn-circle.disabled(data-action='delete', data-toggle='tooltip', data-original-title='Delete')
+                i.la.la-trash-o
+            span.counter-selected.ml-1(hidden='')
+              | Selected 
+              span.font-strong.text-warning.counter-count 3
+          .input-group-icon.input-group-icon-left
+            span.input-icon.input-icon-right.font-16
+              i.ti-search
+            input#key-search.form-control.form-control-rounded(type='text', placeholder='Search ...')
+        table#table-inbox.table.table-hover.table-inbox
+          tbody.rowlinkx(data-link='row')
+            tr(data-id='1')
+              td.check-cell.rowlink-skip
+                label.checkbox.checkbox-primary.check-single
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td Emma Johnson
+              td
+                a.d-block(data-toggle='modal', data-target='#mail-view-modal') Fusce suscipit semper erat, vel solo.
+              td
+              td
+                i.badge-point.badge-success
+              td.text-right 5.22 AM
+            tr.unread(data-id='2')
+              td.check-cell
+                label.checkbox.checkbox-primary
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td Olivia Smith
+              td Mauris in sem at quam elementum sagittis vel.
+              td
+                i.fa.fa-paperclip
+              td
+                i.badge-point.badge-warning
+              td.text-right 4.10 AM
+            tr.unread(data-id='3')
+              td.check-cell
+                label.checkbox.checkbox-primary
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td Noah Williams
+              td Neque porro quisquam est qui dolorem ipsum quia
+              td
+              td
+              td.text-right 1.20 AM
+            tr(data-id='4')
+              td.check-cell
+                label.checkbox.checkbox-primary
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td Sophia Jones
+              td Lorem ipsum dolor sit.
+              td
+              td
+              td.text-right Jan 10
+            tr(data-id='5')
+              td.check-cell
+                label.checkbox.checkbox-primary
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td Jacob Brown
+              td Nam vitae magna sollicitudin, fringilla neque sit.
+              td
+                i.fa.fa-paperclip
+              td
+              td.text-right Dec 18
+            tr(data-id='6')
+              td.check-cell
+                label.checkbox.checkbox-primary
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td James Davis
+              td Donec eget diam quis lectus auctor.
+              td
+              td
+                i.badge-point.badge-primary
+              td.text-right Dec 12
+            tr(data-id='7')
+              td.check-cell
+                label.checkbox.checkbox-primary
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td Ava Wilson
+              td Duis hendrerit tellus tellus, ut lobortis quam.
+              td
+              td
+              td.text-right Sep 7
+            tr.unread(data-id='8')
+              td.check-cell
+                label.checkbox.checkbox-primary
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td Ethan Taylor
+              td Neque porro quisquam est qui dolorem ipsum quia dolor
+              td
+              td
+              td.text-right Sep 1
+            tr(data-id='9')
+              td.check-cell
+                label.checkbox.checkbox-primary
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td Emily Thomas
+              td Proin dictum sem felis, eu.
+              td
+              td
+                i.badge-point.badge-danger
+              td.text-right July 8
+            tr(data-id='10')
+              td.check-cell
+                label.checkbox.checkbox-primary
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td Noah Moore
+              td Phasellus massa velit, sodales non sollicitudin nec.
+              td
+              td
+                i.badge-point.badge-success
+              td.text-right July 6
+            tr(data-id='11')
+              td.check-cell
+                label.checkbox.checkbox-primary
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td Mia Anderson
+              td Pellentesque rutrum auctor magna vel facilisis. Aliquam.
+              td
+              td
+              td.text-right June 15
+            tr(data-id='12')
+              td.check-cell
+                label.checkbox.checkbox-primary
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td Amelia Harris
+              td In ac imperdiet nulla. Proin interdum enim.
+              td
+              td
+              td.text-right June 8
+            tr(data-id='13')
+              td.check-cell
+                label.checkbox.checkbox-primary
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td Sofia Jackson
+              td Morbi et lacus malesuada, cursus est non yet.
+              td
+                i.fa.fa-paperclip
+              td
+                i.badge-point.badge-primary
+              td.text-right April 27
+            tr.unread(data-id='14')
+              td.check-cell
+                label.checkbox.checkbox-primary
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td Daniel Garcia
+              td Suspendisse potenti. Donec in vestibulum tortor. Duis.
+              td
+              td
+              td.text-right April 25
+            tr(data-id='15')
+              td.check-cell
+                label.checkbox.checkbox-primary
+                  input.mail-check(type='checkbox')
+                  span.input-span
+              td Lucas Martin
+              td Curabitur id ultrices erat. Praesent rhoncus augue.
+              td
+              td
+              td.text-right April 25
+        ul.pagination.justify-content-end.p-4
+          li.page-item
+            a.page-link.page-link-solid(href='javascript:;', aria-label='First')
+              span(aria-hidden='true')
+                i.la.la-angle-double-left
+          li.page-item
+            a.page-link.page-link-solid(href='javascript:;', aria-label='Previous')
+              span(aria-hidden='true')
+                i.la.la-angle-left
+          li.page-item.active
+            a.page-link(href='javascript:;') 1
+          li.page-item
+            a.page-link(href='javascript:;') 2
+          li.page-item
+            a.page-link(href='javascript:;') 3
+          li.page-item
+            a.page-link(href='javascript:;') 4
+          li.page-item
+            a.page-link(href='javascript:;')
+              i.la.la-ellipsis-h
+          li.page-item
+            a.page-link.page-link-solid(href='javascript:;', aria-label='Next')
+              i.la.la-angle-right
+          li.page-item
+            a.page-link.page-link-solid(href='javascript:;', aria-label='Last')
+              i.la.la-angle-double-right
+  #new-mail-modal.modal.fade
+    .modal-dialog(role='document')
+      form.modal-content
+        .modal-header.p-4
+          h5.modal-title NEW MESSAGE
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body.p-4
+          .flexbox.mb-4
+            span.btn-icon-only.btn-circle.bg-primary-50.text-primary.mr-3
+              i.ti-support
+            .flex-1.d-flex
+              .flex-1
+                span.text-muted.mr-2 From:
+                div support@example.com
+              .dropdown
+                a.dropdown-toggle.font-16(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-support
+                    | support@example.com
+                  a.dropdown-item
+                    i.ti-shopping-cart
+                    | shopping@example.com
+                  a.dropdown-item
+                    i.ti-help
+                    | help@example.com
+          .form-group.mb-4
+            input.form-control.form-control-line(type='text', name='to', placeholder='Recipient')
+          .form-group.mb-4
+            input.form-control.form-control-line(type='text', name='subject', placeholder='Enter Subject')
+          .form-group.mb-4
+            textarea.form-control.form-control-line(rows='4', name='message', placeholder='Enter Message')
+        .modal-footer.justify-content-between.bg-primary-50
+          div
+            button.btn.btn-primary.btn-rounded.mr-3 Submit
+            label.btn.btn-sm.btn-transparent.btn-secondary.btn-icon-only.btn-circle.file-input.mb-0
+              i.la.la-paperclip.font-20
+              input(type='file')
+            label.btn.btn-sm.btn-transparent.btn-secondary.btn-icon-only.btn-circle.file-input.mb-0
+              i.la.la-image.font-20
+              input(type='file')
+            button.btn.btn-sm.btn-transparent.btn-secondary.btn-icon-only.btn-circle
+              i.la.la-link.font-20
+          a.text-danger
+            i.la.la-trash.font-20
+  #mail-view-modal.modal.fade
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header.px-4.py-3.bg-primary-400
+          div
+            h5.modal-title.text-white Stella Obrien
+            small
+              a.text-white(href='javascript:;') 12 Messages
+          button.close.text-white(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body.p-4
+          .d-flex.mb-4
+            div
+              +img('users/u10.jpg')(class='img-circle mr-3', width='40')
+            .flex-1.d-flex
+              .flex-1
+                .font-strong.font-16 I want a new version of Adminca
+                div
+                  | Stella Obrien
+                  span.text-muted.ml-2 Stella@example.com
+                .text-muted.font-13 24.03.2018, 16:30
+              .d-flex.ml-4
+                button.btn.btn-sm.btn-transparent.btn-secondary.btn-icon-only.btn-circle(data-toggle='tooltip', data-original-title='Important')
+                  i.la.la-star-o
+                button.btn.btn-sm.btn-transparent.btn-secondary.btn-icon-only.btn-circle(data-toggle='tooltip', data-original-title='Reply')
+                  i.la.la-reply
+                .dropdown
+                  button.btn.btn-sm.btn-transparent.btn-secondary.btn-icon-only.btn-circle.dropdown-toggle(data-toggle='dropdown')
+                    i.ti-more-alt
+                  .dropdown-menu.dropdown-menu-right
+                    a.dropdown-item Reply
+                    a.dropdown-item Forward
+                    a.dropdown-item Mark as unread
+                    a.dropdown-item Mark as read
+                    a.dropdown-item Mark as important
+                    .dropdown-divider
+                    a.dropdown-item Print
+                    a.dropdown-item.text-danger Delete
+          hr
+          div
+            p Hi Jack
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur velit, corporis iste. Dolorem sapiente at, quibusdam fuga ea voluptatem iste. Cupiditate dignissimos, iure impedit, perferendis in beatae fuga voluptate.
+            p Best regards! Stella Obrien.
+          .mt-4.pt-2
+            .flexbox.mb-2
+              span.text-primary
+                i.la.la-paperclip.font-18.mr-3
+                | firstfile.pdf
+              a(href='./assets/img/blog/07.jpeg', download='')
+                i.ti-download
+            .flexbox
+              span.text-primary
+                i.la.la-paperclip.font-18.mr-3
+                | firstfile.pdf
+              a(href='./assets/demo/test-file.txt', download='')
+                i.ti-download
+        .modal-footer.justify-content-between.bg-primary-50
+          div
+            button.btn.btn-primary.btn-rounded.mr-3 Submit
+            label.btn.btn-sm.btn-transparent.btn-secondary.btn-icon-only.btn-circle.file-input.mb-0
+              i.la.la-paperclip.font-20
+              input(type='file')
+            label.btn.btn-sm.btn-transparent.btn-secondary.btn-icon-only.btn-circle.file-input.mb-0
+              i.la.la-image.font-20
+              input(type='file')
+            button.btn.btn-sm.btn-transparent.btn-secondary.btn-icon-only.btn-circle
+              i.la.la-link.font-20
+          a.text-danger
+            i.la.la-trash.font-20
+  
+block page_styles
+  style.
+    .table-inbox tr.unread {font-weight: 600;}
+    .table-inbox tr > td:first-child {padding-left: 1.5rem}
+    .table-inbox tr > td:last-child {padding-right: 1rem}

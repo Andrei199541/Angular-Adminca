@@ -1,0 +1,441 @@
+{
+    "menu1" : [
+        {
+            "name": "Dashboards",
+            "icon": "ti-home",
+            "childrens": [
+                {"name":"Visitors", "url":"index.html"},
+                {"name":"Shop", "url":"dashboard_ecommerce.html"},
+                {"name":"Blog", "url":"dashboard_blog.html"},
+                {"name":"Dashboard v4", "url":"dashboard_4.html"},
+                {"name":"Dashboard v5", "url":"dashboard_5.html"},
+                {"name":"Dashboard v6", "url":"dashboard_6.html"},
+                {"name":"Dashboard v7", "url":"dashboard_7.html"}
+            ]
+        },
+        {"header":true, "name":"FEATURES"},
+        {
+            "name": "Basic UI",
+            "icon": "ti-paint-roller",
+            "childrens": [
+                {"name":"Colors", "url":"colors.html"},
+                {"name":"Typography", "url":"typography.html"},
+                {"name":"Panels", "url":"panels.html"},
+                {
+                    "name":"Tabs", 
+                    "childrens": [
+                        {"name": "Pills", "url": "tabs-pill.html"},
+                        {"name": "Line tabs", "url": "tabs-line.html"}
+                    ]
+                },
+                {"name":"Alerts", "url":"alerts.html"},
+                {"name":"Tooltip & Popover", "url":"tooltip_popover.html"},
+                {"name":"Badges & Progress", "url":"badges_progress.html"},
+                {"name":"List", "url":"lists.html"}
+            ]
+        },
+        {
+            "name": "Components",
+            "icon": "ti-package",
+            "childrens": [
+                {"name":"Toastr Notifications", "url":"toastr.html"},
+                {"name":"Sweet Alert", "url":"sweetalert.html"},
+                {"name":"Alertify", "url":"alertify.html"},
+                {"name":"Idle timer", "url":"idle_timer.html"},
+                {"name":"Session Timeout", "url":"session_timeout.html"},
+                {"name":"Code Editor", "url":"code_editor.html"},
+                {"name":"Tree View", "url":"tree_view.html"},
+                {"name":"Nestable List", "url":"nestable.html"},
+                {"name":"Clipboard", "url":"clipboard.html"},
+                {"name":"Masonry", "url":"masonry.html"},
+                {"name":"PDF viewer", "url":"pdf_viewer.html"}
+            ]
+        },
+        {
+            "name": "Buttons",
+            "icon": "ti-heart",
+            "childrens": [
+                {
+                    "name":"Base Buttons", 
+                    "childrens": [
+                        {"name": "Default style", "url": "buttons-default.html"},
+                        {"name": "Rounded style", "url": "buttons-rounded.html"},
+                        {"name": "Square style", "url": "buttons-square.html"},
+                        {"name": "Air style", "url": "buttons-air.html"}
+                    ]
+                },
+                {"name": "Button Icon", "url": "button-icon.html"},
+                {"name": "Labeled buttons", "url": "button-labeled.html"},
+                {"name": "Animated buttons", "url":"button-animated.html"},
+                {"name": "FAB buttons", "url":"buttons-fab.html"},
+                {"name": "Button Groups", "url": "button-groups.html"},
+                {"name": "Button dropdowns", "url": "button-dropdowns.html"},
+                {"name": "Social Buttons", "url": "buttons-social.html"}
+            ]
+        },
+        {
+            "name": "Widgets",
+            "icon": "ti-layers-alt",
+            "childrens": [
+                {"name": "Statistics Widgets", "url": "widgets-statistics.html"},
+                {"name": "App & List Widgets", "url": "widgets-list.html"},
+                {"name": "User Widgets", "url": "widgets-user.html"},
+                {"name": "Blog Widgets", "url": "widgets-blog.html"}
+            ]
+        },
+        {
+            "name": "Forms",
+            "icon": "ti-check-box",
+            "childrens": [
+                {
+                    "name":"Form Controls", 
+                    "childrens": [
+                        {"name": "Inputs", "url": "form-controls.html"},
+                        {"name": "Switch", "url": "form-switch.html"},
+                        {"name": "Checkbox & Radio", "url": "form-checkbox-radio.html"},
+                        {"name": "Input Groups", "url": "form-input-groups.html"}
+                    ]
+                },
+                {"name":"Form Layouts", "url":"form_layouts.html"},
+                {"name":"Advanced Plugins", "url":"form_advanced.html"},
+                {"name":"Form input masks", "url":"form_masks.html"},
+                {"name":"Form Validation", "url":"form_validation.html"},
+                {"name":"Text Editors", "url":"text_editors.html"},
+                {"name":"Dropzone File Upload", "url":"form_dropzone.html"},
+                {"name":"Image Cropping", "url":"image_cropping.html"},
+                {"name":"Autocomplete", "url":"autocomplete.html"},
+                {"name":"Form Wizard", "url":"form_wizard.html"}
+            ]
+        },
+        {
+            "name": "Tables",
+            "icon": "ti-layout-tab-window",
+            "childrens": [
+                {"name":"Basic Tables", "url":"table_basic.html"},
+                {"name":"Datatables", "url":"datatables.html"}
+            ]
+        },
+        {
+            "name": "Charts",
+            "icon": "ti-bar-chart",
+            "childrens": [
+                {"name":"Flot Charts", "url":"charts_flot.html"},
+                {"name":"Morris Charts", "url":"charts_morris.html"},
+                {"name":"Chart.js", "url":"chartjs.html"},
+                {"name":"C3 Charts", "url":"c3.html"},
+                {"name":"Peity Charts", "url":"charts_peity.html"},
+                {"name":"Sparkline Charts", "url":"charts_sparkline.html"},
+                {"name":"Rickshaw Charts", "url":"charts_rickshaw.html"}
+            ]
+        },
+        {
+            "name": "Maps",
+            "icon": "ti-map-alt",
+            "childrens": [
+                {"name":"Google maps", "url":"maps_google.html"},
+                {"name":"Datamaps", "url":"datamaps.html"},
+                {"name":"Vector maps", "url":"maps_vector.html"}
+            ]
+        },
+        {
+            "name": "Icons",
+            "url": "icons.html",
+            "icon": "ti-comments-smiley"
+        },
+        {"header":true, "name":"PAGES"},
+        {
+            "name": "Mailbox",
+            "icon": "ti-email",
+            "url": "mailbox.html"
+        },
+        {
+            "name": "Blog",
+            "icon": "ti-pencil",
+            "childrens": [
+                {"name":"List", "url":"blog_list.html"},
+                {"name":"Article", "url":"article.html"}
+            ]
+        },
+        {
+            "name": "E-Commerce",
+            "icon": "ti-shopping-cart",
+            "childrens": [
+                {"name":"Dashboard", "url":"dashboard_ecommerce.html"},
+                {"name":"Products list", "url":"ecommerce_products_list.html"},
+                {"name":"Add new product", "url":"ecommerce_add_product.html"},
+                {"name":"Orders list", "url":"ecommerce_orders_list.html"},
+                {"name":"Order details", "url":"ecommerce_order_details.html"},
+                {"name":"Invoice", "url":"invoice.html"},
+                {"name":"Customers", "url":"ecommerce_customers.html"}
+            ]
+        },
+        {
+            "name": "Calendar",
+            "url": "calendar.html",
+            "icon": "ti-calendar"
+        },
+        {
+            "name": "General Pages",
+            "icon": "ti-files",
+            "childrens": [
+                {"name":"FAQ", "url":"faq.html"},
+                {"name":"Search", "url":"search.html"},
+                {"name":"Timeline", "url":"timeline.html"},
+                {"name":"Horizontal timeline", "url":"timeline_horizontal.html"},
+                {"name":"Pricing Table v1", "url":"pricing-table-1.html"},
+                {"name":"Pricing Table v2", "url":"pricing-table-2.html"},
+                {"name":"Pricing Table v3", "url":"pricing-table-3.html"},
+                {"name":"Pricing Table v4", "url":"pricing-table-4.html"},
+                {"name":"Pricing Table v5", "url":"pricing-table-5.html"},
+                {"name":"Pricing Table v6", "url":"pricing-table-6.html"}
+            ]
+        },
+        {
+            "name": "Custom Pages",
+            "icon": "ti-user",
+            "childrens": [
+                {
+                    "name":"User Pages", 
+                    "childrens": [
+                        {"name":"Profile", "url":"profile.html"},
+                        {"name":"Login v1", "url":"login.html"},
+                        {"name":"Login v2", "url":"login-2.html"},
+                        {"name":"Login v3", "url":"login-3.html"},
+                        {"name":"Login v4", "url":"login-4.html"},
+                        {"name":"Login v5", "url":"login-5.html"},
+                        {"name":"Lockscreen", "url":"lockscreen.html"},
+                        {"name":"Forgot password", "url":"forgot_password.html"}
+                    ]
+                },
+                {
+                    "name":"Error Pages", 
+                    "childrens": [
+                        {"name":"404 error", "url":"error_404.html"},
+                        {"name":"404 error v2", "url":"error_404-2.html"},
+                        {"name":"403 error", "url":"error_403.html"},
+                        {"name":"500 error", "url":"error_500.html"},
+                        {"name":"Maintenance Mode", "url":"maintenance.html"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Menu Levels",
+            "icon": "ti-anchor",
+            "childrens": [
+                {"name":"Level 2", "url":"javascript:;"},
+                {
+                    "name":"Level 2", 
+                    "url":"",
+                    "childrens": [
+                        {"name": "Level 3", "url": "javascript:;"},
+                        {"name": "Level 3", "url": "javascript:;"}
+                    ]
+                }
+            ]
+        }
+    ],
+    "menu2" : [
+        {
+            "name": "Dashboards",
+            "childrens": [
+                {"name":"Visitors", "url":"index.html"},
+                {"name":"Shop", "url":"dashboard_ecommerce.html"},
+                {"name":"Blog", "url":"dashboard_blog.html"},
+                {"name":"Dashboard v4", "url":"dashboard_4.html"},
+                {"name":"Dashboard v5", "url":"dashboard_5.html"},
+                {"name":"Dashboard v6", "url":"dashboard_6.html"},
+                {"name":"Dashboard v7", "url":"dashboard_7.html"}
+            ]
+        },
+        {
+            "name": "Basic UI",
+            "childrens": [
+                {"name":"Colors", "url":"colors.html"},
+                {
+                    "name":"Buttons", 
+                    "childrens": [
+                        {"name": "Default style", "url": "buttons-default.html"},
+                        {"name": "Rounded style", "url": "buttons-rounded.html"},
+                        {"name": "Square style", "url": "buttons-square.html"},
+                        {"name": "Air style", "url": "buttons-air.html"},
+                        {"name": "Button Icon", "url": "button-icon.html"},
+                        {"name": "Labeled buttons", "url": "button-labeled.html"},
+                        {"name": "Animated buttons", "url":"button-animated.html"},
+                        {"name": "FAB buttons", "url":"buttons-fab.html"},
+                        {"name": "Button Groups", "url": "button-groups.html"},
+                        {"name": "Button dropdowns", "url": "button-dropdowns.html"},
+                        {"name": "Social Buttons", "url": "buttons-social.html"}
+                    ]
+                },
+                {"name":"Typography", "url":"typography.html"},
+                {"name":"Panels", "url":"panels.html"},
+                {
+                    "name":"Tabs", 
+                    "childrens": [
+                        {"name": "Pills", "url": "tabs-pill.html"},
+                        {"name": "Line tabs", "url": "tabs-line.html"}
+                    ]
+                },
+                {"name":"Alerts", "url":"alerts.html"},
+                {"name":"Tooltip & Popover", "url":"tooltip_popover.html"},
+                {"name":"Badges & Progress", "url":"badges_progress.html"},
+                {"name":"List", "url":"lists.html"}
+            ]
+        },
+        {
+            "name": "Components",
+            "childrens": [
+                {"name":"Toastr Notifications", "url":"toastr.html"},
+                {"name":"Sweet Alert", "url":"sweetalert.html"},
+                {"name":"Alertify", "url":"alertify.html"},
+                {"name":"Idle timer", "url":"idle_timer.html"},
+                {"name":"Session Timeout", "url":"session_timeout.html"},
+                {"name":"Code Editor", "url":"code_editor.html"},
+                {"name":"Tree View", "url":"tree_view.html"},
+                {"name":"Nestable List", "url":"nestable.html"},
+                {"name":"Clipboard", "url":"clipboard.html"},
+                {"name":"Masonry", "url":"masonry.html"},
+                {"name":"PDF viewer", "url":"pdf_viewer.html"}
+            ]
+        },
+        {
+            "name": "Pages",
+            "childrens": [
+                {
+                    "name":"User Pages",
+                    "icon": "ti-user",
+                    "childrens": [
+                        {"name":"Profile", "url":"profile.html"},
+                        {"name":"Login v1", "url":"login.html"},
+                        {"name":"Login v2", "url":"login-2.html"},
+                        {"name":"Login v3", "url":"login-3.html"},
+                        {"name":"Login v4", "url":"login-4.html"},
+                        {"name":"Login v5", "url":"login-5.html"},
+                        {"name":"Lockscreen", "url":"lockscreen.html"},
+                        {"name":"Forgot password", "url":"forgot_password.html"}
+                    ]
+                },
+                {
+                    "name":"Error Pages",
+                    "icon": "ti-info-alt",
+                    "childrens": [
+                        {"name":"404 error", "url":"error_404.html"},
+                        {"name":"404 error v2", "url":"error_404-2.html"},
+                        {"name":"403 error", "url":"error_403.html"},
+                        {"name":"500 error", "url":"error_500.html"},
+                        {"name":"Maintenance Mode", "url":"maintenance.html"}
+                    ]
+                },
+                {"name":"FAQ", "url":"faq.html"},
+                {"name":"Search", "url":"search.html"},
+                {"name":"Blog List", "url":"blog_list.html"},
+                {"name":"Article", "url":"article.html"},
+                {"name":"Pricing Table v1", "url":"pricing-table-1.html"},
+                {"name":"Pricing Table v2", "url":"pricing-table-2.html"},
+                {"name":"Pricing Table v3", "url":"pricing-table-3.html"},
+                {"name":"Pricing Table v4", "url":"pricing-table-4.html"},
+                {"name":"Pricing Table v5", "url":"pricing-table-5.html"},
+                {"name":"Pricing Table v6", "url":"pricing-table-6.html"},
+                {"name":"Timeline", "url":"timeline.html"},
+                {"name":"Horizontal timeline", "url":"timeline_horizontal.html"}
+             ]
+        },
+        {
+            "name": "E-Commerce",
+            "childrens": [
+                {"name":"Dashboard", "url":"dashboard_ecommerce.html"},
+                {"name":"Products list", "url":"ecommerce_products_list.html"},
+                {"name":"Add new product", "url":"ecommerce_add_product.html"},
+                {"name":"Orders list", "url":"ecommerce_orders_list.html"},
+                {"name":"Order details", "url":"ecommerce_order_details.html"},
+                {"name":"Invoice", "url":"invoice.html"},
+                {"name":"Customers", "url":"ecommerce_customers.html"}
+            ]
+        },
+        {
+            "name": "Apps",
+            "childrens": [
+                {
+                    "name": "Mailbox",
+                    "icon": "ti-email",
+                    "url": "mailbox.html"
+                },
+                {
+                    "name": "Calendar",
+                    "url": "calendar.html",
+                    "icon": "ti-calendar"
+                }
+            ]
+        },
+        {
+            "name": "More",
+            "childrens": [
+                {
+                    "name": "Icons",
+                    "url": "icons.html",
+                    "icon": "ti-comments-smiley"
+                },
+                {
+                    "name":"Widgets",
+                    "icon": "ti-layers-alt",
+                    "childrens": [
+                        {"name": "Statistics Widgets", "url": "widgets-statistics.html"},
+                        {"name": "App & List Widgets", "url": "widgets-list.html"},
+                        {"name": "User Widgets", "url": "widgets-user.html"},
+                        {"name": "Blog Widgets", "url": "widgets-blog.html"}
+                    ]
+                },
+                {
+                    "name":"Forms",
+                    "icon": "ti-check-box",
+                    "childrens": [
+                        {"name": "Inputs", "url": "form-controls.html"},
+                        {"name": "Switch", "url": "form-switch.html"},
+                        {"name": "Checkbox & Radio", "url": "form-checkbox-radio.html"},
+                        {"name": "Input Groups", "url": "form-input-groups.html"},
+                        {"name":"Form Layouts", "url":"form_layouts.html"},
+                        {"name":"Advanced Plugins", "url":"form_advanced.html"},
+                        {"name":"Form input masks", "url":"form_masks.html"},
+                        {"name":"Form Validation", "url":"form_validation.html"},
+                        {"name":"Text Editors", "url":"text_editors.html"},
+                        {"name":"Dropzone File Upload", "url":"form_dropzone.html"},
+                        {"name":"Image Cropping", "url":"image_cropping.html"},
+                        {"name":"Autocomplete", "url":"autocomplete.html"},
+                        {"name":"Form Wizard", "url":"form_wizard.html"}
+                    ]
+                },
+                {
+                    "name":"Tables",
+                    "icon": "ti-layout-tab-window",
+                    "childrens": [
+                        {"name":"Basic Tables", "url":"table_basic.html"},
+                        {"name":"Datatables", "url":"datatables.html"}
+                    ]
+                },
+                {
+                    "name": "Charts",
+                    "icon": "ti-bar-chart",
+                    "childrens": [
+                        {"name":"Flot Charts", "url":"charts_flot.html"},
+                        {"name":"Morris Charts", "url":"charts_morris.html"},
+                        {"name":"Chart.js", "url":"chartjs.html"},
+                        {"name":"C3 Charts", "url":"c3.html"},
+                        {"name":"Peity Charts", "url":"charts_peity.html"},
+                        {"name":"Sparkline Charts", "url":"charts_sparkline.html"},
+                        {"name":"Rickshaw Charts", "url":"charts_rickshaw.html"}
+                    ]
+                },
+                {
+                    "name": "Maps",
+                    "icon": "ti-map-alt",
+                    "childrens": [
+                        {"name":"Google maps", "url":"maps_google.html"},
+                        {"name":"Datamaps", "url":"datamaps.html"},
+                        {"name":"Vector maps", "url":"maps_vector.html"}
+                    ]
+                }
+            ]
+        }
+    ]
+}

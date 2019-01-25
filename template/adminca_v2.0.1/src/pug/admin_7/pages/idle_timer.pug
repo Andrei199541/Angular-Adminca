@@ -1,0 +1,63 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'jQuery Idle Timer'
+  - var pageUrl = 'idle_timer.html'
+  - var page_heading = 'jQuery Idle Timer'
+  - var path = ['Components', 'jQuery Idle Timer']
+
+block content
+    .alert.alert-primary.alert-bordered
+        p provides you a way to monitor user activity with a page.
+        p: a.btn.btn-primary(href='https://github.com/thorst/jquery-idletimer', target='_blank') Official Website
+    +panel()
+        .text-center(style='margin-bottom:50px')
+            h5 Keep your mouse and keyboard still for 5 second
+            i.fa.fa-mouse-pointer.fa-4x
+        p
+            | The idle timer is built on jQuery and provides two events: idle.idleTimer and active.idleTimer, which fire when the user's idle state has changed.
+        p
+            | When you move your mouse over the page or start typing, you're considered "active".
+        p Fires a custom event when the user is "idle". Idle is defined by not...
+        ul
+            li moving the mouse
+            li scrolling the mouse wheel
+            li using the keyboard
+        br
+        p.text-muted Basic Usage
+        pre: code.
+          $(function(){
+              // Set idle time
+              $( document ).idleTimer( 5000 );
+    
+              $( document ).on( "idle.idleTimer", function(event, elem, obj){
+                  // function you want to fire when the user goes idle
+              });
+
+              $( document ).on( "active.idleTimer", function(event, elem, obj, triggerevent){
+                  // function you want to fire when the user becomes active again
+              });
+          });
+
+block scripts
+    script.
+        $(function(){
+            // Set idle time
+            $( document ).idleTimer( 5000 );
+            //$( document ).idleTimer("destroy");
+
+
+            $( document ).on( "idle.idleTimer", function(event, elem, obj){
+                // function you want to fire when the user goes idle
+                toastr.warning('You can call any function when the user goes idle.','Idle time');
+                //$('<audio id="chatAudio"><source src="/assets/audio/notify/notify.ogg" type="audio/ogg"><source src="/assets/audio/notify/notify.mp3" type="audio/mpeg"><source src="/assets/audio/notify/notify.wav" type="audio/wav"></audio>').appendTo('body');
+                //$('#chatAudio')[0].play();
+            });
+
+            $( document ).on( "active.idleTimer", function(event, elem, obj, triggerevent){
+                // function you want to fire when the user becomes active again
+                toastr.clear();
+                toastr.success('You returned to the active mode.','You are back.');
+            });
+
+        });

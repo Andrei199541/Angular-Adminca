@@ -1,0 +1,17 @@
+// New question dialog
+.modal.fade#session-dialog
+  .modal-dialog(style="width:400px" role="document")
+    .modal-content.timeout-modal
+      .modal-body
+        button.close(data-dismiss="modal" aria-label="Close")
+        .text-center.mt-3.mb-4: i.ti-lock.timeout-icon
+        .text-center.h4.mb-3 Set Auto Logout
+        p.text-center.mb-4 You are about to be signed out due to inactivity.<br>Select after how many minutes of inactivity you log out of the system.
+        #timeout-reset-box(style="display:none")
+          .form-group.text-center: button.btn.btn-danger.btn-fix.btn-air#timeout-reset Deactivate
+        #timeout-activate-box
+          form#timeout-form.form-purple(action='javascript:;')
+            .form-group.pl-3.pr-3.mb-4
+              input.form-control.form-control-line(type="text" name='timeout_count' placeholder="Minutes" id='timeout-count')
+            .form-group.text-center: button.btn.btn-purple.btn-fix.btn-air#timeout-activate Activate
+// End New question dialog

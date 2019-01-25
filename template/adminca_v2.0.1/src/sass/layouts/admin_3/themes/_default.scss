@@ -1,0 +1,41 @@
+$sidebar-bg: #34495f;
+
+.page-sidebar {
+	background-color: #34495f;
+}
+.page-brand {
+	color: #fff;
+    background-color: #4c6c8b;
+}
+.side-menu {
+    & > li {
+        a {
+	        color: #b4bcc8;
+	        &:hover, &:focus {
+	            color: #fff;
+	        }
+	        &.active {color:#fff}
+	    }
+	    &:hover {
+	        & > a {
+	            color: #fff;
+	            background-color: lighten($sidebar-bg, 10%);
+	        }
+	        
+	    }
+	    &.active {
+	        & > a, & > a:hover, & > a:focus {
+			    color: #1abc9c;
+			    background-color: lighten($sidebar-bg, 10%);
+	        }
+	    }
+	    .nav-2-level > ul {
+	        background-color: $sidebar-bg;
+	        &::before {border-right-color: #34495f}
+	    }
+	    .nav-3-level {
+	        background-color: $sidebar-bg;
+	    }
+    }
+}
+

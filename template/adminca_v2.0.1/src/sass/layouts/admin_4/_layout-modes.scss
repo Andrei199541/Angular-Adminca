@@ -1,0 +1,89 @@
+body {
+    
+    &.hidden-menu {
+        .top-navbar {
+            display: none;
+        }
+    }
+
+    // Drawer sidebar
+    /////////////////
+
+	&.drawer-sidebar {
+		.top-navbar {
+		    position: fixed;
+		    top: 0;
+		    bottom: 0;
+		    width: 220px;
+		    left: -220px;
+		    margin-top: 0;
+		    background-color: #253544;
+		    z-index: 1005;
+		    &.shined { left: 0 }
+		    .nav-menu {
+		        flex-flow: column nowrap;
+		        margin-left: -15px;
+		        margin-right: -15px;
+		        a {
+		            color: #b4bcc8;
+		            background-color: transparent !important;
+		            & > i {display:none}
+		            &:not(.active):hover {color: #fff}
+		        }
+		        .dropdown-menu {
+			        position: relative !important;
+			        transform: none !important;
+			        float: none;
+			        box-shadow: none;
+			        background: #253544;
+			        z-index: 1;
+			        & > li > a {
+			            padding-left: 42px;
+			            &:hover, &:focus {background-color: transparent}
+			        }
+		        }
+		        .dropdown.open, .dropdown.show {
+		            &, & .dropdown-menu {background-color: #2b3c4e}
+		        }
+		        .submenu > li > a {padding-left: 52px}
+		        a.dropdown-toggle::before {
+		            content: "\f105";
+	                font-family: FontAwesome;
+		            display: inline-block;
+		            position: absolute;
+		            right: 10px;
+	                top: 14px;
+		        }
+		        & > li {
+		            & > a {
+		                border: none;
+		            }
+		            &.active > a, &.active > a:hover {
+				        color: #18C5A9;
+		            }
+		        }
+		    }
+		}
+	}
+
+    // Fixed navbar
+    /////////////////
+
+    &.fixed-navbar {
+		.header {
+		    position: fixed;
+		    left: 0;
+		    right: 0;
+		    top: 0;
+		    z-index: 1002;
+		}
+		.content-wrapper {
+			padding-top: 100px;
+		}
+		&.hidden-menu, &.drawer-sidebar {
+		    .content-wrapper {padding-top: 50px}
+		}
+	}
+
+
+}

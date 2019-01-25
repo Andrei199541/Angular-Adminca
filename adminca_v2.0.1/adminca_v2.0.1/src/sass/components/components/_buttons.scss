@@ -1,0 +1,178 @@
+
+.btn {
+    border-radius: $btn-border-raius;
+    outline: 0 !important;
+    transition: all ease-in-out .15s;
+    position: relative;
+    padding: 0.65rem 1.25rem;
+    cursor: pointer;
+    overflow: hidden;
+    &:active, &.active,
+    .show > &.dropdown-toggle,
+    .open > &.dropdown-toggle {
+        box-shadow: none;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+    .active-visible {display: none}
+    &.active {
+        .active-visible {display: inline}
+        .active-hidden {display: none}
+    }
+}
+
+.btn-group-lg>.btn, .btn-lg {
+    padding: 1rem 1.75rem;
+    border-radius: $btn-lg-border-raius;
+}
+.btn-group-sm>.btn, .btn-sm {
+    padding: 0.35rem 0.75rem;
+    border-radius: $btn-sm-border-raius;
+}
+
+// Air style
+
+.btn-air {
+    box-shadow: 0 5px 20px #d6dee4;
+    &:hover {box-shadow: none}
+}
+
+// Thick border style
+
+.btn-thick {
+    border-width: 2px;
+}
+
+// Square style
+
+.btn-square {
+    &, & .btn {
+        border-radius: 0 !important;
+    }
+}
+
+// Long style
+
+.btn-fix {
+    min-width: 120px;
+    text-align: center;
+}
+
+// Rounded style
+
+.btn-rounded {
+    border-radius: 50px !important;
+}
+
+
+// SEMANTIC BUTTONS
+
+.btn-secondary {
+    @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+.btn-primary {
+    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+.btn-success {
+    @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+.btn-info {
+    @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+.btn-warning {
+    @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+.btn-danger {
+    @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+.btn-blue {
+    @include button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
+}
+.btn-pink {
+    @include button-variant($btn-pink-color, $btn-pink-bg, $btn-pink-border);
+}
+.btn-white {
+    background-color: #fff;
+}
+.btn-transparent {
+    &, &.disabled {
+        border-color: transparent;
+        background-color: transparent;
+        color: #485b6f;
+    }
+}
+
+// OUTLINE BUTTONS
+
+.btn-outline-secondary {
+    color: $btn-secondary-color;
+    background-image: none;
+    background-color: transparent;
+    border-color: rgba(0,0,0,.1);
+    &:focus, &.focus, &:hover, &.active, &:active {
+        color: $btn-secondary-color !important;
+        background-color: $btn-secondary-bg !important;
+        border-color: $btn-secondary-border !important;
+        box-shadow: none;
+        background-image: none;
+    }
+}
+.btn-outline-primary {
+  @include button-outline-variant($btn-primary-bg);
+}
+.btn-outline-info {
+  @include button-outline-variant($btn-info-bg);
+}
+.btn-outline-success {
+  @include button-outline-variant($btn-success-bg);
+}
+.btn-outline-warning {
+  @include button-outline-variant($btn-warning-bg);
+}
+.btn-outline-danger {
+  @include button-outline-variant($btn-danger-bg);
+}
+.btn-outline-blue {
+  @include button-outline-variant($btn-blue-bg);
+}
+.btn-outline-pink {
+  @include button-outline-variant($btn-pink-bg);
+}
+.btn-outline {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+
+
+
+
+@import 'buttons/icon-buttons';
+@import 'buttons/gradient-buttons';
+@import 'buttons/labeled-buttons';
+@import 'buttons/animated-buttons';
+@import 'buttons/button-groups';
+@import 'buttons/social-buttons';
+@import 'buttons/fab-buttons';
+
+
+//
+// Support bootstrap 3 for plugins 
+//
+
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid\9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.btn .caret {
+    margin-left: 0;
+}

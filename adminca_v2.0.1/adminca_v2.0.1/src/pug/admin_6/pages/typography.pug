@@ -1,0 +1,130 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Typography'
+  - var pageUrl = 'typography.html'
+  - var page_heading = 'Typography'
+  - var path = ['Basic UI', 'Typography']
+
+block content
+  .row
+    .col-lg-6
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title HEADINGS
+        .ibox-body
+          h1.m-0 h1 Heading
+          br
+          h2.m-0 h2 Heading
+          br
+          h3.m-0 h3 Heading
+          br
+          h4.m-0 h4 Heading
+          br
+          h5.m-0 h5 Heading
+          br
+          h6.m-0 h6. Heading
+          br
+          h5.font-strong.mt-5 Display headings
+          p.mb-5.text-muted
+            | When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style.
+          h1.display-1 Display 1
+          h1.display-2 Display 2
+          h1.display-3 Display 3
+          h1.display-4 Display 4
+          h5.font-strong.mt-5 Lead
+          p.text-muted
+            | Make a paragraph stand out by adding 
+            code .lead
+            | .
+          p.lead
+            | Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+    .col-lg-6
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title TEXT
+        .ibox-body
+          h5.font-strong.mb-4 State colors
+          p.text-primary Simple example of primary text.
+          p.text-pink Simple example of pink text.
+          p.text-success Simple example of success text.
+          p.text-warning Simple example of warning text.
+          p.text-info Simple example of info text.
+          p.text-danger Simple example of danger text.
+          p.text-blue Simple example of blue text.
+          p.text-muted Simple example of muted text.
+          h5.font-strong.mb-4.mt-5 Font Weight
+          p.font-light Light text
+          p Normal text
+          p.font-strong Strong text
+          p.font-bold Bold text
+          p.font-extra-bold Extra Bold text
+          h5.font-strong.mb-4.mt-5 Alignment
+          p.text-left Left aligned text.
+          p.text-center Center aligned text.
+          p.text-right Right aligned text.
+  .row
+    .col-lg-6
+      .ibox
+        .ibox-head
+          .ibox-title Inline text elements
+        .ibox-body
+          p
+            | You can use the mark tag to 
+            mark highlight
+            |  text.
+          p
+            del This line of text is meant to be treated as deleted text.
+          p
+            s This line of text is meant to be treated as no longer accurate.
+          p
+            ins This line of text is meant to be treated as an addition to the document.
+          p
+            u This line of text will render as underlined
+          p
+            small This line of text is meant to be treated as fine print.
+          p
+            strong This line rendered as strong text.
+          p
+            b This line rendered as bold text.
+          p
+            em This line rendered as italicized text.
+    .col-lg-6
+      .ibox
+        .ibox-head
+          .ibox-title Inline text elements
+        .ibox-body
+          h5.font-strong.mb-4 Links
+          p
+            a(href='javascript:;') Simple Link
+          p
+            a.text-purple(href='javascript:;') Simple Link
+          p
+            a.text-pink(href='javascript:;') Simple Link
+          p
+            a.text-blue(href='javascript:;') Simple Link
+          p
+            a.text-success(href='javascript:;') Simple Link
+          p
+            a.text-warning(href='javascript:;') Simple Link
+          p
+            a.text-info(href='javascript:;') Simple Link
+          p
+            a.text-danger(href='javascript:;') Simple Link
+          p
+            a.text-muted(href='javascript:;') Simple Link
+          h5.font-strong.mb-4.mt-4 Abbreviations
+          p
+            abbr(title='attribute') attr
+          p
+            abbr.initialism(title='HyperText Markup Language') HTML
+          h5.font-strong.mb-4.mt-4 Blockquotes
+          blockquote.blockquote
+            p.mb-0
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          blockquote.blockquote
+            p.mb-0
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            footer.blockquote-footer
+              | Someone famous in 
+              cite(title='Source Title') Source Title

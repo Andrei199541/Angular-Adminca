@@ -1,0 +1,394 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'E-commerce Products list'
+  - var pageUrl = 'ecommerce_products_list.html'
+
+block plugins-styles
+  +link('dataTables/datatables.min.css','plugin')
+
+block plugins
+    +script('dataTables/datatables.min.js', 'plugin')
+
+block content
+  .ibox
+    .ibox-body
+      h5.font-strong.mb-4 PRODUCTS LIST
+      .flexbox.mb-4
+        .flexbox
+          label.mb-0.mr-2 Type:
+          select#type-filter.selectpicker.show-tick.form-control(title='Please select', data-style='btn-solid', data-width='150px')
+            option(value='') All
+            optgroup(label='Electronics')
+              option TV & Video
+              option Cameras & Photo
+              option Computers & Tablets
+            optgroup(label='Fashion')
+              option Health & Beauty
+              option Shoes
+              option Handbags & Purses
+              option Jewelry and Watches
+        .flexbox
+          .input-group-icon.input-group-icon-left.mr-3
+            span.input-icon.input-icon-right.font-16
+              i.ti-search
+            input#key-search.form-control.form-control-rounded.form-control-solid(type='text', placeholder='Search ...')
+          a.btn.btn-rounded.btn-primary.btn-air(href='ecommerce_add_product.html') Add Product
+      .table-responsive.row
+        table#products-table.table.table-bordered.table-hover
+          thead.thead-default.thead-lg
+            tr
+              th ID
+              th Product
+              th Category
+              th Price
+              th SKU
+              th Quantity
+              th Actions
+          tbody
+            tr
+              td 1
+              td
+                +img('products/07.jpg')(class='mr-3', width='60')
+                | Samsung UE32M5503AUX
+              td TV & Video
+              td $425
+              td F0522
+              td
+                span.badge.badge-danger.badge-pill Out of stock
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 2
+              td
+                +img('products/10.jpg')(class='mr-3', width='60')
+                | Dell XPS 13 2-in-1 9365-4429
+              td Computers & Tablets
+              td $1636
+              td A1274
+              td 120
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 3
+              td
+                +img('products/16.jpg')(class='mr-3', width='60')
+                | Evaflor "Whisky"
+              td Health & Beauty
+              td $12
+              td A5474
+              td 148
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 4
+              td
+                +img('products/15.jpg')(class='mr-3', width='60')
+                | Evaflor "Whisky Silver"
+              td Health & Beauty
+              td $12
+              td 60781
+              td 205
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 5
+              td
+                +img('products/11.jpg')(class='mr-3', width='60')
+                | HP Elitebook Revolve 810 G3
+              td Computers & Tablets
+              td $3287
+              td U7822
+              td
+                span.badge.badge-warning.badge-pill Low of stock
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 6
+              td
+                +img('products/23.jpg')(class='mr-3', width='60')
+                | Women's wrist watch "Moschino"
+              td Jewelry and Watches
+              td $335
+              td Q5497
+              td 47
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 7
+              td
+                +img('products/18.jpg')(class='mr-3', width='60')
+                | Ralf Ringer Modern Shoes
+              td Shoes
+              td $53.80
+              td K2397
+              td 178
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 8
+              td
+                +img('products/08.jpg')(class='mr-3', width='60')
+                | Canon EOS 200D Kit
+              td Cameras & Photo
+              td $1328
+              td R4592
+              td
+                span.badge.badge-warning.badge-pill Low of stock
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 9
+              td
+                +img('products/12.jpg')(class='mr-3', width='60')
+                | Archos 133 Oxygen
+              td Computers & Tablets
+              td $244
+              td T7812
+              td 112
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 10
+              td
+                +img('products/20.jpg')(class='mr-3', width='60')
+                | Women's bag Cromia "Luxor"
+              td Handbags & Purses
+              td $430
+              td M7894
+              td 547
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 11
+              td
+                +img('products/05.jpg')(class='mr-3', width='60')
+                | Sony KD-43XE8096BR2
+              td TV & Video
+              td $1080
+              td C3258
+              td 78
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 12
+              td
+                +img('products/17.jpg')(class='mr-3', width='60')
+                | Brogi Ralf Ringer Modern
+              td Shoes
+              td $24
+              td T9485
+              td
+                span.badge.badge-danger.badge-pill Out of stock
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 13
+              td
+                +img('products/21.jpg')(class='mr-3', width='60')
+                | Women's bag Cromia "Starlight"
+              td Handbags & Purses
+              td $416
+              td Z6219
+              td 244
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 14
+              td
+                +img('products/25.jpg')(class='mr-3', width='60')
+                | Watch Mitya Veselkov "The Spiral of Time"
+              td Jewelry and Watches
+              td $35
+              td I8976
+              td 97
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 15
+              td
+                +img('products/13.jpg')(class='mr-3', width='60')
+                | Lenovo Yoga Tab 3 Pro YT3–X90L
+              td Computers & Tablets
+              td $665
+              td L1249
+              td 58
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 16
+              td
+                +img('products/06.jpg')(class='mr-3', width='60')
+                | Sony KD-55XE8577SR2
+              td TV & Video
+              td $1706
+              td A3656
+              td
+                span.badge.badge-warning.badge-pill Low of stock
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 17
+              td
+                +img('products/09.jpg')(class='mr-3', width='60')
+                | Canon EOS 200D Kit
+              td Cameras & Photo
+              td $650
+              td P9658
+              td 102
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 18
+              td
+                +img('products/19.jpg')(class='mr-3', width='60')
+                | Sneakers Nike Air Max
+              td Shoes
+              td $102
+              td N3264
+              td 55
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 19
+              td
+                +img('products/22.jpg')(class='mr-3', width='60')
+                | Men's bag Fabretti
+              td Handbags & Purses
+              td $259
+              td B4754
+              td 355
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 20
+              td
+                +img('products/26.jpg')(class='mr-3', width='60')
+                | Romanson CL 5A09H MB(BK)
+              td Jewelry and Watches
+              td $518
+              td V6585
+              td 420
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 21
+              td
+                +img('products/24.jpg')(class='mr-3', width='60')
+                | Wrist watches Rodania
+              td Jewelry and Watches
+              td $693
+              td D5412
+              td
+                span.badge.badge-warning.badge-pill Low of stock
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 22
+              td
+                +img('products/04.jpg')(class='mr-3', width='60')
+                | Sony KD-43XE7096
+              td TV & Video
+              td $870
+              td T4578
+              td 75
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+            tr
+              td 23
+              td
+                +img('products/14.jpg')(class='mr-3', width='60')
+                | Evaflor "Double Whisky"
+              td Health & Beauty
+              td $12
+              td H0214
+              td 132
+              td
+                a.text-light.mr-3.font-16(href='javascript:;')
+                  i.ti-pencil
+                a.text-light.font-16(href='javascript:;')
+                  i.ti-trash
+
+block scripts
+  script.
+    $(function(){
+        $('#products-table').DataTable({
+            pageLength: 10,
+            fixedHeader: true,
+            responsive: true,
+            "sDom":     'rtip',
+        });
+        var table = $('#products-table').DataTable();
+        $('#key-search').on( 'keyup', function () {
+            table.search( this.value ).draw();
+        });
+        $('#type-filter').on('change', function(){
+            table.column(2).search($(this).val()).draw();
+        });
+    });

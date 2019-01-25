@@ -1,0 +1,48 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'PDF viewer'
+  - var pageUrl = 'pdf_viewer.html'
+  - var page_heading = 'PDF viewer'
+  - var path = ['Components', 'PDF viewer']
+
+block plugins
+  +script('pdfjs/pdf.js', 'plugin')
+
+block content
+    .alert.alert-primary.alert-bordered
+        h4 PDF.js
+        p
+            | PDF.js is a Portable Document Format (PDF) viewer that is built with HTML5. PDF.js is community-driven and supported by Mozilla Labs. The goal is to create a general-purpose, web standards-based platform for parsing and rendering PDFs.
+        p
+            a.btn.btn-primary(href='https://mozilla.github.io/pdf.js/', target='_blank') Official Website
+    +panel()
+        .text-center.centered(style='max-width:600px;')
+            .btn-group
+                button#prev.btn.btn-secondary
+                    i.fa.fa-long-arrow-left
+                    |  
+                    span.d-none.d-md-inline Previous
+                button#next.btn.btn-secondary
+                    span.d-none.d-md-inline Next
+                    |  
+                    i.fa.fa-long-arrow-right
+                button#zoomin.btn.btn-secondary
+                    i.fa.fa-search-minus
+                    |  
+                    span.d-none.d-md-inline Zoom In
+                button#zoomout.btn.btn-secondary
+                    i.fa.fa-search-plus
+                    |  
+                    span.d-none.d-md-inline Zoom Out
+                button#zoomfit.btn.btn-secondary  100%
+                span.btn-label-out Page:
+                .input-group(style='width:auto')
+                    input#page_num.form-control(style='max-width:50px')
+                    .input-group-btn
+                        button#page_count.btn.btn-outline-default / 22
+        .text-center
+            canvas#the-canvas.pdfcanvas
+
+block scripts
+  +script('pdfjs-demo.js', 'page')

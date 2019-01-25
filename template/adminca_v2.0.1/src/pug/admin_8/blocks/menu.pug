@@ -1,0 +1,62 @@
+
+mixin navItem(item, current)
+  if !item.header
+    if !item.childrens
+      li(class=item.url===current ? 'active' : '')
+        a(href=item.url)
+          if item.icon
+            i.navbar-item-icon(class=item.icon)
+          |#{item.name}
+    else
+      - var x = 'a';
+      each i in item.childrens
+        if i.childrens
+          each ii in i.childrens
+            if ii.childrens
+              each iii in ii.childrens
+                if current === iii.url
+                  - x = current;
+            else
+              if current === ii.url
+                - x = current;
+        else
+          if current === i.url
+            - x = current;
+      li.dropdown(class=current===x ? 'active' : '')
+        a.dropdown-toggle(href='href="javascript:;' data-toggle="dropdown")
+          if item.icon
+            i.navbar-item-icon(class=item.icon)
+          |#{item.name}
+          |  
+          i.fa.fa-angle-down
+        ul.dropdown-menu
+          each child in item.childrens
+            if !child.childrens
+              li
+                a.dropdown-item(href=child.url class=current===child.url ? 'active' : '')
+                  if child.icon
+                    i.navbar-item-icon(class=child.icon)
+                  |#{child.name}
+            else
+              - var y = 'a';
+              each d in child.childrens
+                if current === d.url
+                  - y = d.url;
+              li.has-submenu
+                a.has-tip.dropdown-item(href='href="javascript:;' class=y===current ? 'active' : '')
+                  if child.icon
+                    i.navbar-item-icon(class=child.icon)
+                  |#{child.name}
+                ul.submenu
+                  each subchild in child.childrens
+                    li
+                      a(href=subchild.url class=current===subchild.url ? 'active' : '')
+                        if subchild.icon
+                          i.navbar-item-icon(class=subchild.icon)
+                        |#{subchild.name}
+
+div.top-navbar
+  div.wrapper#navbar-wrapper
+    ul.nav-menu
+      each i in menu2
+        +navItem(i, pageUrl)

@@ -1,0 +1,697 @@
+<div class="page-content fade-in-up">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="ibox">
+                <div class="ibox-body">
+                    <div class="d-flex justify-content-between mb-4">
+                        <div>
+                            <h3 class="m-0">Sales Analytics</h3>
+                            <div>Your shop sales analytics</div>
+                        </div>
+                        <div class="rel">
+                            <button class="btn btn-white btn-icon-only btn-circle" data-toggle="dropdown"><i class="ti-settings"></i></button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item"><i class="la la-upload"></i>Export</a>
+                                <a class="dropdown-item"><i class="la la-file-excel-o"></i>Download</a>
+                                <a class="dropdown-item" data-action="print" data-target="#diagram_1"><i class="la la-print"></i>Print</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <canvas id="line_chart" style="height:260px;"></canvas>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <div class="text-muted mb-4">Statistics</div>
+                    <div class="row align-items-center">
+                        <div class="col-6" data-print-hidden>
+                            <canvas id="chart_1" style="height:100px;"></canvas>
+                        </div>
+                        <div class="col-6">
+                            <h2 class="text-success">+2250$</h2>
+                            <div class="text-muted">
+                                <span class="text-success mr-2"><i class="ti-stats-up mr-1"></i>32%</span>FROM LAST YEAR</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-4 text-center" style="border-right: 1px solid rgba(0,0,0,.1);">
+                            <div class="text-muted">MONTH INCOME</div>
+                            <h2 class="text-success mt-1">$305</h2>
+                        </div>
+                        <div class="col-4 text-center" style="border-right: 1px solid rgba(0,0,0,.1);">
+                            <div class="text-muted">MONTH SALES</div>
+                            <h2 class="text-success mt-1">1680</h2>
+                        </div>
+                        <div class="col-4 text-center">
+                            <div class="text-muted">MONTH ORDERS</div>
+                            <h2 class="text-success mt-1">5800</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ibox ibox-fullheight">
+                        <div class="ibox-head">
+                            <div class="ibox-title">Statistics</div>
+                        </div>
+                        <div class="ibox-body">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <div>
+                                        <canvas id="doughnut_chart" style="height:200px;"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <div class="mb-4">
+                                        <div><i class="la la-heart-o text-pink font-26"></i></div>
+                                        <div class="h1 m-0">220</div>
+                                        <div class="text-lighter">month income</div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <div><i class="ti-shopping-cart text-pink font-26"></i></div>
+                                        <div class="h1 m-0">220</div>
+                                        <div class="text-lighter">month income</div>
+                                    </div>
+                                    <div>
+                                        <div><i class="la la-server text-pink font-26"></i></div>
+                                        <div class="h1 m-0">+28<sup>%</sup></div>
+                                        <div class="text-lighter">Issue Fixed</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ibox ibox-fullheight">
+                        <div class="ibox-head">
+                            <div>
+                                <div class="ibox-title">Weekly earnings</div><small class="text-lighter">24.02 - 24.09</small></div>
+                            <div class="ibox-tools">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-more-alt"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item"><i class="la la-upload"></i>Export</a>
+                                    <a class="dropdown-item"><i class="la la-file-excel-o"></i>Download</a>
+                                    <a class="dropdown-item"><i class="la la-print"></i>Print</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ibox-body">
+                            <div class="row m-b-20">
+                                <div class="col-6 text-center" style="border-right: 1px solid rgba(0,0,0,.1);">
+                                    <div class="text-muted">DAILY PROFIT</div>
+                                    <div class="h2 text-success mt-1">$540</div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <div class="text-muted">SUBSCRIPTIONS</div>
+                                    <div class="h2 text-success mt-1">36</div>
+                                </div>
+                            </div>
+                            <div class="h1 mt-4">$7,400<sup>.60</sup><i class="ti-stats-up float-right text-warning" style="font-size:40px;"></i></div>
+                            <div class="text-lighter">26% Higher then last week</div>
+                            <div class="mt-5 mb-5">
+                                <canvas id="earnings_chart" style="height:100px;"></canvas>
+                            </div>
+                            <div class="d-flex">
+                                <button class="btn btn-gradient-purple mr-2">View More</button>
+                                <button class="btn btn-outline-secondary">Print</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="ibox">
+                        <div class="ibox-body bg-success">
+                            <h5 class="text-center text-white mb-3">Statistics</h5>
+                            <div>
+                                <canvas id="chart_c" style="height:180px;"></canvas>
+                            </div>
+                        </div>
+                        <div class="ibox-body">
+                            <div class="text-lighter mb-2">Lorem Ipsum is simply dummy text</div>
+                            <div>
+                                <span class="h1 mr-3 text-success font-40">72.5%</span>
+                                <span class="text-lighter">34.5% Higher then last month</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="ibox">
+                        <div class="ibox-body bg-pink">
+                            <h5 class="text-center text-white mb-3">Statistics</h5>
+                            <div>
+                                <canvas id="chart_d" style="height:180px;"></canvas>
+                            </div>
+                        </div>
+                        <div class="ibox-body">
+                            <div class="text-lighter mb-2">Lorem Ipsum is simply dummy text</div>
+                            <div>
+                                <span class="h1 mr-3 text-pink font-40">72.5%</span>
+                                <span class="text-lighter">34.5% Higher</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">LATEST ORDERS</div>
+                    <div class="ibox-tools">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-more-alt"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item"> <i class="ti-pencil"></i>Create</a>
+                            <a class="dropdown-item"> <i class="ti-pencil-alt"></i>Edit</a>
+                            <a class="dropdown-item"> <i class="ti-close"></i>Remove</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <div class="flexbox mb-4">
+                        <div class="flexbox">
+                            <span class="flexbox mr-3">
+                                <span class="mr-2 text-muted">Paid</span>
+                                <span class="h3 mb-0 text-primary font-strong">310</span>
+                            </span>
+                            <span class="flexbox">
+                                <span class="mr-2 text-muted">Unpaid</span>
+                                <span class="h3 mb-0 text-pink font-strong">105</span>
+                            </span>
+                        </div>
+                        <a class="flexbox" href="ecommerce_orders_list.html" target="_blank">VIEW ALL<i class="ti-arrow-circle-right ml-2 font-18"></i></a>
+                    </div>
+                    <div class="ibox-fullwidth-block">
+                        <table class="table table-hover">
+                            <thead class="thead-default thead-lg">
+                                <tr>
+                                    <th class="pl-4">Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th class="pr-4" style="width:91px;">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="pl-4">
+                                        <a routerLink="/ecommerce/order_details">#1254</a>
+                                    </td>
+                                    <td>Becky Brooks</td>
+                                    <td>$457.00</td>
+                                    <td>
+                                        <span class="badge badge-success badge-pill">Shipped</span>
+                                    </td>
+                                    <td class="pr-4">17.05.2018</td>
+                                </tr>
+                                <tr>
+                                    <td class="pl-4">
+                                        <a routerLink="/ecommerce/order_details">#1253</a>
+                                    </td>
+                                    <td>Emma Johnson</td>
+                                    <td>$1200.00</td>
+                                    <td>
+                                        <span class="badge badge-success badge-pill">Shipped</span>
+                                    </td>
+                                    <td class="pr-4">17.05.2018</td>
+                                </tr>
+                                <tr>
+                                    <td class="pl-4">
+                                        <a routerLink="/ecommerce/order_details">#1252</a>
+                                    </td>
+                                    <td>Noah Williams</td>
+                                    <td>$780.00</td>
+                                    <td>
+                                        <span class="badge badge-primary badge-pill">Pending</span>
+                                    </td>
+                                    <td class="pr-4">17.05.2018</td>
+                                </tr>
+                                <tr>
+                                    <td class="pl-4">
+                                        <a routerLink="/ecommerce/order_details">#1251</a>
+                                    </td>
+                                    <td>Sophia Jones</td>
+                                    <td>$105.60</td>
+                                    <td>
+                                        <span class="badge badge-success badge-pill">Completed</span>
+                                    </td>
+                                    <td class="pr-4">17.05.2018</td>
+                                </tr>
+                                <tr>
+                                    <td class="pl-4">
+                                        <a routerLink="/ecommerce/order_details">#1250</a>
+                                    </td>
+                                    <td>Jacob Brown</td>
+                                    <td>$40.00</td>
+                                    <td>
+                                        <span class="badge badge-primary badge-pill">Pending</span>
+                                    </td>
+                                    <td class="pr-4">17.05.2018</td>
+                                </tr>
+                                <tr>
+                                    <td class="pl-4">
+                                        <a routerLink="/ecommerce/order_details">#1249</a>
+                                    </td>
+                                    <td>James Davis</td>
+                                    <td>$78.00</td>
+                                    <td>
+                                        <span class="badge badge-danger badge-pill">Canceled</span>
+                                    </td>
+                                    <td class="pr-4">17.05.2018</td>
+                                </tr>
+                                <tr>
+                                    <td class="pl-4">
+                                        <a routerLink="/ecommerce/order_details">#1248</a>
+                                    </td>
+                                    <td>Emma Johnson</td>
+                                    <td>$1200.00</td>
+                                    <td>
+                                        <span class="badge badge-success badge-pill">Shipped</span>
+                                    </td>
+                                    <td class="pr-4">17.05.2018</td>
+                                </tr>
+                                <tr>
+                                    <td class="pl-4">
+                                        <a routerLink="/ecommerce/order_details">#1247</a>
+                                    </td>
+                                    <td>Noah Williams</td>
+                                    <td>$780.00</td>
+                                    <td>
+                                        <span class="badge badge-primary badge-pill">Pending</span>
+                                    </td>
+                                    <td class="pr-4">17.05.2018</td>
+                                </tr>
+                                <tr>
+                                    <td class="pl-4">
+                                        <a routerLink="/ecommerce/order_details">#1246</a>
+                                    </td>
+                                    <td>James Davis</td>
+                                    <td>$78.00</td>
+                                    <td>
+                                        <span class="badge badge-danger badge-pill">Canceled</span>
+                                    </td>
+                                    <td class="pr-4">17.05.2018</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card mb-4 card-hover-zoom">
+                        <img class="card-img img-zoom" src="./assets/img/blog/03.jpg" alt="image" />
+                        <div class="card-img-overlay text-white card-overlay-dark card-overlay-hover d-flex flex-column justify-content-between align-items-start">
+                            <div class="w-100 d-flex justify-content-between mb-3">
+                                <div>
+                                    <span class="badge badge-primary mr-2">TRENDS</span>
+                                    <span class="badge badge-pink">DESIGN</span>
+                                </div>
+                                <div>
+                                    <span class="mr-4"><i class="fa fa-heart-o mr-2"></i>124</span>
+                                    <span><i class="fa fa-comment-o mr-2"></i>56</span>
+                                </div>
+                            </div>
+                            <h2 class="card-title mb-2">
+                                <a>Web Design Trends<br>Strict Selection</a>
+                            </h2>
+                            <div class="text-muted">16 January 2017</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card mb-4 card-hover-zoom">
+                        <img class="card-img img-zoom" src="./assets/img/blog/07.jpeg" alt="image" />
+                        <div class="card-img-overlay text-white card-overlay-dark card-overlay-hover d-flex flex-column justify-content-between align-items-start">
+                            <div class="w-100 d-flex justify-content-between mb-3">
+                                <div>
+                                    <span class="badge badge-primary mr-2">TRENDS</span>
+                                    <span class="badge badge-pink">DESIGN</span>
+                                </div>
+                                <div>
+                                    <span class="mr-4"><i class="fa fa-heart-o mr-2"></i>124</span>
+                                    <span><i class="fa fa-comment-o mr-2"></i>56</span>
+                                </div>
+                            </div>
+                            <h2 class="card-title mb-2">
+                                <a>Web Design Trends<br>Strict Selection</a>
+                            </h2>
+                            <div class="text-muted">16 January 2017</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card card-air text-center centered mb-4" style="max-width:320px;">
+                <div class="card-body">
+                    <div class="card-avatar mt-3 mb-4">
+                        <img class="img-circle" src="./assets/img/users/u6.jpg" alt="image" />
+                    </div>
+                    <h4 class="card-title mb-1">Connor Perez</h4>
+                    <div class="text-pink"><i class="ti-location-pin mr-2"></i>California, USA</div>
+                    <p class="mt-4 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="d-flex align-items-center justify-content-between mb-5">
+                        <div class="text-center">
+                            <h2 class="text-pink m-0">1200</h2>
+                            <div class="text-muted">FOLLOWERS</div>
+                        </div>
+                        <div class="text-center">
+                            <h2 class="text-pink m-0">480</h2>
+                            <div class="text-muted">LIKES</div>
+                        </div>
+                        <div class="text-center">
+                            <h2 class="text-pink m-0">14.2k</h2>
+                            <div class="text-muted">VIEWS</div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around align-items-center">
+                        <button class="btn btn-pink btn-rounded mr-2">
+                            <span class="btn-icon"><i class="la la-heart-o"></i>Follow</span>
+                        </button>
+                        <button class="btn btn-secondary btn-rounded">
+                            <span class="btn-icon"><i class="la la-envelope"></i>Message</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="fab fab-bottom card-fab-top-right">
+                    <button class="btn btn-pink btn-icon-only btn-circle btn-air" data-toggle="button"><i class="la la-share-alt fab-icon"></i><i class="la la-close fab-icon-active"></i></button>
+                    <ul class="fab-menu">
+                        <li>
+                            <a class="btn btn-soc-facebook btn-icon-only btn-circle btn-air" href="javascript:;"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a class="btn btn-soc-twitter btn-icon-only btn-circle btn-air" href="javascript:;"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a class="btn btn-soc-dribbble btn-icon-only btn-circle btn-air" href="javascript:;"><i class="fa fa-dribbble"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">NEW CUSTOMERS</div>
+                    <div class="ibox-tools">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-user"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item"><i class="ti-pencil mr-2"></i>Create</a>
+                            <a class="dropdown-item"><i class="ti-pencil-alt mr-2"></i>Edit</a>
+                            <a class="dropdown-item"><i class="ti-close mr-2"></i>Remove</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <ul class="media-list media-list-divider mr-2 scroller" data-height="580px">
+                        <li class="media align-items-center">
+                            <a class="media-img" href="javascript:;">
+                                <img class="img-circle" src="./assets/img/users/u8.jpg" alt="image" width="54" />
+                            </a>
+                            <div class="media-body d-flex align-items-center">
+                                <div class="flex-1">
+                                    <div class="media-heading">Lynn Weaver</div><small class="text-muted">Lorem Ipsum is simply dummy</small></div>
+                                <button class="btn btn-sm btn-outline-secondary btn-rounded">Follow</button>
+                            </div>
+                        </li>
+                        <li class="media align-items-center">
+                            <a class="media-img" href="javascript:;">
+                                <img class="img-circle" src="./assets/img/users/u6.jpg" alt="image" width="54" />
+                            </a>
+                            <div class="media-body d-flex align-items-center">
+                                <div class="flex-1">
+                                    <div class="media-heading">Connor Perez</div><small class="text-muted">Lorem Ipsum is simply dummy</small></div>
+                                <button class="btn btn-sm btn-primary btn-rounded">Followed</button>
+                            </div>
+                        </li>
+                        <li class="media align-items-center">
+                            <a class="media-img" href="javascript:;">
+                                <img class="img-circle" src="./assets/img/users/u11.jpg" alt="image" width="54" />
+                            </a>
+                            <div class="media-body d-flex align-items-center">
+                                <div class="flex-1">
+                                    <div class="media-heading">Tyrone Carroll</div><small class="text-muted">Lorem Ipsum is simply dummy</small></div>
+                                <button class="btn btn-sm btn-outline-secondary btn-rounded">Follow</button>
+                            </div>
+                        </li>
+                        <li class="media align-items-center">
+                            <a class="media-img" href="javascript:;">
+                                <img class="img-circle" src="./assets/img/users/u10.jpg" alt="image" width="54" />
+                            </a>
+                            <div class="media-body d-flex align-items-center">
+                                <div class="flex-1">
+                                    <div class="media-heading">Stella Obrien</div><small class="text-muted">Lorem Ipsum is simply dummy</small></div>
+                                <button class="btn btn-sm btn-outline-secondary btn-rounded">Follow</button>
+                            </div>
+                        </li>
+                        <li class="media align-items-center">
+                            <a class="media-img" href="javascript:;">
+                                <img class="img-circle" src="./assets/img/users/u2.jpg" alt="image" width="54" />
+                            </a>
+                            <div class="media-body d-flex align-items-center">
+                                <div class="flex-1">
+                                    <div class="media-heading">Becky Brooks</div><small class="text-muted">Lorem Ipsum is simply dummy</small></div>
+                                <button class="btn btn-sm btn-outline-secondary btn-rounded">Follow</button>
+                            </div>
+                        </li>
+                        <li class="media align-items-center">
+                            <a class="media-img" href="javascript:;">
+                                <img class="img-circle" src="./assets/img/users/u5.jpg" alt="image" width="54" />
+                            </a>
+                            <div class="media-body d-flex align-items-center">
+                                <div class="flex-1">
+                                    <div class="media-heading">Bob Gonzalez</div><small class="text-muted">Lorem Ipsum is simply dummy</small></div>
+                                <button class="btn btn-sm btn-primary btn-rounded">Followed</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">Feeds</div>
+                    <div class="ibox-tools">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-notepad"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item"><i class="ti-pencil mr-2"></i>Create</a>
+                            <a class="dropdown-item"><i class="ti-pencil-alt mr-2"></i>Edit</a>
+                            <a class="dropdown-item"><i class="ti-close mr-2"></i>Remove</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <ul class="media-list media-list-divider scroller" data-height="470px">
+                        <li class="media py-3">
+                            <div class="media-img">
+                                <span class="btn-icon-only btn-circle bg-primary-50 text-primary"><i class="ti-check"></i></span>
+                            </div>
+                            <div class="media-body">
+                                <div class="media-heading">2 Issue fixed<small class="float-right text-muted ml-2">5 mins</small></div>
+                                <div class="font-13 text-light">Lorem Ipsum is simply dummy text.</div>
+                            </div>
+                        </li>
+                        <li class="media py-3">
+                            <div class="media-img">
+                                <span class="btn-icon-only btn-circle bg-primary-50 text-primary"><i class="ti-support"></i></span>
+                            </div>
+                            <div class="media-body">
+                                <div class="media-heading text-success">4 New Support Tickets<small class="float-right text-muted ml-2">7 mins</small></div>
+                                <div class="font-13 text-light">Lorem Ipsum is simply dummy text.</div>
+                            </div>
+                        </li>
+                        <li class="media py-3">
+                            <div class="media-img">
+                                <span class="btn-icon-only btn-circle bg-primary-50 text-primary"><i class="ti-shopping-cart-full"></i></span>
+                            </div>
+                            <div class="media-body">
+                                <div class="media-heading">7 New Orders<small class="float-right text-muted ml-2">25 mins</small></div>
+                                <div class="font-13 text-light">Lorem Ipsum is simply dummy text.</div>
+                            </div>
+                        </li>
+                        <li class="media py-3">
+                            <div class="media-img">
+                                <span class="btn-icon-only btn-circle bg-primary-50 text-primary"><i class="ti-harddrives"></i></span>
+                            </div>
+                            <div class="media-body">
+                                <div class="media-heading text-danger">Server overloaded 91%<small class="float-right text-muted ml-2">48 mins</small></div>
+                                <div class="font-13 text-light">Lorem Ipsum is simply dummy text.</div>
+                            </div>
+                        </li>
+                        <li class="media py-3">
+                            <div class="media-img">
+                                <span class="btn-icon-only btn-circle bg-primary-50 text-primary"><i class="ti-reload"></i></span>
+                            </div>
+                            <div class="media-body">
+                                <div class="media-heading text-warning">System Reloaded<small class="float-right text-muted ml-2">2 hrs</small></div>
+                                <div class="font-13 text-light">Lorem Ipsum is simply dummy text.</div>
+                            </div>
+                        </li>
+                        <li class="media py-3">
+                            <div class="media-img">
+                                <span class="btn-icon-only btn-circle bg-primary-50 text-primary"><i class="ti-user"></i></span>
+                            </div>
+                            <div class="media-body">
+                                <div class="media-heading">4 New customers<small class="float-right text-muted ml-2">2 hrs</small></div>
+                                <div class="font-13 text-light">Lorem Ipsum is simply dummy text.</div>
+                            </div>
+                        </li>
+                        <li class="media py-3">
+                            <div class="media-img">
+                                <span class="btn-icon-only btn-circle bg-primary-50 text-primary"><i class="ti-arrow-circle-up"></i></span>
+                            </div>
+                            <div class="media-body">
+                                <div class="media-heading text-success">Production server up<small class="float-right text-muted ml-2">12.05</small></div>
+                                <div class="font-13 text-light">Lorem Ipsum is simply dummy text.</div>
+                            </div>
+                        </li>
+                        <li class="media py-3">
+                            <div class="media-img">
+                                <span class="btn-icon-only btn-circle bg-primary-50 text-primary"><i class="ti-announcement"></i></span>
+                            </div>
+                            <div class="media-body">
+                                <div class="media-heading text-primary">7 new feedback<small class="float-right text-muted ml-2">13:45</small></div>
+                                <div class="font-13 text-light">Lorem Ipsum is simply dummy text.</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ibox">
+                <div class="ibox-head">
+                    <div class="ibox-title">TASKS</div>
+                    <div class="ibox-tools">
+                        <a class="font-18"><i class="ti-plus"></i></a>
+                    </div>
+                </div>
+                <div class="ibox-body">
+                    <ul class="list-group list-group-divider list-group-full tasks-list">
+                        <li class="list-group-item task-item">
+                            <div>
+                                <label class="checkbox checkbox-grey checkbox-success">
+                                    <input type="checkbox" checked="">
+                                    <span class="input-span"></span>
+                                    <span class="task-title">Make Adminca the best and the most easy admin template</span>
+                                </label>
+                            </div>
+                            <div class="task-data"><small class="text-muted">29 May 2018</small></div>
+                            <div class="task-actions">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-more-alt"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item"><i class="ti-pencil-alt mr-2"></i>Edit</a>
+                                    <a class="dropdown-item"><i class="ti-close mr-2"></i>Remove</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item task-item">
+                            <div>
+                                <label class="checkbox checkbox-grey checkbox-success">
+                                    <input type="checkbox">
+                                    <span class="input-span"></span>
+                                    <span class="task-title">Create Financial Report</span>
+                                </label>
+                            </div>
+                            <div class="task-data"><small class="text-muted">No due date</small></div>
+                            <div class="task-actions">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-more-alt"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item"><i class="ti-pencil-alt mr-2"></i>Edit</a>
+                                    <a class="dropdown-item"><i class="ti-close mr-2"></i>Remove</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item task-item">
+                            <div>
+                                <label class="checkbox checkbox-grey checkbox-success">
+                                    <input type="checkbox" checked="">
+                                    <span class="input-span"></span>
+                                    <span class="task-title">Meeting with Ann</span>
+                                </label>
+                                <span class="badge badge-warning ml-1"><i class="ti-alarm-clock"></i> 1 hrs</span>
+                            </div>
+                            <div class="task-data"><small class="text-muted">29 May 2018</small></div>
+                            <div class="task-actions">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-more-alt"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item"><i class="ti-pencil-alt mr-2"></i>Edit</a>
+                                    <a class="dropdown-item"><i class="ti-close mr-2"></i>Remove</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item task-item">
+                            <div>
+                                <label class="checkbox checkbox-grey checkbox-success">
+                                    <input type="checkbox">
+                                    <span class="input-span"></span>
+                                    <span class="task-title">Edit the blog post</span>
+                                </label>
+                            </div>
+                            <div class="task-data"><small class="text-muted">29 May 2018</small></div>
+                            <div class="task-actions">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-more-alt"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item"><i class="ti-pencil-alt mr-2"></i>Edit</a>
+                                    <a class="dropdown-item"><i class="ti-close mr-2"></i>Remove</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item task-item">
+                            <div>
+                                <label class="checkbox checkbox-grey checkbox-success">
+                                    <input type="checkbox">
+                                    <span class="input-span"></span>
+                                    <span class="task-title">Send photos to Jack</span>
+                                </label>
+                                <span class="badge badge-success ml-1">Today</span>
+                            </div>
+                            <div class="task-data"><small class="text-muted">29 May 2018</small></div>
+                            <div class="task-actions">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-more-alt"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item"><i class="ti-pencil-alt mr-2"></i>Edit</a>
+                                    <a class="dropdown-item"><i class="ti-close mr-2"></i>Remove</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item task-item">
+                            <div>
+                                <label class="checkbox checkbox-grey checkbox-success">
+                                    <input type="checkbox">
+                                    <span class="input-span"></span>
+                                    <span class="task-title">Send Financial Reports</span>
+                                </label>
+                                <span class="badge badge-danger ml-1">Important</span>
+                            </div>
+                            <div class="task-data"><small class="text-muted">29 May 2018</small></div>
+                            <div class="task-actions">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-more-alt"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item"><i class="ti-pencil-alt mr-2"></i>Edit</a>
+                                    <a class="dropdown-item"><i class="ti-close mr-2"></i>Remove</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item task-item">
+                            <div>
+                                <label class="checkbox checkbox-grey checkbox-success">
+                                    <input type="checkbox">
+                                    <span class="input-span"></span>
+                                    <span class="task-title">Send message to Bob</span>
+                                </label>
+                            </div>
+                            <div class="task-data"><small class="text-muted">29 May 2018</small></div>
+                            <div class="task-actions">
+                                <a class="dropdown-toggle" data-toggle="dropdown"><i class="ti-more-alt"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item"><i class="ti-pencil-alt mr-2"></i>Edit</a>
+                                    <a class="dropdown-item"><i class="ti-close mr-2"></i>Remove</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

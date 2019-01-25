@@ -1,0 +1,124 @@
+
+.dropdown-menu {
+    border-radius: 2px;
+    border: none;
+    padding: 0;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    color: inherit;
+    animation-name: fadeIn;
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    
+    .dropdown-item, 
+    & > li > a
+    {
+        padding: 8px 15px;
+        color: #526477;
+        &:hover, &:focus {
+            background-color: #f7f8f8;
+            color: #16181b;
+        }
+    }
+    .active > a, .active > a:hover, .active > a:focus,
+    .dropdown-item.active, .dropdown-item.active:hover, .dropdown-item.active:focus{
+        background-color: #ebedee;
+        color: inherit;
+    }
+    .dropdown-header {
+        font-size: inherit;
+        color: inherit;
+        border-radius: .25rem .25rem 0 0;
+        padding: 1rem 1.5rem;
+    }
+    .dropdown-arrow {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        overflow: hidden;
+        height: 22px;
+        width: 50px;
+        &:after {
+            content: '';
+            transform: rotate(45deg);
+            background: #fff;
+            position: absolute;
+            top: 16px;
+            right: 15px;
+            width: 25px;
+            height: 25px;
+            border-radius: .25rem;
+        }
+    }
+    &.dropdown-menu-right .dropdown-arrow {
+        right: 0;
+        left: auto;
+    }
+
+    ////
+    // support for bootstrap 3 plugins
+    ////
+    & > li > a {
+        display: block;
+        width: 100%;
+        clear: both;
+        font-weight: 400;
+        text-align: inherit;
+        white-space: nowrap;
+        background: 0 0;
+        border: 0;
+    }
+}
+.dropdown-toggle::after {
+    display: none;
+}
+
+.btn.dropdown-arrow {
+    &:after {
+        display: inline;
+        border: 0;
+        font-family: "LineAwesome";
+        content: "\f110";
+        text-decoration: inherit;
+        text-rendering: optimizeLegibility;
+        text-transform: none;
+        font-size: 0.8rem;
+        line-height: 0;
+        vertical-align: middle;
+        top: -0.1em;
+        position: relative;
+        margin-left: 4px;
+    }
+    &.btn-lg, .btn-group-lg & {
+        &:after {
+            font-size: 1rem;
+        }
+    }
+}
+.btn+.dropdown-toggle-split {
+    padding-right: 0.9rem;
+    padding-left: 0.9rem;
+    &.dropdown-arrow:after {
+        margin-left: 0;
+    }
+}
+.btn-group-lg>.btn+.dropdown-toggle-split, .btn-lg+.dropdown-toggle-split {
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+} 
+.btn-group-sm>.btn+.dropdown-toggle-split, .btn-sm+.dropdown-toggle-split {
+    padding-right: 0.55rem;
+    padding-left: 0.55rem;
+}
+
+.dropdown-item {
+    & > i {
+        color: #9aa4af;
+        line-height: 0;
+        vertical-align: middle;
+        position: relative;
+        top: -0.08rem;
+        margin-right: 0.6rem;
+    }
+    & > [class*=" la-"] { font-size: 1.3rem }
+    & > [class^="ti-"] { font-size: 1.1rem }
+}

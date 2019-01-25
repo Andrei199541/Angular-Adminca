@@ -1,0 +1,180 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Base Form Controls'
+  - var pageUrl = 'form-controls.html'
+  - var page_heading = 'Base Form Controls'
+  - var path = ['Form Controls', 'Base Form Controls']
+
+block content
+  .row
+    .col-md-6
+      +panel(title='Base Form Controls')
+        .form-group.mb-4
+          label Base input
+          input.form-control(type='text', placeholder='Base input')
+        .form-group.mb-4
+          label With Help text
+          input.form-control(type='text', placeholder='Base input')
+          span.help-block This is some placeholder block-level help text for the above input.
+        .form-group.mb-4
+          label Rounded input
+          input.form-control.form-control-rounded(type='text', placeholder='Rounded input')
+        .form-group.mb-4
+          label Static control
+          p.form-control-static email@example.com
+        .form-group.mb-4
+          label Base select
+          select.form-control
+            option(value='') 1
+            option(value='') 2
+            option(value='') 3
+        .form-group.mb-4
+          label Multiple select
+          select.form-control(multiple='')
+            option(value='') 1
+            option(value='') 2
+            option(value='') 3
+            option(value='') 4
+            option(value='') 5
+        .form-group.mb-4
+          label Textarea
+          textarea.form-control(rows='3')
+      +panel(title='Air Style Controls')
+        .form-group.mb-4
+          label Base input
+          input.form-control.form-control-air(type='text', placeholder='Base input')
+        .form-group.mb-4
+          label Rounded
+          input.form-control.form-control-rounded.form-control-air(type='text', placeholder='Rounded input')
+        .form-group.mb-4
+          label Base select
+          select.form-control.form-control-air
+            option(value='') 1
+            option(value='') 2
+            option(value='') 3
+        .form-group.mb-4
+          label Multiple select
+          select.form-control.form-control-air(multiple='')
+            option(value='') 1
+            option(value='') 2
+            option(value='') 3
+            option(value='') 4
+            option(value='') 5
+        .form-group.mb-4
+          label Textarea
+          textarea.form-control.form-control-air(rows='3')
+      +panel(title='Sizing')
+        .form-group.mb-4
+          label Large input
+          input.form-control.form-control-lg(type='text', placeholder='Large input')
+        .form-group.mb-4
+          label Base input
+          input.form-control(type='text', placeholder='Base input')
+        .form-group.mb-4
+          label Small input
+          input.form-control.form-control-sm(type='text', placeholder='Small input')
+        .form-group.mb-4
+          label Large select
+          select.form-control.form-control-lg
+            option(value='') 1
+            option(value='') 2
+            option(value='') 3
+        .form-group.mb-4
+          label Base select
+          select.form-control
+            option(value='') 1
+            option(value='') 2
+            option(value='') 3
+        .form-group.mb-4
+          label Small select
+          select.form-control.form-control-sm
+            option(value='') 1
+            option(value='') 2
+            option(value='') 3
+
+    .col-md-6
+      +panel(title='Line Style Controls')
+        .form-group.mb-4
+          input.form-control.form-control-line(type='text', placeholder='Line input')
+        .form-group.mb-4
+          select.form-control.form-control-line
+            option Line select
+            option option
+            option option
+        .form-group.mb-4
+          textarea.form-control.form-control-line(rows='3' placeholder='Line textarea')
+        .form-group.has-success.mb-4
+          input.form-control.form-control-line(type='text' placeholder='Success State')
+        .form-group.has-warning.mb-4
+          input.form-control.form-control-line(type='text' placeholder='Warning State')
+        .form-group.has-error.mb-4
+          input.form-control.form-control-line(type='text' placeholder='Error State')
+
+      +panel(title='Solid Style Controls')
+        .form-group.mb-4
+          label Base input
+          input.form-control.form-control-solid(type='text', placeholder='Base input')
+        .form-group.mb-4
+          label Rounded
+          input.form-control.form-control-rounded.form-control-solid(type='text', placeholder='Rounded input')
+        .form-group.mb-4
+          label Base select
+          select.form-control.form-control-solid
+            option(value='') 1
+            option(value='') 2
+            option(value='') 3
+        .form-group.mb-4
+          label Multiple select
+          select.form-control.form-control-solid(multiple='')
+            option(value='') 1
+            option(value='') 2
+            option(value='') 3
+            option(value='') 4
+            option(value='') 5
+        .form-group.mb-4
+          label Textarea
+          textarea.form-control.form-control-solid(rows='3')
+      +panel(title='Custom File inputs')
+        .form-group.mb-4
+          label.btn.btn-info.file-input.mr-2
+            span.btn-icon
+              i.la.la-upload
+              | Browse file
+            input(type='file')
+          label.btn.btn-primary.file-input.mr-2
+            span.btn-icon
+              i.la.la-cloud-upload
+              | Browse file
+            input(type='file')
+          label.btn.btn-gradient-purple.file-input
+            span.btn-icon
+              i.la.la-camera
+              | Browse
+            input(type='file')
+      +panel(title='Form Controls States')
+        .form-group.has-success.mb-4
+          label.col-form-label Success State
+          input.form-control(type='text')
+        .form-group.has-warning.mb-4
+          label.col-form-label Warning State
+          input.form-control(type='text')
+        .form-group.has-error.mb-4
+          label.col-form-label Error State
+          input.form-control(type='text')
+        .text-muted.mb-4 States with icons
+        .form-group.has-success.mb-4
+          label.col-form-label Success State
+          .input-group-icon.input-group-icon-right
+            span.input-icon.input-icon-right.text-success: i.ti-check
+            input.form-control(type='text')
+        .form-group.has-warning.mb-4
+          label.col-form-label Warning State
+          .input-group-icon.input-group-icon-right
+            span.input-icon.input-icon-right.text-warning: i.la.la-warning.font-16
+            input.form-control(type='text')
+        .form-group.has-error.mb-4
+          label.col-form-label Error State
+          .input-group-icon.input-group-icon-right
+            span.input-icon.input-icon-right.text-danger: i.ti-info-alt
+            input.form-control(type='text')

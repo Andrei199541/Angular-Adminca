@@ -1,0 +1,268 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Lists'
+  - var pageUrl = 'lists.html'
+  - var page_heading = 'Lists'
+  - var path = ['Basic UI', 'Lists']
+
+block content
+  .row
+    .col-lg-6
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title Timeline List
+        .ibox-body
+          ul.timeline
+            li.timeline-item
+              span.timeline-point
+              | 2 Issue fixed
+              small.float-right.text-muted.ml-2.nowrap Just now
+            li.timeline-item
+              span.timeline-point.bg-warning
+              span
+                | 7 new feedback
+                span.badge.badge-warning.badge-pill.ml-2 important
+              small.float-right.text-muted 5 mins
+            li.timeline-item
+              span.timeline-point.bg-purple
+              span.flexbox
+                | 25 new orders sent
+                i.la.la-truck.font-16.ml-2.text-purple
+              small.float-right.text-muted.ml-2.nowrap 24 mins
+            li.timeline-item
+              span.timeline-point
+              | 12 New orders
+              small.float-right.text-muted.ml-2.nowrap 45 mins
+            li.timeline-item
+              span.timeline-point.bg-warning
+              | 18 new users registered
+              small.float-right.text-muted.ml-2.nowrap 1 hrs
+            li.timeline-item
+              span.timeline-point
+              span
+                | Server Error
+                span.badge.badge-success.badge-pill.ml-2 resolved
+              small.float-right.text-muted 2 hrs
+            li.timeline-item
+              span.timeline-point.bg-purple
+              span
+                | System Warning
+                a.text-purple.ml-2 Check
+              small.float-right.text-muted.ml-2.nowrap 12:07
+            li.timeline-item
+              span.timeline-point.bg-warning
+              | The invoice is ready
+              small.float-right.text-muted.ml-2.nowrap 12:30
+            li.timeline-item
+              span.timeline-point.bg-purple
+              | 5 New Orders
+              small.float-right.text-muted.ml-2.nowrap 13:45
+            li.timeline-item
+              span.timeline-point
+              span.flexbox
+                | Production server up
+                i.la.la-arrow-circle-up.font-18.ml-2.text-success
+              small.float-right.text-muted.ml-2.nowrap 1 days ago
+            li.timeline-item
+              span.timeline-point
+              | Server overloaded 91%
+              small.float-right.text-muted.ml-2.nowrap 2 days ago
+            li.timeline-item
+              span.timeline-point.bg-warning
+              | Server error
+              small.float-right.text-muted.ml-2.nowrap 2 days ago
+    .col-lg-6
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title Timeline List
+        .ibox-body
+          ul.timeline
+            li.timeline-item
+              i.ti-check.timeline-icon
+              | 2 Issue fixed
+              small.float-right.text-muted.ml-2.nowrap Just now
+            li.timeline-item
+              i.ti-announcement.timeline-icon
+              span
+                | 7 new feedback
+                span.badge.badge-warning.badge-pill.ml-2 important
+              small.float-right.text-muted 5 mins
+            li.timeline-item
+              i.ti-truck.timeline-icon
+              | 25 new orders sent
+              small.float-right.text-muted.ml-2.nowrap 24 mins
+            li.timeline-item
+              i.ti-shopping-cart.timeline-icon
+              | 12 New orders
+              small.float-right.text-muted.ml-2.nowrap 45 mins
+            li.timeline-item
+              i.ti-user.timeline-icon
+              | 18 new users registered
+              small.float-right.text-muted.ml-2.nowrap 1 hrs
+            li.timeline-item
+              i.ti-harddrives.timeline-icon
+              span
+                | Server Error
+                span.badge.badge-success.badge-pill.ml-2 resolved
+              small.float-right.text-muted 2 hrs
+            li.timeline-item
+              i.ti-info-alt.timeline-icon
+              span
+                | System Warning
+                a.text-purple.ml-2 Check
+              small.float-right.text-muted.ml-2.nowrap 12:07
+            li.timeline-item
+              i.fa.fa-file-excel-o.timeline-icon
+              | The invoice is ready
+              small.float-right.text-muted.ml-2.nowrap 12:30
+            li.timeline-item
+              i.ti-shopping-cart.timeline-icon
+              | 5 New Orders
+              small.float-right.text-muted.ml-2.nowrap 13:45
+            li.timeline-item
+              i.ti-arrow-circle-up.timeline-icon
+              | Production server up
+              small.float-right.text-muted.ml-2.nowrap 1 days ago
+            li.timeline-item
+              i.ti-harddrives.timeline-icon
+              | Server overloaded 91%
+              small.float-right.text-muted.ml-2.nowrap 2 days ago
+            li.timeline-item
+              i.ti-info-alt.timeline-icon
+              | Server error
+              small.float-right.text-muted.ml-2.nowrap 2 days ago
+  .row
+    .col-lg-6
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title Base List groups
+        .ibox-body
+          p
+            | The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.
+          h5.mt-4.mb-4.font-strong WITH DIVIDER LINE & BADGES
+          ul.list-group.list-group-full.list-group-divider
+            li.list-group-item.active Active item
+            li.list-group-item.flexbox
+              | List Group Item
+              span.badge.badge-primary.badge-circle 4
+            li.list-group-item List Group Item
+            li.list-group-item.disabled.flexbox
+              | Disabled item 
+              span.badge.badge-danger.badge-pill HOT
+            li.list-group-item.flexbox
+              | List Group Item
+              span.badge.badge-info 3
+          h5.mt-5.mb-5.font-strong BORDERED
+          ul.list-group.list-group-bordered
+            li.list-group-item.active.flexbox
+              | 1. Active item 
+              span.badge.badge-success 72
+            li.list-group-item.flexbox
+              | 2. Dapibus ac facilisis in 
+              span.badge.badge-pink 4
+            li.list-group-item 3. Morbi leo risus
+            li.list-group-item.disabled.flexbox
+              | 4. Disabled item 
+              span.badge.badge-danger 17
+            li.list-group-item.flexbox
+              | 5. Vestibulum at eros 
+              span.badge.badge-primary 3
+    .col-lg-6
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title Media List
+        .ibox-body
+          ul.media-list.media-list-divider
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u8.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Lynn Weaver
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u6.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Connor Perez
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-purple.btn-rounded Followed
+            li.media.align-items-center
+              a.media-img(href='javascript:;')
+                +img('users/u11.jpg')(class='img-circle', width='54')
+              .media-body.d-flex.align-items-center
+                .flex-1
+                  .media-heading Tyrone Carroll
+                  small.text-muted Lorem Ipsum is simply dummy
+                button.btn.btn-sm.btn-outline-secondary.btn-rounded Follow
+          hr.mt-4.mb-4
+          ul.media-list.list-unstyled
+            li.media
+              a.media-img(href='javascript:;')
+                +img('users/u10.jpg')(class='img-circle', width='40')
+              .media-body
+                h6.media-heading Stella Obrien
+                small Director
+              .media-right
+                i.fa.fa-heart-o.font-16.text-purple
+            li.media
+              a.media-img(href='javascript:;')
+                +img('users/u2.jpg')(class='img-circle', width='40')
+              .media-body
+                h6.media-heading Becky Brooks
+                small Frontend Master
+              .media-right
+                i.fa.fa-heart-o.font-16.text-danger
+            li.media
+              a.media-img(href='javascript:;')
+                +img('users/u1.jpg')(class='img-circle', width='40')
+              .media-body
+                h6.media-heading Jeanne Gonzalez
+                small Graphic Designer
+              .media-right
+                i.fa.fa-heart-o.font-16.text-info
+          hr.mt-4.mb-4
+          ul.media-list
+            li.media
+              a.media-img(href='javascript:;')
+                +img('users/u10.jpg')(width='45')
+              .media-body
+                .media-heading
+                  a.comment-author(href='javascript:;') Stella Obrien
+                  small.text-muted.ml-2 5 days ago
+                  .pull-right.font-13
+                    a.text-muted.mr-2(data-toggle='tooltip', data-original-title='Like')
+                      i.fa.fa-heart
+                    a.text-muted(data-toggle='tooltip', data-original-title='Reply')
+                      i.fa.fa-reply
+                p Aliquam nec dui fermentum, fermentum est sed, molestie ligula.
+            li.media
+              a.media-img(href='javascript:;')
+                +img('users/u2.jpg')(width='45')
+              .media-body
+                .media-heading
+                  a.comment-author(href='javascript:;') Becky Brooks
+                  small.text-muted.ml-2 5 days ago
+                  .pull-right.font-13
+                    a.text-muted.mr-2(data-toggle='tooltip', data-original-title='Like')
+                      i.fa.fa-heart
+                    a.text-muted(data-toggle='tooltip', data-original-title='Reply')
+                      i.fa.fa-reply
+                p
+                  | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                .media
+                  a.media-img(href='javascript:;')
+                    +img('users/u11.jpg')(width='45')
+                  .media-body
+                    .media-heading
+                      a.comment-author(href='javascript:;') Tyrone Carroll
+                      small.text-muted.ml-2 5 days ago
+                      .pull-right.font-13
+                        a.text-muted.mr-2(data-toggle='tooltip', data-original-title='Like')
+                          i.fa.fa-heart
+                        a.text-muted(data-toggle='tooltip', data-original-title='Reply')
+                          i.fa.fa-reply
+                    p Cras sit amet nibh libero, in gravida nulla.

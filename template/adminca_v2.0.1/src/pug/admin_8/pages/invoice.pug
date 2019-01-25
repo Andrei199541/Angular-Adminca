@@ -1,0 +1,103 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Invoice'
+  - var pageUrl = 'invoice.html'
+
+block content
+  .ibox
+    .ibox-body
+      .d-flex.justify-content-between.mb-5.pb-4
+        .d-flex.align-items-center
+          span.mr-4.static-badge.badge-pink AC
+          div
+            h5.font-strong Adminca
+            .text-light Emma Johnson, 17.05.2018, Shipped
+        .text-right(style='width: 260px')
+          h4.font-strong.mb-3
+            | INVOICE
+            span.text-muted.font-normal.ml-3 160-001F
+          .row.align-items-center.mb-2
+            .col-6.text-muted Invoice Date
+            .col-6 10 April 2018
+          .row.align-items-center
+            .col-6.text-muted Issue Date
+            .col-6 30 April 2018
+      .row.mb-5.pb-3
+        .col-6
+          h5.font-strong.mb-3 INVOICE FROM
+          h5.font-strong.text-success.mb-3 Adminca, Inc.
+          .text-light San Francisco, CA 94103 Market Street
+          .text-light adminca@exmail.com
+          .text-light (123) 456-2112
+        .col-6.text-right
+          h5.font-strong.mb-3 INVOICE TO
+          h5.font-strong.text-success.mb-3 Emma Johnson
+          .text-light San Francisco, 548 Market St.
+          .text-light emma.johnson@exmail.com
+          .text-light (123) 279-4058
+      .ibox-fullwidth-block 
+        table.table.mb-4
+          thead.thead-default.thead-lg
+            tr
+              th.pl-4 Item Description
+              th Quantity
+              th Unit Cost
+              th.text-right.pr-4 Total
+          tbody
+            tr
+              td.pl-4
+                div
+                  strong Evaflor "Whisky"
+                small Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              td 3
+              td $12.00
+              td.text-right.pr-4 $36.00
+            tr
+              td.pl-4
+                div
+                  strong Evaflor "Whisky Silver"
+                small Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              td 4
+              td $12.00
+              td.text-right.pr-4 $48.00
+            tr
+              td.pl-4
+                div
+                  strong Women's bag Cromia "Luxor"
+                small Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              td 13
+              td $430.00
+              td.text-right.pr-4 $430.00
+            tr
+              td.pl-4
+                div
+                  strong Women's wrist watch "Moschino"
+                small Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              td 1
+              td $335.00
+              td.text-right.pr-4 $335.00
+            tr
+              td.pl-4
+                div
+                  strong Women's bag Cromia "Starlight"
+                small Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              td 1
+              td $416.00
+              td.text-right.pr-4 $416.00
+          tfoot
+            tr
+              th(colspan='4')
+        
+      .d-flex.justify-content-end
+        .text-right(style='width:300px;')
+          .row.mb-2
+            .col-6 Subtotal Price
+            .col-6 $1265
+          .row.mb-2
+            .col-6 Tax 20%:
+            .col-6 $253
+          .row.font-strong.font-20.align-items-center
+            .col-6 Total Price:
+            .col-6
+              .h3.font-strong.mb-0 $1518

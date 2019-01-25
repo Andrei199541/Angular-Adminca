@@ -1,0 +1,571 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Dashboard'
+  - var pageUrl = 'index.html'
+
+block plugins-styles
+  +link('fullcalendar/dist/fullcalendar.min.css', 'plugin')
+  +link('fullcalendar/dist/fullcalendar.print.min.css', 'plugin')(media='print')
+  +link('smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css', 'plugin')
+
+block plugins
+  +script('chart.js/dist/Chart.min.js', 'plugin')
+  +script('jquery.easy-pie-chart/dist/jquery.easypiechart.min.js', 'plugin')
+  +script('moment/min/moment.min.js', 'plugin')
+  +script('fullcalendar/dist/fullcalendar.min.js', 'plugin')
+  +script('smalot-bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js', 'plugin')
+
+block content
+  .row
+    .col-lg-8
+      .row
+        .col-lg-7
+          .ibox.ibox-fullheight
+            .ibox-body.bg-success
+              h5.text-center.text-white.mb-3 Statistics
+              div
+                canvas#chart_a(style='height:180px')
+            .ibox-body
+              .text-lighter.mb-2 Lorem Ipsum is simply dummy text
+              div
+                span.h1.mr-3.text-success.font-40 72.5%
+                span.text-lighter 34.5% Higher then last month
+        .col-lg-5
+          .ibox.ibox-fullheight
+            .ibox-body.bg-pink
+              h5.text-center.text-white.mb-3 Statistics
+              div
+                canvas#chart_b(style='height:180px')
+            .ibox-body
+              .text-lighter.mb-2 Lorem Ipsum is simply dummy text
+              div
+                span.h1.mr-3.text-pink.font-40 72.5%
+                span.text-lighter 34.5% Higher
+    .col-lg-4
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title Statistics
+          .ibox-tools
+            a.font-18(href='javascript:;')
+              i.ti-control-record
+        .ibox-body
+          ul.media-list.media-list-divider
+            li.media.flexbox
+              div
+                .media-heading.font-16 Earnings
+                .font-13.text-light Lorem ipsum dolar set...
+              h4.font-strong.mb-0.ml-3.text-primary +$1200
+            li.media.flexbox
+              div
+                .media-heading.font-16 Orders
+                .font-13.text-light Lorem ipsum dolar set...
+              h4.font-strong.mb-0.ml-3.text-success +840
+            li.media.flexbox
+              div
+                .media-heading.font-16 Visits
+                .font-13.text-light Lorem ipsum dolar set...
+              h4.font-strong.mb-0.ml-3.text-warning +24%
+            li.media.flexbox
+              div
+                .media-heading.font-16 Customers
+                .font-13.text-light Lorem ipsum dolar set...
+              h4.font-strong.mb-0.ml-3.text-pink +725
+  .ibox
+    .ibox-head
+      .ibox-title CALENDAR
+      button.btn.btn-primary.btn-rounded.btn-air.my-3(data-toggle="modal", data-target="#new-event-modal")
+        span.btn-icon
+          i.la.la-plus
+          | New Event
+    .ibox-body
+      #calendar
+  .row
+    .col-xl-8  
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title SUPPORT TICKETS
+          .ibox-tools
+            a.dropdown-toggle.font-18(data-toggle='dropdown')
+              i.ti-ticket
+            .dropdown-menu.dropdown-menu-right
+              a.dropdown-item
+                i.ti-pencil.mr-2
+                | Create
+              a.dropdown-item
+                i.ti-pencil-alt.mr-2
+                | Edit
+              a.dropdown-item
+                i.ti-close.mr-2
+                | Remove
+        .ibox-body
+          ul.media-list.media-list-divider.scroller.mr-2(data-height='470px')
+            li.media
+              .media-body.d-flex
+                .flex-1
+                  h5.media-heading
+                    a(href='javascript:;') How to install new Adminca
+                  p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla
+                  .d-flex.align-items-center.font-13
+                    +img('users/u11.jpg')(class='img-circle mr-2', width='22')
+                    a.mr-2.text-success(href='javascript:;') Tyrone Carroll
+                    span.text-muted 18 mins ago
+                .text-right(style='width:100px;')
+                  span.badge.badge-primary.badge-pill.mb-2 Open
+                  div
+                    small.text-muted.font-12
+                      i.fa.fa-reply.mr-2
+                      | 2 reply
+            li.media
+              .media-body.d-flex
+                .flex-1
+                  h5.media-heading
+                    a(href='javascript:;') How to compile SaSS
+                  p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla
+                  .d-flex.align-items-center.font-13
+                    +img('users/u10.jpg')(class='img-circle mr-2', width='22')
+                    a.mr-2.text-success(href='javascript:;') Stella Obrien
+                    span.text-muted 45 mins ago
+                .text-right(style='width:100px;')
+                  span.badge.badge-success.badge-pill.mb-2 Pending
+            li.media
+              .media-body.d-flex
+                .flex-1
+                  h5.media-heading
+                    a(href='javascript:;') I need help to update bower
+                  p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla
+                  .d-flex.align-items-center.font-13
+                    +img('users/u6.jpg')(class='img-circle mr-2', width='22')
+                    a.mr-2.text-success(href='javascript:;') Connor Perez
+                    span.text-muted 1 hrs ago
+                .text-right(style='width:100px;')
+                  span.badge.badge-primary.badge-pill.mb-2 In Progress
+                  div
+                    small.text-muted.font-12
+                      i.fa.fa-reply.mr-2
+                      | 2 reply
+            li.media
+              .media-body.d-flex
+                .flex-1
+                  h5.media-heading
+                    a(href='javascript:;') IE7 problem
+                  p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla
+                  .d-flex.align-items-center.font-13
+                    +img('users/u2.jpg')(class='img-circle mr-2', width='22')
+                    a.mr-2.text-success(href='javascript:;') Becky Brooks
+                    span.text-muted 2 hrs ago
+                .text-right(style='width:100px;')
+                  span.badge.badge-success.badge-pill.mb-2 Pending
+            li.media
+              .media-body.d-flex
+                .flex-1
+                  h5.media-heading
+                    a(href='javascript:;') I need help to install Adminca Angular
+                  p.font-13.text-light.mb-1 Cillum in incididunt reprehenderit qui reprehenderit nulla
+                  .d-flex.align-items-center.font-13
+                    +img('users/u5.jpg')(class='img-circle mr-2', width='22')
+                    a.mr-2.text-success(href='javascript:;') Bob Gonzalez
+                    span.text-muted 2 days ago
+                .text-right(style='width:100px;')
+                  span.badge.badge-secondary.badge-pill.mb-2 Closed
+                  div
+                    small.text-muted.font-12
+                      i.fa.fa-reply.mr-2
+                      | 3 reply
+    .col-lg-4
+      +panel(title='Logs Timeline', tools={'menu':1}, boxClass='ibox-fullheight')
+        ul.timeline.scroller(data-height='400px')
+          li.timeline-item
+            i.ti-check.timeline-icon
+            | 2 Issue fixed
+            small.float-right.text-muted.ml-2.nowrap Just now
+          li.timeline-item
+            i.ti-announcement.timeline-icon
+            span
+              | 7 new feedback
+              span.badge.badge-warning.badge-pill.ml-2 important
+            small.float-right.text-muted 5 mins
+          li.timeline-item
+            i.ti-truck.timeline-icon
+            | 25 new orders sent
+            small.float-right.text-muted.ml-2.nowrap 24 mins
+          li.timeline-item
+            i.ti-shopping-cart.timeline-icon
+            | 12 New orders
+            small.float-right.text-muted.ml-2.nowrap 45 mins
+          li.timeline-item
+            i.ti-user.timeline-icon
+            | 18 new users registered
+            small.float-right.text-muted.ml-2.nowrap 1 hrs
+          li.timeline-item
+            i.ti-harddrives.timeline-icon
+            span
+              | Server Error
+              span.badge.badge-success.badge-pill.ml-2 resolved
+            small.float-right.text-muted 2 hrs
+          li.timeline-item
+            i.ti-info-alt.timeline-icon
+            span
+              | System Warning
+              a.text-primary.ml-2 Check
+            small.float-right.text-muted.ml-2.nowrap 12:07
+          li.timeline-item
+            i.fa.fa-file-excel-o.timeline-icon
+            | The invoice is ready
+            small.float-right.text-muted.ml-2.nowrap 12:30
+          li.timeline-item
+            i.ti-shopping-cart.timeline-icon
+            | 5 New Orders
+            small.float-right.text-muted.ml-2.nowrap 13:45
+          li.timeline-item
+            i.ti-arrow-circle-up.timeline-icon
+            | Production server up
+            small.float-right.text-muted.ml-2.nowrap 1 days ago
+          li.timeline-item
+            i.ti-harddrives.timeline-icon
+            | Server overloaded 91%
+            small.float-right.text-muted.ml-2.nowrap 2 days ago
+          li.timeline-item
+            i.ti-info-alt.timeline-icon
+            | Server error
+            small.float-right.text-muted.ml-2.nowrap 2 days ago
+  .row
+    .col-lg-8
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title
+            span.btn-icon-only.btn-circle.bg-primary-50.text-primary.mr-3
+              i.ti-email
+            | Email distribution
+        .ibox-body
+          .flexbox.mb-4
+            .flexbox
+              span.flexbox.mr-3
+                span.mr-2.text-muted Sent
+                span.h3.mb-0.text-primary.font-strong 310
+              span.flexbox
+                span.mr-2.text-muted Queue
+                span.h3.mb-0.text-pink.font-strong 105
+            a.flexbox(href='javascript:;', target='_blank')
+              | VIEW ALL
+              i.ti-arrow-circle-right.ml-2.font-18
+          .ibox-fullwidth-block
+            table.table
+              thead.thead-default.thead-lg
+                tr
+                  th.pl-4 Subject
+                  th Quantity
+                  th Reference
+                  th.pr-4 Percent
+              tbody
+                tr
+                  td.pl-4
+                    .flexbox-b
+                      span.btn-icon-only.btn-primary.font-20.mr-3 AC
+                      div
+                        h6.mb-1 Try New version of Adminca
+                        div
+                          span.text-muted.font-13
+                            i.ti-calendar.mr-2
+                            | 20.04.2018
+                  td
+                    h4.font-strong.text-light.mb-0 1400
+                  td
+                    h4.font-strong.text-primary.mb-0 820
+                  td.pr-4
+                    .easypie(data-percent='59', data-bar-color='#5c6bc0', data-size='56', data-line-width='3')
+                      span.easypie-data.h5.font-strong 59%
+                tr
+                  td.pl-4
+                    .flexbox-b
+                      span.btn-icon-only.btn-pink.mr-3: i.ti-gift.font-20
+                      div
+                        h6.mb-1 Adminca Big Bundle 6 in 1
+                        div
+                          span.text-muted.font-13
+                            i.ti-calendar.mr-2
+                            | 20.04.2018
+                  td
+                    h4.font-strong.text-light.mb-0 1250
+                  td
+                    h4.font-strong.text-pink.mb-0 575
+                  td.pr-4
+                    .easypie(data-percent='46', data-bar-color='#ff4081', data-size='56', data-line-width='3')
+                      span.easypie-data.h5.font-strong 46%
+                tr
+                  td.pl-4
+                    .flexbox-b
+                      span.btn-icon-only.btn-success.font-20.mr-3 LV
+                      div
+                        h6.mb-1 Adminca - Save your time, choose the best
+                        div
+                          span.text-muted.font-13
+                            i.ti-calendar.mr-2
+                            | 20.04.2018
+                  td
+                    h4.font-strong.text-light.mb-0 1320
+                  td
+                    h4.font-strong.text-success.mb-0 554
+                  td.pr-4
+                    .easypie(data-percent='42', data-bar-color='#18c5a9', data-size='56', data-line-width='3')
+                      span.easypie-data.h5.font-strong 42%
+                tr
+                  td.pl-4
+                    .flexbox-b
+                      span.btn-icon-only.btn-warning.mr-3: i.ti-support.font-20
+                      div
+                        h6.mb-1 High Quality Support & Easy Code
+                        div
+                          span.text-muted.font-13
+                            i.ti-calendar.mr-2
+                            | 20.04.2018
+                  td
+                    h4.font-strong.text-light.mb-0 870
+                  td
+                    h4.font-strong.text-warning.mb-0 478
+                  td.pr-4
+                    .easypie(data-percent='56', data-bar-color='#f39c12', data-size='56', data-line-width='3')
+                      span.easypie-data.h5.font-strong 56%
+
+    .col-lg-4
+      .ibox.ibox-fullheight
+        .ibox-head
+          .ibox-title TASKS
+          .ibox-tools
+            a.font-18
+              i.ti-plus
+        .ibox-body
+          ul.list-group.list-group-divider.list-group-full.tasks-list
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox', checked='')
+                  span.input-span
+                  span.task-title Make Adminca the best and the most easy admin template
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Create Financial Report
+              .task-data
+                small.text-muted No due date
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox', checked='')
+                  span.input-span
+                  span.task-title Meeting with Ann
+                span.badge.badge-warning.ml-1
+                  i.ti-alarm-clock
+                  |  1 hrs
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Edit the blog post
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Send photos to Jack
+                span.badge.badge-success.ml-1 Today
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Send Financial Reports
+                span.badge.badge-danger.ml-1 Important
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+            li.list-group-item.task-item
+              div
+                label.checkbox.checkbox-grey.checkbox-success
+                  input(type='checkbox')
+                  span.input-span
+                  span.task-title Send message to Bob
+              .task-data
+                small.text-muted 29 May 2018
+              .task-actions
+                a.dropdown-toggle(data-toggle='dropdown')
+                  i.ti-more-alt
+                .dropdown-menu.dropdown-menu-right
+                  a.dropdown-item
+                    i.ti-pencil-alt.mr-2
+                    | Edit
+                  a.dropdown-item
+                    i.ti-close.mr-2
+                    | Remove
+
+  // New Event Dialog
+  #new-event-modal.modal.fade(tabindex='-1', role='dialog')
+      .modal-dialog(role='document')
+          form.modal-content.form-horizontal#newEventForm(action='javascript:;')
+              .modal-header.p-4
+                  h5.modal-title NEW EVENT
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                      span(aria-hidden='true') ×
+              .modal-body.p-4
+                  .form-group.mb-4
+                    label.text-muted.mb-3 Category
+                    div
+                      label.radio.radio-outline-primary.radio-inline.check-single(data-toggle='tooltip', data-original-title='General')
+                        input(type='radio', name='category', checked, value='fc-event-primary')
+                        span.input-span
+                      label.radio.radio-outline-warning.radio-inline.check-single(data-toggle='tooltip', data-original-title='Payment')
+                        input(type='radio', name='category', value='fc-event-warning')
+                        span.input-span
+                      label.radio.radio-outline-success.radio-inline.check-single(data-toggle='tooltip', data-original-title='Technical')
+                        input(type='radio', name='category', value='fc-event-success')
+                        span.input-span
+                      label.radio.radio-outline-danger.radio-inline.check-single(data-toggle='tooltip', data-original-title='Registration')
+                        input(type='radio', name='category', value='fc-event-danger')
+                        span.input-span
+                      label.radio.radio-outline-info.radio-inline.check-single(data-toggle='tooltip', data-original-title='Security')
+                        input(type='radio', name='category', value='fc-event-info')
+                        span.input-span
+                  .form-group.mb-4
+                    input#new-event-title.form-control.form-control-line(type='text', name='title', placeholder='Title')
+                  .row
+                    .col-6.form-group.mb-4
+                      label.col-form-label.text-muted Start:
+                      .input-group-icon.input-group-icon-right
+                        span.input-icon.input-icon-right: i.fa.fa-calendar-check-o
+                        input#new-event-start.form-control.form-control-line.datepicker.date(type='text', name='start', value='')
+                    .col-6.form-group.mb-4
+                      label.col-form-label.text-muted End:
+                      .input-group-icon.input-group-icon-right
+                        span.input-icon.input-icon-right: i.fa.fa-calendar-check-o
+                        input#new-event-end.form-control.form-control-line.datepicker.date(type='text', name='end', value='')
+                  .form-group.mb-4.pt-3
+                    label.ui-switch.switch-icon.mr-3.mb-0
+                      input#new-event-allDay(type='checkbox', checked)
+                      span
+                    | All Day
+              .modal-footer.justify-content-start.bg-primary-50
+                  button#addEventButton.btn.btn-primary.btn-rounded(type='submit') Add event
+  // End New Event Dialog
+  // Event Detail Dialog
+  #event-modal.modal.fade(tabindex='-1', role='dialog')
+      .modal-dialog(role='document')
+          form.modal-content.form-horizontal#eventForm(action='javascript:;')
+              .modal-header.p-4
+                  h5.modal-title EDIT EVENT
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                      span(aria-hidden='true') ×
+              .modal-body.p-4
+                  .form-group.mb-4
+                    label.text-muted.mb-3 Category
+                    div
+                      label.radio.radio-outline-primary.radio-inline.check-single(data-toggle='tooltip', data-original-title='General')
+                        input(type='radio', name='category', checked, value='fc-event-primary')
+                        span.input-span
+                      label.radio.radio-outline-warning.radio-inline.check-single(data-toggle='tooltip', data-original-title='Payment')
+                        input(type='radio', name='category', value='fc-event-warning')
+                        span.input-span
+                      label.radio.radio-outline-success.radio-inline.check-single(data-toggle='tooltip', data-original-title='Technical')
+                        input(type='radio', name='category', value='fc-event-success')
+                        span.input-span
+                      label.radio.radio-outline-danger.radio-inline.check-single(data-toggle='tooltip', data-original-title='Registration')
+                        input(type='radio', name='category', value='fc-event-danger')
+                        span.input-span
+                      label.radio.radio-outline-info.radio-inline.check-single(data-toggle='tooltip', data-original-title='Security')
+                        input(type='radio', name='category', value='fc-event-info')
+                        span.input-span
+                  .form-group.mb-4
+                      input#event-title.form-control.form-control-line(type='text', name='title', placeholder='Title')
+                  .row
+                    .col-6.form-group.mb-4
+                      label.col-form-label.text-muted Start:
+                      .input-group-icon.input-group-icon-right
+                        span.input-icon.input-icon-right: i.fa.fa-calendar-check-o
+                        input#event-start.form-control.form-control-line.datepicker.date(type='text', name='start', value='')
+                    .col-6.form-group.mb-4
+                      label.col-form-label.text-muted End:
+                      .input-group-icon.input-group-icon-right
+                        span.input-icon.input-icon-right: i.fa.fa-calendar-check-o
+                        input#event-end.form-control.form-control-line.datepicker.date(type='text', name='end', value='')
+                  .form-group.mb-4.pt-3
+                    label.ui-switch.switch-icon.mr-3.mb-0
+                      input#event-allDay(type='checkbox')
+                      span
+                    | All Day
+              .modal-footer.justify-content-between.bg-primary-50
+                  button#editEventButton.btn.btn-primary.btn-rounded(type='submit',) Submit
+                  a.text-danger#deleteEventButton(data-dismiss='modal'): i.la.la-trash.font-20
+  // End Event Detail Dialog
+
+block scripts
+  +script('dashboard_5.js', 'page')
+  +script('calendar-demo.js', 'page')

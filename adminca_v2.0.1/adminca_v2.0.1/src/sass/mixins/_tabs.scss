@@ -1,0 +1,18 @@
+
+
+@mixin nav-pill-variant($background, $color: #fff) {
+	.nav-link.active {
+		background-color: $background;
+		@if $color {
+			color: $color
+		}
+	}
+}
+
+@mixin tab-line-variant($color) {
+	.nav-link:hover, .nav-link.active {
+		color: $color;
+		border-bottom-color: $color;
+	}
+}
+

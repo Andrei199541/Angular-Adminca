@@ -1,0 +1,148 @@
+.page-sidebar {
+    width: 220px;
+    min-height: 100%;
+	position: absolute;
+	top: 0;
+	margin-top:50px;
+	transition: all .2s ease-in-out;
+	z-index: 1001;
+}
+
+.side-menu {
+	.heading {
+	    padding: 12px 15px;
+	    display: block;
+	    font-size: 13px;
+	}
+	li {
+	    outline: 0;
+		.sidebar-item-icon {
+			display: block !important;
+			float: left;
+			line-height: 20px !important;
+			margin-right: 8px;
+			font-size: 16px;
+			transition: all .15s linear;
+		}
+		.nav-label {
+		    display:block;
+			transition: color .15s ease-in-out;
+		}
+		.arrow {
+			line-height: 18px;
+			transition: all .15s ease-in;
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			margin-top: -9px;
+			opacity: 1;
+		}
+		&.active > a > .arrow {
+            transform: rotate(-90deg);
+		}
+	}
+	& > li {
+	    a {
+			white-space: nowrap;
+			overflow: hidden;
+	    }
+	}
+	.nav-2-level > li > a {padding:7px 10px 7px 42px;}
+	.nav-3-level > li > a {padding:7px 10px 7px 52px;}
+}
+
+.sidebar-footer {
+	position: fixed;
+	bottom: 0;
+	width: 220px;
+	height: 50px;
+	line-height: 50px;
+	a {
+	    display: block;
+	    float: left;
+		width: 25%;
+		text-align: center;
+		font-size: 18px;
+		&:hover {
+		    font-size: 20px;
+		}
+	}
+}
+
+
+/*************************
+  MINI Sidebar
+************************/  
+
+
+
+.sidebar-mini {
+    .content-wrapper {margin-left:60px}
+    .page-sidebar {width: 60px;}
+    .page-brand {width:60px}
+	.brand {display:none}
+    .brand-mini {display:block !important}
+	.side-menu {
+		li {
+			&.heading {
+			    display:none;
+			}    
+			.sidebar-item-icon {
+			    font-size: 18px;
+			    padding-left: 6px;
+			}
+		    .arrow {
+		        display: none;
+		    }
+		    .nav-2-level {
+		        display: none;
+			    position: absolute;
+			    top: 40px;
+			    left: 60px;
+			    min-width: 200px;
+			    padding-left: 0;
+			    ul {
+			        padding-left: 0;
+			    }
+			    li a {
+			        padding-left: 20px;
+			    }
+		    }
+		    .nav-3-level > li > a {
+		        padding-left: 27px;
+		    }
+		}
+		& > li > a > .nav-label{
+		    display:none;
+		}
+		& > li:hover {
+		    & > a {
+				overflow: visible;
+				width: 260px;
+				& > .nav-label {
+				    display:block;
+				    padding-left: 50px;
+				}
+			}
+			.nav-2-level {
+				display: block;
+				height: auto !important;
+				opacity: 1;
+				visibility: visible
+			}
+		}
+
+	}
+	.sidebar-footer {display:none}
+}
+
+
+
+
+
+
+
+
+/************************
+*  Customizing settings
+************************/

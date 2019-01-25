@@ -1,0 +1,60 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Sparkline Charts'
+  - var pageUrl = 'charts_sparkline.html'
+  - var page_heading = 'Sparkline Charts'
+  - var path = ['Charts', 'Sparkline Charts']
+
+block plugins
+  +script('jquery-sparkline/dist/jquery.sparkline.min.js', 'plugin')
+
+block scripts
+  +script('sparkline-demo.js', 'page')
+
+block content
+    .alert.alert-info.alert-bordered
+        p
+            | A plugin for the jQuery javascript library to generate small sparkline charts directly in the browser
+        p
+            a.btn.btn-info(href='http://omnipotent.net/jquery.sparkline/', target='_blank') Official Website
+    +panel('Sparkline Charts')
+        table.table
+            thead
+              tr
+                th Graph
+                th Name
+            tbody
+                tr
+                    td
+                        span.spark_pie 2,1,2
+                    td Pie chart
+                tr
+                    td
+                        span.spark_bar 10,8,9,3,5,8,5
+                    td Bar chart
+                tr
+                    td
+                        span.spark_bar -3,1,2,0,3,-1
+                    td Bar negative values
+                tr
+                    td
+                        span#spark_tristate 1,1,0,1,-1,-1,1,-1,0,0,1,1
+                    td Tristate chart
+                tr
+                    td
+                        span.spark_line
+                            | 34, 43, 43, 35, 44, 32, 15, 22, 46, 33, 86, 54, 73, 53, 12, 53, 23, 65, 23, 63, 53, 42, 34, 56, 76, 15, 54, 23, 44
+                    td Line chart
+                tr
+                    td
+                        span#spark_compositeline 8,4,0,3,0,3,1,4,4,10,4,10,0,1,4,6,5,9,10
+                    td Composite lines
+                tr
+                    td
+                        span#spark_compositebar 4,6,7,7,4,3,2,1,4
+                    td Composite bar
+                tr
+                    td
+                        span#spark_mousespeed Loading...
+                    td Mouse speed

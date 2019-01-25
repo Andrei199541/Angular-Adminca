@@ -1,0 +1,159 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Pricing Table v5'
+  - var pageUrl = 'pricing-table-5.html'
+
+block content
+  .flexbox-b.mb-5
+    span.mr-4.static-badge.badge-pink
+      i.la.la-trophy
+    div
+      h5.font-strong PRICING TABLES
+      .text-light Perfect and easy pricing tables for your business
+  .row
+    .col-lg-4
+      .pricing-item.pricing-item-1
+        .pricing-header.bg-primary
+          h4.pricing-title BASIC PLAN
+          .price
+            sup $
+            span.price-number 3.99
+            span.font-16 / mo
+          p.mb-4 perfect for a small project.
+          button.btn.pricing-item-btn PURCHASE
+        .pricing-features
+          span.feature-item
+            span.ti-user.text-primary.feature-icon
+            span 25 users
+          span.feature-item
+            span.ti-email.text-primary.feature-icon
+            span 1 email address
+          span.feature-item
+            span.ti-support.text-primary.feature-icon
+            span Base Support
+          span.feature-item
+            span.ti-gift.text-primary.feature-icon
+            span 1 Gift
+    .col-lg-4
+      .pricing-item.pricing-item-2
+        .pricing-header.bg-success
+          h4.pricing-title BUSINESS PLAN
+          .price
+            sup $
+            span.price-number 5.99
+            span.font-16 / mo
+          p.mb-4 perfect for a medium project.
+          button.btn.pricing-item-btn PURCHASE
+        .pricing-features
+          span.feature-item
+            span.ti-user.text-success.feature-icon
+            span 50 users
+          span.feature-item
+            span.ti-email.text-success.feature-icon
+            span 3 email address
+          span.feature-item
+            span.ti-support.text-success.feature-icon
+            span Base Support
+          span.feature-item
+            span.ti-gift.text-success.feature-icon
+            span 3 Gift
+    .col-lg-4
+      .pricing-item.pricing-item-3
+        .pricing-header.bg-pink
+          h4.pricing-title EXTENDED PLAN
+          .price
+            sup $
+            span.price-number 9.99
+            span.font-16 / mo
+          p.mb-4 perfect for a big project.
+          button.btn.pricing-item-btn PURCHASE
+        .pricing-features
+          span.feature-item
+            span.ti-user.text-pink.feature-icon
+            span 100 users
+          span.feature-item
+            span.ti-email.text-pink.feature-icon
+            span 10 email address
+          span.feature-item
+            span.ti-support.text-pink.feature-icon
+            span High Quality
+          span.feature-item
+            span.ti-gift.text-pink.feature-icon
+            span 10 Gift
+  
+block page_styles
+  style.
+    .pricing-item {
+      text-align: center;
+      background-color: #fff;
+      margin-bottom: 26px;
+    }
+    .pricing-header {
+      position: relative;
+      padding-bottom: 30px;
+    }
+    .pricing-header:after {
+      content: '';
+      border-color: transparent;
+      border-style: solid;
+      border-width: 10px 10px 0 10px;
+      position: absolute;
+      top:100%;
+      left: 50%;
+      margin-left: -10px;
+    }
+    .pricing-item-1 .pricing-header:after {
+      border-top-color: #5c6bc0;
+    }
+    .pricing-item-2 .pricing-header:after {
+      border-top-color: #18c5a9;
+    }
+    .pricing-item-3 .pricing-header:after {
+      border-top-color: #ff4081;
+    }
+    .pricing-title {
+      padding: 15px;
+      background-color: rgba(0,0,0,.1);
+      color: #fff;
+    }
+    .pricing-item .price {
+      color: #fff;
+    }
+    .pricing-item .price .price-number {
+      font-size: 60px;
+    }
+    .pricing-item .price sup {
+      margin-right: 3px;
+      font-size: 35px;
+      top: -.5em;
+    }
+    .pricing-features {
+      display: flex;
+      flex-wrap: wrap;
+      border-right: 1px solid rgba(0,0,0,.1);
+    }
+    .pricing-features .feature-item {
+      flex: 50%;
+      height: 140px;
+      border-bottom: 1px solid rgba(0,0,0,.1);
+      border-left: 1px solid rgba(0,0,0,.1);
+    }
+    .feature-item .feature-icon {
+      display: block;
+      font-size: 44px;
+      padding: 20px;
+    }
+    .pricing-item-btn {
+      background-color: transparent;
+      color: #fff;
+      padding: .75rem;
+      width: 170px;
+      border: 2px solid #fff;
+      border-radius: 50px;
+      box-shadow: none !important;
+    }
+    .pricing-item-btn:hover {
+      background-color: #fff;
+      color: inherit;
+    }

@@ -1,0 +1,25 @@
+// Social Buttons
+
+@include social-button-variant('facebook', $btn-facebook-color);
+@include social-button-variant('twitter', $btn-twitter-color);
+@include social-button-variant('google', $btn-google-color);
+@include social-button-variant('linkedin', $btn-linkedin-color);
+@include social-button-variant('pinterest', $btn-pinterest-color);
+@include social-button-variant('vk', $btn-vk-color);
+@include social-button-variant('instagram', $btn-instagram-color);
+@include social-button-variant('youtube', $btn-youtube-color);
+@include social-button-variant('dribbble', $btn-dribbble-color);
+@include social-button-variant('github', $btn-github-color);
+@include social-button-variant('tumblr', $btn-tumblr-color);
+@include social-button-variant('flickr', $btn-flickr-color);
+@include social-button-variant('yahoo', $btn-yahoo-color);
+@include social-button-variant('ok', $btn-ok-color);
+@include social-button-variant('rss', $btn-rss-color);
+
+[class*=' btn-soc-'] {
+	color: #fff;
+	&:hover, &:focus {
+	    opacity: .9;
+	    color: #fff;
+    }
+}

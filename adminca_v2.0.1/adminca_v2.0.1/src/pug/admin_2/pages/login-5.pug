@@ -1,0 +1,83 @@
+extends ../layout-simple.pug
+
+block variables
+  - var pageTitle = 'Login v5'
+  - var pageUrl = 'login-5.html'
+
+block content
+  .cover
+  div(style='max-width: 400px;margin: 100px auto 50px;')
+    .text-center.mb-5
+      span.auth-head-icon
+        i.la.la-user
+    .ibox.login-box
+      form#login-form.ibox-body(action='javascript:;', method='POST')
+        h4.font-strong.text-center.mb-5 LOG IN
+        .form-group.mb-4
+          input.form-control.form-control-line(type='text', name='email', placeholder='Email')
+        .form-group.mb-4
+          input.form-control.form-control-line(type='password', name='password', placeholder='Password')
+        .flexbox.mb-5
+          label.checkbox.checkbox-primary
+            input(type='checkbox', checked='')
+            span.input-span
+            |  Remember
+          a.color-inherit(href='forgot_password.html') Forgot password?
+        .text-center.mb-4
+          button.btn.btn-primary.btn-rounded.btn-block LOGIN
+  
+block page_styles
+  style.
+    body {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(./assets/img/blog/19.jpeg);
+    }
+    .cover {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(117,54,230,.1);
+    }
+    .auth-head-icon {
+      position: relative;
+      height: 60px;
+      width: 60px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      background: rgba(0,0,0,.6);
+      color: #fff;
+      box-shadow: 0 5px 20px #d6dee4;
+      border-radius: 50%;
+      z-index: 2;
+    }
+    .login-box {
+      background: rgba(0,0,0,.6);
+      color: rgba(255,255,255,.8);
+    }
+    .login-box .form-control {
+      background-color: transparent;
+      border-color: rgba(255,255,255,.6);
+      color: #fff;
+    }
+    .login-box .form-control:focus {
+      border-color: rgba(255,255,255,1);
+    }
+
+block scripts
+  script.
+    $(function(){
+      $('#login-form').validate({
+          errorClass:"help-block",
+          rules: {
+              email: {required:true,email:true},
+              password: {required:true}
+          },
+          highlight:function(e){$(e).closest(".form-group").addClass("has-error")},
+          unhighlight:function(e){$(e).closest(".form-group").removeClass("has-error")},
+      });
+    });

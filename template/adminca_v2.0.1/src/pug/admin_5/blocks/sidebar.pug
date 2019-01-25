@@ -1,0 +1,183 @@
+
+nav.page-sidebar
+  .page-brand
+    a(href='index.html'): span.brand AC
+  .side-menu-wrapper
+    .side-menu.nav.scroller
+      a.sidebar-link.sidebar-toggler(href='javascript:;')
+        .sidebar-toggler-icon
+          span.icon-line
+          span.icon-line
+          span.icon-line
+      a.sidebar-link.active(href='#sidemenu-1' data-toggle='tab' aria-expanded='true')
+        i.ti-briefcase
+        span.badge-success.badge-point(style='position:absolute; right: 20px; top: 5px;')
+      a.sidebar-link(href='#sidemenu-2' data-toggle='tab')
+        i.ti-shopping-cart
+      a.sidebar-link(href='javascript:;')
+        i.ti-support
+        span.badge.badge-pink.badge-circle(style='position:absolute; right: 20px; top: 5px;') 8
+      a.sidebar-link(href='#sidemenu-3' data-toggle='tab')
+        i.ti-settings
+.sidebar-tabs
+  .tab-content.scroller
+    .tab-pane.sidebar-submenu.fade.active.show#sidemenu-1
+      a(href='javascript:;')
+        i.ti-user.menu-item-icon
+        div
+          h5.menu-item-title Customers
+          small.menu-item-text Customers and activities
+      a(href='javascript:;')
+        i.ti-email.menu-item-icon
+        div
+          h5.menu-item-title
+            | Mailbox
+            span.badge.badge-success.badge-circle.ml-2 7
+          small.menu-item-text Customers and activities
+      a.visited(href='javascript:;')
+        i.ti-files.menu-item-icon
+        div
+          h5.menu-item-title
+            | Pages
+            span.badge.badge-pink.badge-circle.ml-2 4
+          small.menu-item-text Customers and activities
+      a(href='javascript:;')
+        i.ti-pencil.menu-item-icon
+        div
+          h5.menu-item-title Posts
+          small.menu-item-text Customers and activities
+      a(href='javascript:;')
+        i.ti-calendar.menu-item-icon
+        div
+          h5.menu-item-title
+            | Tasks
+            span.badge.badge-primary.badge-circle.ml-2 4
+          small.menu-item-text Customers and activities
+      a(href='javascript:;')
+        i.ti-support.menu-item-icon
+        div
+          h5.menu-item-title
+            | Support System
+            span.badge.badge-warning.badge-circle.ml-2 8
+          small.menu-item-text Customers and activities
+      a(href='javascript:;')
+        i.ti-server.menu-item-icon
+        div
+          h5.menu-item-title Server State
+          small.menu-item-text Customers and activities
+      a(href='javascript:;')
+        i.ti-settings.menu-item-icon
+        div
+          h5.menu-item-title Settings
+          small.menu-item-text Customers and activities
+      a(href='javascript:;')
+        i.ti-lock.menu-item-icon
+        div
+          h5.menu-item-title Security
+          small.menu-item-text Customers and activities
+    .tab-pane.sidebar-submenu.fade#sidemenu-2
+      a(href='javascript:;')
+        i.ti-bar-chart.menu-item-icon
+        div
+          h5.menu-item-title Analytics
+          small.menu-item-text Customers and activities
+      a(href='javascript:;')
+        i.ti-files.menu-item-icon
+        div
+          h5.menu-item-title
+            | Reports
+            span.badge.badge-success.badge-circle.ml-2 9
+          small.menu-item-text Customers and activities
+      a(href='javascript:;')
+        i.ti-wallet.menu-item-icon
+        div
+          h5.menu-item-title
+            | Earnings
+            span.badge.badge-pink.badge-circle.ml-2 8
+          small.menu-item-text Customers and activities
+      a(href='javascript:;')
+        i.ti-map-alt.menu-item-icon
+        div
+          h5.menu-item-title Country Analytics
+          small.menu-item-text Customers and activities
+      a(href='javascript:;')
+        i.ti-truck.menu-item-icon
+        div
+          h5.menu-item-title
+            | Delivery
+            span.badge.badge-primary.badge-circle.ml-2 9
+          small.menu-item-text Customers and activities
+      a(href='javascript:;')
+        i.ti-package.menu-item-icon
+        div
+          h5.menu-item-title
+            | Orders
+            span.badge.badge-warning.badge-circle.ml-2 8
+          small.menu-item-text Customers and activities
+      a(href='javascript:;')
+        i.ti-gift.menu-item-icon
+        div
+          h5.menu-item-title Promotions & Gifts
+          small.menu-item-text Customers and activities
+      a(href='javascript:;')
+        i.ti-user.menu-item-icon
+        div
+          h5.menu-item-title
+            | Customers
+            span.badge.badge-pink.badge-circle.ml-2 8
+          small.menu-item-text Customers and activities
+    .tab-pane.fade#sidemenu-3
+      .scroller.p-4
+        .font-bold.mb-4.mt-2(style='color:#b4bcc8') APP SETTINGS
+        .flexbox.mb-4
+          | Show notifications
+          label.checkbox.checkbox-success.m-0
+            input(type='checkbox')
+            span.input-span
+        .flexbox.mb-4
+          | Enable autologout
+          label.checkbox.checkbox-success.m-0
+            input(type='checkbox', checked)
+            span.input-span
+        .flexbox.mb-4
+          | Show recent activity
+          label.checkbox.checkbox-success.m-0
+            input(type='checkbox', checked)
+            span.input-span
+        .flexbox.mb-4
+          | Chat history
+          label.checkbox.checkbox-success.m-0
+            input(type='checkbox')
+            span.input-span
+        .flexbox.mb-4
+          | Users activity
+          label.checkbox.checkbox-success.m-0
+            input(type='checkbox', checked)
+            span.input-span
+        .flexbox.mb-4
+          | Orders history
+          label.checkbox.checkbox-success.m-0
+            input(type='checkbox')
+            span.input-span
+        .flexbox.mb-4
+          | SMS Alerts
+          label.checkbox.checkbox-success.m-0
+            input(type='checkbox')
+            span.input-span
+        .font-bold.mb-4(style='color:#b4bcc8') SYSTEM SETTINGS
+        .flexbox.mb-4
+          | Error Reporting
+          label.checkbox.checkbox-success.m-0
+            input(type='checkbox', checked)
+            span.input-span
+        .flexbox.mb-4
+          | Server logs
+          label.checkbox.checkbox-success.m-0
+            input(type='checkbox', checked)
+            span.input-span
+        .flexbox.mb-4
+          | Global search
+          label.checkbox.checkbox-success.m-0
+            input(type='checkbox')
+            span.input-span
+

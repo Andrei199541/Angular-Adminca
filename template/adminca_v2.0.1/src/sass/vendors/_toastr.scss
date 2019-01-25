@@ -1,0 +1,10 @@
+// Toastr Notification
+
+.toast-message {font-size:13px} 
+.toast-close-button {line-height:normal}
+#toast-container>div {opacity:.9;box-shadow:none !important;}
+#toast-container>div:hover {opacity:1;}
+.toast-success {background-color:#18C5A9}
+.toast-info {background-color:#2CC4CB}
+.toast-warning {background-color:#f5ab36}
+.toast-error {background-color:#f75a5f}

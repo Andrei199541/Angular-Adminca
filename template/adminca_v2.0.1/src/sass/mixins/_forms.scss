@@ -1,0 +1,88 @@
+
+
+@mixin checkbox-variant($state, $background, $color) {
+    .checkbox-#{$state} {
+        input:checked {
+            & ~ .input-span {
+                background-color: $background;
+                border-color: $background;
+                &::after {
+                    border-color: $color;
+                }
+            }
+        }
+    }
+    .radio-#{$state} {
+        input:checked {
+            & ~ .input-span {
+                background-color: $background;
+                border-color: $background;
+                &::after {
+                    background-color: $color;
+                }
+            }
+        }
+    }
+
+}
+
+@mixin checkbox-outline-variant($state, $color) {
+    .checkbox-outline-#{$state} {
+        input:checked {
+            & ~ .input-span {
+                border-color: $color;
+                &::after {
+                    border-color: $color;
+                }
+            }
+        }
+    }
+    .radio-outline-#{$state} {
+        input:checked {
+            & ~ .input-span {
+                border-color: $color;
+                &::after {
+                    background-color: $color;
+                }
+            }
+        }
+    }
+
+}
+
+@mixin switch-variant($state, $bg) {
+    $box-shadow: rgba($bg, .4);
+    .ui-switch-#{$state} {
+        input:checked ~ span:after {
+            background-color: $bg;
+            box-shadow: 0 3px 20px 0 $box-shadow;
+        }
+    }
+}
+
+@mixin switch-solid-variant($state, $bg, $switch-bg: #fff) {
+    .switch-solid-#{$state} {
+        span {
+            background-color: $bg;
+            border-color: $bg;
+            &:after {
+                background-color: $switch-bg;
+                color: $bg;
+                box-shadow: none;
+                opacity: .42;
+            }
+        }
+        input:checked ~ span:after {
+            background-color: $switch-bg;
+            opacity: 1
+        }
+    }
+}
+
+@mixin form-state($state, $color) {
+    .form-#{$state} {
+        .form-control:focus {
+            border-color: $color;
+        }
+    }
+}

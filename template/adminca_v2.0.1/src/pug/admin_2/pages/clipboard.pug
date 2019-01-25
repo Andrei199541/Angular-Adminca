@@ -1,0 +1,35 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Clipboard.js'
+  - var pageUrl = 'clipboard.html'
+  - var page_heading = 'Clipboard.js'
+  - var path = ['Components', 'Clipboard.js']
+
+block plugins
+  +script('clipboard/dist/clipboard.min.js', 'plugin')
+
+
+block content
+    .alert.alert-bordered.alert-primary
+        p A modern approach to copy text to clipboard
+        p
+            a.btn.btn-primary(href='https://clipboardjs.com/', target='_blank') Official Website
+    
+    .row
+      .col-md-6
+        +panel('Copy to clipboard')
+            input#input.form-control.mb-2(type='text', value='https://example.com')
+            button.btn.btn-primary(data-clipboard='', data-clipboard-target='#input') Copy to clipboard
+            button.btn.btn-primary(data-clipboard='', data-clipboard-action='cut', data-clipboard-target='#input') Cut to clipboard
+            br
+            br
+            p#copyText
+                | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+            button.btn.btn-primary(data-clipboard='', data-clipboard-target='#copyText') Copy paragraph
+
+block scripts
+  script.
+    $(function(){
+      var clipboard = new Clipboard('[data-clipboard]');
+    })

@@ -1,0 +1,40 @@
+li.dropdown.dropdown-user
+  a.nav-link(data-toggle='dropdown').dropdown-toggle.link
+    +img('users/admin-image.png')
+    span Super User
+  .dropdown-menu.dropdown-arrow.dropdown-menu-right.admin-dropdown-menu
+    .dropdown-arrow
+    .dropdown-header
+      .admin-avatar
+        +img('users/admin-image.png')
+      div
+        h5.font-strong.text-white Super User
+        div
+          span.admin-badge.mr-3
+            i.ti-alarm-clock.mr-2
+            | 30m.
+          span.admin-badge
+            i.ti-lock.mr-2
+            | Safe Mode
+    .admin-menu-features
+      a.admin-features-item(href='javascript:;')
+        i.ti-user
+        span PROFILE
+      a.admin-features-item(href='javascript:;')
+        i.ti-support
+        span SUPPORT
+      a.admin-features-item(href='javascript:;')
+        i.ti-settings
+        span SETTINGS
+    .admin-menu-content
+      .text-muted.mb-2 Your Wallet
+      div
+        i.ti-wallet.h1.mr-3.text-light
+        span.h1.text-success
+          sup $
+          | 12.7k
+      .d-flex.justify-content-between.mt-2
+        a.text-muted(href='javascript:;') Earnings history
+        a.d-flex.align-items-center(href='javascript:;')
+          | Logout
+          i.ti-shift-right.ml-2.font-20

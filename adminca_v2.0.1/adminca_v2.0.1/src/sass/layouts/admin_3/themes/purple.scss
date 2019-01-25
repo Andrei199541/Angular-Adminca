@@ -1,0 +1,22 @@
+@import 'white-sidebar';
+$purple: #5C6BC0;
+
+.header {
+	&, .page-brand {
+        background-color: $purple;
+        .brand-tip {color: #f75a5f}
+    }
+    .sidebar-toggler {
+        .icon-bar {background-color: #eee}
+        &:hover .icon-bar {background-color: #fff}
+    }
+    .toolbar-icon:hover {
+        background-color: rgba(0,0,0,.2);
+    }
+    .navbar-toolbar > li > a {
+        color: #eee;
+        &:hover {
+            color: #fff;
+        }
+    }
+}

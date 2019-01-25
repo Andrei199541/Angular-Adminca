@@ -1,0 +1,42 @@
+
+.page-sidebar {
+	background-color: #fff;
+	border-right: 1px solid rgba(0,0,0,.1);
+}
+
+.side-menu {
+    & > li {
+        a {
+	        color: #71808f;
+	        &:hover, &:focus {
+	            color: #5c6bc0;
+	        }
+	    }
+	    &:hover {
+	        & > a {
+	            color: #5c6bc0;
+	            background-color: #fff;
+	        }
+	    }
+	    &.active {
+	        & > a, & > a:hover, & > a:focus {
+	            color: #5c6bc0;
+	            background-color: #ebedf7;
+	        }
+	    }
+	    .nav-2-level ul {
+            background-color: #5c6bc0;
+            &::before {border-right-color: #5c6bc0;}
+            a {
+                color: #fff;
+                &:hover, &:focus {background-color:rgba(0,0,0,.1)}
+            }
+	    }
+	    .nav-3-level {
+            background-color: #5c6bc0;
+	    }
+    }
+}
+
+
+.theme-config .theme-config-toggle {background-color: #5c6bc0}

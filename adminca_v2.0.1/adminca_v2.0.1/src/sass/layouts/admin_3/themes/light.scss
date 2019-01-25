@@ -1,0 +1,14 @@
+@import 'light-sidebar';
+
+.header {
+	&, .page-brand, .navbar-toolbar .dropdown-user{background: #dde1e2; color: #6d7c85;}
+	.toolbar-icon:hover {
+        color: #5c6bc0;
+        background-color: #ebedf7;
+    }
+	.envelope-badge {
+	    box-shadow: none;
+	    background-color: #1abc9c;
+	}
+
+}

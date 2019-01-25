@@ -1,0 +1,31 @@
+header.header
+  .page-brand
+    a(href='index.html')
+      span.brand AdminCa
+      span.brand-mini AC
+  .flexbox.flex-1 
+    // START TOP-LEFT TOOLBAR
+    ul.nav.navbar-toolbar
+      li
+        a.nav-link.sidebar-toggler.js-sidebar-toggler(href='javascript:;')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+      li
+        a.nav-link.search-toggler.js-search-toggler
+          i.ti-search
+          span Search here...
+    // END TOP-LEFT TOOLBAR
+    // START TOP-RIGHT TOOLBAR
+    ul.nav.navbar-toolbar
+      li.timeout-toggler
+        a.nav-link(data-toggle='modal' data-target='#session-dialog' href='javascript:;').toolbar-icon
+          i.ti-alarm-clock.timeout-toggler-icon.rel
+            span.notify-signal
+      include header/inbox.pug
+      include header/notification.pug
+      include header/user.pug
+      li
+        a.nav-link.quick-sidebar-toggler
+          span.ti-align-right
+    // END TOP-RIGHT TOOLBAR

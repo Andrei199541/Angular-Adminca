@@ -1,0 +1,28 @@
+// Carousel
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    font-family: themify;
+    font-size: 28px;
+    background: none;
+}
+
+.carousel-control-prev-icon:before {
+    content: "\e64a";
+}
+.carousel-control-next-icon:before {
+    content: "\e649";
+}
+
+.carousel-hover-controls {
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        opacity: 0;
+    }
+    &:hover {
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            opacity: 1;
+        }
+    }
+}

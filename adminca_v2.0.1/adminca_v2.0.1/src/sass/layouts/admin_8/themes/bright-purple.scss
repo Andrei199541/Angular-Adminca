@@ -1,0 +1,32 @@
+$purple: #7536e6;
+
+.header-topbar {
+    background: $purple;
+    .page-brand {
+        .brand-tip {color: #f75a5f}
+    }
+    .sidebar-toggler {
+        .icon-bar {background-color: #eee}
+        &:hover .icon-bar {background-color: #fff}
+    }
+    .navbar-toolbar > li 
+    {
+        & > a {
+            &, & > i {color: #eee}
+            &:hover {
+                &, & > i {color: #fff}
+            }
+        }
+        &.timeout-toggler .notify-signal {
+            background-color: #f75a5f;
+            &::before {border-color: #f75a5f}
+        }
+    }
+    .envelope-badge {
+        background-color: #f75a5f;
+    }
+}
+
+.top-navbar .nav-menu > li.active a {border-color: $purple}
+
+.theme-config .theme-config-toggle {background-color: $purple}

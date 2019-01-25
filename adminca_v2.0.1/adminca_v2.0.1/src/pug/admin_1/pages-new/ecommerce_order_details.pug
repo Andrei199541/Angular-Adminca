@@ -1,0 +1,115 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'E-commerce Order details'
+  - var pageUrl = 'ecommerce_order_details.html'
+
+block content
+  .d-flex.align-items-center.mb-5
+    span.mr-4.static-badge.badge-pink
+      i.ti-shopping-cart-full
+    div
+      h5.font-strong Order #1253
+      .text-light Emma Johnson, 17.05.2018, Shipped
+  .row
+    .col-xl-7
+      .ibox
+        .ibox-body
+          h5.font-strong.mb-5 Products List
+          table.table.table-bordered.table-hover
+            thead.thead-default.thead-lg
+              tr
+                th ID
+                th Product
+                th Price
+                th QTY
+                th Total
+            tbody
+              tr
+                td 3
+                td
+                  +img('products/16.jpg')(class='mr-3', width='60')
+                  | Evaflor "Whisky"
+                td $12
+                td 3
+                td $36
+              tr
+                td 4
+                td
+                  +img('products/15.jpg')(class='mr-3', width='60')
+                  | Evaflor "Whisky Silver"
+                td $12
+                td 4
+                td $48
+              tr
+                td 10
+                td
+                  +img('products/20.jpg')(class='mr-3', width='60')
+                  | Women's bag Cromia "Luxor"
+                td $430
+                td 1
+                td $430
+              tr
+                td 6
+                td
+                  +img('products/23.jpg')(class='mr-3', width='60')
+                  | Women's wrist watch "Moschino"
+                td $335
+                td 1
+                td $335
+              tr
+                td 13
+                td
+                  +img('products/21.jpg')(class='mr-3', width='60')
+                  | Women's bag Cromia "Starlight"
+                td $416
+                td 1
+                td $416
+          .d-flex.justify-content-end
+            .text-right(style='width:300px')
+              .row.mb-2
+                .col-6 Subtotal Price
+                .col-6 $1265
+              .row.mb-2
+                .col-6 Discount 5%:
+                .col-6 -$63.25
+              .row.font-strong.font-20
+                .col-6 Total Price:
+                .col-6
+                  .h3.font-strong $1201.71
+    .col-xl-5
+      .ibox
+        .ibox-body
+          h5.font-strong.mb-4 Order Information
+          .row.align-items-center.mb-3
+            .col-4.text-light Total Price
+            .col-8.h3.font-strong.text-pink.mb-0 $1201.71
+          .row.align-items-center.mb-3
+            .col-4.text-light Date
+            .col-8 17.05.2018
+          .row.align-items-center.mb-3
+            .col-4.text-light Delivered
+            .col-8 17.05.2018
+          .row.align-items-center.mb-3
+            .col-4.text-light Status
+            .col-8
+              span.badge.badge-success.badge-pill Shipped
+          .row.align-items-center
+            .col-4.text-light Payment
+            .col-8
+              +img('logos/payment/visa.png')(width='55')
+      .ibox
+        .ibox-body
+          h5.font-strong.mb-4 Buyer Information
+          .row.align-items-center.mb-3
+            .col-4.text-light Customer
+            .col-8 Emma Johnson
+          .row.align-items-center.mb-3
+            .col-4.text-light Address
+            .col-8 San Francisco, CA 94103 Market Street
+          .row.align-items-center.mb-3
+            .col-4.text-light Email
+            .col-8 example@gmail.com
+          .row.align-items-center
+            .col-4.text-light Phone
+            .col-8 +380681478544

@@ -1,0 +1,246 @@
+{
+  "compile": {
+      "jsUglify": true,
+      "cssMinify": true
+  },
+  "path": {
+      "src": "../../src",
+      "output": "../../dist",
+      "bower_components": "../../src/bower_components",
+      "vendors": "../../src/vendors"
+  },
+  "build": {
+      "admin_1": {
+          "js": {
+              "src": [
+                  "@{path.src}/js/app/app.js",
+                  "@{path.src}/js/theme/admin_1/layout.js"
+              ],
+              "output": "@{path.output}/admin_1/html/assets/js"
+          },
+          "sass": {
+              "src": {
+                  "bundle": [
+                      "@{path.src}/sass/components/components.scss",
+                      "@{path.src}/sass/layouts/admin_1/layout.scss",
+                      "@{path.src}/sass/vendors/vendors.scss"
+                  ],
+                  "themes": "@{path.src}/sass/layouts/admin_1/themes/*.scss",
+                  "pages": "@{path.src}/sass/layouts/admin_1/pages/*.css"
+              },
+              "output": {
+                  "bundle": "@{path.output}/admin_1/html/assets/css",
+                  "themes": "@{path.output}/admin_1/html/assets/css/themes",
+                  "pages": "@{path.output}/admin_1/html/assets/css/pages"
+              }
+          },
+          "pug": {
+            "src": "@{path.src}/pug/admin_1/pages/*.pug",
+            "output": "@{path.output}/admin_1/html"
+          }
+      },
+      "admin_2": {
+          "js": {
+              "src": [
+                  "@{path.src}/js/app/app.js",
+                  "@{path.src}/js/theme/admin_2/layout.js"
+              ],
+              "output": "@{path.output}/admin_2/html/assets/js"
+          },
+          "sass": {
+              "src": {
+                  "bundle": [
+                      "@{path.src}/sass/components/components.scss",
+                      "@{path.src}/sass/layouts/admin_2/layout.scss",
+                      "@{path.src}/sass/vendors/vendors.scss"
+                  ],
+                  "themes": "@{path.src}/sass/layouts/admin_2/themes/*.scss",
+                  "pages": "@{path.src}/sass/layouts/admin_2/pages/*.css"
+              },
+              "output": {
+                  "bundle": "@{path.output}/admin_2/html/assets/css",
+                  "themes": "@{path.output}/admin_2/html/assets/css/themes",
+                  "pages": "@{path.output}/admin_2/html/assets/css/pages"
+              }
+          },
+          "pug": {
+            "src": "@{path.src}/pug/admin_2/pages/*.pug",
+            "output": "@{path.output}/admin_2/html"
+          }
+      },
+      "admin_3": {
+          "js": {
+              "src": [
+                  "@{path.src}/js/app/app.js",
+                  "@{path.src}/js/theme/admin_3/layout.js"
+              ],
+              "output": "@{path.output}/admin_3/html/assets/js"
+          },
+          "sass": {
+              "src": {
+                  "bundle": [
+                      "@{path.src}/sass/components/components.scss",
+                      "@{path.src}/sass/layouts/admin_3/layout.scss",
+                      "@{path.src}/sass/vendors/vendors.scss"
+                  ],
+                  "themes": "@{path.src}/sass/layouts/admin_3/themes/*.scss",
+                  "pages": "@{path.src}/sass/layouts/admin_3/pages/*.css"
+              },
+              "output": {
+                  "bundle": "@{path.output}/admin_3/html/assets/css",
+                  "themes": "@{path.output}/admin_3/html/assets/css/themes",
+                  "pages": "@{path.output}/admin_3/html/assets/css/pages"
+              }
+          },
+          "pug": {
+            "src": "@{path.src}/pug/admin_3/pages/*.pug",
+            "output": "@{path.output}/admin_3/html"
+          }
+      },
+      "admin_4": {
+          "js": {
+              "src": [
+                  "@{path.src}/js/app/app.js",
+                  "@{path.src}/js/theme/admin_4/layout.js"
+              ],
+              "output": "@{path.output}/admin_4/html/assets/js"
+          },
+          "sass": {
+              "src": {
+                  "bundle": [
+                      "@{path.src}/sass/components/components.scss",
+                      "@{path.src}/sass/layouts/admin_4/layout.scss",
+                      "@{path.src}/sass/vendors/vendors.scss"
+                  ],
+                  "themes": "@{path.src}/sass/layouts/admin_4/themes/*.scss",
+                  "pages": "@{path.src}/sass/layouts/admin_4/pages/*.css"
+              },
+              "output": {
+                  "bundle": "@{path.output}/admin_4/html/assets/css",
+                  "themes": "@{path.output}/admin_4/html/assets/css/themes",
+                  "pages": "@{path.output}/admin_4/html/assets/css/pages"
+              }
+          },
+          "pug": {
+            "src": "@{path.src}/pug/admin_4/pages/*.pug",
+            "output": "@{path.output}/admin_4/html"
+          }
+      },
+      "admin_5": {
+          "js": {
+              "src": [
+                  "@{path.src}/js/app/app.js",
+                  "@{path.src}/js/theme/admin_5/layout.js"
+              ],
+              "output": "@{path.output}/admin_5/html/assets/js"
+          },
+          "sass": {
+              "src": {
+                  "bundle": [
+                      "@{path.src}/sass/components/components.scss",
+                      "@{path.src}/sass/layouts/admin_5/layout.scss",
+                      "@{path.src}/sass/vendors/vendors.scss"
+                  ],
+                  "themes": "@{path.src}/sass/layouts/admin_5/themes/*.scss",
+                  "pages": "@{path.src}/sass/layouts/admin_5/pages/*.css"
+              },
+              "output": {
+                  "bundle": "@{path.output}/admin_5/html/assets/css",
+                  "themes": "@{path.output}/admin_5/html/assets/css/themes",
+                  "pages": "@{path.output}/admin_5/html/assets/css/pages"
+              }
+          },
+          "pug": {
+            "src": "@{path.src}/pug/admin_5/pages/*.pug",
+            "output": "@{path.output}/admin_5/html"
+          }
+      },
+      "admin_6": {
+          "js": {
+              "src": [
+                  "@{path.src}/js/app/app.js",
+                  "@{path.src}/js/theme/admin_6/layout.js"
+              ],
+              "output": "@{path.output}/admin_6/html/assets/js"
+          },
+          "sass": {
+              "src": {
+                  "bundle": [
+                      "@{path.src}/sass/components/components.scss",
+                      "@{path.src}/sass/layouts/admin_6/layout.scss",
+                      "@{path.src}/sass/vendors/vendors.scss"
+                  ],
+                  "themes": "@{path.src}/sass/layouts/admin_6/themes/*.scss",
+                  "pages": "@{path.src}/sass/layouts/admin_6/pages/*.css"
+              },
+              "output": {
+                  "bundle": "@{path.output}/admin_6/html/assets/css",
+                  "themes": "@{path.output}/admin_6/html/assets/css/themes",
+                  "pages": "@{path.output}/admin_6/html/assets/css/pages"
+              }
+          },
+          "pug": {
+            "src": "@{path.src}/pug/admin_6/pages/*.pug",
+            "output": "@{path.output}/admin_6/html"
+          }
+      },
+      "admin_7": {
+          "js": {
+              "src": [
+                  "@{path.src}/js/app/app.js",
+                  "@{path.src}/js/theme/admin_7/layout.js"
+              ],
+              "output": "@{path.output}/admin_7/html/assets/js"
+          },
+          "sass": {
+              "src": {
+                  "bundle": [
+                      "@{path.src}/sass/components/components.scss",
+                      "@{path.src}/sass/layouts/admin_7/layout.scss",
+                      "@{path.src}/sass/vendors/vendors.scss"
+                  ],
+                  "themes": "@{path.src}/sass/layouts/admin_7/themes/*.scss",
+                  "pages": "@{path.src}/sass/layouts/admin_7/pages/*.css"
+              },
+              "output": {
+                  "bundle": "@{path.output}/admin_7/html/assets/css",
+                  "themes": "@{path.output}/admin_7/html/assets/css/themes",
+                  "pages": "@{path.output}/admin_7/html/assets/css/pages"
+              }
+          },
+          "pug": {
+            "src": "@{path.src}/pug/admin_7/pages/*.pug",
+            "output": "@{path.output}/admin_7/html"
+          }
+      },
+      "admin_8": {
+          "js": {
+              "src": [
+                  "@{path.src}/js/app/app.js",
+                  "@{path.src}/js/theme/admin_8/layout.js"
+              ],
+              "output": "@{path.output}/admin_8/html/assets/js"
+          },
+          "sass": {
+              "src": {
+                  "bundle": [
+                      "@{path.src}/sass/components/components.scss",
+                      "@{path.src}/sass/layouts/admin_8/layout.scss",
+                      "@{path.src}/sass/vendors/vendors.scss"
+                  ],
+                  "themes": "@{path.src}/sass/layouts/admin_8/themes/*.scss",
+                  "pages": "@{path.src}/sass/layouts/admin_8/pages/*.css"
+              },
+              "output": {
+                  "bundle": "@{path.output}/admin_8/html/assets/css",
+                  "themes": "@{path.output}/admin_8/html/assets/css/themes",
+                  "pages": "@{path.output}/admin_8/html/assets/css/pages"
+              }
+          },
+          "pug": {
+            "src": "@{path.src}/pug/admin_8/pages/*.pug",
+            "output": "@{path.output}/admin_8/html"
+          }
+      }
+  }
+}

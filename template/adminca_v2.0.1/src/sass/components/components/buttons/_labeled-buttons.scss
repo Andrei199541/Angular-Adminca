@@ -1,0 +1,160 @@
+// LABELED BUTTONS
+
+.btn-labeled {
+    .btn-label {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.1);
+    }
+}
+.btn-labeled-left {
+    padding-left: 50px;
+    text-align: left;
+    .btn-label { left:0 }
+    &.btn-lg {
+        padding-left: 65px;
+        .btn-label { width: 50px; }
+    }
+    &.btn-sm {
+        padding-left: 40px;
+        .btn-label { width: 30px; }
+    }
+}
+.btn-labeled-right {
+    padding-right: 50px;
+    text-align: right;
+    .btn-label { right:0 }
+    &.btn-lg {
+        padding-right: 65px;
+        .btn-label { width: 50px; }
+    }
+    &.btn-sm {
+        padding-right: 40px;
+        .btn-label { width: 30px; }
+    }
+}
+
+
+/*
+** OUT LABELS
+*/
+
+.btn-label-out {
+    position: relative;
+    line-height: 1.25;
+    padding: .65rem 1rem;
+    border: 1px solid #dee1e3;
+    color: #5d6064;
+    background-color: #fff;
+    &.pointing {
+        margin-left: -1px;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-top: -5px;
+            width: 9px;
+            height: 9px;
+            transform: rotate(45deg);
+            z-index: 3;
+            background-color: inherit;
+            border-style: solid;
+            border-color: inherit;
+        }
+    }
+    .btn-group-lg & {
+        padding: 1rem 1.5rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        &.pointing:before {
+            height: 14px;
+            width: 14px;
+            margin-top: -7px;
+        }
+    }
+    .btn-group-sm & {
+        padding: .35rem .6rem;
+        font-size: .875rem;
+        line-height: 1.5;
+    }
+}
+.btn-label-out-right {
+    margin-left: -1px;
+    border-radius: 0 $btn-label-border-raius $btn-label-border-raius 0;
+    &.pointing:before {
+        left: -5px;
+        border-width: 0 0 1px 1px;
+    }
+    .btn-group-lg &.pointing:before { left:-8px; }
+}
+.btn-label-out-left {
+    margin-right: -1px;
+    border-radius: $btn-label-border-raius 0 0 $btn-label-border-raius;
+    &.pointing:before {
+        right: -5px;
+        border-width: 1px 1px 0 0;
+    }
+    .btn-group-lg &.pointing:before { right:-8px; }
+}
+
+// Color States
+
+.btn-label-out-primary {
+    border-color: $btn-primary-label-color;
+    color: $btn-primary-label-color;
+}
+.btn-label-out-secondary {
+    border-color: $btn-secondary-label-color;
+    color: $btn-secondary-label-color;
+}
+.btn-label-out-info {
+    border-color: $btn-info-label-color;
+    color: $btn-info-label-color;
+}
+.btn-label-out-success {
+    border-color: $btn-success-label-color;
+    color: $btn-success-label-color;
+}
+.btn-label-out-warning {
+    border-color: $btn-warning-label-color;
+    color: $btn-warning-label-color;
+}
+.btn-label-out-danger {
+    border-color: $btn-danger-label-color;
+    color: $btn-danger-label-color;
+}
+.btn-label-out-blue {
+    border-color: $btn-blue-label-color;
+    color: $btn-blue-label-color;
+}
+.btn-label-out-pink {
+    border-color: $btn-pink-label-color;
+    color: $btn-pink-label-color;
+}
+.btn-label-out-gradient-purple {
+    &.btn-label-out-right {
+        border-color: #7536e6;
+        color: #7536e6;
+    }
+    &.btn-label-out-left {
+        border-color: #ff4081;
+        color: #ff4081;
+    }
+}
+.btn-label-out-gradient-peach {
+    &.btn-label-out-right {
+        border-color: #e91e63;
+        color: #e91e63;
+    }
+    &.btn-label-out-left {
+        border-color: #f39c12;
+        color: #f39c12;
+    }
+}
+

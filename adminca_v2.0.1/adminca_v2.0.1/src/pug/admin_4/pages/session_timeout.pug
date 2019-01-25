@@ -1,0 +1,53 @@
+extends ../layout.pug
+
+block variables
+  - var pageTitle = 'Bootstrap Session Timeout'
+  - var pageUrl = 'session_timeout.html'
+  - var page_heading = 'Bootstrap Session Timeout'
+  - var path = ['Components', 'Bootstrap Session Timeout']
+
+block plugins
+  +script('bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js', 'plugin')
+
+block content
+    .alert.alert-primary.alert-bordered
+        p After a set amount of time, a dialog is shown to the user with the option to either log out now, or stay connected. If log out now is selected, the page is redirected to a logout URL. If stay connected is selected, a keep-alive URL is requested through AJAX. If no options is selected after another set amount of time, the page is automatically redirected to a timeout URL.
+        p: a.btn.btn-primary(href='https://github.com/orangehill/bootstrap-session-timeout', target='_blank') Official Website
+    +panel()
+        h4
+            | The warning dialog will fire after 
+            b 5 seconds
+            | . The page will redirect after 
+            b 15 seconds
+            |  with no activity.
+        p.text-muted Basic Usage
+        pre: code.
+          $.sessionTimeout({
+              title:"Session Timeout Notification",
+              message:"Your session is about to expire.",
+              keepAliveUrl:"demo-timeout-keep-alive.php",
+              redirUrl:"lockscreen.html",
+              logoutUrl:"lockscreen.html",
+              warnAfter:5000,
+              redirAfter:15000,
+              ignoreUserActivity:true,
+              countdownMessage:"Redirecting in &lt;span class='label label-warning'>{timer}&lt;/span> seconds.",
+               countdownBar:true
+          })
+
+block scripts
+    script.
+      $(function(){
+        $.sessionTimeout({
+            title:"Session Timeout Notification",
+            message:"Your session is about to expire.",
+            keepAliveUrl:"/demo-timeout-keep-alive.php",
+            redirUrl:"lockscreen.html",
+            logoutUrl:"lockscreen.html",
+            warnAfter:5000,
+            redirAfter:15000,
+            ignoreUserActivity:true,
+            countdownMessage:"Redirecting in <span class='label label-warning'>{timer}</span> seconds.",
+            countdownBar:true
+        })
+      });
